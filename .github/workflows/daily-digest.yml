@@ -35,12 +35,16 @@ jobs:
 
       - name: Run daily digest
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          PRODUCTHUNT_TOKEN: ${{ secrets.PRODUCTHUNT_TOKEN }}
-          DIGEST_REPO: ${{ github.repository }}
+             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+             ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+               # 下面这三行是你需要手动加进去的：
+             LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+             OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+             OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+             OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+   
+             DIGEST_REPO: ${{ github.repository }}
         run: pnpm start
 
       - name: Commit digest files

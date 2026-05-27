@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.152正式版",
+      "Kimi Code CLI推出v1.45.0正式版",
+      "CodeWhale更名后发v0.8.47首版",
+      "全行业对齐MCP工具扩展统一标准",
+      "国产AI CLI迭代速度追平超海外",
+      "全工具迭代MCP兼容防越权能力"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.5.26正式版",
+      "网关启动耗时平均降低42%",
+      "首字输出提速60%缓存抖动降72%",
+      "修复子agent超时时会话死锁Bug",
+      "v2026.5稳定版3天内全量灰度",
+      "累计364条Issue更新500条PR变更"
+    ],
+    "ai-trending": [
+      "Understand-Anything日增星4466全站第一",
+      "反AI套话工具日增星2715冲榜",
+      "ECC总星19.6万适配20+编码Agent",
+      "Anthropic开源知识工作者插件集",
+      "多Agent编排平台ruflo总星超5.5万",
+      "7成高增星项目围绕编码Agent展开"
+    ],
+    "ai-web": [
+      "Anthropic披露Claude Code Auto模式细节",
+      "93%手动批权限致用户许可疲劳",
+      "动态安全平衡高自主低运维成本",
+      "编码代理拉大科研人群效率鸿沟",
+      "OpenAI公示Codex自改进税务代理规划",
+      "头部厂商转向代理商业化落地竞争"
+    ],
+    "ai-hn": [
+      "DeepSeek API降75%引发价格战预期",
+      "Claude Code订阅是17倍裸API补贴",
+      "多Agent自动漏洞挖掘全方案公开",
+      "校正层无需微调超Claude Code表现",
+      "开源实时音乐引擎消费级GPU跑25Hz",
+      "社区热议AI商业化合规成本性价比"
+    ],
+    "ai-arxiv": [
+      "首次发现RLHF对齐篡改放大偏见漏洞",
+      "华为发布MUSE-Autoskill自进化Agent框架",
+      "MobileMoE探索端侧小参数MoE优势",
+      "推翻LLM顺从用户全因谄媚结论",
+      "SAERL用稀疏自编码器指导后训练",
+      "FinHarness推金融LLM代理安全框架"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周点赞4358断层登顶",
+      "Qwen3.6-27B成二次微调主流基底",
+      "DeepSeek-V4-Flash推理提速3倍以上",
+      "腾讯混元1.8B小模型端侧门槛极低",
+      "MiniCPM5-1B适配嵌入式设备直跑",
+      "字节开源全模态any-to-any模型Lance"
+    ],
+    "ai-community": [
+      "开发者14天烧完DeepSeek500万免费token",
+      "三大主流模型Agent编码能力横向对比",
+      "MCP被类比为AI通用工具供电插座",
+      "多数RAG效果差核心问题在检索环节",
+      "官方Claude .NET SDK正式对外发布",
+      "调研披露开发者真实职场AI使用现状"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 flagship AI code CLI tools covered in 2026-05-28 community digest",
+      "MCP emerges as de facto universal standard for cross-tool integration",
+      "All 9 tracked tools shipped new releases with 75+ total high-priority updates",
+      "Chinese vendors iterate faster on locale-specific developer compatibility features",
+      "First-party CLI tools roll out new security controls for custom agent workflows",
+      "Independent vendors prioritize self-hosted and air-gapped deployment use cases"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.5.26 stable release sees 364 issues, 500 PRs in 24 hours",
+      "New v2026.5.26 cuts OpenClaw gateway startup time drastically",
+      "13 total ecosystem projects tracked in the 2026-05-28 OpenClaw digest",
+      "No critical security incidents reported for latest OpenClaw release window",
+      "Update separates user-facing replies from slow background follow-up tasks",
+      "Maintainers triage post-release regressions and gateway performance optimizations"
+    ],
+    "ai-trending": [
+      "Claude Code ecosystem projects dominate 2026-05-28 GitHub AI trending list",
+      "Anti-slop projects break top 5, marking formal rise of open source anti-slop movement",
+      "ECC gains 2062 new stars, hits 195,972 total as top agent optimization layer",
+      "Anthropic open sources full Claude Cowork public plugin library",
+      "Ollama adds native support for Kimi-K2.5, GLM-5, Qwen 3 Chinese models",
+      "4466 new-star top gainer Understand-Anything leads weekly project growth"
+    ],
+    "ai-web": [
+      "Anthropic releases Claude Code Auto Mode safety framework engineering breakdown",
+      "Only 20% of social scientists adopt autonomous coding agents, per new survey",
+      "OpenAI preps imminent Codex launch for regulated financial self-improving agents",
+      "Anthropic surveys 1260 researchers on coding agent adoption in academia",
+      "93% of current Claude Code permission prompts require manual user approval",
+      "New Anthropic/OpenAI updates focus on production-grade autonomous coding agents"
+    ],
+    "ai-hn": [
+      "Simon Willison PMF post for OpenAI/Anthropic draws 682 active HN comments",
+      "YouTube mandatory AI content labeling policy sparks 212 creator discussions",
+      "Altman/Amodei walk back AI jobs apocalypse predictions to frame tools as productivity positive",
+      "Lombardy 200% data center surcharge sparks pushback on European AI compute limits",
+      "New multi-agent system cuts DevSecOps vulnerability audit labor by 70%",
+      "ADE benchmark Claude Code beating paper sparks active developer discussions"
+    ],
+    "ai-arxiv": [
+      "Researchers uncover new RLHF vulnerability that amplifies hidden misaligned biases",
+      "MobileMoE is first optimized sub-1B parameter MoE built for on-device edge use",
+      "New studies quantify under-documented widespread production RAG pipeline failures",
+      "New safety harness reduces runtime risks for high-stakes finance agents",
+      "Self-evolving agents dynamically create and reuse skills with no human input",
+      "RLHF alignment tampering paper proposes critical new guardrail requirements"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops trending with 4358 likes, over 5 million total downloads",
+      "Qwen 3.6 family makes up 1/3 of top 30 trending HF model entries",
+      "DeepSeek-V4-Flash low-latency variant hits over 3 million cumulative downloads",
+      "Pyannote diarization pipeline crosses 9.9 million weekly downloads milestone",
+      "New ByteDance/Microsoft models drive high-fidelity text-to-video interest",
+      "Qwen3.6-27B base vision model logs over 4.5 million total downloads"
+    ],
+    "ai-community": [
+      "Dev.to AI work usage crowdsourced post draws 59 firsthand developer comments",
+      "MCP explainer frames the standard as a 'power outlet for tools' for orchestration",
+      "Developers share real data on unexpected LLM costs and overbuilt RAG failures",
+      "Papal AI dignity encyclical draws 72 nuanced comments on Lobste.rs",
+      "Multiple new MCP production deployment guides published for engineering teams",
+      "Dev shares exact math for burning 5M DeepSeek free tokens in 14 days"
+    ]
+  }
+}

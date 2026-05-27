@@ -1,23 +1,61 @@
 # Hugging Face Trending Models Digest 2026-05-27
 
-> Source: [Hugging Face Hub](https://huggingface.co/) | 30 models | Generated: 2026-05-27 01:28 UTC
+> Source: [Hugging Face Hub](https://huggingface.co/) | 30 models | Generated: 2026-05-27 02:05 UTC
 
 ---
 
-# Hugging Face Trending Models Digest (2026-05-27)
+### Hugging Face Trending Models Digest (2026-05-27)
 ---
-## 1. Today's Highlights
-This week’s top trending Hugging Face releases are dominated by high-performance open-weight generative tools spanning general language, multimodal generation and niche vertical use cases, sorted by 7-day community likes. ByteDance’s new any-to-any generation model and Sulphur AI’s latest text-to-video release are driving unprecedented user attention to open multimodal workflows, while the DeepSeek-V4-Pro flagship LLM leads all rankings with over 4.3K weekly likes. A massive wave of community fine-tunes and quantizations built on Alibaba’s Qwen 3.6 base model represents the largest single family of releases on the leaderboard. Total weekly downloads across the 30 trending models exceed 18M, reflecting fast growing global adoption of self-hosted generative AI systems.
 
-## 2. Trending Models
-### 🧠 Language Models (LLMs, chat models, instruction-tuned)
-1. **deepseek-ai/DeepSeek-V4-Pro** <https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro>
-   - Author: deepseek-ai | Likes: 4,311 | Downloads: 5,019,884
-   - The highest-liked and highest-downloaded model this week, this flagship open text generation conversational LLM is trending for its benchmark-leading general reasoning and 128K long context performance that rivals top closed commercial models.
-2. **Qwen/Qwen3.6-27B** <https://huggingface.co/Qwen/Qwen3.6-27B>
-   - Author: Qwen | Likes: 1,475 | Downloads: 4,577,271
-   - Alibaba’s official latest 27B multimodal base LLM is one of the most widely adopted general purpose models globally, trending for its strong out-of-the-box conversational and vision understanding capabilities.
-3. **tencent/Hy-MT2-1.8B** <https://huggingface.co/tencent/Hy-MT2-
+#### 1. Today's Highlights
+As of May 27, 2026, Hugging Face Hub’s trending models are driven by open-weight generative AI, with deepseek-ai/DeepSeek-V4-Pro leading weekly likes at over 4,300. The Qwen model family dominates the ranks, with base variants, quantized GGUFs, and specialized releases capturing massive download volumes. Multimodal and video generation models like ByteDance’s Lance and SulphurAI’s Sulphur-2-base are rapidly gaining traction, reflecting growing demand for cross-modal capabilities. Translation-focused models from Tencent’s Hy-MT2 series also feature prominently, underscoring ongoing need for multilingual AI tools.
+
+#### 2. Trending Models
+##### 🧠 Language Models (LLMs, chat models, instruction-tuned)
+1. **deepseek-ai/DeepSeek-V4-Pro** (https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)  
+   Author: deepseek-ai | Likes: 4,315 | Downloads: 5,019,884  
+   A state-of-the-art open text-generation model, trending for high performance in conversational and enterprise tasks.
+2. **Qwen/Qwen3.6-27B** (https://huggingface.co/Qwen/Qwen3.6-27B)  
+   Author: Qwen | Likes: 1,476 | Downloads: 4,577,271  
+   A core Qwen family model, popular for its balanced architecture and wide industry adoption.
+3. **tencent/Hy-MT2-1.8B** (https://huggingface.co/tencent/Hy-MT2-1.8B)  
+   Author: tencent | Likes: 1,033 | Downloads: 7,471  
+   A translation-optimized LLM, trending for its focus on efficient multilingual text generation.
+
+##### 🎨 Multimodal & Generation (image, video, audio, text-to-X)
+1. **bytedance-research/Lance** (https://huggingface.co/bytedance-research/Lance)  
+   Author: bytedance-research | Likes: 866 | Downloads: 1,908  
+   An any-to-any multimodal model for image and video generation, trending for unified cross-modal capabilities.
+2. **SulphurAI/Sulphur-2-base** (https://huggingface.co/SulphurAI/Sulphur-2-base)  
+   Author: SulphurAI | Likes: 1,376 | Downloads: 1,376,847  
+   A text-to-video diffusion model, popular for broad accessibility and massive community use.
+3. **openbmb/MiniCPM-V-4.6** (https://huggingface.co/openbmb/MiniCPM-V-4.6)  
+   Author: openbmb | Likes: 978 | Downloads: 314,347  
+   A robust vision-language model, trending for strong image-text understanding.
+4. **Supertone/supertonic-3** (https://huggingface.co/Supertone/supertonic-3)  
+   Author: Supertone | Likes: 698 | Downloads: 48,112  
+   A high-quality text-to-speech model, trending for natural voice synthesis.
+
+##### 🔧 Specialized Models (code, math, medical, embeddings)
+1. **Jackrong/Qwopus3.5-9B-Coder-GGUF** (https://huggingface.co/Jackrong/Qwopus3.5-9B-Coder-GGUF)  
+   Author: Jackrong | Likes: 197 | Downloads: 45,392  
+   A code-optimized Qwen variant, trending for software development task performance.
+
+##### 📦 Fine-tunes & Quantizations (community fine-tunes, GGUF, AWQ)
+1. **HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive** (https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive)  
+   Author: HauhauCS | Likes: 912 | Downloads: 1,598,473  
+   An uncensored, GGUF-formatted Qwen model, trending for high niche adoption.
+2. **unsloth/Qwen3.6-27B-MTP-GGUF** (https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF)  
+   Author: unsloth | Likes: 503 | Downloads: 735,349  
+   A quantized Qwen fine-tune, popular for efficient edge deployment compatibility.
+
+#### 3. Ecosystem Signal
+The Qwen model ecosystem dominates current trends, with multiple variants (base, quantized, specialized) leading download and like counts across categories. Open-weight models remain the core focus, aligning with Hugging Face’s open model ethos, while quantized formats like GGUF drive accessibility for resource-constrained use cases. Community fine-tuning is thriving, with variants targeting niche needs like uncensored content or code tasks, complemented by emerging growth in multimodal and video generation models, signaling expanded demand beyond text-focused AI.
+
+#### 4. Worth Exploring
+1. **deepseek-ai/DeepSeek-V4-Pro**: As the most liked and downloaded model, it’s a benchmark for current open LLM performance, critical to understanding state-of-the-art conversational AI capabilities.
+2. **SulphurAI/Sulphur-2-base**: This high-volume text-to-video model illustrates fast growth in multimodal generative AI, offering insights into the expanding video model landscape.
+3. **HauhauCS/Qwen3.6-35B-A3B-Uncensored**: Its massive download count highlights community demand for specialized model variants, showcasing how fine-tunes cater to specific user requirements.
 
 ---
 *This digest is auto-generated by [agents-radar](https://github.com/kakapez/agents-radar).*

@@ -9,6 +9,8 @@ on:
 permissions:
   contents: write
   issues: write
+  pages: write
+  id-token: write
 
 jobs:
   digest:
@@ -16,6 +18,9 @@ jobs:
     # Web content fetching adds ~60-120 s of HTTP requests on incremental runs;
     # the first-ever run (fetching 50 articles) may need up to 20 min.
     timeout-minutes: 40
+
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -61,6 +66,8 @@ jobs:
 
       - name: Update web manifest
         run: pnpm manifest
+        env:
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name || 'agents-radar' }}
 
       - name: Commit manifest and feed
         run: |
@@ -71,17 +78,28 @@ jobs:
             git push
           fi
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Set Pages URL
+        run: |
+          echo "PAGES_URL=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name || 'agents-radar' }}" >> $GITHUB_ENV
+
       - name: Send Telegram notification
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '@agents_radar' }}
-          PAGES_URL: https://kakapez.github.io/agents-radar
         run: pnpm notify
 
       - name: Send Feishu notification
         env:
           FEISHU_WEBHOOK_URLS: ${{ secrets.FEISHU_WEBHOOK_URLS }}
-          PAGES_URL: https://kakapez.github.io/agents-radar
         run: pnpm notify:feishu
 
       - name: Close stale issues

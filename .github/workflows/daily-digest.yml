@@ -35,16 +35,14 @@ jobs:
 
       - name: Run daily digest
         env:
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-             ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
-             ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-               # 下面这三行是你需要手动加进去的：
-             LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
-             OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-             OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
-             OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
-   
-             DIGEST_REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          DIGEST_REPO: ${{ github.repository }}
         run: pnpm start
 
       - name: Commit digest files
@@ -77,13 +75,13 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '@agents_radar' }}
-          PAGES_URL: https://duanyytop.github.io/agents-radar
+          PAGES_URL: https://kakapez.github.io/agents-radar
         run: pnpm notify
 
       - name: Send Feishu notification
         env:
           FEISHU_WEBHOOK_URLS: ${{ secrets.FEISHU_WEBHOOK_URLS }}
-          PAGES_URL: https://duanyytop.github.io/agents-radar
+          PAGES_URL: https://kakapez.github.io/agents-radar
         run: pnpm notify:feishu
 
       - name: Close stale issues
@@ -91,4 +89,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DIGEST_REPO: ${{ github.repository }}
         run: pnpm close-stale
-

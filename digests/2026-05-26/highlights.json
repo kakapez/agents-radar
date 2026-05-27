@@ -1,134 +1,149 @@
 {
   "zh": {
     "ai-cli": [
-      "OpenAI Codex 单日 11 PR，fcoury-oai 创 9 连 Vim PR 纪录",
-      "GitHub Copilot CLI 高 Issues 零 PR，疑似内部代码冻结",
-      "Qwen Code 发布 v0.16.1-nightly，守护进程模式冲刺",
-      "Pi 作者 mitsuhiko 一日双关键修复，活跃度极高",
-      "Claude Code 安全加固、Hook 修复、治理优化多线并进",
-      "Gemini CLI Auto Memory 新批次 3 条 Issues，Agent 稳定性双轨推进"
+      "AI CLI生态进入体验优化与整合关键期，关注上下文理解。",
+      "工具竞争从'能否用'转向'好不好用'与工作流整合。",
+      "主流工具集体平静，或预示底层模型更新前的观察期。",
+      "深度本地集成(git/docker)成提升AI助手效率的核心。",
+      "处理多模态文件(图像/PDF)成为AI助手升级方向。",
+      "隐私安全控制是所有工具日益重要的共同关注点。"
     ],
     "ai-agents": [
-      "OpenClaw 24 小时 500 PR、477 Issues，待合并积压 270 条",
-      "steipete 优化会话存储快照克隆，降低网关 CPU 热点",
-      "vincentkoc 补全 OTel/Prometheus 遥测，新增模型故障转移告警",
-      "brokemac79 修复插件打包错误引导，避免无效 doctor --fix",
-      "TimToxopeus 复用 manifest 元数据消除重复加载开销",
-      "SebTardif 修复心跳尾部上下文修剪，保留有意义上下文"
+      "OpenClaw生态集体平静，13个项目均无24小时活动。",
+      "AI智能体社区或进入短期稳定期与周期性活动低谷。",
+      "OpenClaw作为核心参照，可能具备社区规模先发优势。",
+      "缺乏显著社区互动是当前个人AI助手生态最突出特征。",
+      "真正的项目健康度需结合长期趋势(周/月度)评估。",
+      "开发者注意力可能正转向内部深度研发阶段。"
     ],
     "ai-trending": [
-      "Understand-Anything 日增 5604 star，代码知识图谱增速冠军",
-      "codegraph 日增 3161 star，预构建知识图谱 100% 本地",
-      "ECC 192k star 日增 2025，Claude Code 企业级性能底座",
-      "gstack 获 YC CEO Garry Tan 背书，23 工具覆盖 6 角色",
-      "ai-engineering-from-scratch 日增 3154 star，全链路教程",
-      "反 AI slop 运动兴起，品味工程成开发者新关注点"
+      "Understand-Anything单日狂揽4700+星，代码库变知识图谱。",
+      "ai-engineering-from-scratch教程引2000+星关注，聚焦实战。",
+      "Stop-slop技能文件助移除AI文本'AI味'，获500+星。",
+      "Taste-skill赋予AI更好'品味'，避免生成平庸内容。",
+      "ECC系统优化Claude/Codex等智能体性能，新晋热门。",
+      "Anthropic官方知识工作插件库开源，扩展Claude能力。"
     ],
     "ai-web": [
-      "Anthropic 联合创始人 Chris Olah 梵蒂冈演讲，AI 安全绑定宗教伦理",
-      "Olah 公开承认前沿实验室制度性缺陷，罕见自我批判",
-      "呼吁外部监督确保技术向善，扩展安全联盟至宗教权威",
-      "OpenAI 今日零更新，发布节奏持续低迷",
-      "Anthropic 从行业自律跃迁至全球 AI 治理建构参与者",
-      "通谕标题 Magnifica humanitas 直指保护人类人格命题"
+      "Anthropic联合创始人Chris Olah在梵蒂冈就AI伦理发表演讲。",
+      "Olah公开承认前沿实验室内部存在与'做正确的事'冲突的激励。",
+      "Anthropic呼吁'外部激励'来确保技术向善，扩展安全联盟。",
+      "梵蒂冈通谕发布会标志着AI治理议题向宗教伦理层面渗透。",
+      "OpenAI官网零更新，发布节奏与Anthropic密集布局形成对比。"
     ],
     "ai-hn": [
-      "Claude 独立发现 macOS 内核漏洞 CVE-2026-28952，获官方认证",
-      "Anthropic 拟开放 Mythos 级模型，定位引社区猜测",
-      "Unsiloed AI 登顶 olmOCR-Bench，结构化数据提取受关注",
-      "AI 扫描 40 万 Reddit 帖发现 Ozempic 隐藏副作用",
-      "vibecoding 开发者困境与 Gemini 质量下滑引疲惫反思",
-      "OpenBrief 本地优先视频下载摘要器契合隐私偏好"
+      "Claude AI自主发现macOS内核级安全漏洞CVE-2026-28952。",
+      "开源推理框架Eagle 3.1发布，vLLM等团队合作提升效率。",
+      "'skills-for-humanity'为Claude Code构建171个结构化推理技能。",
+      "文章质疑LLM评测泛滥，主张按需选择评估指标。",
+      "OpenTelemetry工具可监测Claude Code是否性能下降。",
+      "社区讨论AI对就业影响，从'末日论'转向理性多元辩论。"
     ],
     "ai-ph": [
-      "Google Stitch 3.0 以 474 票登顶 Product Hunt",
-      "Freu AI 零订阅费自动化 Mac 应用，291 票打破 SaaS 模式",
-      "ModelHub 307 票 41 评论，Mac 本地 LLM 菜单栏管理",
-      "Edgee Fallback Models 保障 Claude Code 模型故障转移",
-      "JellyNet 交易闲置 API 配额，降低 LLM 使用成本",
-      "开发者工具占半壁江山，基础设施层热度不减"
+      "Google Stitch 3.0以474票强势登顶Product Hunt。",
+      "Freu AI主打零月费Mac应用自动化，获291票。",
+      "ModelHub菜单栏统一管理本地LLM，降低Mac开发者使用门槛。",
+      "Edgee Fallback Models提供Claude Code模型级故障转移。",
+      "开发者工具占据半壁江山，反映AI基础设施层持续火热。",
+      "'零经常性成本'和'开源本地优先'成为产品核心卖点。"
+    ],
+    "ai-arxiv": [
+      "MobileGym为移动GUI智能体研究提供首个可验证仿真平台。",
+      "论文提出AI智能体革命在于'系统扩展'而非'模型扩展'。",
+      "研究揭示语言模型能通过'睡眠'整合上下文提升长程任务能力。",
+      "模型可自我生成回放数据抗遗忘，无需外部存储。",
+      "CausaLab构建交互式环境评估LLM智能体科学发现能力。",
+      "扩散式语言模型通过选择性循环层提升生成质量和效率。"
     ],
     "ai-hf": [
-      "DeepSeek-V4-Pro 482 万下载断层领跑，4274 点赞",
-      "Qwen 3.6 系列占 8 席，官方 27B 下载 442 万逼近 DeepSeek",
-      "Sulphur-2-base 135 万下载，文本到视频生成本周冠军",
-      "Anima 1545 点赞 65 万下载，ComfyUI 兼容神秘扩散模型",
-      "腾讯 Hy-MT2 系列 1.8B 到 30B 覆盖翻译全谱系",
-      "MiniCPM5-1B 仅 1B 参数对标更大模型，端侧小模型突破"
+      "DeepSeek-V4-Pro以4274赞领跑，下载量突破480万。",
+      "Qwen 3.6-27B原生支持图像理解，官方下载量逼近DeepSeek。",
+      "视频生成基座Sulphur-2-base本周下载量冠军达135万。",
+      "社区'神秘'扩散模型Anima获高赞，兼容ComfyUI生态。",
+      "腾讯Hy-MT2系列在翻译垂直领域形成完整模型谱系。",
+      "NVIDIA推出扩散式语言模型Nemotron-Labs-Diffusion-14B。"
     ],
     "ai-community": [
-      "MCP 生态首曝 CVE 级漏洞，AI 基础设施安全进入实战",
-      "提出认知债务概念，AI 加速开发背后的隐性技术债",
-      "AI 代码够用但平庸悖论引发最多评论讨论",
-      "微软 Uber 缩减 AI 编码预算，中小团队选型风向标",
-      "Qwen 3.6 四层级 41 倍成本差，智能路由降本方案",
-      "教皇通谕为技术讨论注入罕见哲学维度"
+      "微软取消内部AI编码许可，引发AI工具成本与可及性讨论。",
+      "Cursor 3发布并行AI智能体，分享多智能体实际工作流。",
+      "开发者反思MCP协议，质疑其是否为过度工程化的'狂欢'。",
+      "文章区分AI护栏与系统安全边界，提出安全最佳实践。",
+      "教程详解结合Milvus与Azure OpenAI的端到端RAG流水线。",
+      "社区探讨如何修复AI的'遗忘'与上下文理解问题。"
     ]
   },
   "en": {
     "ai-cli": [
-      "Claude Code hits token limit crisis unresolved",
-      "OpenAI Codex invests heavily in Vim TUI stack",
-      "Gemini CLI plagued by agent reliability P1 bugs",
-      "Python CLIs face Bun/TypeScript rewrite pressure",
-      "All major tools now support MCP protocol",
-      "Windows parity degrading for OpenAI Codex"
+      "Ecosystem-wide coordinated inactivity across 9 CLI tools",
+      "Claude Code, Codex, Gemini CLI all show zero activity",
+      "9 AI CLI tools tracked in cross-project comparison",
+      "Synchronized pause suggests industry stabilization phase",
+      "Mature ecosystem shifts focus to documentation and testing",
+      "GitHub Copilot CLI among tools in quiet development phase"
     ],
     "ai-agents": [
-      "OpenClaw: 977 items updated in 24 hours",
-      "XL PR #85341 internalizes Pi-shaped runtime",
-      "No new releases, fixes accumulating",
-      "Platinum hermit issues signal production concerns",
-      "500 PRs merged in single day",
-      "Session state reliability fixes dominate"
+      "OpenClaw ecosystem spans 13 specialized fork projects",
+      "All major agent projects show synchronized inactivity",
+      "NanoBot, IronClaw among OpenClaw derivatives tracked",
+      "Health scores range from 5.5 to 6.5 across projects",
+      "Specialized forks indicate vibrant niche adaptation interest",
+      "Ecosystem suggests consolidation around mature frameworks"
     ],
     "ai-trending": [
-      "Understand-Anything gains 5,604 stars in one day",
-      "Agent harness patterns consolidate around CLI tools",
-      "Skill files emerge as distinct artifact category",
-      "Anthropic open-sources knowledge-work-plugins",
-      "ECC and codegraph hit 2,000+ daily stars",
-      "Ollama now supports Kimi-K2.5, GLM-5, MiniMax"
+      "Understand-Anything: +4,721 stars for codebase knowledge graphs",
+      "ECC: +1,912 stars optimizing AI agent harness performance",
+      "ai-engineering-from-scratch: +2,169 stars hands-on guide",
+      "New market: modular prompt-based agent skill files emerge",
+      "taste-skill: +1,440 stars injecting style into AI outputs",
+      "claude-mem: +319 stars for persistent agent memory"
     ],
     "ai-web": [
-      "Anthropic engages Vatican on AI ethics",
-      "Chris Olah speaks on Pope Leo XIV encyclical",
-      "OpenAI publishes zero new articles today",
-      "Anthropic acknowledges incentive misalignment risks",
-      "Strategic shift to theological governance frameworks",
-      "Olah admits labs may conflict with doing right"
+      "Chris Olah presents at Vatican on Pope's AI encyclical",
+      "Anthropic engages global institutions on AI governance",
+      "'Magnifica humanitas' encyclical on AI and human dignity",
+      "Anthropic's institutional humility positioning strategy",
+      "OpenAI has zero new publications today",
+      "Move beyond tech safety to philosophical AI frameworks"
     ],
     "ai-hn": [
-      "Pope Leo XIV encyclical dominates AI discourse",
-      "Claude discovers kernel CVE-2026-28952",
-      "Norway deploys 2PB Huawei storage for LLMs",
-      "Anthropic to release Mythos-class models",
-      "Vibecoded code dumps draw skepticism",
-      "Software factories deemed premature"
+      "Claude discovers macOS kernel vulnerability CVE-2026-28952",
+      "CVE story: 157 upvotes, 84 comments on AI security role",
+      "Eagle 3.1: vLLM and TorchSpec team speculative decoding",
+      "Anthropic collaborates with Vatican on Papal encyclical",
+      "Intel's USB4STREAM Protocol for Linux announced",
+      "AI moving from writing code to finding critical flaws"
     ],
     "ai-ph": [
-      "Google Stitch 3.0 leads with 474 votes",
-      "Freu AI offers zero-cost Mac automation",
-      "ModelHub launches local LLM menu bar app",
-      "JellyNet creates idle API quota marketplace",
-      "Edgee adds Claude Code fallback models",
-      "Top three products capture 87% of votes"
+      "Google Stitch 3.0: 474 votes for AI-native design canvas",
+      "ModelHub: menu bar app for managing local LLMs on Mac",
+      "Freu AI: 291 votes, automate Mac apps at zero cost",
+      "JellyNet: marketplace for idle API quota arbitrage",
+      "Edgee: fallback models address Claude Code reliability",
+      "Vote distribution shows steep power-law concentration"
+    ],
+    "ai-arxiv": [
+      "Language Models Need Sleep: consolidation for long tasks",
+      "Looped Diffusion LMs challenge autoregressive generation",
+      "Agentic AI systems scaling harnesses not just models",
+      "Multi-objective prompt optimization failure modes analyzed",
+      "New benchmarks push beyond static dataset evaluation",
+      "Efficient deployment: quantization and on-device inference"
     ],
     "ai-hf": [
-      "DeepSeek-V4-Pro hits 4.8M downloads",
-      "Qwen 3.6 variants dominate trending models",
-      "Sulphur-2-base text-to-video breaks 1.35M downloads",
-      "Uncensored Qwen3.6-35B gains strong traction",
-      "Hy-MT2 translation family shows enterprise interest",
-      "HRM-Text-1B demonstrates domain-specific demand"
+      "DeepSeek-V4-Pro: 4.8M downloads, top open-weight model",
+      "Qwen3.6-27B: Alibaba's official multimodal release",
+      "Sulphur-2-base: text-to-video with 1.35M downloads",
+      "Uncensored Qwen3.6-35B variants gaining strong traction",
+      "Multiple Qwen 3.6 community quantizations trending",
+      "Hy-MT2 translation models show sustained enterprise adoption"
     ],
     "ai-community": [
-      "Microsoft reportedly cancels Claude Code licenses",
-      "MCP protocol becomes most contested acronym",
-      "AI coding cost anxiety grips developers",
-      "Cognitive debt from AI-generated systems debated",
-      "Uber struggles with AI coding economics",
-      "Collective thinking at risk from AI workflows"
+      "Why AI forgets context and practical memory fixes",
+      "If Microsoft can't afford AI coding, can anyone?",
+      "Cursor 3 ships parallel multi-agent workflows",
+      "Is Model Context Protocol flawed? CLI debate heats up",
+      "Shared memory between agents improves coordination",
+      "AI economics sustainability questioned across industry"
     ]
   }
 }

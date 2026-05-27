@@ -27,7 +27,9 @@ export class AnthropicProvider implements LlmProvider {
       messages: [{ role: "user", content: prompt }],
     });
     const block = message.content.find((b) => b.type === "text");
-    if (!block) throw new Error("Unexpected response type from Anthropic");
+    if (!block) {
+      throw new Error("Unexpected response type from Anthropic. RAW: " + JSON.stringify(message));
+    }
     return block.text;
   }
 }

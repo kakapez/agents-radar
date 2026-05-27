@@ -1,4 +1,134 @@
 {
-  "zh": {},
-  "en": {}
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.152正式版，日增Issue50条",
+      "GitHub Copilot CLI发布v1.0.55-1正式版",
+      "Qwen Code发4预览版，含TS SDK预览版",
+      "DeepSeek TUI更名CodeWhale，连更2正式版",
+      "9款AI CLI全推进跨端全场景兼容性适配",
+      "多款头部工具同步布局Agent安全管控能力"
+    ],
+    "ai-agents": [
+      "OpenClaw近24小时流转382条Issue、500条PR",
+      "OpenClaw连更2Beta版，网关冷启动耗时降40%",
+      "修复iMessage附件误拦截，支持全目录读取",
+      "修复定时任务误杀问题，可靠性大幅提升",
+      "解决Codex账号嵌入API密钥缺失报错问题",
+      "核心模块Bug平均响应低于6小时，评级优秀"
+    ],
+    "ai-trending": [
+      "Understand-Anything单日涨星4697，登涨幅榜首",
+      "Anthropic开源Claude插件库，日增星1718",
+      "网安Agent技能包日增880星，覆盖26安全领域",
+      "Claude-mem日增352星，兼容20+主流Agent",
+      "反套话技能包taste-skill单日涨星1430",
+      "Agent性能优化框架ECC单日涨星1915"
+    ],
+    "ai-web": [
+      "Anthropic任命韩区代表董事，首尔办公室将开业",
+      "韩国Claude人均使用强度达全球基准3.5倍",
+      "Anthropic公开全产品线Claude风险隔离体系",
+      "高能力模型Mythos因安全未达标推迟上线",
+      "Agent风险隔离设为新模型上线核心硬指标",
+      "今日OpenAI官网无任何新增公开内容"
+    ],
+    "ai-hn": [
+      "大模型睡眠巩固机制论文登顶HN AI热度榜首",
+      "OpenAI研究称幻觉是统计范式固有数学属性",
+      "Anthropic官宣Mythos高能力系列模型对外开放",
+      "YC新项目Minicor推大规模Windows桌面AI自动化",
+      "社区热议Anthropic Claude生产级部署隔离方案",
+      "从业者转向关注AI落地成本与工程稳定性"
+    ],
+    "ai-arxiv": [
+      "首次发现RLHF流程漏洞，存在对齐篡改风险",
+      "MobileMoE架构填补端侧小参数量MoE落地空白",
+      "新研究推翻LLM服从错观点全为谄媚结论",
+      "新方案让长思维链场景LLM推理速度提2倍",
+      "自进化Agent可自主迭代更新自身技能库",
+      "SAERL框架大幅替代低效人工标注数据工程"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro获4315周赞断层登顶HF热度榜",
+      "DeepSeek-V4-Pro总下载量突破500万次",
+      "HRM-Text-1B周下载破10万，主打长文档处理",
+      "腾讯开源Hy-MT2系列轻量多语种翻译模型",
+      "MiniCPM5-1B主打边缘低算力场景部署",
+      "Qwen系列第三方微调量化项目占比近3成"
+    ],
+    "ai-community": [
+      "本地AI代理OpenClaw与CraftBot选型对比出炉",
+      "FastAPI+Kong实现AI Agent按量计费方案",
+      "Cursor 3并行多智能体协同编码工作流公开",
+      "零成本本地AI编码教程可解工具限流问题",
+      "开发者热议AI Agent内存系统标准化方向",
+      "2026年编码Agent用原生检索替代传统RAG"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 AI coding CLI tools tracked in 2026-05-27 community digest",
+      "8 actively maintained production-grade AI coding CLI tools exist",
+      "Entire segment converges on MCP as de facto extensibility standard",
+      "Vendors prioritize auditable session logs and air-gapped deployment",
+      "Core tools include Claude Code, OpenAI Codex, Copilot CLI",
+      "Teams prioritize stability patches over trivial new model support"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem tracks 13 active agent projects 2026-05-27",
+      "382 updated issues and 500 PRs logged for OpenClaw in 24h",
+      "Maintainers closed 209 issues, merged 231 PRs during beta sprint",
+      "Two new OpenClaw beta releases shipped with zero breaking changes",
+      "No critical zero-day or widespread outage regressions reported",
+      "Team prepares feature freeze ahead of SQLite runtime refactor"
+    ],
+    "ai-trending": [
+      "7 Claude ecosystem projects earned 500+ new GitHub stars in 1 day",
+      "Understand-Anything gained 4697 new stars as top daily gainer",
+      "Anthropic released official open source knowledge-work-plugins repo",
+      "ECC agent optimization project added 1915 stars, total 194k+",
+      "Universal Claude-mem context layer earned 352 new stars",
+      "2 anti-AI-slop projects gained combined 1969 new stars in 24h"
+    ],
+    "ai-web": [
+      "Anthropic announces new Seoul office led by KiYoung Choi",
+      "South Korea has 3.5x higher per-capita Claude usage than baseline",
+      "Anthropic withheld Claude Mythos Preview over unmitigated harm risk",
+      "Anthropic published first public agent blast radius containment deep dive",
+      "No new public content updates released by OpenAI this cycle",
+      "South Korea is now one of Anthropic's highest priority global markets"
+    ],
+    "ai-hn": [
+      "Top HN post: LLM sleep-like consolidation stops catastrophic forgetting",
+      "Uber burned entire annual AI token budget in a single quarter",
+      "AI leaders walk back jobs apocalypse warnings ahead of IPOs",
+      "Xiaomi MiMo-v2.5 99% price cut sparks global AI pricing war",
+      "Sleep consolidation research earned 185 HN points, 131 comments",
+      "Viral post claims OpenAI says hallucinations are mathematically inevitable"
+    ],
+    "ai-arxiv": [
+      "50 new AI papers published targeting real production system pain points",
+      "Unpatched RLHF flaw can amplify hidden misaligned biases unnoticed",
+      "MUSE-Autoskill delivers first closed-loop self-evolving agent skill system",
+      "MobileMoE unlocks high-performance sub-billion MoE edge deployment",
+      "New optimizations cut LLM inference and training costs by up to 55%",
+      "Alignment Tampering paper exposes universal critical RLHF vulnerability"
+    ],
+    "ai-hf": [
+      "ByteDance open any-to-any Lance model hits top 3 weekly HF likes",
+      "Qwen family makes up 1/3 of all trending Hugging Face AI entries",
+      "DeepSeek-V4-Pro leads trending with 5M+ total downloads",
+      "Qwen3.6-27B ranks #2 with 4.5M+ downloads, strong multimodal support",
+      "Tencent, Microsoft, Nvidia launched new open production models this week",
+      "No restricted proprietary models rank in top 15 weekly HF trending"
+    ],
+    "ai-community": [
+      "Top Dev.to post compares self-hosted OpenClaw vs CraftBot agents",
+      "Lobste.rs AI ethics post hit 111 points, 53 user comments",
+      "Developers prioritize self-hosted agents avoiding closed SaaS limits",
+      "New guide shares FastAPI + Kong patterns for AI agent usage billing",
+      "Top discussions cover new agent memory patterns and modern code search",
+      "Vatican AI ethics encyclical sparks unexpected high-volume community debate"
+    ]
+  }
 }

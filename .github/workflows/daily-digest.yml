@@ -3,7 +3,7 @@ name: Daily Agents Radar
 on:
   schedule:
     # 每天 00:00 UTC = 08:00 CST (UTC+8)
-    - cron: "0 0 * * *"
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 permissions:

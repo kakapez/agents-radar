@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道完成向全链路研发助手跃迁",
+      "头部产品全部适配Opus 4.8新一代大模型",
+      "MCP/ACP成行业统一扩展互通标准",
+      "国产工具本地化迭代占比环比升超40%",
+      "Gemini CLI当日发布3个不同版本",
+      "9款工具集体优化长上下文Token浪费痛点"
+    ],
+    "ai-agents": [
+      "OpenClaw单日处理399条Issue、500条PR",
+      "发布v2026.5.27正式版强化安全边界",
+      "同步发布beta1预览版新增兼容补丁",
+      "核心P1缺陷平均响应时效低于2小时",
+      "修复插件加载异常降低升级故障率",
+      "修复多会话并行状态竞态Bug"
+    ],
+    "ai-trending": [
+      "MoneyPrinterTurbo单日新增4685星登顶",
+      "Anthropic公开官方Agent技能标准仓库",
+      "Understand-Anything单日涨星3766",
+      "微软MarkItDown日增1263星适配LLM",
+      "Claude Code优化系统ECC日增星1388",
+      "反同质化stop-slop项目首次批量入热榜"
+    ],
+    "ai-web": [
+      "Anthropic融650亿美元 估值达9650亿",
+      "正式发布旗舰模型Claude Opus 4.8",
+      "推出协作式视觉生产力工具Claude Design",
+      "Opus4.8高速模式成本降至前代1/3",
+      "Anthropic开设米兰办公室拓欧洲市场",
+      "OpenAI新增前沿AI治理框架页面"
+    ],
+    "ai-hn": [
+      "Claude Opus4.8获1114分登HN热度第一",
+      "消费级GPU实现单请求3k tokens/s推理",
+      "Claude Code动态工作流大幅提编码效率",
+      "开发者整理数十项LLM生产反模式",
+      "端侧MoE模型LFM2.5-8B-A1B发布",
+      "开源Ktx解决数据Agent权限隔离痛点"
+    ],
+    "ai-arxiv": [
+      "PEFT-Arena从稳定性塑性维度重估PEFT",
+      "双向进化搜索大幅提升LLM自迭代效率",
+      "明确多语言LLM-as-judge失效边界",
+      "推翻LLM无符号推理能力激进结论",
+      "提出动态网络建模智能体记忆新思路",
+      "研究戳破搜索智能体伪检索性能泡沫"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周下载量超528万",
+      "通义千问衍生模型占上榜量近三分之一",
+      "面壁智能发布MiniCPM5-1B端侧模型",
+      "DeepSeek V4 Flash适配高并发场景",
+      "腾讯混元翻译模型超同尺寸通用款",
+      "多款音视频生成新模型登前15"
+    ],
+    "ai-community": [
+      "调试AI代码耗时是写代码的10倍",
+      "文章拆解AI生成80%代码能力边界",
+      "Provenant将Agent Token消耗降65倍",
+      "500行TS搭建AI Issue自动分类Bot",
+      "教皇AI通谕社区获70余条深度讨论",
+      "2026大模型选型本质是成本数学题"
+    ]
+  },
+  "en": {}
+}

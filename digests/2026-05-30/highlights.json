@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发v2.1.156等版，上线本地插件自动加载",
+      "OpenAI Codex发rust-v0.136.0-alpha.1推全栈重写",
+      "GitHub Copilot CLI放开免费用户自定义模型权限",
+      "Kimi Code CLI发v1.46.0官宣升级为Kimi后继线",
+      "Gemini CLI发夜间构建版修复PTY场景原生崩溃",
+      "AI CLI赛道进入存量竞争，聚焦Agent可靠性方向"
+    ],
+    "ai-agents": [
+      "OpenClaw发4个Beta版加固Codex Agent运行时稳定性",
+      "升级后子代理关联崩溃概率可降低约70%",
+      "运行时内存溢出关键补丁进入待合并状态",
+      "Agent跨节点消息识别故障完成彻底修复",
+      "CI测试套件整体执行效率提升60%",
+      "OpenCode插件新增动态模型自动发现能力"
+    ],
+    "ai-trending": [
+      "MoneyPrinterTurbo单日增3563星登增量榜首",
+      "微软markitdown单日涨1876星补RAG解析缺口",
+      "Claude Code单日增460星成编码Agent标杆",
+      "ECC单日增1413星为编码智能体增强能力",
+      "LlamaIndex开源liteparse适配TB级大文件解析",
+      "去AI内容同质化方向3项目集中登热榜"
+    ],
+    "ai-web": [
+      "OpenAI灰度发布生物防御Rosalind项目相关内容",
+      "OpenAI上线第三方可信AI评估框架相关内容",
+      "OpenAI转向高影响场景落地+合规标准化主线",
+      "头部厂商竞争升级到行业规则制定权维度",
+      "Anthropic静默蓄力冲刺新一代旗舰大模型迭代",
+      "OpenAI提前布局全球AI监管对话主动权"
+    ],
+    "ai-hn": [
+      "Liquid AI发8B-A1B MoE训练用38T Token效率超高",
+      "AISlop获71分专扫AI生成代码隐藏隐患",
+      "Tiny-vLLM全C++/CUDA实现无Python依赖",
+      "CVE-Bench发布测试智能体真实漏洞补丁能力",
+      "社区热议Anthropic估值反超OpenAI事件",
+      "推理工程综述拆解大模型部署全链路瓶颈"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周点赞4431登顶Hugging Face全榜",
+      "字节全模态生成模型Lance冲入热度前10",
+      "DeepSeek-V4-Pro周下载量突破583万",
+      "腾讯混元发布30B多语言翻译模型精度超商用",
+      "Qwen3.6系列7款衍生模型集中登热度榜",
+      "面壁智能发布MiniCPM5-1B端侧小参数模型"
+    ],
+    "ai-community": [
+      "零代码方案落地移动端App自动化测试",
+      "实操指南教小团队用Agent快速产出全栈产品",
+      "实战调优把RAG助手压缩到512MB内存运行",
+      "深度科普厘清模型蒸馏相关舆论技术真相",
+      "MarkItDown成多格式文档转Markdown首选工具",
+      "海外AI开发全面进入工程化落地深水区"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI CLI tools tracked in 2026-05-30 ecosystem digest",
+      "AI CLI ecosystem converges on standardized Model Context Protocol support",
+      "New AI CLI releases target pain points like session bricking and token bloat",
+      "AI CLI market supports 3 segments including air-gapped self-hosted deployments",
+      "All surveyed AI CLI tools now serve full-time production coding workflows",
+      "Community adds new Claude Code Skills open source repository"
+    ],
+    "ai-agents": [
+      "OpenClaw recorded 325 updated issues and 500 updated PRs on 2026-05-29",
+      "Four 2026.5.28 beta OpenClaw releases shipped with zero breaking changes",
+      "OpenClaw prioritizes Codex agent runtime reliability fixes this dev cycle",
+      "OpenClaw holds 52.3% 24-hour resolution rate for recently updated issues",
+      "13 total projects tracked in 2026-05-30 OpenClaw ecosystem digest",
+      "No critical unpatched OpenClaw security vulnerabilities reported this window"
+    ],
+    "ai-trending": [
+      "MoneyPrinterTurbo gained 3563 stars for one-click AI short video generation",
+      "Two anti-AI-slop projects earned combined 2684 new GitHub stars",
+      "Microsoft MarkItDown gained 1876 stars as core RAG pre-processing tool",
+      "4+ Claude Code related projects hit GitHub trending this 24-hour window",
+      "Run-llama liteparse gained 680 stars as fast Rust document parser",
+      "Multiple AI productivity projects earned 1000+ new stars in a single day"
+    ],
+    "ai-web": [
+      "OpenAI published 4 new assets around new biodefense initiative 'Rosalind'",
+      "OpenAI released formal third-party frontier AI safety audit framework",
+      "3 new OpenAI assets are stubs for upcoming multi-format program rollout",
+      "Anthropic has zero new public content, indicating pre-launch quiet period",
+      "OpenAI public website total indexed pages reached 830 in May 30 crawl",
+      "Anthropic public site total pages hold steady at 369 with no new updates"
+    ],
+    "ai-hn": [
+      "Liquid AI revealed 8B-A1B MoE model LFM2-5 trained on 38T tokens",
+      "Unconfirmed reports say Anthropic hit $965B valuation overtaking OpenAI",
+      "Viral claim: one enterprise spent $500M on Claude in a single month",
+      "Mozilla launched new open self-hosted AI stack project named Otari",
+      "OpenAI expanded Windows support for its computer use agent feature",
+      "New CVE-Bench tests LLM agents on real-world vulnerability patch tasks"
+    ],
+    "ai-hf": [
+      "DeepSeek V4-Pro hit 5.8M weekly downloads, top trending open LLM",
+      "Alibaba Qwen 3.6 family takes 10 of 30 top Hugging Face spots",
+      "DeepSeek V4-Pro features 1M token context matching top closed models",
+      "ByteDance released production-grade any-to-any multimodal model Lance",
+      "Sulphur-2-base open TTS model hit 1.5M downloads in first 7 days",
+      "DeepSeek V4-Flash is 3x faster low-latency optimized V4 variant"
+    ],
+    "ai-community": [
+      "Papal AI ethics encyclical top post, 131 points on Lobste.rs",
+      "No-code AI mobile test automation cuts regression time by up to 80%",
+      "Pre-agent traditional ML topics are out of mainstream dev discourse",
+      "New agent-kit auto-generates custom instructions for all coding agents",
+      "Popular no-code QA post earned 52 reactions from small app teams",
+      "Developers focus new AI work on agents, runtime optimization, security"
+    ]
+  }
+}

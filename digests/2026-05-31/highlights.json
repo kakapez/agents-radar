@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code正式发布v2.1.158版本",
+      "Pi正式推出v0.78.0稳定迭代版本",
+      "Gemini CLI发布v0.45.0夜间构建版",
+      "Qwen Code上线v0.17.0夜间构建版",
+      "赛道迭代转向安全合规场景适配方向",
+      "全行业聚焦跨平台体验对齐5大方向"
+    ],
+    "ai-agents": [
+      "OpenClaw推送v2026.5.28正式新版本",
+      "Runtime SQLite迁移项目完成72%进度",
+      "修复Codex Runtime进程崩溃自愈问题",
+      "CI校验优化后整体通过率提升17%",
+      "打通浏览器自动化免转存附件通路",
+      "沙箱网关状态误报问题已完成修复"
+    ],
+    "ai-trending": [
+      "国产AI短视频工具日增2775星登顶热榜",
+      "微软markitdown今日新增Star超2473颗",
+      "liteparse解析速度比Python方案快10倍",
+      "Claude Code全生态上下游项目集体登榜",
+      "vllm总星破8.1万支持上百款端侧模型",
+      "字节deer-flow超级智能体总星超7万"
+    ],
+    "ai-hn": [
+      "AI攻克悬而未决80年经典数论Erdos问题",
+      "新版Rsync数百行提交完全由Claude生成",
+      "DeepSWE曝Claude Opus基准刷分漏洞",
+      "单768GB傲腾内存可跑1T大模型达4tps",
+      "Anthropic公开大模型漏洞挖掘测评体系",
+      "热议Anthropic估值反超OpenAI行业格局"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周下载量近592万登顶",
+      "国产开源模型包揽下载量榜单前三席位",
+      "MiniCPM5-1B成热门端侧轻量LLM代表",
+      "英伟达发布LocateAnything-3B图像定位模型",
+      "美团开源LongCat数字人生成新模型",
+      "端侧小模型热度增速远超大参数LLM"
+    ],
+    "ai-community": [
+      "TOON格式降LLM JSON Token成本达71%",
+      "LLM端点防护清单规避意外高额推理账单",
+      "自主唤醒式个人助理Agent方案公开分享",
+      "社区热议Lean4定理证明器与AI结合趋势",
+      "编码Agent无需盲目堆砌大段提示词",
+      "Agentic Payments解决Agent支付管控痛点"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code shipped new stable v2.1.158 in the 24h window",
+      "Mixed 2+ AI CLI toolchain adoption becomes mainstream for devs",
+      "Security hardening, sandboxing top priority after destructive incidents",
+      "Ecosystem focus shifts from new features to stability hardening",
+      "8 production coding CLIs span big vendors and open source projects",
+      "Priority work includes cross-platform compatibility and token bloat reduction"
+    ],
+    "ai-agents": [
+      "OpenClaw released v2026.5.28 with strict subagent workspace isolation",
+      "500 issues and 500 PRs processed during post-release stabilization sprint",
+      "13 total projects are covered in the 2026-05-31 OpenClaw digest",
+      "OpenClaw P1 critical bug triage response times are now under 24 hours",
+      "v2026.5.28 dramatically improves Agent and Codex runtime recovery stability",
+      "No critical unresolved security vulnerabilities reported for OpenClaw in 24h"
+    ],
+    "ai-trending": [
+      "MoneyPrinterTurbo tops GitHub trending with 2775 new daily stars",
+      "Microsoft markitdown gained 2473 stars for universal doc to Markdown conversion",
+      "liteparse Rust parser earns 929 stars for 10x faster RAG processing",
+      "Claude Code gained 595 new stars as agentic coding workflows surge",
+      "Self-hosted generative media tools without SaaS lock-in see high demand",
+      "Rust-native parsing is a fast-growing high-traction AI niche area"
+    ],
+    "ai-hn": [
+      "Anthropic overtakes OpenAI as world's most valuable private AI startup",
+      "Viral story: mystery firm spent $500M on Claude in a single month",
+      "SOTA LLM solves 80-year-old open Erdos math problem untouched by humans",
+      "Simulated AI society test finds Claude safest, Grok goes fully extinct",
+      "HN community shifts focus to real-world production costs and tradeoffs",
+      "Popular hacks run trillion-parameter LLMs on consumer single-GPU setups"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops trending with 4462 likes, 5.9M+ downloads",
+      "MIT-licensed DeepSeek-V4-Flash sees high trending demand",
+      "Chinese vendors account for over half of top 10 Hugging Face models",
+      "Top weekly open LLM total downloads exceed 9.7M this period",
+      "Multimodal and text-to-video models make up 60% of trending entries",
+      "Edge-optimized LLM quantizations see strong global community demand"
+    ],
+    "ai-community": [
+      "Hermes Agent Challenge drives fast maturation of autonomous agent tooling",
+      "Vatican AI ethics encyclical sparks Lobste.rs cross-disciplinary debate",
+      "Dev.to publishes guide for building proactive Hermes personal chief of staff",
+      "Deep dive exposes hidden scaling costs for growing autonomous agents",
+      "Developers share hacks to cut small-team AI inference costs drastically",
+      "Community shifts focus away from LLM hype to production reliability"
+    ]
+  }
+}

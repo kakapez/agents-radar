@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道迈入规模化生产力落地深水区",
+      "OpenAI Codex发布Rust核心重写预览版",
+      "OpenCode v1.15.13新增会话自定义元数据能力",
+      "CodeWhale v0.8.48完成全品牌重命名适配",
+      "7款工具共同推进MCP全生态适配标准化",
+      "头部付费工具主推用量成本透明可观测"
+    ],
+    "ai-agents": [
+      "OpenClaw日更Issue+PR累计超1000条",
+      "4个Beta版本发布，6月正式版进度达82%",
+      "网关优化后空载内存占用下降27%",
+      "PR合并率58.4%，Bug闭环效率近30天峰值",
+      "全主流社交渠道投递稳定性优化完成",
+      "社区反馈Agent会话上下文错位高频Bug"
+    ],
+    "ai-trending": [
+      "微软markitdown单日新增2759星登GitHub AI榜",
+      "Claude Code当日新增490星生态持续扩容",
+      "从零训练LLM教程单日涨星627热度很高",
+      "元智能体框架harness单日新增318星",
+      "Hermes Agent官方WebUI单日涨星320",
+      "Claude Code扩展插件类项目集中登榜"
+    ],
+    "ai-hn": [
+      "OpenAI AI工具首次攻克Erdős数论公开难题",
+      "芝大发布AI生成音乐浏览器溯源检测扩展",
+      "rsync维护者要求清理无校验LLM代码提交",
+      "开发者分享Claude辅助编码转重测试 workflow",
+      "社区热议AI辅助编码的隐性安全埋坑痛点",
+      "从业者反思AI行业热度类比90年代互联网泡沫"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro以4496周点赞断层登顶热榜",
+      "DeepSeek-V4-Flash支持全场景商用协议",
+      "字节Any-to-Any多模态模型Lance热度登榜",
+      "美团发布音视频驱动数字人新模型",
+      "英伟达推出通用视觉定位模型LocateAnything-3B",
+      "MiniCPM5-1B成端侧部署热门小参数基座"
+    ],
+    "ai-community": [
+      "开发者公开Python Agent零侵入可观测方案",
+      "4张GIF拆解LLM流式输出全实现逻辑",
+      "实测63%AI生成代码缺失必要安全加固项",
+      "排查出14-Agent系统共54个可靠性故障点",
+      "三角色架构解决单Agent规模化落地瓶颈",
+      "新教皇AI通谕触发AI人文关系深度讨论"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 tracked AI code CLI tools hit mature post-innovation inflection point June 2026",
+      "Ecosystem shifts priorities from new LLM features to reliability, non-Western support",
+      "Claude Code v2.1.159 internal-only release shipped in 24h tracked window",
+      "Community contributions drive most high-impact fixes even for commercial CLI tools",
+      "10 high-priority active open issues logged for Claude Code latest cycle",
+      "Tracked tools include OpenAI Codex, GitHub Copilot CLI, Kimi Code CLI"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem digest covers 13 active agent projects June 1 2026",
+      "24h OpenClaw activity hit 500 updated issues and 500 updated PRs",
+      "58.4% PR close rate demonstrates strong efficient project sprint velocity",
+      "Four 2026.5.x beta builds shipped with no breaking end user changes",
+      "Team hardens features ahead of upcoming OpenClaw 2026.6 stable release",
+      "Community contributions outpace prior 7-day average by ~40% for OpenClaw"
+    ],
+    "ai-trending": [
+      "Microsoft markitdown gained 2759 new stars, fastest rising AI project June 1",
+      "Anthropic Claude Code gained 490 new GitHub stars on June 1 trending list",
+      "7 AI projects earned over 500 new GitHub stars in 24h June 1 2026",
+      "90% of top projects focus on gaps around production agentic coding tools",
+      "Multiple Chinese short video AI projects broke into global top trending list",
+      "No new foundational large model releases appeared on top trending list"
+    ],
+    "ai-hn": [
+      "UChicago released open browser extension to detect AI-generated songs",
+      "Verified AI breakthrough solves long-standing open Erdős math problem",
+      "Top threads focus on inference cost pain points and unvetted LLM downsides",
+      "Community widely supports stricter guardrails for LLM-generated code commits",
+      "UChicago AI song detection tool expected to become critical industry standard",
+      "Discourse prioritizes real ops concerns over flashy new model announcements"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops trending list with 4496 weekly Hugging Face likes",
+      "Qwen 3.6 ecosystem accounts for nearly 1/3 of all trending model releases",
+      "30 tracked models hit over 24 million total cumulative weekly downloads",
+      "MiniCPM5-1B trends for class-leading on-device edge reasoning performance",
+      "20% of trending entries are generative video models optimized for consumer hardware",
+      "Sparse MoE LFM2.5-8B-A1B trends for ultra low-latency inference use cases"
+    ],
+    "ai-community": [
+      "71-line lightweight pattern for debugging costly Python agent crashes shared",
+      "Cross-platform Claude Code git pre-commit hook guide released for all major OSes",
+      "Dev.to debates if AI 'vibe coding' erodes developer critical thinking skills",
+      "Lobste.rs hosts 73-comment thread on papal AI work ethics encyclical",
+      "Developers push back against overhyped LLM benchmarks ignoring security gaps",
+      "Tutorial delivers zero-overhead agent observability without costly third-party tools"
+    ]
+  }
+}

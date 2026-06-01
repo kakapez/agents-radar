@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenAI Codex发布rust-v0.136.0稳定版",
+      "CodeWhale更名后发v0.8.49正式版",
+      "9款AI CLI全量打磨非主流兼容性",
+      "全行业最高优先级推进MCP生态加固",
+      "Qwen Code发布v0.17.0 nightly构建版",
+      "头部工具向精细化运营阶段转型"
+    ],
+    "ai-agents": [
+      "OpenClaw发布3个Codex迁移相关Beta版",
+      "多渠道消息交付成功率升至98.7%",
+      "Codex默认运行时迁移进度完成70%",
+      "当日Issue关闭率38.8% 健康度为优秀",
+      "生产环境暂不建议升级测试版",
+      "修复配置误迁移致token通胀问题"
+    ],
+    "ai-trending": [
+      "微软markitdown日增3086星登顶热榜",
+      "AI短视频工具日增3325星表现亮眼",
+      "无分词器开源TTS项目VoxCPM登榜",
+      "AI爬虫框架Scrapling日增1475星",
+      "Hermes Agent配套webui涨星984",
+      "智能体内存引擎Supermemory涨星660"
+    ],
+    "ai-web": [
+      "Anthropic保密提交招股书启动IPO流程",
+      "完成650亿美元H轮融资估值9650亿",
+      "Claude Opus 4.8提速2.5倍降本2/3",
+      "Anthropic年化营收突破470亿美元",
+      "OpenAI前沿大模型正式登陆AWS",
+      "头部厂商进入全维度竞争阶段"
+    ],
+    "ai-hn": [
+      "开源新模型实现10亿级蛋白结构预测",
+      "斯坦福AI Agent开发指南获283点高赞",
+      "OpenAI模型解决人类80年未解数学题",
+      "YC新项目主打调度零散闲置GPU算力",
+      "开发者埋对抗prompt防AI盗代码",
+      "Anthropic IPO动态登顶AI类热度榜首"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周点赞4530断层登顶",
+      "DeepSeek-V4-Flash开放MIT协议",
+      "Qwen系列7款衍生模型登榜生态活跃",
+      "腾讯混元推出多语言翻译大模型",
+      "英伟达发布多模态空间定位大模型",
+      "1B端侧大模型MiniCPM5获广泛关注"
+    ],
+    "ai-community": [
+      "探讨vibecoding向清晰思考转型方法",
+      "企业66万采购AI运维平台翻车引热议",
+      "OrinIDE实现全项目级AI上下文感知",
+      "总结AI生成代码坏味道清理方案",
+      "点明Agent落地核心是工具运维非调参",
+      "直面MCP服务器推广难行业痛点"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 tracked AI CLI tools prioritize MCP-aligned extensibility now",
+      "Ecosystem enters reliability hardening phase post core experimentation",
+      "Claude Code closed 20 high-impact longstanding bugs in 24h",
+      "Top tools target pain points: token waste, unexpected session interruptions",
+      "First-party and open source CLI tools compete for dev/enterprise share",
+      "No major paradigm-shifting model launches recorded this 24h"
+    ],
+    "ai-agents": [
+      "OpenClaw recorded 474 updated issues, 500 PRs in past 24h",
+      "3 new pre-release builds shipped for upcoming 2026.6 stable version",
+      "13 total projects tracked in 2026-06-02 OpenClaw ecosystem digest",
+      "v2026.5.31-beta.4 adds recovery logic for interrupted tool calls",
+      "OpenClaw fixes post-Codex-runtime regressions ahead of stable launch",
+      "No major blocking risks found for near-term OpenClaw stable release"
+    ],
+    "ai-trending": [
+      "Microsoft's markitdown gained 3086 new GitHub stars in 24h",
+      "MoneyPrinterTurbo gained 3325 stars as zero-config AI short video tool",
+      "Community demand shifts to production zero-config utility AI tools",
+      "OpenBMB debuted breakthrough tokenizer-free TTS model for edge use",
+      "Hermes Agent ecosystem tools gained hundreds of new contributors recently",
+      "Markitdown converts all office docs to clean Markdown for LLM ingestion"
+    ],
+    "ai-web": [
+      "Anthropic filed confidential S-1 draft to SEC to initiate IPO process",
+      "Anthropic announced $65B private funding round + new Opus release",
+      "Anthropic hits $47B annualized run-rate revenue pre-public listing",
+      "OpenAI announced major cloud expansion partnership with AWS",
+      "3 new official news releases posted on Anthropic site June 1",
+      "Generative AI market enters regulated large-scale public operations phase"
+    ],
+    "ai-hn": [
+      "HN top topic: Anthropic's confidential IPO S-1 submission news",
+      "Florida filed unprecedented state lawsuit against OpenAI and Sam Altman",
+      "Open-source 1B protein prediction model breaks AlphaFold monopoly",
+      "OpenAI math model solved famous 80-year unsolved human math problem",
+      "Alphabet plans $80B equity raise exclusively for AI infrastructure",
+      "Stanford CS336 released official AI agent usage course guidelines"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops weekly LLM charts with 5.8M+ total downloads",
+      "OpenAI published first ever public Hugging Face open PII model",
+      "Qwen family derivatives make up 1/3 of top 30 trending entries",
+      "DeepSeek-V4-Flash hits sub-100ms token speed for production use",
+      "pyannote speaker diarization model has 9.6M cumulative downloads",
+      "DeepSeek-V4-Pro accumulated 4.5k weekly likes on Hugging Face"
+    ],
+    "ai-community": [
+      "Devs discuss high hidden operational costs of hype-driven vibecoding",
+      "Viral story: $660K AI platform failed after full engineering layoffs",
+      "Practical steps shared to debloat redundant AI-generated codebases",
+      "Communities push back on myth AI fully replaces senior engineers",
+      "Unmonitored AI agent security gaps rise as top devsecops priority",
+      "New guidance shares guardrails to turn AI PoCs into production builds"
+    ]
+  }
+}

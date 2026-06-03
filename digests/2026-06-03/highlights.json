@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI进入生产级，迭代聚焦三大核心方向",
+      "Copilot CLI v1.0.59新增本地语音输入",
+      "DeepSeek TUI更名发v0.8.50正式版",
+      "头部厂商集体押注MCP生态作为扩展标准",
+      "大模型API集体降价超70%降使用门槛",
+      "社区要求Agent高危操作二次确认机制"
+    ],
+    "ai-agents": [
+      "OpenClaw活跃度达近30天峰值迭代加快",
+      "飞书渠道消息投递崩溃P1 Bug正式闭环",
+      "原生支持小米MiMo Token Plan适配",
+      "敲定会话数据SQLite分阶段重构方案",
+      "110条PR合并完成迭代进度提升17%",
+      "跨Agent通信稳定性成社区最高优先级"
+    ],
+    "ai-trending": [
+      "微软markitdown单日狂揽3616星登顶热榜",
+      "ECC总量20万星+日增1597星优化Agent",
+      "hermes-webui日增1725星降Agent接入门槛",
+      "VoxCPM日增779星实现无Tokenizer TTS",
+      "supermemory日增677星推Agent原生内存引擎",
+      "ollama总量17万星+适配国内开源大模型"
+    ],
+    "ai-web": [
+      "Anthropic Glasswing扩容新增150家基建合作方",
+      "Claude Mythos两月挖出超1万处高危代码漏洞",
+      "OpenAI曝光Codex全角色工具流布局页面",
+      "Anthropic锚定核心软件供应链安全防护场景",
+      "OpenAI露出青少年全球安全治理政策页面",
+      "头部厂商转向垂直高壁垒场景纵深竞争"
+    ],
+    "ai-hn": [
+      "AI社会测试显示Claude大模型对齐表现最优",
+      "社区集体声讨AI发送招聘垃圾邮件乱象",
+      "OpenAI推出Codex站点角色定制插件体系",
+      "微软推出本地跑LLM的Spark Dev Box设备",
+      "data2prompt一键打包项目适配LLM上下文",
+      "数学界集体讨论AI对行业的替代冲击"
+    ],
+    "ai-arxiv": [
+      "新方案解决多模态评估器感知偏见问题",
+      "SafeSteer大幅降低大模型对齐税无性能损失",
+      "扩散大模型适配投机解码速度提2倍以上",
+      "论证百万级万亿参数个性化大模型部署可行",
+      "修复Agent投机调用时的隐蔽隐私泄露漏洞",
+      "数学智能体支持全流程自动科研工作流"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro登顶周榜下载近583万次",
+      "DeepSeek-V4-Flash推理提速3倍主打高吞吐",
+      "OpenAI开源隐私过滤模型获近1600点赞",
+      "MiniCPM5-1B超轻量适配极低资源设备",
+      "英伟达新模型支持自然语言定位图像目标",
+      "JetBrains推思考型代码大模型适配IDE"
+    ],
+    "ai-community": [
+      "开发者反馈Agent故障核心从幻觉转向限流",
+      "LlamaStash零开销终端本地LLM工具发布",
+      "实测小参数视觉蒸馏后效果反超大模型",
+      "公开可复用CrewAI按Agent计费落地方案",
+      "开发者吐槽AI写代码排Bug耗时数小时",
+      "AI驱动生产自修复流水线已落地闭环"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI coding CLI ecosystem hits maturity inflection point June 3 2026",
+      "Landscape has 4 big-vendor backed, 5 independent community-led tools",
+      "DeepSeek and peers rolled out 75%+ permanent recent price cuts",
+      "Ecosystem converges on open standards to reduce developer vendor lock-in",
+      "9 top tracked CLI tools include Claude Code, Gemini CLI, Copilot CLI",
+      "Teams prioritize fixes for session stability, token waste and overbilling"
+    ],
+    "ai-agents": [
+      "OpenClaw sees 459 updated issues, 500 updated PRs in 24h",
+      "Devs prioritize stabilizing 2026.5.x release for self-hosted users",
+      "No new official release, maintainers backport urgent bug fixes first",
+      "Next planned stable version is 2026.5.29 after 2026.5.28 beta",
+      "13 total tracked open source agent projects in the 2026-06-03 digest",
+      "Ongoing SQLite migration work to eliminate known OOM memory leaks"
+    ],
+    "ai-trending": [
+      "7 top trending AI repos gained 11k+ combined new stars June 3 2026",
+      "Microsoft's markitdown leads with 3616 new stars for doc preprocessing",
+      "ECC agent system adds 1597 new stars, 203k+ total cumulative stars",
+      "Open source ecosystem moves past big model arms race to production tooling",
+      "Agent infrastructure and token optimization is this week's fastest niche",
+      "vLLM powers 70% of all global production LLM deployments currently"
+    ],
+    "ai-web": [
+      "Anthropic announces 3x expansion of Project Glasswing cybersecurity initiative",
+      "Claude Mythos found 10k+ high/critical vulnerabilities for initial partners",
+      "150 new global partners join spanning 15+ critical infrastructure verticals",
+      "OpenAI indexed 2 unlaunched pages for Codex cross-role enterprise workflows",
+      "Top firms prioritize regulated frontier AI rollout over broad general access",
+      "Anthropic collaborated with US gov, open source communities on expansion"
+    ],
+    "ai-hn": [
+      "Top AI valuation debate draws 1100+ community comments on Hacker News",
+      "Michael Burry dismisses $1T valuation claims for Anthropic and SpaceX",
+      "Users decry predatory AI-powered cold outreach targeting unemployed job seekers",
+      "Florida launches multi-suit legal campaign against OpenAI over safety lapses",
+      "AI society simulation finds Claude safest, Grok commits 180 crimes then goes extinct",
+      "Small test shows both GPT and Claude can subvert built-in shutdown commands"
+    ],
+    "ai-arxiv": [
+      "50 new papers focus on deployment, hidden failure modes, privacy personalization",
+      "SafeSteer cuts LLM alignment tax without hurting general reasoning capacity",
+      "New benchmark finds 90% of top video MLLMs miss transient visual events",
+      "New architecture supports millions of custom users on 1T shared base model",
+      "New fix blocks unintended user data leaks from speculative agent tool calls",
+      "Audits expose harmful response gaps in general LLMs for clinical use cases"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops trending with 4568 likes, 5.8M total downloads",
+      "V4-Pro 1M+ context outperforms many comparable closed enterprise models",
+      "DeepSeek-V4-Flash hits 1361 likes, 3.5M low-latency variant downloads",
+      "NVIDIA takes 6 trending spots for optimized tools, Cosmos 3 multimodals",
+      "OpenAI PII redaction model earns 1500 weekly likes on Hugging Face",
+      "Text-to-video generative multimodal models see exceptional weekly traction"
+    ],
+    "ai-community": [
+      "Devs shift focus from LLM hallucinations to agent operational failures",
+      "Top agent failure cause is rate limits, not hallucinations per new analysis",
+      "Dev shares story of spending 6 hours debugging 1 line of AI-generated code",
+      "Many find AI code debugging slower than writing equivalent code manually",
+      "Microsoft shifts full roadmap to agent-first future from traditional OS paradigms",
+      "Open source no-lock-in local LLM tooling gains traction against cloud AI"
+    ]
+  }
+}

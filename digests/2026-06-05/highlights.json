@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code推v2.1.163 新增企业管控命令",
+      "OpenAI Codex连推正式版+4个alpha预览版",
+      "Gemini CLI开放Gemini 3.5 Flash GA权限",
+      "9款CLI集体攻坚MCP插件生态优化",
+      "全头部工具加码企业级部署适配能力",
+      "多工具完成边缘运行环境兼容修复"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.2-beta.1版本",
+      "完成Pi向Codex runtime全量验证对齐",
+      "修复Node≥24环境会话锁句柄泄漏崩溃",
+      "会话存储SQLite重构进度完成30%",
+      "新插件安装策略全场景无破坏性变更",
+      "主流IM通道历史回归问题基本清零"
+    ],
+    "ai-trending": [
+      "Headroom日增3139星 Token压缩最高95%",
+      "Hermes-agent日增1951星成顶流开源Agent",
+      "ECC日增1736星 代码Agent基建爆火",
+      "GitHub正式开放Copilot Agent集成SDK",
+      "NVIDIA开源Cosmos物理AI世界模型平台",
+      "开源AI赛道全面转向Agent落地优化"
+    ],
+    "ai-web": [
+      "OpenAI灰度调试ChatGPT记忆相关新页面",
+      "Anthropic无C端更新 All in企业级To B",
+      "双方走差异化错位竞争路线无重叠",
+      "OpenAI优先级锚定ChatGPT记忆升级",
+      "记忆功能后续大概率开放对应API接口",
+      "Anthropic高监管行业定制Agent方案将出"
+    ],
+    "ai-hn": [
+      "Anthropic公开递归自改进进展引全网激辩",
+      "华为开源vLLM原生KV量化效果超同类",
+      "Claude Opus可一次性生成形式化验证代码",
+      "Anthropic开源AI代码漏洞挖掘测试框架",
+      "云开发环境Boxes.dev获开发者热捧",
+      "AI伦理研究员早年预警全部落地引共鸣"
+    ],
+    "ai-arxiv": [
+      "挖掘推理失败轨迹作为大模型新训练信号",
+      "BiasGRPO去偏鲁棒性升60%不损通用能力",
+      "StreamMA将多智能体延迟压缩至常数级",
+      "实现模型无关低门槛LLM隐私推理方案",
+      "首次揭示大模型全生成路径对齐脆弱性",
+      "AutoLab发布长周期科研任务评测基准"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周下载破568万登顶热度",
+      "Qwen、DeepSeek跻身HF全站热度前三",
+      "英伟达发布7款全栈多模态生成模型",
+      "MiniCPM5-1B成端侧部署热门选择",
+      "英伟达优化Qwen3.6-35B 消费卡可跑",
+      "轻量MoE大模型推理速度远超同参数级"
+    ],
+    "ai-community": [
+      "实测Copilot新计费存在24倍价差",
+      "Headroom最高削减95%LLM Token消耗",
+      "微软推出Windows系统级Agent安全层MXC",
+      "小米披露600亿人民币AI投入战略规划",
+      "系统性梳理AI网关设计逻辑部署路径",
+      "自托管开源AI栈获开发者广泛认可"
+    ]
+  },
+  "en": {}
+}

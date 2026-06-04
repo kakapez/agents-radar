@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道正式进入体验精细化成熟发展期",
+      "MCP成为全生态通用事实统一协议标准",
+      "Qwen Code单日合并50条活跃PR迭代量最高",
+      "OpenAI Codex发布2个Rust核心alpha预发布版",
+      "Gemini CLI单日发布3个版本含1稳定版",
+      "所有工具已将自托管本地大模型列为必选能力"
+    ],
+    "ai-agents": [
+      "OpenClaw核心Bug闭环率较上周大幅提升27%",
+      "推送v2026.6.1正式版无任何破坏性变更",
+      "Agent故障自恢复率提升至98%覆盖4类高频场景",
+      "四大主流IM渠道消息投递丢包率大降72%",
+      "Discord语音通道I/O能力正式打通落地",
+      "核心存量缺陷闭环率32%创近30天新高"
+    ],
+    "ai-trending": [
+      "Token压缩工具headroom单日新增3528星登顶热榜",
+      "微软markitdown单日新增2006星爆火开源圈",
+      "AirLLM单张4GB显卡可流畅跑70B大模型",
+      "编码Agent优化项目ECC累计获20.5万星",
+      "Nous Hermes Agent发布当日涨星1736获热捧",
+      "本地LLM驱动VTuber项目单日新增702星"
+    ],
+    "ai-web": [
+      "高能力原型Claude Mythos因安全不达标推迟上线",
+      "四大咨询数十万员工已完成Claude内部部署",
+      "Anthropic公开Agent级全链路安全管控工程体系",
+      "AI原生攻击特性未被现有MITRE框架覆盖",
+      "Claude合作网络上线3个月收4万企业申请",
+      "OpenAI新增GPT Rosalind元数据暂未开放正文"
+    ],
+    "ai-hn": [
+      "谷歌Gemma 4 12B可在16GB内存笔记本运行",
+      "DeepLearning.AI推出免费vLLM系统专项课程",
+      "Rust实现本地优先LLM记忆层Mnemo获高赞",
+      "拆解Claude Code超1400行Agent循环实现逻辑",
+      "Claude Opus 4.8 Max空输入自动输出内容",
+      "HN热议AI产业公共治理与分配机制议题"
+    ],
+    "ai-arxiv": [
+      "LLM睡眠记忆巩固框架解决灾难性遗忘痛点",
+      "从神经元微观维度揭示大模型规模演化规律",
+      "价值感知KV缓存大幅降低长推理场景显存",
+      "大推理模型忠实置信度校准评估框架首发",
+      "Skill-RM统一异构Agent奖励评价标准",
+      "智能体思维链引导框架实现推理细粒度可控"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro下载量破581万超GPT-4o基准",
+      "通义Qwen3.6-27B成生态最完善开源基座",
+      "DeepSeek-V4-Flash推理提速3倍延迟降70%",
+      "MiniCPM5-1B性能追平前代7B端侧大模型",
+      "LiquidAI轻量MoE小模型激活参数量仅1B",
+      "JetBrains推出代码场景专用思考型大模型"
+    ],
+    "ai-community": [
+      "webMCP网页开发新范式Demo引发开发者热议",
+      "吐槽全品类工具强绑编码代理同质化乱象",
+      "Docker沙箱方案保障AI编码代理运行安全",
+      "AWS公开5种可直接复用多代理架构模式",
+      "面向非确定性AI Agent测试框架出炉",
+      "曝企业投47万AI预算拒付500/月开发者需求"
+    ]
+  },
+  "en": {}
+}

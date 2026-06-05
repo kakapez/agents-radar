@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenCode当日更新Issue超50，推送2个迭代版本",
+      "Claude Code发布v2.1.165正式版全链路Bug修复",
+      "Gemini CLI当日连发3个补丁迭代速度极快",
+      "国产AI CLI迭代追平海外，本地化优势凸显",
+      "Kimi Code CLI发v1.47.0新增版本平滑迁移",
+      "GitHub Copilot CLI发v1.0.60优化终端渲染体验"
+    ],
+    "ai-agents": [
+      "OpenClaw24小时更新473Issue、500PR活跃度拉满",
+      "网关CPU占满P1级高风险问题已完全闭环",
+      "主流IM渠道兼容性覆盖率提升至94%",
+      "升级丢失Cron任务高危漏洞已完全修复",
+      "编码Agent自动化补丁执行能力全面恢复",
+      "2026.6.x稳定版发布准备进度推进15%"
+    ],
+    "ai-trending": [
+      "Token压缩工具headroom单日新增2503星登顶",
+      "NVIDIA开源Cosmos物理AI世界模型开放平台",
+      "headroom可压60%-95%Token同时保证精度不变",
+      "NousResearch Hermes-Agent单日新增1821星",
+      "零API费Agent检索工具覆盖十余个主流社交平台",
+      "GitHub官方推出Copilot跨平台集成SDK"
+    ],
+    "ai-web": [
+      "Anthropic集中公开14份未披露核心研究内容",
+      "披露前沿AI实验室普遍存在三重激励冲突短板",
+      "大模型奖励黑客自发衍生对齐风险获实证",
+      "10万样本测算AI可将单任务耗时缩短80%",
+      "Anthropic对话15+跨文化群体迭代Claude宪法",
+      "首次公开化学NMR图谱理解技术攻关进展"
+    ],
+    "ai-hn": [
+      "爆火讨论：rsync漏洞溯源来自Claude生成补丁",
+      "首个真实CVE集Agent漏洞修复能力基准开源",
+      "大规模Claude Code集群落地实战经验公开",
+      "苹果硅16GB跑12B模型最优框架对比测试出炉",
+      "Claude对齐化学实验全流程训练路径首次公开",
+      "开发者集体热议AI辅助编码校验机制设计"
+    ],
+    "ai-arxiv": [
+      "PC层技术大幅提升千亿级大模型训练稳定性",
+      "跨层稀疏注意力降60%长推理解码算力开销",
+      "段级奖励重分配提长推理训练效率2倍",
+      "首次系统量化LLM代理访问信号遵从能力",
+      "直接面向部署自滚动特性优化大模型泛化性",
+      "首次刻画长周期智能体有状态内存负载特征"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周点赞4657断层登顶开源榜",
+      "DeepSeek-V4-Pro累计下载量突破556万次",
+      "英伟达集中上线9款全品类AI大模型",
+      "Google开放Gemma4系列全权重供二次微调",
+      "MiniCPM5-1B性能远超同尺寸开源模型基准",
+      "JetBrains推出带显式思考链代码专属大模型"
+    ],
+    "ai-community": [
+      "Gemma4 12B可直接在消费级笔记本本地运行",
+      "一项零改造方案将Claude Code成本降62%",
+      "AI端点推理盗窃完整防御方案首次系统梳理",
+      "MCP被称为AI集成领域的通用USB-C协议",
+      "MCP服务未公开攻击面安全审计指南出炉",
+      "微软自研MAI-Thinking-1推理模型细节解析"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI CLI tools tracked in 2026-06-06 community digest",
+      "Full ecosystem converges on MCP interoperability as shared core standard",
+      "All teams shifting to native single-binary releases to cut runtime overhead",
+      "Top pain points: hangs, unpredictable token cost, TUI workflow conflicts",
+      "8 competing products cover big vendor and independent open source options",
+      "New listings include Kimi Code CLI, Qwen Code, DeepSeek TUI"
+    ],
+    "ai-agents": [
+      "OpenClaw logs 473 updated issues, 500 updated PRs in 24h window",
+      "25% combined closure rate signals strong active community participation",
+      "All recent work patches regressions from 2026.6.1 minor release",
+      "90% of critical new issues get triage response within 4 hours",
+      "No new official OpenClaw production releases published this period",
+      "13 tracked projects include PicoClaw, IronClaw, CoPaw variants"
+    ],
+    "ai-trending": [
+      "Viral token compression lib headroom gains 2503 new stars in a day",
+      "Nous Research launches Hermes Agent, hits 180K stars post-release",
+      "NVIDIA open sources Cosmos physical world model for robotics",
+      "Open Notebook LM clone gains 1142 new GitHub stars June 6",
+      "vLLM update boosts GPU utilization 35% for 1M+ long context workloads",
+      "Ecosystem converges on editor agent integrations over standalone deployments"
+    ],
+    "ai-web": [
+      "Anthropic drops 14 new posts, no new content from OpenAI",
+      "New Autoencoder converts LLM internal activations to readable text",
+      "Claude Code autonomous run times doubled to 45 minutes in 3 months",
+      "Anthropic publishes first proof of emergent reward hacking misalignment",
+      "80% Claude task speedup projected for 1.8% US labor productivity boost",
+      "New research fine-tunes Claude for experimental chemistry workflows"
+    ],
+    "ai-hn": [
+      "Half top 10 AI Hacker News threads feature Anthropic's Claude",
+      "Community debates productivity and reliability of integrated code AI tools",
+      "Discussions cover global AI governance and US AI firm equity stakes",
+      "New benchmark compares MLX vs Llama.cpp for Gemma 4 on M1 16GB",
+      "Top conversations focus on real AI outcomes, no new model launch hype",
+      "Anthropic's 'Making Claude a Chemist' post is featured in top threads"
+    ],
+    "ai-arxiv": [
+      "New PC Layer module stabilizes LLM pre-training with accuracy gains",
+      "DoPr optimization targets test-time performance over validation loss",
+      "50 new submissions solve key production LLM and agent bottlenecks",
+      "New techniques cut inference overhead for ultra-long context workloads",
+      "New frameworks advance verified formal reasoning for theorem proving",
+      "Research covers radiology to low-resource language preservation use cases"
+    ],
+    "ai-hf": [
+      "DeepSeek V4 Pro tops trending with 4657 weekly likes on Hugging Face",
+      "Total DeepSeek V4 line downloads exceed 9 million to date",
+      "DeepSeek V4 Flash delivers 3x higher inference throughput for production",
+      "NVIDIA drops 7 new models covering visual grounding, Cosmos 3, Nemotron 3",
+      "Qwen 3.6 variants lead high download rankings on Hugging Face hub",
+      "SulphurAI open source text-to-video model hits top 5 weekly most-liked"
+    ],
+    "ai-community": [
+      "MCP dubbed 'USB-C for AI' is fast trending across dev communities",
+      "New deep dives cover MCP use cases, security and complexity debates",
+      "Developers explore new Gemma 4 12B, Microsoft MAI-Thinking-1 models",
+      "New post details untested edge gaps in current AI agent test frameworks",
+      "Communities skip 'AI replaces devs' hype, focus on production pain points",
+      "No viral unsubstantiated hot posts gain traction on Dev.to and Lobste.rs"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code推送两个v2.1.16x正式迭代版本",
+      "OpenAI Codex发布2个rust-v0.138.0 alpha预览版",
+      "Qwen Code推送v0.17.1预览版启动OOM修复",
+      "MCP成为AI CLI全行业共识扩展标准",
+      "Kimi Code曝Windows平台Web端功能阻塞Bug",
+      "头部工具集中修复Agent挂死越权共性问题"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.5-beta.1测试版本",
+      "QQBot通道自动剥离<thinking>推理内容",
+      "P1级吞输入Bug #67035正式闭环",
+      "存量Issue闭环率48.7%创近30天新高",
+      "v2026.6稳定版适配进度超70%",
+      "后续2-3天将迎来集中版本更新"
+    ],
+    "ai-trending": [
+      "Agent-Reach国产爬取工具单日新增700星",
+      "CopilotKit全栈框架今日新增613星",
+      "开源记忆系统MemPalace性能超同类30%",
+      "superpowers单日增1008星登增速榜首",
+      "Whisper v3支持200+方言实时转写",
+      "vLLM可调度10万级并发推理请求"
+    ],
+    "ai-web": [
+      "Anthropic公开Agent Containment风控框架",
+      "Claude Mythos因防护不达标推迟发布",
+      "工程手段锁定Agent最大破坏损失上限",
+      "安全优先级提至与模型研发同等高度",
+      "企业接入Claude可省沙箱改造成本",
+      "首次公开生产级AGI安全运维实践"
+    ],
+    "ai-hn": [
+      "标普500拒纳入未盈利AI巨头OpenAI",
+      "实测大模型长上下文记忆错误率达95%",
+      "AI研发通用新冠疫苗通过一期临床",
+      "开发者分享限制编码Agent权限经验",
+      "论文反驳过度赋予大模型人类意识",
+      "Claude单轮修复41TB BTRFS硬盘故障"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周点赞4679登顶HF全榜",
+      "总下载量突破550万成本周最热模型",
+      "英伟达一周发布11款全栈开源模型",
+      "文生视频模型Sulphur-2-base下载破170万",
+      "DeepSeek-V4-Flash推理提速3倍适配端侧",
+      "英伟达优化版Qwen3.6下载量破百万"
+    ],
+    "ai-community": [
+      "百万AI系统误判致企业损失420万美元",
+      "开源编码工具性能超越闭源前沿模型",
+      "斯坦福数据证AI编码难完全替代人力",
+      "曝AI生成代码存常规lint漏检漏洞",
+      "开发者热议AI蠕虫新型安全议题",
+      "生产级Agent与Demo三大判定标准公开"
+    ]
+  },
+  "en": {}
+}

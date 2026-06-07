@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.168可靠性补丁",
+      "Qwen Code推出v0.17.1-nightly夜间版",
+      "AI CLI赛道进入生产可用+生态标准化阶段",
+      "MCP/ACP成跨工具全行业事实标准",
+      "头部工具集中攻坚长会话可靠性建设",
+      "国产工具本地化部署优势持续放大"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.5-beta.2无破坏性更新",
+      "OpenClaw飞书渠道可用性提升至99.9%",
+      "修复QQBot推理思维链内容泄露问题",
+      "2026 Q2 Milestone完成度达72%",
+      "修复OpenAI Codex运行时路由错误",
+      "新增Android客户端三档主题模式选择"
+    ],
+    "ai-trending": [
+      "Turbovec单日涨星1533登顶AI热榜",
+      "Hermes Agent单日新增Star达1117",
+      "taste-skill单日涨星1104",
+      "last30days-skill单日涨星1097",
+      "Dify 7日活跃度位列全AI生态第一",
+      "browser-use总星数达97632"
+    ],
+    "ai-hn": [
+      "热议AI对开发者职业冲击相关话题",
+      "Linux用户请愿推出官方桌面版Claude",
+      "开发者用Claude做设计时长超Figma",
+      "开源学习工具Lathe登上Show HN获高赞",
+      "研究指出MoE易通过专家选择泄露隐私",
+      "曝OpenAI/Anthropic收100美元成本超1000"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周下载超551万登顶榜首",
+      "DeepSeek两款模型合计下载近900万",
+      "英伟达发布550B参数超大规模Nemotron基座",
+      "MiniCPM5-1B性能领先同尺寸竞品30%",
+      "JetBrains推出IDE专属思考型代码生成LLM",
+      "LiquidAI MoE模型推理速度达同尺寸4倍"
+    ],
+    "ai-community": [
+      "全AI自动化测试3天造成280万美元损失",
+      "拆解AI带来的8倍生产力神话误区",
+      "提出多代理工作流执行安全架构方案",
+      "明确AI代理合规级审计轨迹建设标准",
+      "总结生产级RAG混合搜索落地优化路径",
+      "源码实锤Claude Code并非递归Agent"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9+ leading AI CLI developer tools tracked in 2026-06-08 digest",
+      "Ecosystem enters post-prototyping production-grade maturity mid-2026",
+      "2 24h new releases: Claude Code patch, Qwen Code nightly pre-release",
+      "Vendors prioritize security, reliability for enterprise production adoption",
+      "Self-hosted air-gapped CLI deployments top demand for regulated dev teams",
+      "Teams prioritize cross-platform support for Linux, WSL2, FreeBSD and Bun runtime"
+    ],
+    "ai-agents": [
+      "13 total open source AI agent projects tracked in 2026-06-08 digest",
+      "OpenClaw recorded 299 updated issues and 500 PRs in 24h window",
+      "New OpenClaw v2026.6.5-beta.2 pre-release ships for 2026.6 stable RC",
+      "OpenClaw QQBot auto-strips raw <thinking> reasoning tags before message delivery",
+      "Active work fixes cross-channel delivery and SQLite session migration bugs",
+      "126 merged PRs show fast turnaround for OpenClaw production pain points"
+    ],
+    "ai-trending": [
+      "4 new AI projects earned over 1000 GitHub stars on 2026-06-08",
+      "Rust vector index turbovec gains 1533 stars, cuts RAG memory overhead 75%",
+      "Nous Research hermes-agent earns 1117 stars on public launch day",
+      "llama.cpp gains 197 stars, adds 128k context small model optimizations",
+      "New Rust agent runtime goose gains 338 stars for full system-level operation",
+      "Ecosystem shifts focus from base models to agent builder usability solutions"
+    ],
+    "ai-hn": [
+      "Viral SWE career erosion LLM essay tops 2026-06-08 HN AI threads",
+      "Users demand official Claude Desktop Linux release from Anthropic",
+      "Satirical paper debunks flawed LLM human-like cognition benchmarks",
+      "Paper proves Age of Empires II meets same LLM cognition criteria",
+      "New research identifies private data leak risk in MoE model routing patterns",
+      "HN AI discussions focus on real tech worker impacts, not AGI hype"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops HF trending with 4696 weekly likes, 5.5M+ downloads",
+      "DeepSeek-V4-Flash delivers 3x faster inference at near-full accuracy",
+      "Nvidia occupies 10 of 30 total trending HF model positions",
+      "Sulphur-2-base TTV model hits 1.7M downloads, leads fastest growing category",
+      "Google Gemma 4 family variants take 4 spots on HF trending leaderboard",
+      "1B-parameter MiniCPM5-1B earns 779 likes for edge use cases"
+    ],
+    "ai-community": [
+      "Viral tale details $2.8M loss after AI fully replaced manual software testing",
+      "Senior devs push back on overhyped 8x AI developer productivity claims",
+      "Communities debate AoE II paper debunking LLM human-like traits",
+      "New architecture pattern resolves multi-agent workflow execution safety crisis",
+      "Anthropic's fast monthly model releases break stable production AI fleets",
+      "Teams prioritize solving agent audit trail and safety gaps for production use"
+    ]
+  }
+}

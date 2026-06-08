@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.169正式版",
+      "OpenAI Codex推出rust-v0.138.0正式版",
+      "Pi发布v0.79.0正式版迭代更新",
+      "国产AI CLI迭代速度部分超越海外头部",
+      "赛道转向Agent可控性工程化比拼",
+      "Qwen Code发布v0.17.1夜间开发版"
+    ],
+    "ai-agents": [
+      "OpenClaw发布2个无破坏性Beta迭代版",
+      "过滤思考标签避免推理内容泄露群聊",
+      "4个超1月高频用户Bug正式闭环",
+      "代码运行时升级降恶意代码执行风险",
+      "CI依赖升级运维安全性提升37%",
+      "自托管用户适配需求占比明显提升"
+    ],
+    "ai-trending": [
+      "last30days-skill单日涨3558星居首位",
+      "turbovec获1730星成端侧检索热点",
+      "Agent-Reach零成本爬取全平台内容",
+      "claude-howto降Code Agent入门门槛",
+      "谷歌推Agent技能开源库促标准化",
+      "TOP2 AI项目单日增星均破1700"
+    ],
+    "ai-web": [
+      "OpenAI疑似提交S-1进入IPO收尾阶段",
+      "Anthropic发布科研智能体专项研究",
+      "工具层加持科研Agent准确率近100%",
+      "提出生物数据生态适配智能体方向",
+      "头部厂商竞争转向落地资本化",
+      "Anthropic绕开参数竞赛攻坚高壁垒赛道"
+    ],
+    "ai-hn": [
+      "OpenAI提交S-1筹备IPO登顶HN热度",
+      "Anthropic官宣次日发Claude Fable 5",
+      "发布AI安全专项Glasswing最新进展",
+      "YC推出浏览器自动化工具解决脚本失效",
+      "Rayline分流Claude子Agent至低成本模型",
+      "推AI编码环境侧重代码质量校验"
+    ],
+    "ai-community": [
+      "大厂打包工程师经验做AI裁员出事返聘",
+      "2026最新pgvector RAG全栈TS教程放出",
+      "观点指出Prompt工程已死系统工程是未来",
+      "开源AI Avatar支持VS Code及Chrome扩展",
+      "展示非洲AI农业应用全落地路径",
+      "社区热议LLM底层原理反对AI玄学"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI coding CLI tools tracked in 2026-06-09 community digest",
+      "Vendors prioritize critical vulnerability patches after recent exploit waves",
+      "Market splits between big-tech closed-source and independent open source CLI tools",
+      "MCP and ACP standards eliminate duplicate custom integration work for teams",
+      "Featured tools include Claude Code, OpenAI Codex, GitHub Copilot CLI",
+      "Cross-tool comparison report for dev teams evaluating coding assistants launched"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem tracks 13 projects, 500 issues, 493 PRs on 2026-06-09",
+      "OpenClaw 24h community contribution up 32% vs prior 7-day average",
+      "Two 2026.6.x beta releases shipped for IM UX and MCP parsing fixes",
+      "53 issues closed and 159 PRs merged over 24h for 2026.6.x RC cycle",
+      "No critical zero-day disclosures reported, regressions limited to pre-releases",
+      "Ecosystem projects include NanoBot, Hermes Agent, PicoClaw, IronClaw"
+    ],
+    "ai-trending": [
+      "7 of top 10 GitHub trending AI repos are agent ecosystem projects on 2026-06-09",
+      "last30days-skill gained 3558 new stars, Q2 2026 new agent skill record",
+      "Google launched public google/skills repo of native agent skills for its cloud products",
+      "turbovec gained 1730 new stars, 12x faster vector search for edge agents",
+      "CopilotKit hit 34.1k total stars, launched new AG-UI generative UI protocol",
+      "Community shifts focus away from larger LLM parameters to agent tooling"
+    ],
+    "ai-web": [
+      "4 new public assets released by Anthropic and OpenAI on 2026-06-08",
+      "Anthropic published agents-in-biology research resolving legacy data bottleneck",
+      "OpenAI added 3 sitemap pages signaling upcoming IPO and governance announcements",
+      "Anthropic research guides biotech teams building reliable scientific AI agents",
+      "Top AI providers shift focus to regulated vertical agent deployment use cases",
+      "OpenAI upcoming disclosures cover filings, governance and economic research"
+    ],
+    "ai-hn": [
+      "Top HN story 2026-06-09 is OpenAI's confirmed confidential S-1 IPO submission",
+      "Cognition AI released FrontierCode model for end-to-end production software builds",
+      "Anthropic released research quantifying LLM impact on N-day exploit timelines",
+      "Anthropic teased upcoming flagship Claude Fable 5 launch in latest updates",
+      "HN AI discussions focus on real-world practical implications, no ungrounded hype",
+      "FrontierCode tests ability to eliminate tedious manual engineering boilerplate work"
+    ],
+    "ai-community": [
+      "Viral Dev.to story: 12 years of engineer's work packaged into AI skill before layoff",
+      "AI skill crashed, firm offered engineer 5x old salary to resolve the issue",
+      "Devs debate choosing Claude Code extensions by prioritizing lightest options first",
+      "Lobste.rs hosts popular paper challenging unproven LLM anthropomorphism claims",
+      "Dev conversations center on production AI agent safety and inference cost auditing",
+      "Consensus grows untested off-the-shelf LLMs carry major unmitigated operational risk"
+    ]
+  }
+}

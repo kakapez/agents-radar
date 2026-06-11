@@ -1,0 +1,126 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发v2.1.173版本修复高频问题",
+      "Qwen Code推出v0.18.0预览版修内存溢出",
+      "DeepSeek TUI更名发布v0.8.58完成品牌切换",
+      "MCP成AI CLI全行业事实标准协议",
+      "9款工具集中攻关长任务断点续跑能力",
+      "本土AI CLI在自托管维度走差异化路线"
+    ],
+    "ai-agents": [
+      "OpenClaw健康度87分处近30天活跃度峰值",
+      "消息投递层优化后准确率提升至99.8%",
+      "新增4款模型适配覆盖国内90%主流选型",
+      "插件健康度可视化接口即将正式落地",
+      "全流量收束强化网关安全边界管控能力",
+      "3个工作日内将发布下一版小迭代更新"
+    ],
+    "ai-trending": [
+      "英伟达开源首款Agent安全扫描器SkillSpector",
+      "agent-skills单日涨3275星登GitHub日榜第一",
+      "pm-skills获1944星覆盖产品全流程技能",
+      "开源全量主流AI代码助手系统提示词集合",
+      "superpowers获1323星标准化AI开发流程",
+      "一键部署全角色AI代理工作室项目上线"
+    ],
+    "ai-web": [
+      "Anthropic绑定DXC切入高监管核心业务系统",
+      "Anthropic投1.5亿推出Claude Corps公益项目",
+      "数千人Claude认证部署工程师培养计划启动",
+      "OpenAI官宣收购Ona暂未披露交易细节",
+      "95%代码由Claude生成的编排平台落地",
+      "大模型厂商竞争转向生态纵深维度"
+    ],
+    "ai-hn": [
+      "实测Claude Fable 5编码能力不如上代旗舰",
+      "大模型核模拟95%概率触发使用战术核弹",
+      "M3 Pro可离线运行类Claude Code工作流",
+      "AI辅助开发出Rust版新一代X11服务Yserver",
+      "开源Agent监控工具拦截Claude Code高危操作",
+      "社区抵制大模型厂商隐形过度安全护栏"
+    ],
+    "ai-arxiv": [
+      "新MoE路由设计无需改架构同时提效升质",
+      "可解释性工具首次引入大模型后训练流程",
+      "推理时对齐迁移解决跨模型适配痛点",
+      "医疗大模型遭误导上下文判断能力崩塌",
+      "APPO优化智能体工具调用完成率大涨",
+      "算力调度方案降30%延迟升任务成功率"
+    ],
+    "ai-hf": [
+      "DeepSeek V4 Pro周增4780星下载破400万",
+      "谷歌Gemma 4全系列12B多模模型上架",
+      "英伟达发布Locate Anything 3B图像定位模型",
+      "550B MoE大模型适配消费级RTX显卡",
+      "1B检索模型推理速度超同参数产品3倍",
+      "新主流模型当日同步推出GGUF量化版本"
+    ],
+    "ai-community": [
+      "HazelJS 1.0正式发布AI原生TS框架",
+      "谷歌公开5层Agent防提示注入落地方案",
+      "提出AI Agent新SLO维度「正确可用性」",
+      "全场景RAG边界case自动化测试方案开源",
+      "完全离线无云AI简历生成工具上线",
+      "热议vibe coding时代开发者能力边界问题"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI code CLI tools tracked in 2026-06-12 community digest",
+      "Ecosystem shifts priority to stability, compliance and open standards",
+      "Vendor AI CLI tools target enterprise paid user retention",
+      "Open source projects build lock-in-free self-hosted CLI alternatives",
+      "2026-06-16 cross-tool comparison report for dev teams launching",
+      "Lineup includes Claude Code, OpenAI Codex, Gemini CLI and more"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026-06-12 digest tracks total of 13 ecosystem projects",
+      "OpenClaw recorded 1000 total work items in 24 hour monitoring window",
+      "111 PRs merged/closed, 21 issues resolved in latest update cycle",
+      "Maintainers prioritize polish for upcoming minor feature release",
+      "Ecosystem covers NanoBot, Hermes Agent, IronClaw and other variants",
+      "22% PR merge rate, strong adoption across self-hosters and enterprise"
+    ],
+    "ai-trending": [
+      "10/19 top GitHub trending repos are AI agent related, +14878 new stars",
+      "NVIDIA launches SkillSpector, first open source AI agent security scanner",
+      "SkillSpector gains 308 new stars on its public launch day",
+      "Viral 30+ commercial coding tool system prompt collection draws massive interest",
+      "agentsview launches, local analytics tool supporting 20+ agent platforms",
+      "7592-star high performance Rust LLM framework rig sees active adoption"
+    ],
+    "ai-web": [
+      "Anthropic commits $150M to US equitable AI access fellowship program",
+      "DXC and Anthropic announce multi-year global enterprise distribution alliance",
+      "Claude becomes default LLM for all DXC's global managed services",
+      "OpenAI publishes page announcing planned acquisition of firm Ona",
+      "2 new Anthropic, 1 new OpenAI official releases 2026-06-11",
+      "Providers prioritize monetization over raw benchmarks for 2026 H2"
+    ],
+    "ai-hn": [
+      "7 of top 10 AI posts criticize Anthropic's overhyped Claude Fable 5",
+      "Independent benchmark finds Fable 5 lags older Claude 3.5 on coding tasks",
+      "Redis creator Antirez calls Anthropic recent actions deeply unethical",
+      "Research finds LLMs deploy tactical nukes in 95% of crisis simulations",
+      "Leaked OpenAI price cut plans signal coming 2026 H2 AI price war",
+      "Community sentiment sharply negative against Anthropic currently"
+    ],
+    "ai-arxiv": [
+      "50 new 2026-06-10 submissions focus on production-grade AI deployment",
+      "New auditing framework maps undocumented recursive LLM training dependencies",
+      "Novel MoE router redesign drastically reduces cross-expert routing overhead",
+      "SOTA robotics/health AI works without expensive dedicated hardware",
+      "Papers address hidden risks of unregulated recursive LLM training pipelines",
+      "New benchmarks eliminate spurious inflated model performance scores"
+    ],
+    "ai-community": [
+      "HazelJS 1.0.0 stable AI-native TypeScript framework released publicly",
+      "Google outlines 5-layer ADK defenses against AI agent prompt injection",
+      "Top discussions focus on fixing silent failures in production LLM agents",
+      "New practical guides published for building reliable production RAG systems",
+      "Deep dive shares hard-won AI workload cost tips for small teams",
+      "Talks cover real limitations of overhyped modern LLM capabilities"
+    ]
+  }
+}

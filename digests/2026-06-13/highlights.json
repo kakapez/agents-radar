@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code当日连发3个正式小版本迭代",
+      "MCP成AI CLI全行业通用事实标准",
+      "全部8款工具推进长会话Agent稳定性优化",
+      "OpenAI Codex推出4个Rust核心层alpha预览版",
+      "6款头部工具集中加固安全与权限体系",
+      "AI CLI赛道全面进入生产级落地攻坚期"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.6全链路安全加固正式版",
+      "封堵13类安全场景历史绕过漏洞",
+      "6月迭代目标完成度约85%进度符合预期",
+      "修复Codex SSE流异常中止误报408超时问题",
+      "飞书渠道@机器人触发错误问题完全修复",
+      "沙箱读写权限技能文件物化挂载特性上线"
+    ],
+    "ai-trending": [
+      "agent-skills项目单日新增2660星登顶增速榜",
+      "4个Agent方向项目单日新增Star破千",
+      "superpowers项目单日揽星1276热度暴涨",
+      "ollama支持Kimi-K2.6等主流模型一键部署",
+      "LMCache大幅提升LLM推理吞吐量降成本",
+      "开源医疗AI项目openmed单日增星517"
+    ],
+    "ai-web": [
+      "Anthropic官宣与全球IT服务商TCS达成战略合作",
+      "Claude将落地56国5万TCS内部员工",
+      "发布5.2万样本全美AI公众态度调研结果",
+      "超70%跨党派民众支持政府介入AI监管",
+      "披露Claude化学领域专项能力升级计划",
+      "OpenAI当期无任何新增公开内容发布"
+    ],
+    "ai-hn": [
+      "开发者用Claude Fable 5体感开发出MMO游戏",
+      "《World of ClaudeCraft》讨论热度达75分",
+      "首份AI Agent线束工程调研聚焦98%边缘case",
+      "批量删Claude对话脚本获50星解用户痛点",
+      "Nature证实通用LLM性能超垂直临床AI",
+      "大模型幻觉底层逻辑研究登上Nature子刊"
+    ],
+    "ai-arxiv": [
+      "Operad代数理论首次引入大模型组合推理研究",
+      "提出无真值标签高效推理故障检测新方法",
+      "EvoArena框架解决动态Agent评测脱节痛点",
+      "HyperTool突破工具增强Agent单步调用范式",
+      "不确定性感知方案缓解长文档RAG检索痛点",
+      "智能体原生知识编排架构全新公开"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro以4796周点赞断层登顶热榜",
+      "DeepSeek-V4-Pro累计下载量突破330万",
+      "英伟达发布550B参数工业级通用大模型",
+      "Google Gemma 4生态占近1/4热门席位",
+      "英伟达推出LocateAnything-3B端侧视觉模型",
+      "小米开源MiMo-V2.5-Pro原生适配Agent任务"
+    ],
+    "ai-community": [
+      "Claude Fable 5系列引发开发者广泛热议",
+      "分享Agent静默失败问题工程优化新思路",
+      "AWS官方Agent工具集解决MCP调用幻觉痛点",
+      "Flutter Agent技能定制优化方案公开",
+      "一线团队分享多Agent协作5个关键流程经验",
+      "开发者实测移动端跑本地LLM体验超桌面"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "2026 Q2 AI CLI tools evolve into full end-to-end agent workflow platforms",
+      "Vendors ship 3+ daily builds resolving new reasoning model teething issues",
+      "40% of popular open-source CLI fixes come from community contributions",
+      "All major CLI tools add native OpenAI-compatible endpoint support",
+      "Cross-vendor MCP ecosystem integration is top 2026 industry priority",
+      "9 leading AI CLI tools tracked including Claude Code, Gemini CLI"
+    ],
+    "ai-agents": [
+      "OpenClaw sees 2.7x average daily activity ahead of v2026.6 stable release",
+      "Two new security-focused OpenClaw releases shipped in last 24 hours",
+      "13 total projects tracked in 2026-06-13 OpenClaw ecosystem digest",
+      "OpenClaw is running active security hardening and stability sprint",
+      "Recent v2026.6 pre-release memory regressions are actively being patched",
+      "No unmitigated critical outages breaking OpenClaw core functionality"
+    ],
+    "ai-trending": [
+      "4 new agent repos net 5799 new stars, dominating GitHub AI trends",
+      "LMCache KV cache cuts inference latency for long-running agent workloads",
+      "Ollama adds native support for all major Chinese open-source frontier models",
+      "vLLM optimized for 10x higher concurrent enterprise agent session counts",
+      "Ecosystem shifts from generic frameworks to verified pre-built agent skill sets",
+      "Full production-grade end-to-end agent development stack is fully established"
+    ],
+    "ai-web": [
+      "Anthropic announces multi-year TCS partnership to bring Claude to regulated industries",
+      "Anthropic released 3 new content pieces, OpenAI has zero new updates",
+      "New Claude chemistry reasoning work targets high-stakes R&D use cases",
+      "Anthropic published first recurring public US AI governance sentiment survey",
+      "TCS deal unlocks Claude access for millions of users across 56 countries",
+      "Anthropic accelerates across enterprise, policy, vertical differentiation fronts"
+    ],
+    "ai-hn": [
+      "Most top HN AI discussions focus on new Claude Fable 5 coding model",
+      "ACM warns against unregulated 'vibe coding' skipping software engineering guardrails",
+      "Viral debate over universities ditching library books for AI research clusters",
+      "New Nature paper uses clinical models to classify LLM hallucination failure modes",
+      "Upcoming massive LLM inference price cuts spark wide industry debate",
+      "Study finds general LLMs outperform specialized AI on medical benchmarks"
+    ],
+    "ai-arxiv": [
+      "New operad theory framework detects LLM reasoning failures no reference needed",
+      "50 new papers heavily focused on solving long-standing LLM agent reliability gaps",
+      "First formal mathematical foundation for LLM compositional reasoning introduced",
+      "New standardized benchmarks fix fragmentation in agent performance evaluation",
+      "Multiple papers demonstrate closed-loop end-to-end automated research workflows",
+      "New designs move past naive RAG to production-grade verifiable agent systems"
+    ],
+    "ai-hf": [
+      "DeepSeek V4 Pro tops trending list with 4796 weekly likes, 3.3M downloads",
+      "9 separate Google Gemma 4 entries dominate Hugging Face trending this week",
+      "NVIDIA releases 550B flagship Nemotron model targeted at enterprise use cases",
+      "Multiple uncensored GGUF multimodal models exceed 2M total downloads",
+      "DeepSeek V4 Pro leads 2026 open benchmarks for reasoning and agent orchestration",
+      "Gemma 4 12B It is the reference for nearly all downstream community variants"
+    ],
+    "ai-community": [
+      "Developers widely discuss fixing hidden silent failures in production agents",
+      "AWS Agent Toolkit eliminates 90% of AWS API hallucinations for LLM agents",
+      "Non-deterministic testing patterns for inconsistent agent outputs shared widely",
+      "Debate sparks over paper claiming LLM human-like traits are logically inconsistent",
+      "Community discusses security risks of Claude 5 VS Code extension integrations",
+      "Post highlights gap between generic SLOs and correct output SLOs for agents"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI进入生产级能力比拼成熟期",
+      "OpenCode活跃Issues/PR今日各达50",
+      "DeepSeek TUI更名发布v0.8.59正式版",
+      "9款头部CLI攻坚MCP生态全链路兼容",
+      "6款主力CLI优先推进成本管控P0需求",
+      "国产CLI迭代适配形成差异化竞争优势"
+    ],
+    "ai-agents": [
+      "OpenClaw活跃度峰值发布2个Beta迭代版",
+      "项目所有P0级阻塞性故障已全部清零",
+      "v2026.6.7-beta.1优化多渠道投递可靠性",
+      "修复DeepSeek Prompt Cache失效成本突增问题",
+      "升级macOS客户端修复3个依赖安全漏洞",
+      "6月核心迭代计划整体完成率达42%"
+    ],
+    "ai-trending": [
+      "英伟达开源SkillSpector涨星809做Agent安全扫描",
+      "agent-skills项目单日新增Star1507登热榜第一",
+      "吴恩达新作多模型统一接口SDK冲上开源热榜",
+      "AI生态竞争重心转向Agent工程化工具链补齐",
+      "superpowers项目日增931星登全品类热榜第二",
+      "LMCache实现大模型推理吞吐量2-3倍提升"
+    ],
+    "ai-web": [
+      "Claude Fable 5上线3天被美政府强制下架",
+      "Anthropic官宣两款新旗舰全量暂停访问",
+      "美政府禁止所有外籍人员访问Fable 5模型",
+      "Anthropic称越狱风险不足以支撑全量断服",
+      "Claude Opus4.8及以下存量服务完全不受影响",
+      "OpenAI全力冲刺对标Fable5的下一代旗舰"
+    ],
+    "ai-hn": [
+      "Anthropic下架帖登顶HN获3045分2207条评论",
+      "智源发布GLM5.2原生支持1M超长上下文",
+      "实测Claude Fable5规划能力优于GPT-5.5",
+      "AgentNexus推出按服务边界拆分Agent新范式",
+      "向量数据库mmap踩坑经典旧文翻红热议",
+      "开发者普遍不满政策直接干预商业AI服务"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro获4812赞断层登顶HF周榜",
+      "Gemma4全谱系7款衍生模型进入TOP30",
+      "英伟达开源LocateAnything-3B图像定位模型",
+      "小米推出代理场景优化FP4量化大模型",
+      "GGUF量化模型下载量远超原生权重版本",
+      "DiffusionGemma-26B多模态模型获701点赞"
+    ],
+    "ai-community": [
+      "开发者实测低价模型调用成本反高8.6倍",
+      "skillscore CLI可给Agent技能文件自动评分",
+      "社区热议停用AI编码工具一周体验反思",
+      "用真实大模型验证MCP服务可避线上故障",
+      "开发者警惕AI代码插件本地数据泄露风险",
+      "Fable5下架引发AI监管边界广泛讨论"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI CLI tools tracked in 2026-06-14 community digest",
+      "AI code CLI ecosystem shifts to prioritize production-grade reliability",
+      "Most CLI tools converge on MCP as universal integration standard",
+      "Market splits between big-tech mass offerings and independent community tools",
+      "24h dev work prioritizes bug fixes over new experimental features",
+      "Tracked top tools include Claude Code, OpenAI Codex, Gemini CLI"
+    ],
+    "ai-agents": [
+      "13 projects covered in 2026-06-14 OpenClaw ecosystem digest",
+      "OpenClaw recorded 500 updated issues and 500 PRs in 24h",
+      "27.2% of recent updated OpenClaw issues were closed in the window",
+      "31.8% of updated OpenClaw PRs merged for fast triage throughput",
+      "Two new OpenClaw beta releases shipped with no breaking user changes",
+      "Betas add incremental Telegram and WhatsApp integration improvements"
+    ],
+    "ai-trending": [
+      "7 of 14 GitHub trending repos are AI coding agent related today",
+      "Nvidia SkillSpector agent scanner earned 809 new daily stars on launch",
+      "Addy Osmani's agent-skills repo hit 1507 new 24h stars on launch",
+      "'superpowers' agentic dev methodology gained 931 new stars today",
+      "Andrew Ng's unified LLM interface saw strong community traction",
+      "LMCache KV optimization layer gained fast widespread user adoption"
+    ],
+    "ai-web": [
+      "Anthropic published 2 new statements post its flagship model suspension",
+      "US rules force Anthropic to block Fable 5/Mythos 5 for all non-US citizens",
+      "Ban applies even to non-US citizen Anthropic internal employees",
+      "Anthropic found cited Fable 5 jailbreak only had minor known vulnerabilities",
+      "First US SOTA AI model forced pulled under federal national security rules",
+      "Event marks major regulatory inflection point for frontier AI industry"
+    ],
+    "ai-hn": [
+      "Anthropic Fable 5 ban drew Hacker News' largest AI thread in months",
+      "Reports claim Amazon CEO lobbied officials to trigger Anthropic crackdown",
+      "Zhipu AI GLM 5.2 1M-context release earned 237 upvotes on HN",
+      "GLM 5.2 is widely discussed as alternative for locked out Claude users",
+      "Pre-ban Fable 5 vs GPT-5.5 benchmark re-surges post shutdown",
+      "Users shared demos of Fable 5's generative game and top use cases"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops HF trending with 4812 likes, 3.25M downloads",
+      "11 of top 30 trending HF models run on Google's Gemma 4 architecture",
+      "Gemma 4-12B base model supports full any-to-any modality processing",
+      "Top vendors launched new open-weight multimodal, speech, code models",
+      "GGUF quantized models are fastest growing category on Hugging Face",
+      "Uncensored community fine-tunes attract millions of hobbyist downloads"
+    ],
+    "ai-community": [
+      "3-day public Claude Fable 5 availability window sparks widespread debate",
+      "Dev shares anecdote of cheap LLM tier costing 8.6x more than premium",
+      "New 'skillscore' CLI lints and scores agent SKILL.md files 0-100 offline",
+      "Community debates structured AI coding vs unplanned 'vibe coding'",
+      "Devs share revocation-proof open source alternatives post Fable 5 ban",
+      "Digest sources cover 30 Dev.to articles and 12 Lobste.rs stories"
+    ]
+  }
+}

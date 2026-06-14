@@ -1,0 +1,94 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenAI Codex发布Rust重写预览版rust-v0.140.0-alpha.19",
+      "OpenCode发布正式版v1.17.7，当日合并20条PR",
+      "CodeWhale完成更名同步发布正式版v0.8.60",
+      "全9款AI CLI集中修复本地运行安全漏洞",
+      "6款头部工具集体推进MCP生态全链路兼容",
+      "5款工具落地多服务商模型灵活调度能力"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.8-beta.1预览版无破坏性变更",
+      "OpenClaw正式适配Gemini 3.1-flash-lite接口",
+      "OpenClaw修复Slack长回复拆分配置失效bug",
+      "OpenClaw闭环飞书群聊升级后零回复问题",
+      "OpenClaw新增17名贡献者，高优问题闭环率62%",
+      "Telegram渠道新增原生富文本渲染推送能力"
+    ],
+    "ai-trending": [
+      "英伟达SkillSpector单日涨962星登AI涨星榜第一",
+      "吴恩达aisuite SDK单日涨290星登GitHub Trending",
+      "vLLM总星82849，支持端侧+分布式集群部署",
+      "LangChain全量适配MCP协议降低Agent开发门槛",
+      "AutoGPT总星184939，支持全自主长周期运行",
+      "7天活跃AI项目中Agent生态占比超40%"
+    ],
+    "ai-hn": [
+      "HN曝里约“自研大模型”实为开源模型合并产物",
+      "社区热议美国对Anthropic无差别出口管制政策",
+      "用户反馈Claude过度对齐反噬实际使用体验",
+      "研究证明大模型能力无法靠Prompt技巧突破",
+      "开源工具实现Issue直接生成可合并PR全流程",
+      "Anthropic公开Claude化学领域能力注入研究成果"
+    ],
+    "ai-hf": [
+      "DeepSeek V4-Pro周点赞近4900登HF周榜第一",
+      "DeepSeek V4-Pro下载量破300万成顶流开源大模型",
+      "谷歌Gemma4系列7款产品登榜破百万下载",
+      "Qwen3.6系列全版本总下载量突破600万",
+      "Cohere推出轻量化代码MoE基座North-Mini-Code-1.0",
+      "HF本周总互动量同比上周提升42%"
+    ],
+    "ai-community": [
+      "开发者实测Claude Code+Codex高效分工策略",
+      "开源免费替代版Sourcegraph助搭私有代码检索",
+      "Mac mini跑本地LLM替代订阅降AI使用成本",
+      "开发者总结5类生产环境专属Agent隐性故障",
+      "开源AI系统设计陪练工具零成本搭建备考场景",
+      "8个AI Agent沙盒模拟社会演化出现协作冲突"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI dev CLI tools featured in 2026-06-15 community digest",
+      "Ecosystem now prioritizes production reliability and enterprise compliance",
+      "All tracked projects focus on hardening MCP integrations this window",
+      "Multi-provider support erodes historic AI coding workflow vendor lock-in",
+      "OpenAI Codex rolled out new Rust runtime in the 24h tracking period",
+      "No paradigm-shifting new major features launched across the segment"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.6 pre-release launched for 2026.6 development cycle",
+      "13 total AI agent projects covered in the 2026-06-15 ecosystem digest",
+      "500 updated issues and 500 PRs recorded across the 24h window",
+      "52 issues closed, 24 PRs merged for core OpenClaw project development",
+      "Fixes deployed for post-2026.5.x OpenClaw release regressions",
+      "Work completed to improve Telegram/Slack/WhatsApp delivery reliability"
+    ],
+    "ai-trending": [
+      "NVIDIA SkillSpector gained 962 new stars, top trending AI repo today",
+      "Andrew Ng's aisuite gained 290 new stars for unified LLM provider access",
+      "SkillSpector scans AI agents for hidden vulnerabilities before production deploy",
+      "Zero-dependency aisuite supports 20+ generative AI providers out of the box",
+      "Agent infrastructure and privacy RAG are top 7-day high momentum categories",
+      "Niche financial markets foundation model Kronos joined trending GitHub list"
+    ],
+    "ai-hn": [
+      "Top post exposes Rio public Nex-N2 LLM as trivial unmodified open source merge",
+      "251-score HN thread calls Brazilian sovereign AI project wasted public PR stunt",
+      "Users report recent Claude 3.5/4 models are far more unhelpful, confrontational",
+      "Anthropic shared research on fine-tuning Claude for organic chemistry tasks",
+      "Widespread discussions cover new US export controls targeting Anthropic models",
+      "Community distrust in unvetted sovereign AI projects surges across Hacker News"
+    ],
+    "ai-community": [
+      "Claude officially overtook ChatGPT in US enterprise AI business spend",
+      "Dev.to post shares proven low-friction Claude Code + Codex side-by-side workflow",
+      "Dev replaced 3+ paid cloud AI subscriptions with local LLM running on Mac Mini",
+      "Deep dives detail why building production-grade AI agents is far harder than hype",
+      "Lobste.rs debate calls out unpublicized flaws in big tech private inference",
+      "Open source self-hosted AI dev tooling sees massive new community adoption"
+    ]
+  }
+}

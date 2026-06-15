@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code正式发布v2.1.178生产版本",
+      "OpenAI Codex更新rust-v0.140.0加3个alpha版",
+      "全生态攻坚多代理长任务生产级稳定性",
+      "国内AI CLI工具海外代差缩小至半年以内",
+      "Qwen Code同步发CLI+桌面端双新版本",
+      "全生态围绕MCP协议推进统一扩展标准"
+    ],
+    "ai-agents": [
+      "OpenClaw当日500条Issue/PR更新活跃度高位",
+      "修复多模型降级场景无限钉死遗留bug",
+      "社区呼吁官方提供Linux/Windows原生桌面端",
+      "外部贡献占比超60%向v2026.6.x推进",
+      "适配通义千问DashScope视觉模型兼容",
+      "闭环定时任务心跳不刷新核心回归bug"
+    ],
+    "ai-trending": [
+      "英伟达SkillSpector单日涨星1079登顶AI热榜",
+      "Agent-Reach零API费爬20+平台日增星超千",
+      "Ollama总星174k支持几乎所有主流开源模型",
+      "开源Cua跨端沙箱降低桌面Agent开发门槛",
+      "Dify 145k星成全球热门低代码Agent平台",
+      "AutoGPT总星184k形成完整Agent工具生态"
+    ],
+    "ai-web": [
+      "Anthropic定位LLM内专属情绪概念神经元模式",
+      "Anthropic攻坚化学场景瞄准医药高价值赛道",
+      "推翻LLM情绪反应仅为语料模拟的认知",
+      "OpenAI上线官方合作伙伴网络专属页面",
+      "Anthropic走底层可控+垂直场景窄深路线",
+      "下半年大模型进入可控落地生态新阶段"
+    ],
+    "ai-hn": [
+      "开发者晒本地大模型替代云端GPT实测经验",
+      "发布Claude Code编码助手可观测性工具",
+      "AWS WAF新增向AI爬虫内容收费能力",
+      "调侃LLM全面替代所有岗位的夸张叙事",
+      "披露Anthropic Fable 5推理轨迹训练法",
+      "实证指出大众普遍低估AI效率提升幅度"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro单周获4861赞下载近300万",
+      "Gemma-4系列6款模型集体冲榜HuggingFaceTOP30",
+      "397B参数Rio-3.5-Open主打全场景商用开放",
+      "GGUF端侧模型占热门榜单比例近40%",
+      "微软发布FastContext轻量化长上下文模型",
+      "Nex-N2-Pro原生支持多模态Agent工具调用"
+    ],
+    "ai-community": [
+      "Anthropic Fable 5下线用户复盘生产切换故障",
+      "MCP全链路生产落地实操内容密集产出",
+      "Gemma 4微调古朝鲜语古籍翻译全教程",
+      "曝光Gemini计费不透明易致用户超支问题",
+      "AI审核工具Sloan误判原创内容引热议",
+      "开源MCP给Claude接入全浏览记忆架构方案"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 tracked AI dev CLI tools now use MCP as baseline standard",
+      "Ecosystem shifts to production-grade features for pro engineering teams",
+      "Closed and open source AI CLI tools see equal high user adoption",
+      "AI CLI teams prioritize unattended multi-agent execution pain point fixes",
+      "Ecosystem matures past experimental status for mainstream team use",
+      "Top listed tools include Claude Code, GitHub Copilot CLI, Gemini CLI"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem tracks 13 active agent projects 2026-06-16",
+      "OpenClaw closed 52 issues, merged 60 PRs in past 24 hours",
+      "OpenClaw overall project health status is assessed as strong",
+      "No new public tagged OpenClaw releases in the monitoring window",
+      "PicoClaw is Sipeed's embedded optimized agent framework project",
+      "NetEase Youdao's LobsterAI joins OpenClaw ecosystem digest"
+    ],
+    "ai-trending": [
+      "NVIDIA SkillSpector gains 1079 new daily stars to top AI trending",
+      "Zero-fee web tool Agent-Reach crosses 1000 new daily GitHub stars",
+      "New financial market base model Kronos earns unexpected high traction",
+      "vLLM hits 82969 total stars as leading high-throughput LLM inference engine",
+      "Ollama reaches 174253 stars as de facto standard for local LLM deployment",
+      "Ecosystem shifts focus to production agent tooling over experimental base models"
+    ],
+    "ai-web": [
+      "Anthropic releases landmark LLM emotion interpretability research June 15",
+      "Anthropic launches dedicated R&D program for Claude chemistry capabilities",
+      "OpenAI teases unannounced formal OpenAI Partner Network program",
+      "Study confirms Claude Sonnet 4.5 has functional internal emotion representations",
+      "2 new Anthropic papers published alongside 1 unannounced OpenAI announcement",
+      "Emotion research has major implications for LLM agent safety design"
+    ],
+    "ai-hn": [
+      "600-upvote discussion covers using local alternatives for daily coding work",
+      "Anthropic faced user backlash after abrupt removal of Fable and Mythos models",
+      "Community observes ongoing AI price war squeezing leading incumbent margins",
+      "Deep dive reveals Anthropic used full reasoning traces to train Fable 5",
+      "New study finds organizations drastically underestimate their actual AI usage",
+      "HN users prioritize low-cost real AI utility over abstract frontier model hype"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4 Pro tops HF trending with 4861 likes, 2.9M weekly downloads",
+      "6 distinct official and community Gemma 4 12B variants hit top 30 trending",
+      "12 of top 30 HF models carry GGUF tags for CPU and edge inference",
+      "Gemma 4 12B-it crosses 1.16M downloads with permissive licensing",
+      "New pose-driven character animation models see fast user traction",
+      "Demand surges for consumer-deployable locally run multimodal models"
+    ],
+    "ai-community": [
+      "Devs report production workflow failures after Anthropic pulled Fable 5",
+      "Community explores MCP as new standard for local agent desktop workflows",
+      "Tutorial demonstrates fine-tuning Gemma 4 for niche Old Korean translation",
+      "Devs flag opaque Gemini billing that does not match public model tier names",
+      "Post documents real failures migrating from Fable 5 to last-minute open backup",
+      "Community debates hallucinations are architecture flaws not core model defects"
+    ]
+  }
+}

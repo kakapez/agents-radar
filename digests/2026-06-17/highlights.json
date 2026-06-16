@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入生产落地周期，用户渗透率破20%",
+      "Claude Code发v2.1.179版 修复断连WSL2滚轮问题",
+      "OpenAI Codex迭代3个Rust SDK alpha版本",
+      "Kimi Code CLI隐藏思考输出功能正式闭环",
+      "国产AI CLI工具本土适配形成差异化优势",
+      "OpenCode落地大量性能优化多模型兼容PR"
+    ],
+    "ai-agents": [
+      "OpenClaw发v2026.6.8正式版 优化IM消息体验",
+      "OpenClaw测多代理记忆隔离预发布实验特性",
+      "高负载场景消息交付成功率达99.97%",
+      "补齐Windows端系统服务托管能力",
+      "Bug修复闭环效率较上月提升27%",
+      "单日处理500条Issue与500条PR更新"
+    ],
+    "ai-trending": [
+      "VoxCPM无分词TTS单日新增星413登热榜",
+      "阿里zvec轻量向量数据库单日新增星188",
+      "Ollama适配Kimi-K2.6、GLM-5.1等国产模型",
+      "ECC降大代码库开发场景65%token消耗",
+      "近7天智能体类AI项目占比接近三成",
+      "vllm新增支持端侧量化模型全链路部署"
+    ],
+    "ai-web": [
+      "Anthropic公开40万次Claude Code追踪数据集",
+      "联合TCS切入金融医疗强监管落地赛道",
+      "重发AI安全立场强化企业合规品牌标签",
+      "非研发岗用Claude编码成功率近工程师水平",
+      "编码会话调试占比7个月下降近50%",
+      "OpenAI新部署模拟页面引行业猜测"
+    ],
+    "ai-hn": [
+      "DeepSeek V4 Pro运行成本仅为Claude的5%",
+      "智谱公开前沿级大模型GLM-5.2全权重",
+      "Claude迁移DeepSeek工程指南获开发者关注",
+      "吴恩达推出Open CoWorker桌面AI代理",
+      "自托管Memento个人代理搜索项目登榜",
+      "研究探讨gzip实现类大模型能力可能"
+    ],
+    "ai-arxiv": [
+      "首次定位LLM内部隐式轨迹价值判断靶点",
+      "ExpRL大幅降低LLM稀疏奖励RL对齐门槛",
+      "ContextRL解决多模态AI漏线索通病",
+      "TokenPilot最高降70%智能体长推理成本",
+      "首套Nature科研智能体评测基准发布",
+      "新方法大幅提升大模型决策可追溯性"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro以4895点赞登顶周榜",
+      "Qwen3.6系列累计下载突破700万",
+      "Qwen3.6-35B-A3B下载量破330万",
+      "Google全系列Gemma4集中进入热度榜",
+      "英伟达开源LocateAnything-3B超同类30%",
+      "GLM-5.2未开放权重即获大量关注"
+    ],
+    "ai-community": [
+      "开发者实锤AI内容检测器存在普遍误判",
+      "小漏洞致意外产生1800美元API账单",
+      "GraphRAG+限定上下文规避大模型幻觉",
+      "实测AI自动化工具反爬对抗表现",
+      "社区热议vibe coding新开发范式优劣",
+      "分享AI项目权责不清故障反面案例"
+    ]
+  },
+  "en": {}
+}

@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "ai-cli": [
+      "9款AI工具24小时新增核心PR超70个",
+      "OpenAI Codex发1正式版+3个预发测试版",
+      "Gemini CLI v0.47.0正式版上线发布",
+      "Pi v0.79.7正式版落地推送",
+      "CodeWhale v0.8.62正式版发布",
+      "全行业攻坚MCP插件生态稳定性问题"
+    ],
+    "ai-agents": [
+      "24小时累计500条Issue+500条PR更新",
+      "修复子代理消息过时污染主会话问题",
+      "数据库优先Runtime迭代进度达42%",
+      "热议降低QA套件测试误报成本",
+      "呼吁开放SQLite会话导出官方接口",
+      "MCP通道级授权成核心讨论议题"
+    ],
+    "ai-trending": [
+      "代码MCP服务单日涨2300星成最大黑马",
+      "全栈编码Agent Kilocode日增1339星",
+      "谷歌TimesFM刚开源日增858星登榜",
+      "智源GLM-5为代理工程化优化基座",
+      "Agent技能框架superpowers日增1435星",
+      "vLLM成大模型部署工业事实标准"
+    ],
+    "ai-web": [
+      "Claude零辅助操控四足机器人快人类20倍",
+      "Anthropic发布生信评测基准BioMysteryBench",
+      "Anthropic首尔办公室正式落地韩国",
+      "打通大模型直驱具身智能落地路径",
+      "为生命科学大模型提供可量化标尺",
+      "完成东亚首个属地办公室布局"
+    ],
+    "ai-hn": [
+      "MoE核心开发者Noam加入OpenAI引热议",
+      "3B小模型VibeThinker引发基准争议",
+      "本地PII脱敏工具登Show HN获好评",
+      "mistral.rs新增Agent原生技能调用支持",
+      "Claude Code推出Artifacts交互升级功能",
+      "缓存推理路由可大幅降低LLM部署成本"
+    ],
+    "ai-arxiv": [
+      "自蒸馏大幅降低LLM后训练标注成本",
+      "首次解析GRPO训练策略熵塌缩机制",
+      "预训练阶段对齐降低后续微调成本",
+      "局部参数存用户记忆不干扰通用能力",
+      "扩散模型刷新定理证明领域SOTA",
+      "多智能体虚拟博弈提升复杂决策效果"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro以4955赞登顶全榜",
+      "英伟达LocateAnything-3B获2161赞",
+      "GLM-5.2发布首周登上热门榜单",
+      "DiffusionGemma下载量突破50万",
+      "微软发布4B子代理专用FastContext模型",
+      "GGUF格式模型下载量远超原生版本"
+    ],
+    "ai-community": [
+      "实测AI概念竞品干不过务实落地团队",
+      "产出生产级AI Agent落地Checklist",
+      "总结AI Agent部署必过可靠性关",
+      "热议重度依赖AI会致开发者技能退化",
+      "教程可快速搭建自动PR审查Agent",
+      "深度讨论AI行业泡沫与落地优先级"
+    ]
+  },
+  "en": {}
+}

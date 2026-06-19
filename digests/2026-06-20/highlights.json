@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发v2.1.183 升级高危Git操作防护",
+      "GitHub Copilot CLI新增命令别名与工作树隔离",
+      "多款AI CLI集体迭代安全权限体系相关功能",
+      "Qwen Code多Agent调度、Token统计进入合入阶段",
+      "DeepSeek TUI v0.8.63进入功能冻结测试阶段",
+      "国产AI CLI本地化适配进度明显领先海外产品"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.9-beta.1预览版本",
+      "升级Telegram富消息渲染 无破坏性变更",
+      "修复Slack线程回复无法投递到频道问题",
+      "会话状态栏运行时长显示功能已正式上线",
+      "会话层SQLite迁移完成40% 代码合入主分支",
+      "核心团队处于v2026.6密集优化迭代周期"
+    ],
+    "ai-trending": [
+      "输入压缩工具headroom单日星涨3938登顶热榜",
+      "代码智能MCP服务星日增超千 降99%Token占用",
+      "智谱GLM-5正式版首次登GitHub AI热榜",
+      "Dify星数达145848 国内落地最广泛",
+      "Agent沙箱框架flue实现代码运行安全隔离",
+      "编码Agent技能框架superpowers日增星1113"
+    ],
+    "ai-web": [
+      "Anthropic发布40万Claude Code生产会话研究报告",
+      "证实编码任务平均市场等价价值提升25%",
+      "非工程师编码完成率几乎追平职业程序员",
+      "用户编码调试占比观测周期内下滑近50%",
+      "Agent编码评估标准将从跑分转向真实价值",
+      "OpenAI今日无新公开内容 处于静默迭代状态"
+    ],
+    "ai-hn": [
+      "GLM-5.2幻觉率仅为GPT-5.5三分之一引热议",
+      "LMSYS新推理方案可将大模型速度提升3倍",
+      "Anthropic暂停Claude Agent SDK按Token计费",
+      "AlphaFold诺奖得主John Jumper加盟Anthropic",
+      "社区热议企业集体缩减AI预算务实降本",
+      "Airgap方案可防AI Agent泄露本地密钥"
+    ],
+    "ai-arxiv": [
+      "首次系统探究扩散LLM DiffusionGemma可解释性边界",
+      "隐式行为对齐方案大幅降低RLHF数据采集成本",
+      "LedgerAgent近100%符合客服场景政策约束",
+      "UltraQuant方案Agent显存占用降低超75%",
+      "量化多智能体网络评估偏差传播核心规律",
+      "探明安全对齐LLM混合演示行为演化规律"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周点赞4968登顶热度榜首",
+      "GLM-5.2开源 性能追平齐平商用闭源基座",
+      "英伟达开源LocateAnything-3B周获2194赞",
+      "DeepSeek-V4-Pro首周下载量突破300万",
+      "谷歌DiffusionGemma下载量突破60万次",
+      "中文厂商开源模型活跃度全面超越海外厂商"
+    ],
+    "ai-community": [
+      "公开MCP服务从零搭建对接GitHub API实操指南",
+      "分享单API接入50余款国产大模型落地方案",
+      "共识AI写代码易 系统级工程不可替代",
+      "记录AI修BUG引入4处隐性故障踩坑经历",
+      "带溯源AI摘要构建方案可直接复用落地",
+      "热议AI生成代码需建立全链路校验机制"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Global AI code CLI ecosystem enters production-grade maturity phase",
+      "75%+ leading tools actively standardize around Model Context Protocol",
+      "Top commercial AI CLI tools target enterprise regulated workspace use cases",
+      "9 leading AI CLI tools tracked in 2026-06-20 community digest",
+      "Ecosystem converges on shared UX conventions to cut developer learning friction",
+      "Regional tools cater to edge embedded and local LLM ecosystem needs"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.6.9-beta.1 ships full Telegram rich delivery overhaul",
+      "OpenClaw merged 31 PRs, closed 55 issues in 24h reporting window",
+      "70% of OpenClaw high-severity bugs have active linked fix PRs in progress",
+      "13 OpenClaw ecosystem projects tracked in 2026-06-20 digest",
+      "Core team prioritizes SQLite session storage architecture upgrades",
+      "Self-hosted enterprise users contribute large volumes of field test data"
+    ],
+    "ai-trending": [
+      "12 of top 15 GitHub trending repos are AI-related on 2026-06-20",
+      "Headroom gains 3938 new 24h stars, cuts token usage 60-95%",
+      "Google open-sources TimesFM pre-trained time series foundation model",
+      "TimesFM gains 1516 new 24h stars post public GitHub release",
+      "3 separate MCP integration projects land on GitHub trending lists",
+      "Community focus shifts from LLM experiments to agent workflow pain points"
+    ],
+    "ai-web": [
+      "Anthropic study draws on 400k anonymized Claude Code real sessions",
+      "Non-specialist users match pros on Claude Code coding success rates",
+      "Agentic coding reduces user debug time by 50% per Anthropic research",
+      "Claude Code sessions deliver 25% uplift in task economic value",
+      "OpenAI released no new public content in 2026-06-20 reporting window",
+      "Anthropic publishes first large-scale Claude Code usage analysis"
+    ],
+    "ai-hn": [
+      "AlphaFold Nobel laureate John Jumper officially joins Anthropic",
+      "Amazon scraps Sam Altman biopic right after OpenAI partnership announce",
+      "Enterprises pull back unvetted AI deployments amid soaring inference costs",
+      "MIT-licensed GLM-5.2 outperforms GPT-5.5 on hallucination metrics",
+      "GPT-5.5 hallucinates 3x more than permissively licensed GLM-5.2",
+      "Top HN AI conversations focus on enterprise costs and open model gains"
+    ],
+    "ai-arxiv": [
+      "First diffusion LLM reasoning transparency analysis published on ArXiv",
+      "New framework solves cross-turn state drift for deployed AI agents",
+      "Research uncovers new vulnerabilities in safety-aligned LLMs",
+      "New DP method cuts accuracy tradeoff for regulatory compliant ML systems",
+      "50 new ArXiv AI submissions prioritize robustness over benchmark gains",
+      "New calibration framework addresses ML distribution shift for high-stakes use"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro earns 4968 weekly likes, top trending open LLM",
+      "70% of top 20 HF trending models are from Asian LLM families",
+      "12 of 30 trending models released in GGUF format for local inference",
+      "Uncensored multimodal fine-tune hits 3.7M weekly downloads new record",
+      "Zhipu GLM-5.2 trends for low overhead and 128k context window",
+      "VibeThinker-3B outperforms 7B models on math reasoning benchmarks"
+    ],
+    "ai-community": [
+      "Viral post says basic gzip can work as a usable lightweight LM",
+      "Top Dev.to thread: AI makes code writing easier, not engineering easier",
+      "Developers prioritize production AI reliability over flashy demo hype",
+      "Creators share production AI lessons cutting through vendor marketing",
+      "Popular guide builds evidence-bound AI summaries with source citations",
+      "Discussions highlight performance parity of new Chinese open models"
+    ]
+  }
+}

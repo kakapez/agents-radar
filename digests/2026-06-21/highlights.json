@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.185小版本更新",
+      "OpenAI Codex推出v0.142.0-alpha.7预发布版",
+      "Pi正式发布v0.79.9稳定迭代版本",
+      "Qwen Code同步推出v0.18.4正式+预览版",
+      "DeepSeek TUI v0.8.63校验完成即将推送",
+      "AI CLI成第三大AI编程助手入口"
+    ],
+    "ai-agents": [
+      "OpenClaw活跃度达近30天历史高位",
+      "双插件体系重构兼容度提升至99%",
+      "新增服务商降级重试防生产会话崩溃",
+      "PR自动流水线降维护者30%重复工作量",
+      "补齐Windows网关托管官方支持缺口",
+      "距6.10稳定版迭代目标完成度达85%"
+    ],
+    "ai-trending": [
+      "headroom单日斩获3786星登GitHub热榜第一",
+      "代码智能MCP服务器单日涨星1267颗",
+      "MCP协议已成AI代理生态事实标配",
+      "vLLM成大模型推理部署行业事实标准",
+      "ollama累计星数达174614领跑本地部署",
+      "编码Agent测试工具填补行业标准空白"
+    ],
+    "ai-hn": [
+      "开源大模型梯队已比肩闭源前沿水准",
+      "马斯克预判中国2027Q1出Fable 5级模型",
+      "GLM-5.2网页设计性能反超Fable 5",
+      "渗透测试专用大模型移除通用伦理拦截",
+      "Persona.js原生WebMCP降Agent接入成本",
+      "曝单页可RCE运行AI Agent主机漏洞"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro周点赞4982断层领跑HF",
+      "中文厂商开源模型占HF榜单近6成",
+      "GLM-5.2获1681赞成最热中文基座",
+      "端侧轻量模型下载量远超原生大模型",
+      "本地AI部署需求持续爆发热度飙升",
+      "多模态垂直模型上榜占比大幅提升"
+    ],
+    "ai-community": [
+      "AI Agent自动化生成发布日志方案出炉",
+      "拆解生产级高可用LLM网关核心设计逻辑",
+      "分层编码Agent团队搭建全流程经验分享",
+      "点破向量数据库私有AI宣传常见误区",
+      "2天开发20款MCP应用踩坑指南发布",
+      "通俗解析KV缓存与PagedAttention原理"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 production 2026 AI CLI tools cover big tech, regional and open source projects",
+      "AI CLI ecosystem prioritizes MCP standard and stability hardening over unvetted new features",
+      "Nearly all CLI projects add self-hosted local LLM support moving past cloud-only designs",
+      "MCP is the dominant standard, enabling full cross-agent workflow interoperability",
+      "Tracked CLI tools include releases from Anthropic, OpenAI, Google, Moonshot and Qwen",
+      "Mature 2026 AI CLI market prioritizes bug fixes for widespread production deployment"
+    ],
+    "ai-agents": [
+      "13 projects tracked in the 2026-06-21 OpenClaw ecosystem digest",
+      "OpenClaw saw 500 updated issues and 500 updated PRs in 24h",
+      "OpenClaw devs prioritize low-risk changes to protect production self-hosted deployments",
+      "OpenClaw is developing SQLite migration for session and transcript state storage",
+      "No new official OpenClaw releases dropped in the latest 24h monitoring window",
+      "Ecosystem forks include PicoClaw, NanoClaw, ZeroClaw and IronClaw"
+    ],
+    "ai-trending": [
+      "3 new AI open source projects gained 1000+ fresh GitHub stars in 24h",
+      "Token compression tool headroom earned 3786 stars, delivering 60-95% token reduction",
+      "codebase-memory-mcp gained 1267 stars for fast code knowledge graph queries",
+      "Fully open source agentic video production system OpenMontage hit top trending",
+      "Google Research released production TimesFM model, earning 432 new stars",
+      "Leading LLM inference project vLLM now holds 83,428 total GitHub stars"
+    ],
+    "ai-hn": [
+      "24h Hacker News AI discussions are dominated by stories around Anthropic",
+      "New local AI agent RCE exploit risks spark widespread developer conversations",
+      "Viral red team AI model Show HN sparks cybersecurity practitioner debates",
+      "Benchmark finds top open source models now competitive with Anthropic Opus",
+      "Community notes open vs closed LLM gap shrank far faster than 12-month forecasts",
+      "Discussions note top Chinese open models outperform closed ones on specific tasks"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops Hugging Face trending with 4982 weekly likes",
+      "Qwen 3.x/3.6 GGUF fine tunes drive unprecedented edge AI adoption",
+      "Uncensored 35B vision Qwen variant hit over 3.8 million weekly downloads",
+      "NVIDIA, Google, Microsoft debuted new specialized high-performance models this week",
+      "New trending models cover localization, multimodal reasoning and sub-agent tasks",
+      "Low-latency streaming audio models show major community traction this week"
+    ],
+    "ai-community": [
+      "Dev.to and Lobste.rs top AI talks focus on practical production implementation",
+      "Top Lobste.rs post explores fast-evolving AI-powered social engineering threats",
+      "Top Dev.to discussion covers proven patterns for reliable LLM gateway deployment",
+      "Developers push back on disposable AI code, requiring proper long-term maintenance",
+      "Viral Dev.to post shares workflow auto-generating release notes from PR data",
+      "Developers demand transparent audits of 'private AI' vendor data handling claims"
+    ]
+  }
+}

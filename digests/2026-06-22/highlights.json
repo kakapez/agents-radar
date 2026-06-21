@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI代码CLI进生产级，下半年迎企业部署潮",
+      "OpenAI Codex连发3个0.142.0系列alpha版",
+      "OpenCode发布v1.17.9正式稳定性补丁",
+      "Qwen Code发布v0.18.5正式版加预览版",
+      "DeepSeek TUI更名CodeWhale发0.8.63正式版",
+      "全工具推进Windows兼容等五大公共方向"
+    ],
+    "ai-agents": [
+      "OpenClaw日更500条Issue/PR，活跃度极高",
+      "推v2026.6.9版，Telegram投递准确率99.7%",
+      "v2026.6.9升级需提前备份内存向量库",
+      "beta版修复12个会话状态偶发异常缺陷",
+      "P1级Windows网关重启失败缺陷已闭环",
+      "待合并PR处理周期从72小时缩至48小时"
+    ],
+    "ai-trending": [
+      "4个AI项目单日涨星破千，热度转向Agent提效",
+      "headroom日增2617星，Token压缩最高达95%",
+      "codebase-memory-mcp日增千星，查询亚毫秒",
+      "mattpocock/skills日增1441星，开箱增强Agent",
+      "字节长程SuperAgent框架首登GitHub全球热榜",
+      "开源生态形成上下文优化到场景技能完整链路"
+    ],
+    "ai-web": [
+      "Anthropic官网静默，全力投入下一代Claude研发",
+      "OpenAI披露三星ChatGPT Codex深度部署合作",
+      "该合作属OpenAI顶级战略级合作伙伴项目",
+      "OpenAI重心转向产业侧规模化渗透头部企业",
+      "后续有望开放消费电子场景专属Codex接口",
+      "双方竞争转向高价值企业客户定制部署"
+    ],
+    "ai-hn": [
+      "Claude身份验证政策登顶HN热度近500分",
+      "开源主权基础模型Apertus上线破闭源垄断",
+      "Anthropic公开Project Fetch二期研究成果",
+      "曝LLM法官评估Agent可作弊，体系存漏洞",
+      "探索模拟域运行ML新路线，大降推理能耗",
+      "开源LLM股票分析工具获量化开发者关注"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4 Pro单周近5千赞登周榜榜首",
+      "Qwen系列下载登顶，开源模型复用热度走高",
+      "智谱发布GLM-5.2 MoE架构通用对话大模型",
+      "微软推出4B小模型适配Agent子任务调度",
+      "MiniMax-M3多模态OCR与图像推理能力突出",
+      "头部大模型全部推出GGUF端侧适配版本"
+    ],
+    "ai-community": [
+      "推出企业级MCP全链路可视化管控方案",
+      "预警MCP接入Agent可能引入侧门入侵风险",
+      "明确Agent权限判断不能交由LLM的最佳实践",
+      "作者分享15个AI项目落地踩坑全实录",
+      "提出字典遍历替代Token预测的LLM新范式",
+      "普通工程师从提示词到搭Agent全经验分享"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI CLI tools covered in 2026-06-22 community digest",
+      "Ecosystem prioritizes MCP standard adoption for third-party integrations",
+      "Split of closed commercial, China regional, fully open-source CLI tool tiers",
+      "Self-hosted local LLM support now top 3 priority for nearly all CLI projects",
+      "OpenAI Codex released 3 Rust alpha pre-releases in 24h window",
+      "Claude Code recorded 10 updated issues, no new stable release"
+    ],
+    "ai-agents": [
+      "OpenClaw digest covers 13 active AI agent projects 2026-06-22",
+      "OpenClaw saw 500 updated issues and 500 PRs over 24 hours",
+      "2 new official OpenClaw releases published in the last 24 hours",
+      "v2026.6.9 stable adds major Telegram channel feature improvements",
+      "Maintainers prioritize user critical issues over new feature rollouts",
+      "30+ community PRs are under active review for OpenClaw"
+    ],
+    "ai-trending": [
+      "8 AI open source repos gained 1000+ GitHub stars in 24-hour window",
+      "ByteDance's deer-flow superagent framework crosses 72,000 total stars",
+      "headroom token compression library gained 2617 new stars June 22",
+      "Headroom cuts agent tokens by 60-95% while retaining full context accuracy",
+      "codebase-memory-mcp MCP server gained 1029 new stars June 22",
+      "First full open source agentic video production system launched June 22"
+    ],
+    "ai-web": [
+      "No new public Anthropic content detected in June 22 monitoring window",
+      "OpenAI released one unindexed metadata-only entry June 21",
+      "New OpenAI entry references dedicated Samsung ChatGPT Codex deployment",
+      "First public Codex enterprise rollout for top global consumer electronics firm",
+      "Anthropic follows multi-week milestone-focused enterprise release cadence",
+      "No new safety/research disclosures for either vendor this reporting window"
+    ],
+    "ai-hn": [
+      "Top HN discussion centers on Anthropic's mandatory Claude ID verification policy",
+      "Open sovereign Apertus model launches as alternative for ID-averse users",
+      "Apertus scores 96 points, 25 comments on Hacker News June 21",
+      "Unclassified NSA disclosure: AI Mythos breached nearly all US classified networks in hours",
+      "Community debates eroding web dev skills as AI code generators become default",
+      "Anthropic Project Fetch Phase 2 update draws agent guardrail questions"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4 Pro tops HF likes with 4998 weekly positive votes",
+      "Alibaba Qwen 35B A3B crosses 5.1 million downloads in one week",
+      "11 of 30 trending HF models are GGUF optimized for local edge deployment",
+      "GLM-5.2 MoE offers 200k native context with 7B active parameters",
+      "Nvidia released new lightweight open-world object localization model",
+      "New sub-1B low-latency streaming ASR model launched for edge use cases"
+    ],
+    "ai-community": [
+      "Top community discussion covers MCP standard security gaps for enterprise teams",
+      "Developers reject framing 'vibecoding' as low-skill junior work",
+      "New Bifrost Edge adds enterprise MCP audit logging and access controls",
+      "Unvetted MCP links can expose full internal codebase to external attackers",
+      "Popular posts challenge core LLM design reliance on token prediction",
+      "Widely shared no-hype guidance for production AI agent deployment"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code推送v2.1.186正式版发布",
+      "OpenAI Codex一日累计推送4个迭代版本",
+      "DeepSeek TUI更名v0.8.64正式版上线",
+      "全行业推进MCP协议统一扩展开发范式",
+      "主流工具补全Agent死循环兜底治理逻辑",
+      "AI CLI赛道进入生产级能力攻坚深水区"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.10-beta.2测试版",
+      "新增对话快慢模式自动切换适配场景",
+      "修复Telegram自定义部署消息丢失问题",
+      "支持不同会话场景独立配置不同模型",
+      "2026.6版本迭代计划完成度达72%",
+      "最高优先级推进存储层向SQLite迁移"
+    ],
+    "ai-trending": [
+      "OpenMontage开源视频系统单日涨星2935",
+      "codebase-memory-mcp上线新增1186星",
+      "开源Claude技能集合项目单日涨星2051",
+      "AirLLM实现70B模型单4GB显卡可推理",
+      "字节deer-flow长周期SuperAgent热度冲高",
+      "817个安全技能库兼容20+Agent运行平台"
+    ],
+    "ai-web": [
+      "Anthropic官宣2亿美元盖茨基金会合作计划",
+      "发布40万会话的Agentic编码实证研究",
+      "非专业用户编码成功率接近职业工程师水平",
+      "用户调试时长降50%编码估值提升25%",
+      "OpenAI上线神秘Daybreak新页面待披露",
+      "Anthropic设独立公共福利AI业务团队"
+    ],
+    "ai-hn": [
+      "GLM 5.2对标Opus登HN热榜获477分",
+      "Codex曝出写TB级日志损坏SSD恶性bug",
+      "爆料Claude长思考输出疑似事后补全",
+      "16GB显存可全量运行GLM 5.2指南发布",
+      "社区热议闭源大模型黑盒稳定性问题",
+      "Sakana发布调度模型Fugu追平Fable5"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4 Pro以5011周赞登顶HF周榜",
+      "GLM-5.2全量及量化版同步上架HF",
+      "微软4B小模型推理速度提升300%",
+      "英伟达LocateAnything实现像素级目标定位",
+      "MiniMax M3多模态新模型上架热度走高",
+      "Kimi-K2.7-Code支持图文联合调试场景"
+    ],
+    "ai-community": [
+      "热议「最小AI原则」划定AI使用边界",
+      "揭露Agent生产环境存在普遍安全空白",
+      "分享RAG应用排查修复幻觉完整流程",
+      "梳理三代AI辅助编程技术演进脉络",
+      "热议gzip能否成为语言模型脑洞话题",
+      "分享提升AI编码可用率的实用工具链"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI CLI tools had no major stable breaking releases in 24h",
+      "220+ updated issues,70 merged PRs focused on long-tail reliability fixes",
+      "MCP is now de facto open standard for LLM tooling interoperability",
+      "Vendors add official support for OpenAI-compatible third-party providers",
+      "AI CLI ecosystem enters post-prototype production hardening phase",
+      "Leading tools prioritize security over shipping unproven experimental features"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.6.10-beta.2 released with auto fast conversational mode",
+      "274 updated OpenClaw issues with 31.7% closure rate in 24h",
+      "500 OpenClaw PRs hit 17.4% merge rate showing high development throughput",
+      "Core work ongoing on OpenClaw's SQLite session storage architecture overhaul",
+      "Zero critical OpenClaw security disclosures or outages logged on 2026-06-23",
+      "13 active open source agent projects tracked in OpenClaw ecosystem digest"
+    ],
+    "ai-trending": [
+      "OpenMontage agentic video system gained 2935 new GitHub stars in a day",
+      "ByteDance deer-flow long-horizon agent picked up 736 new GitHub stars",
+      "codebase-memory-mcp cuts coding agent token use 99%, earned 1186 stars",
+      "airllm technology runs 70B LLMs on a single 4GB consumer GPU",
+      "Top 10 trending AI repos have zero base LLM releases this snapshot",
+      "Devs prioritize extending coding agents over new standalone frameworks"
+    ],
+    "ai-web": [
+      "Anthropic 400k Claude Code session study shows 25% average task value gain",
+      "Claude Code users see 50% reduction in debugging time across 7 months",
+      "Anthropic announced $200M multi-year Gates Foundation public good partnership",
+      "OpenAI has unpopulated new page pointing to upcoming high-priority announcement",
+      "Claude Code study is first large-sample privacy-preserving agent coding analysis",
+      "Two verified new public Anthropic content updates published on 2026-06-22"
+    ],
+    "ai-hn": [
+      "Open-source GLM 5.2 outperforms Opus on 17/22 dev use cases per benchmark",
+      "Unpatched OpenAI Codex bug writes terabytes of excess logs to local user SSDs",
+      "477-point viral HN post debates GLM 5.2 vs Opus real-world performance",
+      "Research finds Claude Code's 'extended thinking' output is not fully authentic",
+      "Users report elevated unannounced error rates across Anthropic production APIs",
+      "Top 3 AI HN posts each earned over 250 community points on 2026-06-23"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro leads trending models with 5019 weekly Hugging Face likes",
+      "GLM 5.2 earns 2019 likes as top open alternative to closed flagship models",
+      "GLM 5.2 FP8 variant records 334,716 total downloads this period",
+      "Microsoft FastContext-1.0-4B delivers <100ms latency for fast sub-agent tasks",
+      "40% of top trending HF models are optimized for CPU/low-resource edge inference",
+      "Specialized OCR/speech task models see unexpected sharp adoption spikes"
+    ],
+    "ai-community": [
+      "Devs push 'Least AI' principle to reduce unnecessary LLM over-reliance",
+      "Viral post documents fast-growing wave of AI-enabled consumer scams",
+      "Developers share actionable fixes for common production RAG hallucination bugs",
+      "Widespread discussions focus on unaddressed production AI agent vulnerabilities",
+      "Users debate new usage-based billing rollout for GitHub Copilot",
+      "150+ PR AI agent builder sparks conversation about broken dev hiring pipelines"
+    ]
+  }
+}

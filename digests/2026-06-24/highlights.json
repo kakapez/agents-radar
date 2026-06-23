@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.187正式版",
+      "Codex推送7个v0.143系列alpha版本",
+      "Pi连发3个v0.80.x正式版",
+      "Qwen Code连发2个v0.19.x正式版",
+      "AI CLI赛道全面进入生产级落地期",
+      "头部产品集体攻坚MCP生态等方向"
+    ],
+    "ai-agents": [
+      "OpenClaw存储层重构进度达70%",
+      "上线PR自动评审+Windows守护程序",
+      "修复Debian系统python命令兼容问题",
+      "当日合并31个PR健康度评级良好",
+      "40%PR来自社区外围适配贡献",
+      "热议核心会话SQLite迁移兼容方案"
+    ],
+    "ai-trending": [
+      "字节deer-flow登顶周度AI项目活跃榜",
+      "OpenMontage单日新增3590星登热榜",
+      "代码MCP服务器当日新增1299星",
+      "Anthropic官宣Claude插件目录标准化",
+      "817个网安Agent技能项目获千星",
+      "vllm总星83653新增端侧模型优化"
+    ],
+    "ai-web": [
+      "Anthropic推出常驻Slack的Claude Tag",
+      "内测支撑Anthropic团队65%代码产出",
+      "Claude Tag仅对企业客户开放Beta",
+      "打破AI需跳转独立界面的使用范式",
+      "Anthropic重心转向企业级生态落地",
+      "推出「@调用AI」通用协作新范式"
+    ],
+    "ai-hn": [
+      "全站最高热是LaTeX所见即所得编辑器",
+      "OpenAI发布安全专用大模型GPT-5.5-Cyber",
+      "Envoy AI Gateway 1.0正式稳定版发布",
+      "英伟达发布生命科学Agent开发套件",
+      "社区热议大模型用户封号维权问题",
+      "新扩散模型可降30%训练算力开销"
+    ],
+    "ai-arxiv": [
+      "随机化YaRN提升长序列推理稳定性",
+      "刷新大模型参数均匀分配传统认知",
+      "揭AdamW重尾噪声下有效性开放问题",
+      "新方法无需重训适配大模型小语种",
+      "SVD优化大模型压缩性能损失更低",
+      "首份多智能体提示优化基准发布"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4 Pro以5030周赞登全榜第一",
+      "周下载量突破220万远超头部竞品",
+      "国产开源大模型占比超四成迭代领先",
+      "智源GLM-5.2周下载量突破4万",
+      "通义千问3.6无约束版下载近400万",
+      "端侧GGUF量化版下载远超原版基座"
+    ],
+    "ai-community": [
+      "总结AI代码最后20%占80%时间痛点",
+      "分享46个仓库建代码知识图谱经验",
+      "指出Agent普遍缺失可追溯核心记忆",
+      "提出AI功能优先写评估体系再迭代",
+      "曝光Agent自动绕过权限管控真实案例",
+      "实测低成本小模型部分场景优过大模型"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI CLI tools tracked in 2026-06-24 community digest",
+      "AI CLI production workload adoption up 3x quarter-over-quarter",
+      "MCP and ACP standards unify fragmented AI CLI plugin ecosystems",
+      "Unplanned breaking APIs are top user pain point across all tools",
+      "10 tracked tools include Claude Code, Gemini CLI, Qwen Code",
+      "Maintainers prioritize bug fixes over new features in 24h window"
+    ],
+    "ai-agents": [
+      "13 AI agent projects tracked in latest OpenClaw ecosystem digest",
+      "OpenClaw recorded 188 updated issues, 500 updated PRs in 24h",
+      "OpenClaw last stable release is 2026.6.9, no new builds out",
+      "Devs wrap up Path 3 of core OpenClaw SQLite session migration",
+      "Maintainers triage fixes for 2026.6.x release train regressions",
+      "No critical OpenClaw zero-day vulnerabilities reported in window"
+    ],
+    "ai-trending": [
+      "OpenMontage gained 3590 new 24h stars, fastest growing AI project",
+      "ByteDance released production agent harness deer-flow publicly",
+      "7 AI projects earned over 1000 new 24h GitHub stars June 24",
+      "codebase-memory-mcp cuts coding agent token usage by 99%",
+      "Anthropic launched official curated Claude Code plugins directory",
+      "MCP agent memory tools see exponential user adoption"
+    ],
+    "ai-web": [
+      "Anthropic launched new team collaborative agent feature Claude Tag",
+      "Claude Tag rolls out first on Slack for paid Team/Enterprise users",
+      "65% of Anthropic internal product code uses pre-release Claude Tag",
+      "Claude Tag retains persistent context via @mention summoning",
+      "No new public releases published by OpenAI in monitoring window",
+      "Claude Tag supports ticket triage, debugging cross-functional use cases"
+    ],
+    "ai-hn": [
+      "OpenAI released security-focused GPT-5.5-Cyber for infrastructure defense",
+      "HN users push back against closed LLM mandatory ID verification rules",
+      "Viral Claude Code ban anecdotes spark commercial tool trust concerns",
+      "Community backs open agent governance standards and self-hosted workflows",
+      "New diffusion research challenges core noise conditioning assumption",
+      "Reactions split on GPT-5.5-Cyber over privacy vs surveillance risks"
+    ],
+    "ai-arxiv": [
+      "Randomized YaRN fixes LLM long sequence length generalization failures",
+      "New Tapered LLM architecture boosts efficiency with non-uniform parameters",
+      "2026 AI research shifts focus to real-world deployment pain points",
+      "New enterprise agent benchmark eliminates synthetic evaluation flaws",
+      "New frameworks cut manual labeling for reasoning RL scaling",
+      "Papers cover clinical mental health AI, personalized multimodal tools"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops HF weekly AI model trending rankings",
+      "DeepSeek-V4-Pro earned 5030 weekly likes, outpacing all peers",
+      "Nvidia new open models appear in 2026-06-24 trending list",
+      "30 top trending AI models tracked in latest HF daily digest",
+      "Open-weight flagship DeepSeek-V4-Pro sees rapid community adoption",
+      "Weekly rankings show strong traction for production open LLMs"
+    ],
+    "ai-community": [
+      "Devs debate AI agent persistent context gaps across Dev.to, Lobste.rs",
+      "Top post explores unaddressed LLM-enabled exploit security vectors",
+      "Open source AI observability tools gain traction vs commercial alternatives",
+      "80/20 AI code rule: final 20% of work takes 80% of total time",
+      "Custom static KG unifies 46 repos better than raw full codebase feeds",
+      "Users discuss high code agent failure rates late in feature builds"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入生产级稳定性打磨新阶段",
+      "OpenAI Codex发布0.143.0 Rust SDK alpha预览包",
+      "Qwen Code发布v0.19.2夜间构建预览版",
+      "ACP跨工具互操作标准获主流厂商采纳",
+      "头部7款工具24小时累计更新超230条Issue/PR",
+      "赛道分层竞争格局已基本成型"
+    ],
+    "ai-agents": [
+      "OpenClaw过去24小时活跃度达近期峰值",
+      "修复长会话受限问题 父Agent可回溯全历史",
+      "完成技能目录快照 离线可加载技能元数据",
+      "修复子Agent锁泄漏 大幅提升生产会话可用性",
+      "新增PR自动评审流水线+Windows后台守护能力",
+      "ClawHub托管技能市场开发进度达60%"
+    ],
+    "ai-trending": [
+      "谷歌DESIGN.md单日1542星登顶AI项目日增榜",
+      "cognee Agent内存平台单日涨星808创纪录",
+      "ai-berkshire多Agent投资框架日增686星",
+      "ppt-master生成原生PPT单日涨星589颗",
+      "gstack内置23个角色工具 复用全岗位Agent流",
+      "opencode全开源 支持全主流模型私有化部署"
+    ],
+    "ai-web": [
+      "Anthropic发布全新Agent原生经济指数报告",
+      "新指数拆分三类口径 填补Agent观测盲区",
+      "Anthropic抢占Agent价值量化标准先发位",
+      "数据采样粒度提至小时级 新增用户行为调研",
+      "可作为企业AI生产力工具选型公开参考",
+      "OpenAI本次抓取周期无公开新增内容发布"
+    ],
+    "ai-hn": [
+      "首个Agent编码专用开源大模型Ornith-1.0发布",
+      "DeepSeek开源DeepSpec代码形式化验证工具链",
+      "Adrafinil实现Mac合盖时AI Agent持续运行",
+      "开发者优化llama.cpp 提升20%提示词处理TPS",
+      "OpenTag复刻Claude标签能力 降低Agent适配成本",
+      "亚洲AI初创集体推出类Mythos高性能模型"
+    ],
+    "ai-hf": [
+      "GLM-5.2以2670周点赞登顶HF大模型总榜",
+      "百度开源无限制OCR 支持任意场景文字识别",
+      "微博发布VibeThinker-3B 端侧运行效率极高",
+      "通义千问推出AgentWorld-35B 专为Agent优化",
+      "Krea-2-Turbo文生图速度较前代提升300%",
+      "DeepSeek新旗舰未开放权重即登热榜"
+    ],
+    "ai-community": [
+      "探索Agent最小运行阈值 给边缘部署提供基准",
+      "博主分享踩坑经历 拆解5项LLM隐形计费项",
+      "深度解析OpenAI定制推理ASIC Jalapeño细节",
+      "MemStrata在代码场景下性能全面超越传统RAG",
+      "指出LLM评测常用裁判模型普遍未经验证",
+      "披露LLM路由器明文记录敏感密钥的安全隐患"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 AI CLI tools covered in 2026 mid-year landscape digest",
+      "Open source CLI tools close core gaps vs first-party offerings",
+      "All projects prioritize MCP hardening and transparent cost guardrails",
+      "No new stable CLI builds launched in 24h, focus on bug fixes",
+      "Claude Code logged 30 updated issues, 3 active PRs in the day",
+      "Cross-platform interop is top shared workstream across all CLI projects"
+    ],
+    "ai-agents": [
+      "13 active agent projects tracked in 2026 OpenClaw ecosystem digest",
+      "OpenClaw saw 500 updated issues, 500 updated PRs in 24h",
+      "Dev focus on stability hardening and ClawHub skill marketplace progress",
+      "2.8% issues, 11% PRs closed/merged for strong triage throughput",
+      "No new official OpenClaw releases dropped in 24h reporting window",
+      "Ongoing work prioritizes enterprise self-hosted user requirements"
+    ],
+    "ai-trending": [
+      "7 AI projects gained over 500 new GitHub stars in a single 24h window",
+      "Google Labs' design.md spec hit 1542 new stars as day's fastest growing repo",
+      "design.md sets standard format to inject design rules for coding agents",
+      "Open source opencode gained 428 stars, supports local sandboxed code execution",
+      "Vertical multi-agent tools for investing, site cloning see high user traction",
+      "New AI memory platforms trend to solve long-running agent context loss"
+    ],
+    "ai-web": [
+      "Anthropic released overhauled June 2026 AI Economic Index report on June 26",
+      "New index adds hourly sampling and segment-specific Claude usage breakdowns",
+      "It is first major LLM provider public metric for agentic AI economic footprint",
+      "New user survey captures off-session perceptions of AI's work impact",
+      "No new public content released from OpenAI in 24h reporting window",
+      "Chat transcript analytics no longer sufficient for Claude agent tracking"
+    ],
+    "ai-hn": [
+      "Top post covers Asian models launched to evade Anthropic export restrictions",
+      "Community debates unsustainable enterprise AI spending and possible correction",
+      "New Ornith-1.0 open LLM family specialized for agentic coding launched",
+      "DeepSpec toolkit released for formal verification of LLM reasoning outputs",
+      "Users show strong preference for self-hosted offline local agent deployments",
+      "Pro-AI infrastructure policy ignoring environment drew widespread HN pushback"
+    ],
+    "ai-hf": [
+      "zai-org's GLM-5.2 MoE LLM earned 2670 weekly likes as top trending model",
+      "Qwen 3.6 derived quant model exceeded 5 million total HF downloads",
+      "Qwen released Qwen-AgentWorld-35B-A3B optimized for agent orchestration",
+      "WeiboAI 3B VibeThinker math fine-tune hit 57k+ downloads this period",
+      "New releases span enterprise OCR, spatial vision and streaming ASR tools",
+      "4 of top 10 highest downloaded assets are uncensored use case fine-tunes"
+    ],
+    "ai-community": [
+      "Users debate possible coming AI winter matching historical boom-bust cycles",
+      "Popular post details unplanned 4x LLM cost spike with no traffic growth",
+      "Deep dive tests minimum viable agent model size for low-cost local deployments",
+      "Guide lists actionable fixes for hidden LLM billing traps to avoid overruns",
+      "OpenAI + Broadcom Jalapeño ASIC sparks debate on cheaper LLM deployment",
+      "Practitioners flag agent data exfiltration risk via poorly secured LLM proxies"
+    ]
+  }
+}

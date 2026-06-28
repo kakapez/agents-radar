@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Qwen Code单日双更正式+预览版本迭代最快",
+      "OpenAI Codex集中修复费率统计核心BUG",
+      "MCP成行业标准头部工具全完成核心适配",
+      "头部AI CLI集中攻坚非预期Token消耗管控",
+      "DeepSeek TUI全力优化缓存命中率核心特性",
+      "Claude Code新增资源用量实时提示能力上线"
+    ],
+    "ai-agents": [
+      "OpenClaw SQLite存储重构完成度达80%",
+      "openclaw status命令执行耗时降低70%",
+      "修复会话配置非预期丢失核心BUG",
+      "新增PR评审自动修复流水线降维护成本",
+      "补齐Windows平台AI Agent生产部署能力",
+      "社区热议解决旧存储架构内存膨胀问题"
+    ],
+    "ai-trending": [
+      "代码智能MCP服务器单日新增2162星登顶",
+      "多智能体金融赛道双项目登热榜热度走高",
+      "ai-berkshire日增1456星成热门投研Agent",
+      "国内开源项目出海涨星速度远超行业平均",
+      "全离线FluidVoice日增491星登语音类榜首",
+      "MCP生态成今日AI开源圈核心爆发方向"
+    ],
+    "ai-hn": [
+      "GLM 5.2在网安基准测试中性能反超Claude",
+      "普通开发者用Claude Code完成MRI影像诊断",
+      "路由工具自动分配本地/云端大模型任务",
+      "纯C/CUDA从零实现无依赖GPT-2级大模型",
+      "社区热议垂直场景开源模型反超闭源可能性",
+      "自脚手架编码大模型Ornith-1.0正式发布"
+    ],
+    "ai-hf": [
+      "智源GLM-5.2以2807周赞登HF周榜榜首",
+      "英伟达推出GLM-5.2硬件优化低精度版本",
+      "通义千问开源35B级Agent专属大模型基座",
+      "端侧GGUF模型单周下载量突破百万级别",
+      "国内厂商贡献近半数HF热门上榜大模型",
+      "微软开源4B轻量上下文增强模型FastContext"
+    ],
+    "ai-community": [
+      "2026年四大主流向量数据库选型指南发布",
+      "零后端成本AI浏览器扩展架构方案公开",
+      "社区热议AI行业现早年寒冬早期信号",
+      "实测投机解码边界破除无条件降本误区",
+      "提出代码库即提示词的AI开发新范式",
+      "分享AI项目被外行接管快速失败踩坑案例"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 tracked AI coding CLI tools enter core maturity phase in 2026",
+      "MCP emerges as de facto industry standard extension layer for coding tools",
+      "60% of engineering teams use agentic coding workflows as of 2026",
+      "No single AI coding CLI holds over 25% of active daily user base",
+      "Users prioritize high-severity bug fixes over new feature rollouts",
+      "Regulated enterprise teams are the fastest growing CLI user segment"
+    ],
+    "ai-agents": [
+      "OpenClaw saw 500 updated issues and 500 updated PRs in 24 hours",
+      "OpenClaw dev prioritizes SQLite session storage migration for stable build",
+      "91 PRs merged recently for storage refactoring and deployment hardening",
+      "All top OpenClaw P1 issues have clear active development paths underway",
+      "No new official OpenClaw releases published over the past 24 hours",
+      "13 total projects tracked in the 2026-06-29 OpenClaw ecosystem digest"
+    ],
+    "ai-trending": [
+      "8 of 13 top GitHub trending projects are AI-focused, up 60% WoW",
+      "codebase-memory-mcp gains 2162 new stars for solving code token bloat",
+      "Two finance AI agent frameworks earn over 1400 combined new stars",
+      "New 3D scene reconstruction foundation model hits GitHub top trending",
+      "codebase-memory-mcp supports 158 programming languages with sub-ms queries",
+      "Demand surges for domain-specific production agent tools over generic demos"
+    ],
+    "ai-hn": [
+      "Dev used Claude Code to self-analyze MRI, drawing 400 safety comments",
+      "Semgrep finds GLM 5.2 outperforms Claude on cybersecurity benchmarks",
+      "Ford rehired veteran engineers after AI failed for auto production design",
+      "Austria lobbies EU to host Anthropic amid tightening US AI access curbs",
+      "Viral post explores if LLMs can pass the mirror self-recognition test",
+      "GLM 5.2 results spark debates on Western top model dominance narratives"
+    ],
+    "ai-hf": [
+      "GLM-5.2 MoE LLM leads trending with 2807 weekly Hugging Face likes",
+      "GLM-5.2 delivers 70B-class reasoning at half inference compute cost",
+      "3 trending open models log over 800k total weekly downloads combined",
+      "Gemma 4 12B fine-tune has near-zero shell command hallucination rate",
+      "WeiboAI 3B VibeThinker trends as lightweight edge math reasoning option",
+      "Multimodal projects make up ~40% of top trending Hugging Face entries"
+    ],
+    "ai-community": [
+      "Lobste.rs post draws parallels between 2026 AI boom and 1980s AI winter",
+      "Viral post details AI platform failure after non-technical leadership takeover",
+      "New data shows low-cost LLM setups run 2-3x costlier than dedicated inference",
+      "Devs share widespread personal anecdotes of corporate AI project mismanagement",
+      "Conversations highlight hidden uncalculated costs of running production AI agents",
+      "AI geopolitics fiction sparks debates on global hardware access control impacts"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入落地深耕期，MCP成行业事实标准",
+      "GitHub Copilot CLI发布正式版v1.0.66-2",
+      "Gemini CLI发布v0.51.0夜间迭代版",
+      "OpenAI Codex发布rust-v0.142.4内部小版本",
+      "Qwen Code当日新增合并20条有效PR活跃度最高",
+      "国产工具补齐本土适配云原生差异化能力"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.11-beta.2公测版",
+      "24小时新增350条Issue、500条PR迭代",
+      "新增Slack中继、Mattermost原生指令管控",
+      "闭环媒体理解模块异常路由等4项核心故障",
+      "开放模型用量统计能力到第三方插件",
+      "全量兼容旧版配置文件无需额外迁移"
+    ],
+    "ai-trending": [
+      "今日AI开源项目最高单日涨星超1600",
+      "vllm新版7B模型单卡推理效率提升40%",
+      "ollama新增Kimi-K2.6、GLM-5.1国产模型适配",
+      "ai-berkshire涨1397星，多Agent投研框架",
+      "agency-agents涨1221星，多专业人格Agent工作室",
+      "dify新增MCP原生适配降低Agent接入成本"
+    ],
+    "ai-web": [
+      "OpenAI公示与HP Frontier高性能产品线合作",
+      "合作属首页级重磅深度合作非浅营销",
+      "OpenAI大模型能力向IT硬件商用终端渗透",
+      "Anthropic无更新，资源集中下一代模型迭代",
+      "后续或现预装OpenAI能力的商用AI工作站",
+      "Anthropic走技术突破优先生态铺量路线"
+    ],
+    "ai-hn": [
+      "vLLM微代理技术，小模型协作追平大模型",
+      "开源ScreenMind实现端侧实时截图视觉感知",
+      "开源套件Mac本地跑通全链路离线AI能力",
+      "9B开源模型1M上下文对齐Claude Mythos",
+      "韩千亿级投入AI硬件+人形机器人产业",
+      "Anthropic与加州政府达成半价服务合作"
+    ],
+    "ai-hf": [
+      "Qwen系列模型合计下载破千万居周度榜首",
+      "GLM-5.2登顶周榜点赞最高官方原生基座",
+      "GLM-5.2量化版下载量远超原生基座",
+      "Qwen发布AgentWorld专项优化35B基座",
+      "1M上下文Qwythos-9B累计下载近8万",
+      "超半数热门模型采用GGUF轻量部署格式"
+    ],
+    "ai-community": [
+      "提出MCP场景化上下文新思路优化RAG",
+      "教程教搭Ollama自动生成Git提交信息",
+      "给出AI Agent防密钥泄露生产级架构方案",
+      "LLM成本优化方案可压缩70%推理成本",
+      "发布MCP服务Python落地实操指南",
+      "开发者热议AI寒冬回声与从业者定位"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "All 9 tracked AI CLI tools adopt MCP as standard extension architecture",
+      "OpenAI Codex v0.142.4 minor Rust runtime patch released 2026-06-30",
+      "Claude Code saw 10 hot issues, 3 new PRs with no new public release",
+      "AI CLI landscape prioritizes production reliability and enterprise compliance",
+      "No major new AI CLI product launches reported in 24h observation window",
+      "AI CLI market splits into 3 distinct user-focused segments mid-2026"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.6.11-beta.2 adds 3 new channel automation features",
+      "OpenClaw closed 77 issues, 44 PRs for post-2026.6 upgrade regressions",
+      "Top OpenClaw desktop client feature request hits 110 comments, 81 upvotes",
+      "13 total OpenClaw ecosystem projects covered in 2026-06-30 digest",
+      "New OpenClaw beta adds native Mattermost /oc_queue command support",
+      "All OpenClaw critical P1 bugs have active review PRs, project health stable"
+    ],
+    "ai-trending": [
+      "7 of top 10 fastest growing AI repos gained over 800 new stars in 24h",
+      "CuPy update cuts local AI inference latency by 40% for 2026 consumer GPUs",
+      "vLLM adds native support for top Chinese LLMs Kimi-K2.6 and GLM-5.1",
+      "Ollama 0.6 release simplifies one-click deployment of 20+ multimodal models",
+      "Top trending AI projects are domain-specific production-ready multi-agent tools",
+      "Nearly all high-growth new projects natively support MCP interoperability standard"
+    ],
+    "ai-web": [
+      "Unindexed OpenAI HP Frontier partnership page spotted on official domain",
+      "No new public content released from Anthropic in 24h tracking window",
+      "Spotted page is first confirmed formal OpenAI-HP co-branded infrastructure initiative",
+      "OpenAI HP partnership page is metadata-only, no full article retrievable yet",
+      "Anthropic stays on low-disclosure cadence during core model development cycle",
+      "No new Anthropic preprints, releases or partnerships detected 2026-06-30"
+    ],
+    "ai-hn": [
+      "vLLM Micro-Agent demo beats standalone frontier models on most reasoning tasks",
+      "Top HN AI post sparks 24-comment open source vs AI safety debate",
+      "South Korea announces $1T investment for memory chips and humanoid robots",
+      "Zvi argues claims of China full Anthropic model parity are unsubstantiated",
+      "Developers prioritize efficiency, on-device execution over raw frontier model hype",
+      "vLLM Micro-Agent coordinates small specialized models inside one API call"
+    ],
+    "ai-hf": [
+      "Zhipu GLM-5.2 MoE tops trending with 2928 weekly likes, 133k+ downloads",
+      "Multiple Qwen3.5/Qwen3.6 models exceed 3M total weekly downloads",
+      "GLM-5.2 has industry-leading 1M+ long context and low hallucination rates",
+      "Qwen-AgentWorld 35B is purpose-built for multi-agent collaboration tasks",
+      "Half of top 30 trending HF models are optimized GGUF variants for local use",
+      "Nvidia, Baidu, DeepSeek launched new hardware-optimized AI model releases"
+    ],
+    "ai-community": [
+      "2026 AI Engineer World's Fair dominates top Dev.to engagement posts",
+      "Lobste.rs thread links 2026 AI funding bubble to historical AI Winter cycles",
+      "Popular post: prioritize situational context over fragile LLM long-term memory",
+      "Developers debate AI guardrails to prevent sensitive system credential leaks",
+      "Top Dev.to post cuts hype for grounded 12-month AI tooling predictions",
+      "Developers discuss upskilling as AI automates low-level repetitive work"
+    ]
+  }
+}

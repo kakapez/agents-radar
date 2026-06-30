@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道入成熟期，MCP成通用接入标准",
+      "Claude Code双更，默认启用Claude Sonnet 5",
+      "Copilot CLI新增支持Claude Opus 4.8 Fast",
+      "OpenCode修复全量MCP生态连接稳定性问题",
+      "Gemini CLI迭代沙箱，发布v0.51.0夜间版",
+      "国产AI CLI梯队针对中文场景差异化优化"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.11正式版无破坏性变更",
+      "修复升级指令冲突致Gateway死循环高危故障",
+      "解决插件更新误降级第三方npm插件问题",
+      "新增Slack中继、Mattermost专属命令能力",
+      "24小时合并85条PR，完成62%月度迭代目标",
+      "修复配置写入误改权限的高合规安全隐患"
+    ],
+    "ai-trending": [
+      "agency-agents单日涨1793星登顶今日AI热榜",
+      "herdr终端多路复用工具单日新增485星",
+      "OmniRoute对接231家大模型最高降95%成本",
+      "谷歌发布agents-cli部署运维云侧智能体",
+      "superpowers提编码智能体准确率达60%",
+      "vllm新增Agent路由吞吐效率提升2倍"
+    ],
+    "ai-web": [
+      "Anthropic发Claude Sonnet 5，Agent能力追平Opus",
+      "Sonnet 5全量免费开放，推理成本大幅下探",
+      "推出Claude Science科研工作台全流程可溯源",
+      "Anthropic首次公开前沿红队团队完整架构",
+      "OpenAI上线生物基因基准测试工具新页面",
+      "头部厂商竞争转向Agent普惠垂直场景落地"
+    ],
+    "ai-hn": [
+      "Claude Sonnet 5登顶HN AI榜获近800热度",
+      "Meta发布无手术脑电波转文字AI系统引热议",
+      "Mistral发布轻量边缘模型Leanstral 1.5",
+      "开源全链路代码Agent基础设施143.dev亮相",
+      "实测消费级APU可流畅跑本地开源LLM",
+      "开发者热议Claude Code隐私定价数据问题"
+    ],
+    "ai-arxiv": [
+      "35B智能体追平万亿参数大模型实测性能",
+      "新正则解决稀疏自编码器特征分裂顽疾",
+      "实证推翻保守离线训练更安全对齐共识",
+      "自进化世界模型大幅提Agent规划鲁棒性",
+      "转混合注意力策略降长文本推理成本",
+      "多智能体通信新型攻击面研究补安全空白"
+    ],
+    "ai-hf": [
+      "GLM-5.2获3041周赞登顶Hugging Face周榜",
+      "社区微调Qwen3.6量化版周下载超300万",
+      "百度开源Unlimited-OCR精度超商用付费服务",
+      "通义千问开源Agent专属基座Qwen-AgentWorld",
+      "微博3B数学小模型性能超同量级7B模型",
+      "英伟达LocateAnything-3B周下载破80万"
+    ],
+    "ai-community": [
+      "开发者热议AI进入全行业重构iPhone时刻",
+      "披露免费AI服务隐性转移付费风险",
+      "谷歌从业者论证本地开源AI是未来趋势",
+      "提出日志即Agent新思路降落地门槛",
+      "分享46个仓库AI语义搜索无侵入方案",
+      "AGENTS.md解决多编码Agent上下文对齐"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "10 leading AI dev CLI tools covered in 2026-07-01 community digest",
+      "Mid-2026 AI code CLI category prioritizes production-grade reliability",
+      "All tracked tools align on MCP compatibility and zero-trust sandboxing",
+      "70% of power AI CLI users run on Windows, WSL, Linux Wayland platforms",
+      "Market splits between vendor compliance tools and open community alternatives",
+      "Maintainers shift focus to resolving cross-platform long-tail regressions"
+    ],
+    "ai-agents": [
+      "13 OpenClaw ecosystem projects tracked in 2026-07-01 digest",
+      "OpenClaw v2026.6.1 shipped new Slack relay channel control features",
+      "OpenClaw hit 27% work item resolution rate on high-activity maintenance day",
+      "Team rolled out security patches for multi-channel self-hosted deployments",
+      "No critical zero-day flaws or major production outages were reported",
+      "Next OpenClaw feature release is scheduled for mid-July 2026"
+    ],
+    "ai-trending": [
+      "OmniRoute AI gateway gained 459 new GitHub stars in 24 hours",
+      "Google agents-cli gained 433 daily stars for cloud agent deployment",
+      "Rust herdr terminal agent multiplexer earned 485 new daily stars",
+      "Open source AI focus shifts from generic LLMs to production agent stacks",
+      "New AI gateway tools saw explosive growth to cut high inference costs",
+      "Niche vertical AI agents get far more traction than generalist apps"
+    ],
+    "ai-web": [
+      "Claude Sonnet 5 matches Opus 4.8 performance at low entry price points",
+      "Claude Sonnet 5 makes top-tier tool use default for free Claude users",
+      "Anthropic debuted Claude Science vertical workbench for R&D researchers",
+      "Anthropic announced new dedicated Frontier Red Team safety function",
+      "OpenAI published unconfirmed Genebench Pro metadata no full content",
+      "Anthropic June 30 releases target agentic AI and scientific segments"
+    ],
+    "ai-hn": [
+      "Claude Sonnet 5 hit 782 points as top-rated 2026-07-01 AI HN story",
+      "HN users call Claude Sonnet 5 a real GPT-4o production workload competitor",
+      "Unannounced Claude Code pricing changes sparked widespread user frustration",
+      "Viral post flags Cursor iOS app overreach in device privacy modifications",
+      "Meta non-invasive brain-to-text BCI research earned 70 points on HN",
+      "Users discuss BCI accessibility use cases for motor-impaired people"
+    ],
+    "ai-arxiv": [
+      "35B MoE agent matches trillion-parameter performance cutting compute 96%",
+      "New paper scales task horizon not parameters for top agent results",
+      "Study finds offline conservative training amplifies LLM reward hacking flaws",
+      "Self-evolving world model fixes foresight gaps for long-horizon agents",
+      "New RAG design mitigates conflicting knowledge performance drops",
+      "50 preprints deliver breakthroughs resolving agentic system bottlenecks"
+    ],
+    "ai-hf": [
+      "zai-org GLM-5.2 earned 3041 weekly likes as top trending open MoE",
+      "Community uncensored Qwen 3.6 MoE exceeded 3 million total downloads",
+      "1/3 of trending HF models are GGUF format for edge llama.cpp deploy",
+      "GLM-5.2 has permissive commercial license and ultra-low inference latency",
+      "DeepSeek V4 Pro offers near-zero downtime long context enterprise support",
+      "OCR multimodal tools posted record week-over-week engagement growth"
+    ],
+    "ai-community": [
+      "Developers shift focus to local open AI away from closed frontier models",
+      "2026 AI Engineer World’s Fair coverage dominates cross-platform discussions",
+      "Dev post flags hidden billing risks of un-audited free consumer AI plans",
+      "Developers prioritize production AI use cases over untested viral content",
+      "Users debate 2020s AI Winter risk amid current market overhype cycles",
+      "Post frames 2026 AI shift as equivalent to 2007 iPhone inflection point"
+    ]
+  }
+}

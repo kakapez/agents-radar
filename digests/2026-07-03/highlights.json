@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入规模化落地生产阶段",
+      "MCP扩展生态事实标准快速普及",
+      "Qwen Code发布v0.19.5正式稳定版",
+      "OpenAI Codex当日活跃PR达10个",
+      "Gemini CLI发布v0.51.0夜间预览版",
+      "国产AI CLI抢占国内企业用户市场"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.7.1-beta.1预览版",
+      "全链路支持OpenAI GPT-5.6模型",
+      "新增openclaw attach跨工具调试命令",
+      "社区外部贡献PR占比超60%",
+      "修复安卓客户端消息丢失时序bug",
+      "解决LanceDB插件依赖冲突问题"
+    ],
+    "ai-trending": [
+      "agency-agents单日新增星2925登顶榜首",
+      "OpenAI发布Codex对接Claude Code插件",
+      "caveman削减Claude Code 65%Token消耗",
+      "ECC优化主流编码AI工具Harness性能",
+      "量化交易智能体Vibe-Trading登榜",
+      "MCP组件支持Agent调用Chrome调试"
+    ],
+    "ai-web": [
+      "Anthropic发布新品Claude Sonnet 5模型",
+      "Sonnet 5 Agent能力追平Opus 4.8",
+      "全档位用户直接默认可用新模型",
+      "高危任务能力降级降低滥用风险",
+      "中端Agent普惠重构开发成本基线",
+      "OpenAI今日无公开官网更新内容"
+    ],
+    "ai-hn": [
+      "倡议不直接引入LLM生成代码依赖",
+      "Claude Code暴露60秒无应答自动执行bug",
+      "开源方案让任意LLM可解析视频内容",
+      "披露AI浏览器绕护栏幻觉共性漏洞",
+      "11款LLM复杂代码重构能力对比测试",
+      "OpenAI拟向美政府出让5%股份引热议"
+    ],
+    "ai-arxiv": [
+      "单层Transformer对齐算力降一个数量级",
+      "对数空间量化亚1比特保95%性能",
+      "AutoMem大幅提升大模型长期记忆效率",
+      "实证智能体开放世界泛化性极脆弱",
+      "首次量化LLM科研思路与人类差距",
+      "推导异步RLHF最优学习率缩放规律"
+    ],
+    "ai-hf": [
+      "智源GLM-5.2周点赞超3200登榜首",
+      "英伟达LocateAnything-3B下载破百万",
+      "4款轻量化模型单周下载破百万",
+      "百度开源Unlimited-OCR支持任意版式识别",
+      "230M超轻量模型可部署在嵌入式设备",
+      "Krea-2-Turbo文生图速度提升3倍"
+    ],
+    "ai-community": [
+      "汇总AIE大会18位从业者AI发展预判",
+      "给出AI生成测试用例优劣边界标准",
+      "科普LLM常见入侵路径附防护方案",
+      "拆解本地AI性能追平云端核心原因",
+      "发布2026欧盟推理服务商横向对比",
+      "提出多智能体协作创新落地新思路"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI CLI tools tracked in 2026-07-03 community digest",
+      "AI CLI landscape shifts from hobbyist to production enterprise usage",
+      "6 vendor-backed tools prioritize first-party model and IDE integration",
+      "3 open source CLI tools focus on multi-provider customizability",
+      "MCP compliance is now a baseline for competitive AI CLI tools",
+      "All major teams prioritize reliability hardening over new features"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.7.1-beta.1 released with full GPT-5.6 family support",
+      "New `openclaw attach` CLI command for debugging active sessions launched",
+      "197 updated issues, 500 PRs tracked across 13 ecosystem projects",
+      "OpenClaw hits 40.6% 24-hour issue closure rate with strong engagement",
+      "Maintainers prioritize post-v2026.6.x regression patches for stability",
+      "40% of updated P1 OpenClaw issues have linked open fix PRs"
+    ],
+    "ai-trending": [
+      "7 of top 10 trending AI repos focus on autonomous dev workflows",
+      "3 Claude Code optimization projects gained 800+ new stars each",
+      "Google launches official Chrome DevTools MCP, first big-tech MCP contribution",
+      "ECC system cuts coding agent runtime overhead by 40% for most deployments",
+      "Total AI trending new stars hit 10,200, 310% week-over-week growth",
+      "Specialized agents for pentesting, trading, job search see massive traction"
+    ],
+    "ai-web": [
+      "Anthropic fully launches Claude Sonnet 5, its most agentic mid-tier model yet",
+      "Claude Sonnet 5 nearly matches Opus 4.8 on core autonomous task performance",
+      "Sonnet 5 is set as default for free consumer and low-cost Pro plans",
+      "New Claude Sonnet 5 includes dedicated agent safety optimizations",
+      "Sonnet 5 retains the line's signature low price point vs flagship models",
+      "No new official content updates on OpenAI platforms this crawl window"
+    ],
+    "ai-hn": [
+      "Top HN discussions cover OpenAI's 5% US government ownership stake proposal",
+      "Popular developer movement pushes to ban LLM code from dependencies",
+      "claude-real-video adds video analysis to any LLM no fine-tuning needed",
+      "High-engagement threads cover hidden Claude Code tracking, IP misappropriation",
+      "11-model LLM code refactoring benchmark draws heavy developer attention",
+      "Open source video LLM wrapper earns 50 HN points and 14 user comments"
+    ],
+    "ai-arxiv": [
+      "Single transformer layer optimization matches full LLM RL training performance",
+      "New method cuts LLM RL post-training compute overhead drastically",
+      "State-Prediction Separation Hypothesis introduces high-impact transformer tweak",
+      "New papers address understudied LLM agent failure modes like sycophancy",
+      "Research prioritizes running frontier AI on non-data-center consumer hardware",
+      "2026-07-03 submissions deliver key mechanistic LLM operation insights"
+    ],
+    "ai-hf": [
+      "GLM-5.2 MoE LLM leads trending with 3,248 weekly Hugging Face likes",
+      "Uncensored Qwen 3.6 vision GGUF variant crosses 3 million downloads",
+      "Nvidia LocateAnything-3B earns 2,572 likes and 1M+ total downloads",
+      "DeepSeek-V4-Pro-DSpark optimized for low-latency enterprise inference",
+      "DeepSeek-V4-Flash-DSpark built for edge and low-resource cloud use",
+      "397B Ornith 1.0 ultra-large LLM draws heavy research team interest"
+    ],
+    "ai-community": [
+      "AI Engineer World's Fair dominates top Dev.to AI engagement July 3",
+      "Lobste.rs hosts deep dives into AI malware and math research disruption",
+      "Open thread lets community shape AIE World's Fair public discussion topics",
+      "Guide documents common failure modes of un-audited AI test suites",
+      "Google VP of Technology publicly states he has given up on writing code",
+      "Developers focus on practical local AI optimization and production LLM routing"
+    ]
+  }
+}

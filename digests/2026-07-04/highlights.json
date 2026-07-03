@@ -1,0 +1,126 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.199/200两个新版本",
+      "Gemini CLI当日24个PR合入活跃度拉满",
+      "国内AI CLI主打安全可控差异化优势",
+      "赛道集体转向生产级开发工作流落地",
+      "OpenCode当日超20个PR合入活跃度极高",
+      "头部产品聚焦工程可靠性四大方向迭代"
+    ],
+    "ai-agents": [
+      "OpenClaw修复Codex Worker失控核心故障",
+      "12项公共代码重构降维护成本22%",
+      "云实例正余额误判欠费Bug已修复",
+      "P1安全级文本泄露问题引发社区热议",
+      "下补丁版将修复v2026.6.11全P1故障",
+      "第三方生态适配需求环比上涨17%"
+    ],
+    "ai-trending": [
+      "caveman单日增2851星登GitHub全站榜首",
+      "Claude Code生态衍生项目今日集中爆发",
+      "谷歌官方推出Chrome DevTools MCP接口",
+      "herdr实现多Agent并行调度多路复用",
+      "Superpowers成Agent工程化落地标杆项目",
+      "agency-agents单日新增Star达1202个"
+    ],
+    "ai-web": [
+      "Anthropic正式发布Sonnet 5中端Agent模型",
+      "Sonnet 5能力接近Opus 4.8定价大降",
+      "可见式扩展思考机制支持自定义推理预算",
+      "公开越狱分级框架填补行业统一标准空白",
+      "完善ASL AI安全等级体系对齐BSL标准",
+      "全档位用户可直接默认访问Sonnet 5"
+    ],
+    "ai-hn": [
+      "本地SOTA部署指南拿245星登HN AI热度第一",
+      "Meta新大模型性能对标OpenAI GPT-5旗舰",
+      "新研究解决小模型嵌入空间坍缩痛点",
+      "大模型测试期高危漏洞披露量同步激增",
+      "Mistral推出轻量形式化验证模型Leanstral1.5",
+      "生成式UI统一开放标准OpenUI正式发布"
+    ],
+    "ai-arxiv": [
+      "提出LLM部署阶段轻量实时安全监控框架",
+      "LACUNA成首个LLM遗忘精度评测测试床",
+      "发现编码代理跨会话持久态全新攻击面",
+      "ReContext大幅降低长场景推理幻觉率",
+      "多Agent社会结构引发公私输出系统性差异",
+      "证实个性化记忆会导致LLM推理轨迹漂移"
+    ],
+    "ai-hf": [
+      "GLM-5.2获本周最高原生基座社区点赞",
+      "近400B参数超大MoE模型完全开源无限制",
+      "英伟达优化Qwen3.6推理速度提升超2倍",
+      "消费级N卡可流畅运行量化版GLM-5.2",
+      "Qwen衍生35B基座性能对标闭源SOTA",
+      "4款热门模型单周下载量破100万"
+    ],
+    "ai-community": [
+      "MCP+Skills补齐编码Agent工作流短板",
+      "开发者落地AI Agent内存可信防火墙",
+      "大模型对抗测试入门指南提前排查漏洞",
+      "基于Firecracker搭建AI代码轻量沙箱",
+      "汇总7款开源代码库上下文工具面向研发",
+      "梳理Agent记忆演进路径明确未来方向"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI CLI dev tools tracked in 2026-07-04 community digest",
+      "Mid-2026 AI CLI ecosystem prioritizes MCP standard adoption",
+      "Vendors fix regressions from Claude Opus 4.8 and GPT-5.5 models",
+      "Industry pushes multi-provider AI CLI support to cut vendor lock-in",
+      "Teams build air-gapped AI CLI versions for regulated enterprise use",
+      "Cross-surface state sync is top unmet AI CLI user demand"
+    ],
+    "ai-agents": [
+      "13 OpenClaw ecosystem projects tracked in 2026-07-04 digest",
+      "OpenClaw v2026.6.11 regression triage is top July 4 dev priority",
+      "Only 7.8% of OpenClaw PRs merged post recent stability incidents",
+      "No new official OpenClaw releases launched in 24h to 2026-07-04",
+      "OpenClaw PR #99605 fixes Google Gemini OAuth token error response",
+      "Active community contributes to OpenClaw issue triage and bug reproduction"
+    ],
+    "ai-trending": [
+      "14 trending AI repos gained 17k+ combined GitHub stars 2026-07-04",
+      "Viral token skill cuts 65% coding prompt usage, earned 2851 stars",
+      "Anthropic Claude Code gained 245 new GitHub stars 2026-07-04",
+      "New Chrome DevTools MCP server earned 404 stars on launch day",
+      "Leading agent runtimes now support standardized interoperability",
+      "Vertical pentest and no-code agency AI agents see massive traction"
+    ],
+    "ai-web": [
+      "Anthropic launched Claude Sonnet 5 as default for free and Pro tiers",
+      "Claude Sonnet 5 nears Opus 4.8 performance at lower price points",
+      "Anthropic released Fable 5 full cybersecurity safeguard transparency docs",
+      "Anthropic published public draft of AI jailbreak severity framework",
+      "New Anthropic Responsible Scaling Policy aligns with agentic risks",
+      "Anthropic launched customizable reasoning budgets for Claude users"
+    ],
+    "ai-hn": [
+      "Top HN AI post is SOTA LLM local consumer hardware run guide",
+      "Study finds AI delivers only 3% net time savings for knowledge workers",
+      "Meta claims its upcoming flagship LLM has caught up to OpenAI GPT-5",
+      "Community debates geopolitical segmentation of commercial AI services",
+      "Vulnerabilities spiked after Claude Mythos Preview release per Epoch data",
+      "HN users prioritize local user-controlled AI tools over frontier hype"
+    ],
+    "ai-arxiv": [
+      "50 new ArXiv AI papers focus on agent safety and unlearning 2026-07-04",
+      "LACUNA is first standardized testbed for LLM unlearning precision",
+      "Lightweight new LLM monitor enables real-time deployment oversight",
+      "Research finds reasoning investment drives code agent first-try reliability",
+      "New benchmarks evaluate dynamic multi-agent emergent behaviors",
+      "New attack surface documented for persistent-state coding agents"
+    ],
+    "ai-community": [
+      "Devs debate production readiness of autonomous looping coding agents",
+      "MCP-aligned workflow structures cut AI agent hallucinations per devs",
+      "New demo trust firewall enforces verifiable AI agent memory access controls",
+      "Security teams warn of hallucinated phishing domain LLM vulnerabilities",
+      "Hackathon projects showcase Cognee framework for structured AI memory",
+      "Devs share actionable 2026 AI Engineer World's Fair takeaways"
+    ]
+  }
+}

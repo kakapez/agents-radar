@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.201优化Sonnet5提示注入逻辑",
+      "Qwen Code推出v0.19.6-nightly强化PR自动审核机制",
+      "MCP成AI CLI全行业统一扩展事实标准",
+      "全赛道迭代重心转向长会话稳定性等痛点",
+      "头部AI CLI产品拥有十万级稳定付费用户",
+      "所有工具集中适配带原生思考链的最新大模型"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.3稳定版问题修复完成度达87%",
+      "137个PR合并，Slack渠道适配全闭环",
+      "预览版2026.7.12将合入大量稳定性修复",
+      "修复高并发下控制仪表板虚假内存告警",
+      "非英文Windows端口检测修复进入最终评审",
+      "P1级Bug：子代理任务完成结果静默丢失"
+    ],
+    "ai-trending": [
+      "AI渗透测试工具strix日增星1910登顶榜首",
+      "caveman工具削减65%Claude Code Token消耗",
+      "阿里开源page-agent用自然语言操控任意网页",
+      "Chrome官方DevTools MCP适配器日增303星",
+      "OpenAI推出Codex对接Claude Code互通插件",
+      "Rust本地AI会议助手meetily日增星865"
+    ],
+    "ai-hn": [
+      "Anthropic缓存泄漏漏洞260分登顶HN全榜热度",
+      "AI冲击初级程序员就业引148条正反交锋",
+      "GPT-5.5 Codex缺陷致代码生成质量骤降",
+      "几乎所有主流商用AI模型由中美企业训练",
+      "开源本地Recall替代方案ScreenMind获好评",
+      "Crew框架实现Claude Code多代理直接通讯"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2开源登顶本周HF点赞量榜首",
+      "Qwen推出AgentWorld-35B智能体专属优化模型",
+      "DeepSeek V4带DSpark优化推理速度提2倍",
+      "GGUF量化模型占HF周度热门近半数席位",
+      "英伟达发布GLM-5.2-NVFP4硬件优化衍生模型",
+      "35B参数Ornith大模型下载量破21万次"
+    ],
+    "ai-community": [
+      "session-indexer解决Claude Code跨项目记忆丢失",
+      "实测FTS5比向量搜索更适配编码Agent内存",
+      "2026主流向量数据库实测对比降低选型成本",
+      "AI Agent权限过高存重大生产安全隐患",
+      "AI辅助凭证检测可减少95%以上误报率",
+      "OrinIDE v1.0.8更新强化前端AI编码能力"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI code CLI tools shift focus to post-release regression fixes",
+      "MCP becomes de facto standard across all tracked AI CLI tools",
+      "Claude Code released targeted v2.1.201 stability patch on 2026-07-05",
+      "OpenAI Codex has 19 active PRs, latest stable remains v0.142.0",
+      "8 tracked AI CLI tools prioritize fixing persistent agent reliability gaps",
+      "3 distinct market segments have emerged in the AI CLI ecosystem"
+    ],
+    "ai-agents": [
+      "OpenClaw saw 500 updated issues and 500 PRs in 24h ending 2026-07-05",
+      "Maintainers clear backlog of early 2026 high-severity production bugs",
+      "No major breaking changes detected in recent merged OpenClaw work",
+      "No new OpenClaw release as team prioritizes pending bug and security patches",
+      "13 total OpenClaw ecosystem projects are tracked in the latest digest",
+      "Devs focus on multi-agent orchestration reliability improvements"
+    ],
+    "ai-trending": [
+      "AI pentest tool strix gained 1910 new GitHub stars in 24 hours",
+      "Claude Code skill caveman cuts token use 65%, gained 1089 daily stars",
+      "Leaked top LLM system prompts repo gained 432 new daily stars",
+      "Official Chrome DevTools MCP bridge launched, gained 303 daily stars",
+      "Open source community shifts focus to coding agent practical extensions",
+      "New .NET AI coding agent skill set integrations launched in the period"
+    ],
+    "ai-hn": [
+      "Top HN thread covers verified Claude Code session/cache data leakage flaw",
+      "Viral debate on AI collapsing junior programmer market sparks heated discussion",
+      "Codex clustering optimization causes long-form debugging failures per user reports",
+      "Almost no unannounced new AI model hype appears in current HN discussions",
+      "Anthropic faces multiple negative updates including poorly optimized Mac app",
+      "US and Chinese firms build nearly all widely used AI models per Our World in Data"
+    ],
+    "ai-hf": [
+      "zai-org GLM-5.2 leads weekly HF trending with 3396 likes",
+      "Top trending HF model variants hit nearly 3 million total downloads",
+      "11 of 30 trending HF models support vision-language workflows, up 72% MoM",
+      "DeepSeek-V4-Pro-DSpark for distributed spark inference gains traction",
+      "Domain cybersecurity code auditing HF models attract high download volumes",
+      "13% of trending HF models are enterprise hardware-optimized for low latency"
+    ],
+    "ai-community": [
+      "MCP gains traction as industry fix for AI agent tool integration gaps",
+      "Dev.to game GPU Survivors teaches 1T parameter LLM inference troubleshooting",
+      "OrinIDE v1.0.8 ships new JS dev-focused AI code editor UI updates",
+      "Engineers share workarounds for AI tool hallucination and memory gaps",
+      "Post reveals scan rule flagged 842 fake secrets in vercel/ai repo",
+      "Communities prioritize addressing AI agent unaddressed production pain points"
+    ]
+  }
+}

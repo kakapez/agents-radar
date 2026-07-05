@@ -1,0 +1,53 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Copilot CLI发布v1.0.69-1正式稳定版",
+      "Qwen Code发布v0.19.6-nightly预览版",
+      "OpenAI Codex发布rust-v0.143.0-alpha.36版",
+      "头部厂商攻坚子代理长会话MCP方向",
+      "Gemini CLI发布v0.51.0-nightly预览版",
+      "国内私有化部署需求增速超海外市场"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.7.1-beta.2测试版",
+      "全链路适配OpenAI GPT-5.6全系列模型",
+      "新增attach命令支持挂载运行中网关",
+      "v2026.7正式版整体完成度达72%",
+      "新增成本对比功能提升运营管控效率",
+      "修复Codex音视频输入模态识别Bug"
+    ],
+    "ai-trending": [
+      "OpenAI推出codex-plugin-cc打通Claude链路",
+      "Token削减工具caveman今日涨星1043",
+      "阿里开源page-agent可直接操控任意网页",
+      "大模型系统提示词泄露全合集上线",
+      "Rust框架rig性能超Python栈3至5倍",
+      "Agent多路复用器支持调度数十个Agent"
+    ],
+    "ai-hn": [
+      "149美元让Claude完成生产工具大版本开发",
+      "首个AI家教测出超1SD学分课程增益",
+      "开源Claude设计系统提示词模板受热捧",
+      "美芯片管制意外加速中国开源AI生态",
+      "Context Graph给出Agent低成本记忆方案",
+      "社区热议AI生成代码实际生产效能"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2登顶本周HF点赞榜榜首",
+      "英伟达优化Qwen3.6适配消费级显卡推理",
+      "9B基座支持1M Token超长文档推理",
+      "通义千问发布智能体专用量化基座",
+      "Qwen衍生模型占HF近三成成开发首选",
+      "端侧GGUF版贡献超七成模型总下载量"
+    ],
+    "ai-community": [
+      "公开8个月200次LLM替代方案踩坑经验",
+      "验证所有确定性Agent方案全部未达预期",
+      "LangChain Agent静默两周故障排查经验公开",
+      "自托管LLM默认无权限校验存高危漏洞",
+      "拆解Cursor生成代码自带SSRF漏洞原因",
+      "发布多Agent场景变种RAG设计权衡方案"
+    ]
+  },
+  "en": {}
+}

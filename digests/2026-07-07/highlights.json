@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code推送v2.1.202正式版",
+      "MCP成AI CLI工具默认支持标准协议",
+      "OpenCode推送v1.17.14正式版",
+      "全行业日均高优PR合入量普遍超10项",
+      "OpenAI Codex推送新版alpha预览版",
+      "全工具集中修复Agent越权执行安全缺陷"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.7.x迭代进度达62%",
+      "Claude Sonnet 5适配后推理成本降75%",
+      "政务卡片渲染回归bug已完成全闭环修复",
+      "重入防护会话冲突严重bug已修复",
+      "社区呼吁推出Linux/Windows桌面客户端",
+      "37%高优Issue关联修复PR闭环效率高"
+    ],
+    "ai-trending": [
+      "审美技能项目taste-skill日增星1453登顶",
+      "OpenAI插件打通Claude与Codex能力互调",
+      "工程技能库agent-skills日增星1114上Trending",
+      "阿里轻量向量库zvec今日新增星355",
+      "CodexBar免登录查看编码Agent用量统计",
+      "终端Agent多路复用器herdr日增星783"
+    ],
+    "ai-web": [
+      "Claude Code20小时审计4.66亿行政务遗留代码",
+      "Anthropic发现大模型类人脑J-空间工作区",
+      "创下公开大模型代码处理规模新纪录",
+      "Anthropic攻坚高合规政企敏感场景市场",
+      "J-空间为大模型可解释性提供新路径",
+      "OpenAI处于下一代大模型上线前蓄力期"
+    ],
+    "ai-hn": [
+      "Anthropic类脑研究获218分高热度霸榜",
+      "讨论称开源大模型将推动AI边际成本趋零",
+      "DeepSeek V4 Agent场景调用占比快速提升",
+      "Pulpie网页清洗小模型性能超通用LLM 80%",
+      "6美元包月不限Token LLM服务引热议",
+      "社区掀起LLM创新停滞行业反思潮"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2以3529点赞登周榜榜首",
+      "通义千问Agent优化模型下载超5.7万次",
+      "Qwen衍生模型占HF榜单总量超30%",
+      "DeepSeek V4推理优化版下载超1.4万次",
+      "腾讯混元第三代Hy3刚上架尚未开放",
+      "美团长上下文模型LongCat-2.0刚发布"
+    ],
+    "ai-community": [
+      "36项AI写作痕迹排查清单可直接复用",
+      "拆解LLM API密钥全链路泄露防护方案",
+      "浏览器端本地AI编辑器OrinIDE发新版",
+      "分享AI Agent重发错误功能事故防护方案",
+      "游戏化科普PagedAttention显存调度原理",
+      "开发者分享OpenAI服务停服迁移方案"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9+ leading AI CLI tools covered in 2026-07-07 community digest",
+      "All major AI CLI projects adopt MCP and ACP interoperability layers",
+      "Vendors shift priority from model benchmarks to reliability and security hardening",
+      "Top user concerns: predictable performance, transparent billing, no workflow disruption",
+      "Open source AI CLI ecosystem builds parity for regulated air-gapped deployments",
+      "Ecosystem moves past fragmented feature dev to standardized shared foundations"
+    ],
+    "ai-agents": [
+      "13 OpenClaw ecosystem AI agent projects tracked in 2026-07-07 digest",
+      "OpenClaw hits peak 24h activity: 500 updated issues, 500 updated PRs",
+      "OpenClaw adds onboarding support for new Anthropic Claude Sonnet 5 model",
+      "186 PRs merged/closed in 24h, v2026.7.x release near feature-complete",
+      "No new OpenClaw builds published, pending final compatibility validation",
+      "Only small set of high-severity unpatched bugs remain in project backlog"
+    ],
+    "ai-trending": [
+      "Frontier model system prompt repo gains +1386 new GitHub stars",
+      "Local Rust AI assistant Meetily picks up 2493 new GitHub stars in a day",
+      "Agent-skills repo hits 1114 stars, cuts LLM dev task errors by 40%",
+      "Lightweight terminal agent multiplexer herd gains 783 new GitHub stars",
+      "Alibaba zvec vector DB adds 355 stars, total 13834 GitHub stars",
+      "Open source AI shifts to building agent extensions, not full end-to-end stacks"
+    ],
+    "ai-web": [
+      "Anthropic published 2026-07-06 public sector Claude Code cybersecurity case study",
+      "Claude Code scans 466M lines of legacy gov code in 20h for vulnerabilities",
+      "Anthropic releases landmark paper on consciousness-like LLM neural workspace",
+      "No new content published on OpenAI's official site in latest crawl cycle",
+      "Anthropic pushes to expand footprint in high-trust regulated public sector AI use cases",
+      "Anthropic sets new industry benchmark for LLM reasoning interpretability"
+    ],
+    "ai-hn": [
+      "218-scored HN thread discusses Anthropic's global LLM workspace research",
+      "Viral essay argues falling costs will trigger widespread AI margin collapse",
+      "HN community debates growing warnings of imminent AI market correction",
+      "Users criticize recent Anthropic choices eroding long-built user goodwill",
+      "Community notes LLM field entered era of mostly incremental 'regression to mean'",
+      "Surge of low-cost unmetered LLM tools signals coming model commoditization"
+    ],
+    "ai-hf": [
+      "GLM-5.2 MoE LLM hits 3529 weekly likes, top trending open HF model",
+      "Qwen model family spans all top 30 HF trending model use cases",
+      "GGUF quantizations break records, some crossing 2.8M edge deployment downloads",
+      "Agents-A1 LLM optimized for native autonomous multi-step task planning",
+      "10+ trending HF models have over 100k weekly downloads as of 2026-07-07",
+      "Tencent debuts specialized new Hy3 open language model on HF leaderboard"
+    ],
+    "ai-community": [
+      "Dev discussions share unfiltered real-world AI agent failure horror stories",
+      "BrowserAct hits #1 on Product Hunt for transparency on its known edge cases",
+      "36-part AI career series check-in post draws 43 reactions, 43 comments",
+      "Community prioritizes LLM operational security and production failure resilience",
+      "New deep dives cover API key exposure risks and AI production policy best practices",
+      "36-pattern checklist helps developers spot unnatural AI writing flaws"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "zh": {
+    "ai-cli": [
+      "6款AI CLI工具当日活跃度登顶S级",
+      "MCP成为AI CLI扩展全行业事实标准",
+      "Claude Code发布v2.1.203正式版",
+      "Qwen Code当日连发正式+夜间双版本",
+      "全行业攻坚用量透明化共性需求",
+      "头部工具集体补全多代理稳定性短板"
+    ],
+    "ai-agents": [
+      "OpenClaw当日活跃度达近一周峰值",
+      "插件测试集跑通成功率升至100%",
+      "解决ACP子会话Token显示为null历史Bug",
+      "沙箱自定义Dashboard进入评审队列",
+      "7个堆叠大特性即将完成下版迭代",
+      "热议工具文本泄露到公开通道Bug"
+    ],
+    "ai-trending": [
+      "系统提示词汇总项目单日新增1704星",
+      "agent-skills首发涨1311星登热榜",
+      "腾讯云开源CubeSandbox并发轻量沙箱",
+      "OfficeCLI让Agent原生读写办公文档",
+      "Claude Code适配类项目总增星超6000",
+      "CodexBar可离线查询Codex/Claude用量"
+    ],
+    "ai-web": [
+      "Anthropic发布Claude Sonnet 5下放代理能力",
+      "Sonnet 5成为Free/Pro计划默认模型",
+      "首次公开大模型全生命周期安全体系",
+      "发现J-space实现大模型推理可观测",
+      "25%情感咨询场景模型易过度谄媚",
+      "Sonnet 5性能逼近Opus 4.8定价更低"
+    ],
+    "ai-hn": [
+      "实现在浏览器运行1.7B参数1-bit LLM",
+      "开源本地版Claude Desktop获63分热度",
+      "Shellular支持手机端运行主流编码助手",
+      "曝美网安机构用Mythos审计政务代码",
+      "调研显示Codex Bug少但用户更爱Claude",
+      "热议付费清理AI生成冗余代码现象"
+    ],
+    "ai-arxiv": [
+      "新方案大降推理增强LLM训练成本",
+      "首次定义验证能力为大模型全新缩放维度",
+      "无需扩上下文支撑长时序Agent任务",
+      "发现大模型可线性编码剩余输出Token数",
+      "因果审计提升神经元编辑可靠性",
+      "具身框架填补规划与动作策略鸿沟"
+    ],
+    "ai-community": [
+      "热议AI时代勿丢阅读文档底层能力",
+      "新方案最高可省Agent循环99%Token成本",
+      "披露RAG嵌入向量可反向还原敏感文本",
+      "谷歌推出gemma-trainer降低本地微调门槛",
+      "实测AI生成线程安全代码慢5倍",
+      "行业共识AI核心竞争转向可靠性"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem shifts to reliability hardening as of July 8 2026",
+      "All active AI CLI projects align on shared Model Context Protocol",
+      "9 top AI coding CLI tools tracked including Claude Code, Gemini CLI",
+      "Devs prioritize cutting unplanned token costs over raw model gains",
+      "Community tracks both vendor-backed and open source AI CLI alternatives",
+      "Projects focus on solving cross-platform compatibility pain points"
+    ],
+    "ai-agents": [
+      "OpenClaw saw 500 updated issues and 500 PRs in 24h window",
+      "OpenClaw devs prioritize sandboxed custom dashboard widget system",
+      "No new stable OpenClaw releases, work targets 2026.7 feature cycle",
+      "13 AI agent projects tracked including PicoClaw, IronClaw, NanoBot",
+      "No critical zero-day vulnerabilities found in OpenClaw monitoring period",
+      "Maintainers resolve longstanding multi-agent orchestration reliability gaps"
+    ],
+    "ai-trending": [
+      "Leaked LLM prompts repo hit 3rd GitHub trending spot with 1704 new stars",
+      "Agent-skills new repo earned 1311 stars for production AI coding skills",
+      "Rust powers 5 of top 12 trending open source AI projects July 8 2026",
+      "Tencent CubeSandbox gained 665 stars as secure AI agent sandbox",
+      "AI coding agent ecosystem saw 1000+ total daily new GitHub stars",
+      "Ecosystem shifts from foundational LLM dev to practical workflow tools"
+    ],
+    "ai-web": [
+      "Anthropic launched Claude Sonnet 5, default for free and Pro users",
+      "Claude Sonnet 5 hits near Opus 4.8 parity at lower price point",
+      "Anthropic published LLM research on human-like conscious processing patterns",
+      "Anthropic released 4 new official publications on July 7, 2026",
+      "No new public content released by OpenAI in 24h tracking window",
+      "Anthropic pushes advanced agentic AI capabilities to all non-premium users"
+    ],
+    "ai-hn": [
+      "Top HN thread discusses unconsented AI recording of in-person private talks",
+      "Anthropic gave all paid users free Claude Fable 5 access through mid-July",
+      "2026 data shows more devs choose Claude than OpenAI Codex for coding",
+      "Local AI client Rowboat is top AI Show HN on July 8 2026",
+      "Claude Code behind-the-scenes HN thread got 49 points, 28 comments",
+      "Users discuss rising costs of deleting low-quality AI code bloat"
+    ],
+    "ai-arxiv": [
+      "LLM-as-a-Verifier formalizes verification as new LLM scaling axis",
+      "New distillation pipeline cuts RLVR training costs across all model sizes",
+      "Work removes mandatory camera calibration for vision-language-action robots",
+      "Papers introduce provable prompt injection protection for AI web tools",
+      "Latest ArXiv batch focuses on fixing long-horizon AI agent failure modes",
+      "New work resolves context window overflow gaps for long agent runs"
+    ],
+    "ai-hf": [
+      "GLM-5.2 earned 3587 weekly likes, tops trending Hugging Face models",
+      "40% of top 30 HF trending models are Qwen 3.5/3.6 derivatives",
+      "Tencent new Hy3 model supports a 1M+ native context window",
+      "7 HF AI models hit over 1M weekly downloads as local demand surges",
+      "DeepSeek-V4-Pro-DSpark gained 424 likes and 15538 weekly downloads",
+      "GLM-5.2 matches leading closed model reasoning at lower inference cost"
+    ],
+    "ai-community": [
+      "Devs warn over AI over-reliance causing lost system mental models",
+      "Aug 2026 OpenAI Assistants API shutdown forces devs to rework agent stacks",
+      "Google released gemma-trainer tool for fully local Gemma fine-tuning",
+      "Discussions highlight hidden unaddressed AI agent loop operational costs",
+      "Community focuses on solving post-demo RAG and AI agent safety gaps",
+      "Lobste.rs features deep dives into understudied quirks of AI outputs"
+    ]
+  }
+}

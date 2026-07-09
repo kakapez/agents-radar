@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Codex推送4版修复P0级断网问题",
+      "Copilot CLI推v1.0.70新增3项核心特性",
+      "OpenCode连更3小版迭代节奏极快",
+      "9款工具同步推进内网私有化适配",
+      "7款工具优化Agent失控兜底机制",
+      "全量对齐适配GPT-5.6等新模型"
+    ],
+    "ai-agents": [
+      "OpenClaw当日迭代1000条健康度稳健",
+      "修复macOS端网关服务重复创建冲突",
+      "WebUI搜配置效率提升超70%",
+      "解决飞书渠道Markdown换行渲染问题",
+      "多端体验对齐完善全平台一致性",
+      "迭代指向无人值守场景SLA提升"
+    ],
+    "ai-trending": [
+      "AI求职框架单日涨星3728登全站第一",
+      "编码Agent技能库获2582星登顶热榜",
+      "首个Agent原生办公套件涨星1923",
+      "渗透测试Agent pentagi获543星",
+      "端侧TTS引擎支持普通CPU离线运行",
+      "网页爬取工具Crawl4AI适配LLM输入"
+    ],
+    "ai-web": [
+      "伯南克加入Anthropic长期受益信托",
+      "上线Claude用户使用复盘Beta功能",
+      "公开定位调控Claude单特征激活技术",
+      "披露最激进AI长期对齐治理架构",
+      "OpenAI将推GPT-5.6绑定365 Copilot",
+      "两巨头将生物安全防控列为最高优先级"
+    ],
+    "ai-hn": [
+      "GPT-5.6热帖931分断层登顶全站",
+      "Agent编码场景Token效率提升54%",
+      "GLM5.2财会精度追平人类登HN热榜",
+      "OpenAI NYT版权诉讼新进展引热议",
+      "网页结构化API解决Agent爬取痛点",
+      "方案快速封装Web应用为Agent能力"
+    ],
+    "ai-arxiv": [
+      "解决GRPO全失败样本梯度消失缺陷",
+      "跨模型竞争提升推理质量而非凑长度",
+      "新范式降显存占用减少事实类幻觉",
+      "发布全球最大开源可溯源Agent技能库",
+      "自动定位Agent故障根因替代人工排查",
+      "动态剪枝多保留10%下游任务性能"
+    ],
+    "ai-hf": [
+      "GLM-5.2周获3722星登顶全榜",
+      "腾讯混元V3开源版主打低幻觉中文生成",
+      "DeepSeek V4高速版推理提速40%",
+      "美团LongCat2.0支持百万字长上下文",
+      "英伟达视觉定位模型下载破144万",
+      "7成热门模型为GGUF格式端侧热"
+    ],
+    "ai-community": [
+      "热议拒用AI的资深开发者将降级",
+      "提出Agent落地核心是可追溯日志",
+      "分享清理200行AI生成代码经验",
+      "提出LLM质量门替代落地方案",
+      "揭露主流AI服务商暗藏未公开猫腻",
+      "热议手写烂代码不比AI生成的更优"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI coding CLI tools covered in 2026-07-10 digest",
+      "Leading CLI tools prioritize stable low-regression developer releases",
+      "Enterprise self-hosted air-gapped AI coding deployments see sharp growth",
+      "Open source CLI tools add OTel tracing for corporate compliance needs",
+      "Teams focus on multi-agent workflow refinement and cross-tool interoperability",
+      "Tracked tools prioritize support for 2026 flagship large language models"
+    ],
+    "ai-agents": [
+      "13 total OpenClaw ecosystem projects covered in 2026-07-10 digest",
+      "500 updated issues and 500 PRs recorded in 24-hour maintenance sprint",
+      "49% of modified PRs resolved, showing high maintainer throughput",
+      "Team triages 2026.6.x regressions, no new releases this window",
+      "Active fixes target silent subagent task loss and gateway memory bloat",
+      "No breaking changes or migration notes for the 24h period"
+    ],
+    "ai-trending": [
+      "3 top AI trending projects gained over 2500 new stars in 24 hours",
+      "addyosmani/agent-skills gained 2582 stars for coding agent workflows",
+      "iOfficeAI/OfficeCLI gained 1923 stars for native agent office automation",
+      "Leaked top 10 LLM system prompts repo draws massive community attention",
+      "No new end-to-end foundation models made today's top trending rankings",
+      "Niche red teaming, job search AI use cases see unexpected traction"
+    ],
+    "ai-web": [
+      "Anthropic appointed Ben Bernanke to its Long-Term Benefit Trust board",
+      "Anthropic published 6 coordinated public updates on July 9 2026",
+      "OpenAI teases upcoming GPT-5.6 launch across new official index pages",
+      "Anthropic released beta personal AI usage reflection tool for users",
+      "Anthropic shared research on jailbreak-resistant model weight gating",
+      "OpenAI referenced new biosecurity bug bounty program in new pages"
+    ],
+    "ai-hn": [
+      "OpenAI GPT-5.6 launch hit 931 points, top weekly AI HN post",
+      "Users confirm GPT-5.6 delivers 54% better token efficiency for coding",
+      "GLM 5.2 hits near-human accuracy on bookkeeping VAT benchmarks",
+      "HN debates non-US AI models narrowing domain capability gaps",
+      "NYT alleges OpenAI hid training logs in ongoing publisher copyright suit",
+      "OpenAI's ChatGPT for Work enterprise product draws strong team interest"
+    ],
+    "ai-arxiv": [
+      "2 new papers resolve well-documented GRPO reasoning training flaws",
+      "Co-LMLM LLM cuts memory 70% for zero-overhead fact updates",
+      "Agon RL framework uses rival grading to boost model reasoning performance",
+      "Research introduces standardized harm grading for safe agent deployment",
+      "New optimizations deliver order-of-magnitude LLM compute overhead cuts",
+      "50 submissions focus on reasoning, agent deployment, AI governance"
+    ],
+    "ai-hf": [
+      "GLM-5.2 tops trending, earns 3722 weekly Hugging Face likes",
+      "Qwen 3.5/3.6 models make up 40% of all trending HF entries",
+      "Tencent's Hy3 trends for improved multilingual reasoning performance",
+      "InternScience/Agents-A1 supports native multi-step tool calling workflows",
+      "3 trending models cross 2.5 million weekly download mark this week",
+      "New OCR, image editing models expand Hugging Face niche ecosystem"
+    ],
+    "ai-community": [
+      "Viral post argues handwritten low-quality code is not more trustworthy",
+      "The hot take sparked 35 comments on post-AI developer work norms",
+      "Devs push back on overused LLM-as-judge flawed agent design pattern",
+      "Industry shifts from benchmark chases to AI cost efficiency and auditability",
+      "Popular post advises teams to audit unvetted third-party AI vendors",
+      "34 total AI stories tracked across Dev.to and Lobste.rs today"
+    ]
+  }
+}

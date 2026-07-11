@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code推送v2.1.207正式版",
+      "OpenAI Codex发布rust客户端alpha预发布版",
+      "全行业合力攻坚MCP生态落地兼容优化",
+      "头部产品加急适配最新推理大模型",
+      "Qwen Code发布v0.19.8-nightly测试版",
+      "AI CLI赛道进入生产级可用性攻坚周期"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.7.1-beta.5新版本",
+      "24小时累计新增437条Issues、500条PR",
+      "会话SQLite迁移落地解决跨版本兼容问题",
+      "网关OOM修复内存增速降至2MB/小时内",
+      "解决4天长周期运行严重内存泄漏问题",
+      "核心问题闭环速度较上月提升40%"
+    ],
+    "ai-trending": [
+      "DesktopCommanderMCP单日新增星900颗",
+      "superpowers项目单日涨星737颗",
+      "Google开源跨Agent通用技能库stitch-skills",
+      "MCP相关项目占新增星总量70%以上",
+      "vllm总星85988为工业界推理标配",
+      "开源项目集中围绕编码Agent工具链爆发"
+    ],
+    "ai-hn": [
+      "欧盟主权大模型仅耗时2个月完成预训练",
+      "实测单页维基消耗Agent68000token",
+      "OpenAI复刻Git疑似开发AI定制版",
+      "研究显示LLM会消解公开讨论观点多样性",
+      "Anthropic观测到Claude隐藏推理空间",
+      "社区吐槽厂商为对齐牺牲产品可用性"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2获本周全榜最高点赞量",
+      "百度无限长OCR周下载破130万",
+      "英伟达优化Qwen大模型推理提速40%",
+      "7款模型周下载破百万全为端侧量化版",
+      "腾讯开源混元三代大模型首次登榜",
+      "35B大模型完全开放支持MIT商用授权"
+    ],
+    "ai-community": [
+      "手把手教你搭建首个专属MCP服务",
+      "实操把Slack改造成自动开PR的AI队友",
+      "梳理2026企业级AI Agent认证全方案",
+      "揭秘Transformer论文8位作者全离开谷歌",
+      "分享业务收缩下AI项目留存实操思路",
+      "行业指出大模型堆料远胜小众架构创新"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "2026 mid-year AI coding CLI market enters post-major-model stabilization phase",
+      "MCP becomes universal de facto extensibility standard for coding AI CLI tools",
+      "Claude Code v2.1.207 ships with default Auto mode for all enterprise deployments",
+      "7 of 8 tracked coding CLI tools prioritize bug fixes over new features this cycle",
+      "Enterprise AI coding adoption surges, driving demand for SSO MCP support",
+      "OpenAI Codex releases 2 Rust CLI pre-releases for multi-agent use cases"
+    ],
+    "ai-agents": [
+      "OpenClaw 24h activity up 12% vs 7-day average, 437 issues 500 PRs updated",
+      "OpenClaw v2026.7.1-beta.5 launches full conversational onboarding across clients",
+      "OpenClaw resolves multiple months-old high-severity stability bugs this cycle",
+      "OpenClaw is on track to ship stable 2026.7.1 release very soon",
+      "OpenClaw closes 47.6% of updated issues and 43.2% of updated PRs in 24h",
+      "Maintainers wrap up long-running SQLite session/transcript migration refactor"
+    ],
+    "ai-trending": [
+      "DesktopCommanderMCP gains 900 new stars, top daily GitHub AI trending repo",
+      "New Google Labs open agent skill standard gains 338 stars, cuts cross-tool fragmentation",
+      "DesktopCommanderMCP grants Claude Code full terminal, file search and diff edit access",
+      "claude-code-templates gains 230 stars, reduces enterprise Claude Code setup overhead",
+      "MCP ecosystem dominates all top growing AI projects on 2026-07-12 GitHub trending",
+      "Local agent access utility projects outperform core LLM framework repos this cycle"
+    ],
+    "ai-hn": [
+      "Top HN AI post highlights unopt-outable AI tracker built into Windows 11",
+      "Anthropic faces widespread user backlash over declining latest Claude model quality",
+      "Apple files dual trade secret lawsuits against OpenAI per top HN discussion",
+      "OpenAI's safety head makes surprise departure, drawing heavy HN community attention",
+      "Anthropic experiences near-$17M platform billing glitch, trending on Hacker News",
+      "EU's Soofi sovereign LLM trained in 2 months without US Big Tech stack dependencies"
+    ],
+    "ai-hf": [
+      "Zhipu AI's GLM-5.2 tops HF trending with 3.8k weekly likes",
+      "Qwen 3.5/3.6 derived models make up over 40% of this week's HF trending LLM list",
+      "Tencent's Hy3 open LLM trends for long context and low latency enterprise use cases",
+      "Meituan's LongCat-2.0 LLM supports 2M tokens for extended document workflows",
+      "Top HF quantized model downloads surge past 2.5M for local no-cloud inference",
+      "Mistral releases high-performance open Leanstral-1.5-119B-A6B LLM build"
+    ],
+    "ai-community": [
+      "Devs focus on practical pain points moving AI agents to production deployments",
+      "All 8 original Transformer paper authors have left Google, sparking wide discussion",
+      "Grok 4.5 gains 16-point performance via scaling, no new architecture innovations",
+      "Lobste.rs top story explores Google AI infrastructure's underreported carbon footprint",
+      "Devs benchmark GPT-5.6 and Claude Fable 5 to map optimal coding use cases",
+      "Viral tutorial shows building Slack AI teammate that automatically opens PRs"
+    ]
+  }
+}

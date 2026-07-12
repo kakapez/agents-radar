@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI集体进入生产级落地打磨关键拐点",
+      "全品类优先推进GPT-5.6、Gemini 3适配",
+      "Gemini CLI当日新增合并PR达10个活跃度最高",
+      "Qwen Code原定nightly版因E2E测试中止发布",
+      "全头部工具集中补全生产级安全防护基线",
+      "大量迭代资源向Windows端兼容性修复倾斜"
+    ],
+    "ai-agents": [
+      "OpenClaw冲刺2026.7稳定版 暂未发布新版本",
+      "修复CI全链路失败问题 恢复自动化门禁流水线",
+      "闭环Windows平台ACP runtime不可用P1级Bug",
+      "跨平台原生客户端需求呼声达全站历史最高",
+      "当日累计关闭148个Issue/PR 项目健康度高位",
+      "后续计划发布无界文件读取加固安全补丁"
+    ],
+    "ai-trending": [
+      "Agent危险命令拦截工具单日暴涨444星",
+      "Anthropic Claude官方教程库单日新增464星",
+      "港大开源交易Agent项目单日暴涨776星",
+      "100+LLM样例仓库总星超11.8万日增450星",
+      "Claude Code模板管理工具单日新增274星",
+      "MCP桌面管控生产级项目单日涨星207"
+    ],
+    "ai-hn": [
+      "Claude Code无效token是OpenCode的4-5倍",
+      "geohot公开信炮轰AI行业炒作获开发者高认同",
+      "因果推断方法引入LLM可解释性助力合规",
+      "Confessor工具可回溯Claude本地文件访问记录",
+      "MCP生态持久化记忆工具Adaptive Recall上线",
+      "用户集体吐槽Claude Code近期账单莫名暴涨"
+    ],
+    "ai-hf": [
+      "智源GLM-5.2周获3854赞 领跑开源模型榜",
+      "腾讯开源新一代混元Hy3大模型获广泛关注",
+      "美团发布LongCat 2.0长上下文大模型新版本",
+      "Qwen衍生模型占本周开源生态占比超30%",
+      "端侧Agent模型下载破40万支持本地命令调用",
+      "Unsloth推出DeepSeek V4量化版降部署门槛"
+    ],
+    "ai-community": [
+      "实战方案可将Claude Code账单降低77%",
+      "拆解AI工具反裹挟风险引发开发者共鸣",
+      "实测Jetson Nano部署Ollama全场景性能数据",
+      "输出AI CI校验方案兼顾误报清理与防漏报",
+      "通过MCP低成本扩展Claude自定义业务能力",
+      "拆解AI记忆模块缺陷规避RAG系统幻觉问题"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "No 9 tracked major AI CLI tools shipped stable releases in the 24h window",
+      "Dev teams prioritize fixing 2026 LLM regressions, Windows gaps, agent security hardening",
+      "Model Context Protocol adoption hits critical mass across all AI CLI cohorts",
+      "Vendor-backed AI CLI tools focus on zero-config usability for professional devs",
+      "Open-source AI CLI tools prioritize self-hosted enterprise custom extensibility",
+      "10 tracked tools include Claude Code, OpenAI Codex, Gemini CLI, Qwen Code"
+    ],
+    "ai-agents": [
+      "OpenClaw repo recorded 1000 total updated artifacts across 500 issues and 500 PRs",
+      "204 issues and 148 PRs closed/merged, no new public OpenClaw releases issued",
+      "OpenClaw team prioritizes fixes ahead of upcoming 2026.7.x minor release",
+      "13 tracked ecosystem projects include NanoBot, Hermes Agent, PicoClaw",
+      "OpenClaw devs focus on core runtime stability and memory safety hardening",
+      "Enterprise self-hosted operators actively contribute to OpenClaw bug troubleshooting"
+    ],
+    "ai-trending": [
+      "HKUDS/Vibe-Trading trading agent tops trends with 776 new daily GitHub stars",
+      "virattt/ai-hedge-fund multi-agent system gains 109 new daily stars",
+      "Anthropic's new claude-cookbooks repo earns 464 stars on its launch day",
+      "destructive_command_guard safety tool gains 444 stars, blocks risky AI shell commands",
+      "claude-code-templates config tool for Claude picks up 274 new daily stars",
+      "Nutlope/hallmark anti-AI-slop design project earns 210 new daily stars"
+    ],
+    "ai-hn": [
+      "Claude Code token bloat audit tops HN AI threads with 365 upvotes, 205 comments",
+      "GeoHot's anti-LLM-hype op-ed ranks #2, draws hundreds of dev comments",
+      "HN users discuss new details of Apple's OpenAI trade secret lawsuit",
+      "Causality-based LLM interpretability research thread scores 70 upvotes",
+      "Community discusses Anthropic's recent quiet Claude usage limit adjustments",
+      "Classic AI essay 'The One-Step Trap' resurfaces on Hacker News"
+    ],
+    "ai-hf": [
+      "zai-org/GLM-5.2 open MoE LLM hits 3854 weekly likes, 441k+ downloads",
+      "7 of top 10 trending HF models use Alibaba Qwen 3.5/3.6 base weights",
+      "Tencent's open Hy3 long-context LLM gains 717 likes, 8655 total downloads",
+      "InternScience/Agents-A1 agent LLM earns 507 likes, 29k+ total downloads",
+      "GLM-5.2 offers full unrestricted commercial use, matches GPT-4o-mini performance",
+      "Most 9B-35B trending HF LLMs now support out-of-the-box multimodal inputs"
+    ],
+    "ai-community": [
+      "Top threads focus on unplanned LLM cost overruns, multi-agent workflow edge bugs",
+      "Viral Dev.to post covers hidden AI dashboard failures after user mutes alerts",
+      "New Ollama on Jetson Nano benchmark gives actionable edge LLM performance data",
+      "Lobste.rs hosts discussions on AI's underdiscussed environmental risks",
+      "Dev communities converge on 2026 hybrid local/cloud LLM best practices",
+      "Anthropic and vLLM release optimizations cutting large inference overhead"
+    ]
+  }
+}

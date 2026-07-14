@@ -1,0 +1,126 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入体验补全生态落地深水区",
+      "9款工具全量推进Windows专属bug适配修复",
+      "MCP生态迭代占行业当日开发资源30%以上",
+      "OpenAI Codex当日合10PR发布5个正式版本",
+      "全行业集体升级多代理编排可控性能力",
+      "工具同步优化长会话性能与token成本治理"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.7.1后集中修复启动崩溃问题",
+      "核心P0级启动崩溃bug已修复合入主干",
+      "积压多月2个高影响历史bug正式闭环",
+      "会话持久化特性预计7.2版本正式上线",
+      "全量第三方渠道挂死漏洞修复进入待合队列",
+      "用户呼吁补充Linux/Windows原生桌面客户端"
+    ],
+    "ai-trending": [
+      "开源剪辑工具OpenCut单日涨星4349+登热榜第一",
+      "交易Agent Vibe-Trading单日涨星1265",
+      "编码AI技能库单日涨星1864破年内纪录",
+      "Rust工具拦截Agent执行危险Shell命令",
+      "反劣质代码生成插件Hallmark单日涨星破千",
+      "首个高星Grok生态开源工具grok2api发布"
+    ],
+    "ai-web": [
+      "Anthropic推出美K12教师专属免费AI工具",
+      "Anthropic投1000万加元资助加拿大AI研究",
+      "Claude加拿大人均使用量达人口预期4倍",
+      "Anthropic暂停新大模型迭代深耕场景落地",
+      "Claude for Teachers内置全美50州课标技能库",
+      "OpenAI无对外更新疑似酝酿重磅产品"
+    ],
+    "ai-hn": [
+      "Codex加密子代理提示词引发开发者大规模抗议",
+      "内核补丁将N卡预留显存从380M降至31M",
+      "Agnost AI主打Agent对话用户反馈自动提取",
+      "Agent观测工具推出每百万追踪仅10美元",
+      "BIS发布AI热潮债务融资路径官方报告",
+      "研究宣称首次观测到大模型递归自改进"
+    ],
+    "ai-arxiv": [
+      "发现多智能体分布式后门可绕过本地检测",
+      "首次从隐藏层维度解析LLM裁判偏差机理",
+      "发布大模型元认知领域最完整综述路线图",
+      "证实RAG温度参数影响输出意识形态倾向",
+      "提出沙漏式推理架构提升少样本归纳性能",
+      "开源Agent自动红队测试框架挖生产级漏洞"
+    ],
+    "ai-hf": [
+      "智源开源GLM-5.2 MoE模型支持百万级长文本",
+      "腾讯开源混元Hy3引发长上下文测试热潮",
+      "1B MiniCPM5版本实现端侧多步深度推理",
+      "原生Agent底座Agents-A1兼容多模态工具调用",
+      "2bit量化27B模型可在8G消费级PC运行",
+      "MIT协议开源35B大模型无任何商用限制"
+    ],
+    "ai-community": [
+      "曝光AI爬取论坛提问自动生成销售线索产业链",
+      "谷歌提出多Agent动态工作流触发官方方案",
+      "定位RAG输出不稳定根因为检索非确定性",
+      "实测AI生成性能优化代码存隐性边界缺陷",
+      "开发者吐槽AI框架前10%易后90%全是坑",
+      "热议Agent完成任务后必须加外部校验机制"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Mid-2026 AI coding CLI ecosystem enters mature production-focused phase",
+      "Claude Code ships 2 stable v2.1.x releases in the 24h tracked window",
+      "All major CLI teams fix Windows platform parity gaps post recent regressions",
+      "Leading vendors align CLI tool interoperability on Model Context Protocol",
+      "10 top AI coding CLI tools are covered in the latest community digest",
+      "Teams prioritize stability over new features to resolve cross-platform pain points"
+    ],
+    "ai-agents": [
+      "OpenClaw saw 500 updated issues and 500 PRs in the 24h window",
+      "OpenClaw triages regressions from its recently shipped 2026.7.1 release",
+      "3 of 7 new OpenClaw P0 critical bugs already have active in-progress fixes",
+      "No new official OpenClaw releases were published on 2026-07-15",
+      "13 total projects are covered in the latest OpenClaw ecosystem digest",
+      "Maintainers prioritize patching critical OpenClaw gateway startup crash bugs"
+    ],
+    "ai-trending": [
+      "7 open source AI projects earned over 1000 new GitHub stars today",
+      "Graphify gained +1858 stars, turns codebases into queryable knowledge graphs",
+      "New launch mattpocock/skills gained 1864 stars, offers Claude Code skill packs",
+      "Two trading AI agent projects gained combined 1421 new GitHub stars today",
+      "Rust becomes preferred language for safety-critical high-performance agent infrastructure",
+      "Ecosystem shifts focus from core LLMs to production hardening for coding agents"
+    ],
+    "ai-web": [
+      "Anthropic released 3 new official publications, OpenAI released 0 today",
+      "Anthropic launches Claude for Teachers, its first US K-12 educator product",
+      "Claude for Teachers is guardrailed to reduce educator burden, no student-facing tools",
+      "Anthropic commits $10M CAD to Canadian AI safety and applied research",
+      "Anthropic publishes Claude adoption economic value report for Canada markets",
+      "Claude for Teachers serves exclusively verified US K-12 educator users"
+    ],
+    "ai-hn": [
+      "OpenAI's encrypted Codex sub-agent prompts sparked widespread HN dev pushback",
+      "Viral Claude 'load-bearing' overuse guide spawned hundreds of HN prompt hack jokes",
+      "12 of 30 top AI HN posts today cover Anthropic product, policy and news",
+      "Report notes OpenAI's ad business is on track to miss revenue targets by 90%",
+      "BIS bulletin outlines AI industry shift from equity raises to high-yield debt",
+      "Top two AI HN posts gained combined over 690 total user comments"
+    ],
+    "ai-arxiv": [
+      "New paper uncovers representation-level root causes of LLM-as-judge bias",
+      "50 new ArXiv AI papers focus on reliable, democratized AI systems today",
+      "Metacognition survey formalizes self-reflection as core LLM capability",
+      "New research finds unrecognized multi-agent distributed backdoor vulnerabilities",
+      "New NAS pipeline runs fully on consumer hardware for small development teams",
+      "New benchmarks fill gaps for math reasoning and multilingual moral evaluation"
+    ],
+    "ai-community": [
+      "Dev thread highlights missing independent validation layer for AI agent results",
+      "Dev community debates AI scraping of public posts for automated sales outreach",
+      "Developers share frustration at overhyped frameworks that break at production scale",
+      "Devs share actionable hacks to slash token costs and fix inconsistent RAG results",
+      "Lobste.rs hosts conversations on AI surveillance and verifiable inference",
+      "Community focuses on under-documented pain points of moving AI demos to production"
+    ]
+  }
+}

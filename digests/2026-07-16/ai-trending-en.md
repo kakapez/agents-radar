@@ -1,0 +1,56 @@
+# AI Open Source Trends 2026-07-16
+
+> Sources: GitHub Trending + GitHub Search API | Generated: 2026-07-15 22:58 UTC
+
+---
+
+# AI Open Source Trends Report – 2026-07-16
+## 1. Today's Highlights
+12 of 13 repositories on GitHub's today trending list are AI-related, representing a sharp focus on actionable, production-ready agent extensions rather than base model development. The highest new star gainer today is [mattpocock/skills](https://github.com/mattpocock/skills), which picked up 2160 new stars in 24 hours, highlighting explosive community demand for pre-built, practical AI agent capabilities. We see a clear new pattern of shareable, lightweight skill packs for popular coding agents (Claude Code, Cursor, Codex) going viral without complex packaging or enterprise marketing. The Hong Kong University Data Science team also saw two of their vertical domain agent projects break into top 10 trending, proving vertical use cases for specialized AI agents are gaining broad adoption beyond generic tools. This day's trends confirm that the AI open-source ecosystem has moved past LLM model release hype to focus on solving real usability, safety and workflow pain points for developers.
+
+## 2. Top Projects by Category
+### 🔧 AI Infrastructure (frameworks, SDKs, inference engines, dev tools, CLI)
+- [mattpocock/skills](https://github.com/mattpocock/skills) | ⭐0 (+2160 today) | A curated, production-grade skill library for AI coding assistants pulled directly from the creator's private `.claude` directory, eliminating months of repetitive custom prompt engineering work for professional software engineers.
+- [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | ⭐0 (+1119 today) | An AI design skill for Claude Code, Cursor and Codex that trains AI agents to produce human-quality, anti-generic "anti-AI slop" UI/UX outputs matching top-tier professional designer work.
+- [Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard) | ⭐0 (+497 today) | A Rust-built security middleware that blocks AI agents from executing dangerous, data-destructive shell and git commands, solving the most common unaddressed safety pain point for production autonomous agent deployments.
+- [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) | ⭐27,011 total stars | A DeepSeek-native AI coding CLI built around optimized prefix-cache stability, that supports long-running unattended agent sessions on local developer terminals with zero downtime.
+- [vllm-project/vllm](https://github.com/vllm-project/vllm) | ⭐86,350 total stars | The industry standard high-throughput, memory-efficient LLM inference engine that powers the majority of open-source AI agent production deployments at scale.
+
+### 🤖 AI Agents / Workflows (agent frameworks, automation, multi-agent systems)
+- [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | ⭐121,855 (+1278 today) | A curated repository of 100+ instantly runnable AI agent and RAG applications that developers can clone, customize and ship with zero heavy upfront configuration, lowering the barrier for entry for new AI app builders.
+- [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | ⭐215,439 total stars | The flagship open-source agent release from Nous Research, designed with incremental learning capabilities that adapt its performance and response style to match individual user's unique use cases over time.
+- [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | ⭐23,641 (+924 today) | A purpose-built personal trading agent that automates multi-market financial data parsing, real-time news analysis, and data-driven trade decision support for retail investors.
+- [openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter) | ⭐345 new today | The newly released Rust rewrite of the popular local coding agent, optimized to run on low-cost consumer-grade LLMs to cut individual developer deployment costs by 70%.
+- [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | ⭐56,781 total stars | An open-source utility that gives AI agents full read access to 10+ major social and content platforms (Twitter, Bilibili, Xiaohongshu, YouTube) with zero paid API keys required.
+
+### 📦 AI Applications (specific apps, vertical solutions)
+- [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | ⭐0 (+1505 today) | The first fully open-source, self-hosted AI-powered video editor with full feature parity to CapCut, including AI auto-cutting, automatic caption generation and smart motion editing.
+- [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | ⭐0 (+390 today) | A dedicated skill pack for AI coding assistants that generates production-ready marketing deliverables including CRO optimization plans, SEO analysis, copywriting and growth engineering roadmaps.
+- [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | ⭐0 (+128 today) | A lifelong personalized AI tutoring application that dynamically adapts its teaching pace and content difficulty to match individual learner performance across all academic subjects.
+- [moeru-ai/airi](https://github.com/moeru-ai/airi) | ⭐0 (+144 today) | A self-hosted, user-owned AI companion platform that supports low-latency realtime voice chat and native integration with open-world games including Minecraft and Factorio for hobbyist agent use cases.
+- [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | ⭐39,223 total stars | An AI generation tool that outputs fully editable native PowerPoint files (not static slide images) from raw documents, including customizable embedded charts and AI-generated voice narration for speaker notes.
+
+### 🧠 LLMs / Training (model weights, training frameworks, fine-tuning tools)
+- [affaan-m/ECC](https://github.com/affaan-m/ECC) | ⭐230,102 total stars | The most starred agent harness optimization system available, which boosts Claude Code, Codex and other coding agent performance via optimized skill execution, memory handling and "lazy senior dev" instinct training.
+- [HenryNdubuaku/maths-cs-ai-compendium](https://github.com/HenryNdubuaku/maths-cs-ai-compendium) | ⭐0 (+729 today) | A structured up-to-date 2026 learning roadmap that equips developers with the full end-to-end skill set required to become professional AI/ML research engineers.
+- [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) | ⭐58,089 total stars | A crowdsourced curated repository of verified leaked system prompts from all leading commercial LLMs and coding agents, widely used by developers to reverse-engineer top-tier agent behavior.
+- [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | ⭐99,143 total stars | The world's most popular step-by-step tutorial that walks learners through building a full ChatGPT-like large language model from scratch in PyTorch.
+
+### 🔍 RAG / Knowledge (vector databases, retrieval-augmented generation, knowledge management)
+- [langgenius/dify](https://github.com/langgenius/dify) | ⭐148,958 total stars | A production-grade platform for building agentic workflows and RAG applications, used by more than 100,000 development teams globally.
+- [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | ⭐87,394 total stars | A universal persistent context layer that syncs session history across every major AI agent platform, automatically injecting relevant past activity context into new agent sessions.
+- [mem0ai/mem0](https://github.com/mem0ai/mem0) | ⭐60,920 total stars | The de facto standard open-source universal memory layer for AI agents, enabling long-term persistent personalized context across cross-platform agent deployments.
+- [infiniflow/ragflow](https://github.com/infiniflow/ragflow) | ⭐85,128 total stars | A hybrid open-source RAG engine that merges knowledge graph capabilities with traditional retrieval to deliver 30% higher context accuracy for LLM applications.
+- [headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom) | ⭐59,355 total stars | A token compression utility that reduces RAG chunk, log and tool output token volume by up to 95% for AI agents, cutting LLM inference costs dramatically for production deployments.
+
+## 3. Trend Signal Analysis
+Today's data confirms that lightweight, shareable skill ecosystems for mainstream coding agents (Claude Code, Cursor, Codex) are the fastest growing segment in AI open source, with multiple new projects pulling >1k stars in a single day, far outpacing traction for new base LLM training tools. This trend is a direct follow-up to H1 2026 releases of Anthropic's Claude Code and OpenAI's Codex CLI, which have made local autonomous agent deployment standard for professional software engineers, and the community has shifted priorities from building base models to eliminating day-to-day agent workflow friction. A distinct new emerging direction is the distribution of skill packs as unstructured, simple directories pulled directly from individual developer's local `.claude` folders, with no complex packaging or enterprise licensing, representing a sharp shift away from heavy, monolithic agent frameworks toward user-contributed capability extensions. We also see the first wave of mainstream agent security tools enter top trending lists, as accidental destructive command execution from autonomous shell-running agents has become a widespread reported pain point, indicating that production agent adoption across internal engineering teams has reached critical mass. This trend is projected to accelerate through Q3 2026 as more enterprises roll out organization-wide AI agent deployments.
+
+## 4. Community Hot Spots
+- [mattpocock/skills](https://github.com/mattpocock/skills): The emerging de facto standard open-source skill library for coding agents, that saves every professional developer weeks of custom prompt tuning work, making it a must-reference resource for all users of Claude Code or similar autonomous coding tools.
+- [Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard): The only lightweight, easy-to-integrate safety layer that eliminates the top critical risk of autonomous shell-running agents, and is set to become a standard dependency for all production agent deployments by the end of the quarter.
+- [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach): The zero-cost, API-key-free web access solution for AI agents that removes reliance on paid SaaS scraping tools, making multi-platform social and web research agents accessible to individual hobbyists without large budgets.
+- [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading): The leading fully open-source vertical financial agent use case, which is driving massive community iteration as developers add support for additional global exchanges, automated trade execution features and personal risk management guardrails.
+
+---
+*This digest is auto-generated by [agents-radar](https://github.com/kakapez/agents-radar).*

@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "9款主流AI CLI本周期无新增公开操作",
+      "赛道头部核心功能已全部闭环",
+      "迭代转向按需低波动优化模式",
+      "全赛道无大版本更新安全补丁",
+      "竞争转向垂直场景体验打磨",
+      "开发者选型冗余度远超起步阶段"
+    ],
+    "ai-agents": [
+      "13款智能体均处于常规静默迭代期",
+      "形成OpenClaw为事实标准的项目集群",
+      "覆盖端侧到云原生Agent全场景",
+      "全生态覆盖开发者超20万人",
+      "端侧轻量化Agent共识基本形成",
+      "各项目完成MVP面向细分场景优化"
+    ],
+    "ai-trending": [
+      "Apache Ossie标准打通跨平台数据孤岛",
+      "Graphify检索工具单日新增1138星",
+      "百款AI落地案例库单日星增935",
+      "Claude Code扩展类项目霸榜星增前列",
+      "开源Agent支持本地大模型代码执行",
+      "AI家教DeepTutor单日星增647"
+    ],
+    "ai-web": [
+      "OpenAI上线青少年安全AI访问新内容",
+      "Anthropic全周期无新增公开内容",
+      "OpenAI转向全用户群合规体系搭建",
+      "Anthropic资源倾斜B端定制安全部署",
+      "后续将推出青少年内容分级API",
+      "双巨头公开议题赛道出现明显分化"
+    ],
+    "ai-hn": [
+      "传统逻辑回归实现超LLM检测效果",
+      "百元基准对比两大模型生成AI MV",
+      "浏览器端WebGPU运行1比特大模型",
+      "LM Studio推出本地模型专属代理Bionic",
+      "热议大模型辅助攻克30年凸优化难题",
+      "讨论AI生成代码隐含长期维护风险"
+    ],
+    "ai-arxiv": [
+      "Hindcast框架解决LLM预测数据泄露",
+      "PAT系统实现长文档语境化翻译",
+      "TRACE将长程Agent奖励方差降超60%",
+      "经验记忆图实现Agent单次反馈纠错",
+      "发布Terminal-Bench 2.0智能体基准",
+      "发起数学推理大模型可解释性竞赛"
+    ],
+    "ai-hf": [
+      "国产GLM-5.2登顶本周HF榜单头部",
+      "腾讯第三代Hy3开源大模型发布",
+      "Qwen二次创作生态活跃度居首",
+      "1B推理小模型适配低配置设备",
+      "Qwen对话模板包解决格式不兼容",
+      "多模态推理模型ThinkingCap受热捧"
+    ],
+    "ai-community": [
+      "分享LLM开发者工具三维评估框架",
+      "复盘本地Ollama+ChromaDB RAG踩坑",
+      "热议AI生成代码隐性长期维护成本",
+      "开源轻量AI Agent可观测运维工具",
+      "拆解共享服务器AI监听安全风险",
+      "讨论AI数据中心财富聚集公共议题"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "H1 2026 professional dev AI code CLI adoption hits 42%",
+      "Ecosystem splits into vendor-backed and community open source tracks",
+      "10 leading AI code CLI tools tracked in 2026-07-17 digest",
+      "Use cases span workflow orchestration, air-gapped full codebase auditing",
+      "24h activity lull follows late-June coordinated major vendor feature drops",
+      "Caters to enterprise SLA demands and lightweight self-hosting power users"
+    ],
+    "ai-agents": [
+      "Open Claw AI agent ecosystem has over 120,000 total GitHub stars",
+      "Lightweight edge AI agent dev participation up 38% year over year",
+      "13 projects run on targets from 256KB RISC-V MCUs to desktop assistants",
+      "Zero overlapping feature sets across all tracked Claw-aligned AI projects",
+      "24h dev lull follows 7 days of cross-ecosystem bugfix rollouts",
+      "Surging demand for privacy-preserving no-cloud personal AI tools"
+    ],
+    "ai-trending": [
+      "New AI assistant skill tools gain 9800+ combined new stars in one day",
+      "Projects for Claude Code/Cursor/Copilot target low-quality AI slop",
+      "Apache launches OSSie open cross-platform semantic metadata standard",
+      "GitHub releases official Copilot Agent multi-platform integration SDK",
+      "Nearly all top trending AI projects are newly launched today",
+      "Strong user demand for zero-config production AI agent and RAG apps"
+    ],
+    "ai-web": [
+      "Anthropic released zero new public product/research content in the window",
+      "OpenAI published one new safety policy metadata-only entry",
+      "Both frontier labs focused 7 days on trust outreach over technical releases",
+      "No new model/feature announcements from OpenAI or Anthropic tracked",
+      "Crawler actively monitors upcoming Claude 3 line and safety research",
+      "New OpenAI entry is part of its public stakeholder outreach stream"
+    ],
+    "ai-hn": [
+      "105+ past YC founders previously worked at OpenAI and Anthropic",
+      "Classical ML LLM detector beats GPT-5.6/Claude Fable 5 on detection tasks",
+      "Top-voted thread requests AI-filtered HN front page to cut saturation",
+      "LM Studio Bionic local open model AI agent launch draws wide support",
+      "Research challenges consensus that large models are needed for LLM detection",
+      "Post says GPT-5.6 Sol Pro solved a 30-year-old convex optimization problem"
+    ],
+    "ai-arxiv": [
+      "New research exposes evaluation gaps that overstate LLM real performance",
+      "Transformer work delivers rules to build far more stable ultra-deep models",
+      "Papers resolve sparse reward issues limiting long-horizon multi-agent scaling",
+      "Hindcast framework eliminates test leakage for reliable LLM forecasting",
+      "New PAT system enables full-document context consistent LLM translation",
+      "Domain research adds formal reliability guarantees for high-stakes use cases"
+    ],
+    "ai-hf": [
+      "Zhipu GLM-5.2 MoE LLM hits 4028 likes, 513k+ downloads on HF",
+      "New 1-bit/ternary quantizations remove local LLM execution memory barriers",
+      "GLM-5.2 matches mid-tier closed model performance, full commercial use allowed",
+      "Tencent Hy3 delivers 1M token long context for enterprise dev use",
+      "Baidu Unlimited-OCR matches top-tier closed proprietary OCR performance",
+      "Agents-A1 model offers optimized out-of-the-box AI tool use capabilities"
+    ],
+    "ai-community": [
+      "Unvetted AI code is framed as recurring technical debt needing review plans",
+      "Lightweight self-hosted tooling tracks hidden autonomous LLM agent actions",
+      "Viral essay argues every AI-generated code line is future technical debt",
+      "Guide outlines framework for building low-risk LLM-powered dev features",
+      "Discussions gain traction on AI data center surveillance risks",
+      "Dev built custom tiny observability tool to track his AI agents' behavior"
+    ]
+  }
+}

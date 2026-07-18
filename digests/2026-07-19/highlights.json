@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.214正式安全补丁",
+      "Qwen Code发布v0.19.12正式版+预览版",
+      "全赛道集体加固CLI工具权限安全体系",
+      "多工具新增本地OpenAI端点适配能力",
+      "9款产品全量投入优化TUI终端交互体验",
+      "全行业迭代企业级多实例部署能力"
+    ],
+    "ai-agents": [
+      "OpenClaw全渠道落地持久化入站降丢包率",
+      "修复托管实例模型配置丢失生产级故障",
+      "解决心跳任务死锁阻塞运行核心问题",
+      "闭环Codex OAuth迁移遗留启动失败问题",
+      "15个资源泄漏补丁使泄漏率降70%",
+      "24小时更新409Issue/500PR迭代节奏健康"
+    ],
+    "ai-trending": [
+      "AirLLM实现单4G显卡运行70B大模型",
+      "3D重建大模型lingbot-map单日涨星超800",
+      "code-review-graph日增356星降大库Token消耗",
+      "零密钥本地搜索工具wigolo日增192星",
+      "PostHog AI可观测平台日增337星",
+      "本地优先端侧AI编码代理生态集中爆发"
+    ],
+    "ai-hn": [
+      "GPT-5.6辅助填补凸优化领域30年学术空白",
+      "分享闲置Mac供Claude Code控制实操指南",
+      "Claude Fable 5全系Max用户免费升级",
+      "测试发现Claude对Anthropic存隐性偏向",
+      "开源Claude设计替代项目获7.7万GitHub星",
+      "拆解大模型做时序预测的普遍痛点"
+    ],
+    "ai-hf": [
+      "Gemma4 31B多模版周下载破1200万",
+      "智谱GLM-5.2登顶文本生成类模型热度榜",
+      "腾讯开源第三代混元Hy3轻量大模型",
+      "百度Unlimited OCR周下载破200万",
+      "超4成热门模型为GGUF/MLX端侧量化版本",
+      "字节开源Wan-Dancer-14B生成连贯舞蹈视频"
+    ],
+    "ai-community": [
+      "分享PDF预处理降大模型Token消耗方案",
+      "开源工具解决AI生成站点同质化痛点",
+      "实测FLUX在RTX4070显卡运行部署教程",
+      "解析Kimi K3端侧跑120B模型技术逻辑",
+      "分享安全AI Agent原型到生产升级路径",
+      "AI诱饵方案演示职场AI攻防新思路"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 production-grade AI code CLI tools tracked for 2026-07-19",
+      "Ecosystem aligns around ACP and MCP interoperability standards",
+      "All tools prioritize security hardening and cross-platform UX fixes",
+      "Teams optimize reliability for unattended long-running agent workloads",
+      "No 24h paradigm shifts, focus on resolving high-impact bug backlogs",
+      "Tracked tools include Claude Code, OpenAI Codex, Gemini CLI"
+    ],
+    "ai-agents": [
+      "13 total tracked open agent projects covered in 2026-07-19 digest",
+      "OpenClaw sees 409 updated issues and 500 updated PRs in 24h",
+      "Activity focuses on security hardening and 2026.7.x branch stability",
+      "224 PRs and 151 issues merged or closed in the reporting window",
+      "Pre-release testing ongoing for upcoming 2026.7.2 minor version",
+      "No new official OpenClaw releases published in the last 24h"
+    ],
+    "ai-trending": [
+      "New 3D foundation model tops trending list with 827 new 24h stars",
+      "AirLLM framework runs 70B LLMs on consumer 4GB GPU",
+      "PostHog gains 337 new stars for AI agent-native observability",
+      "Apache launches OSSIE open semantic metadata standard for AI stacks",
+      "Top AI projects pull 1000+ aggregated new stars in 24 hours",
+      "Community prioritizes zero-cloud no-API-cost local agent deployments"
+    ],
+    "ai-hn": [
+      "Top AI story: GPT-5.6 closes 30-year convex optimization research gap",
+      "The landmark post hits 474 points with 303 total HN comments",
+      "Users debate breakthrough origin: prompt engineering or novel reasoning",
+      "Large discussion share centers on Claude ecosystem updates and edge cases",
+      "Community shifts away from AGI hype to tangible real-world LLM use cases",
+      "Thread flags subtle Anthropic-favoring bias in Claude test results"
+    ],
+    "ai-hf": [
+      "Google Gemma 4 31B IT hits over 12M weekly top HF downloads",
+      "Z.AI GLM-5.2 MoE takes top weekly likes spot with 4125 total likes",
+      "Qwen ecosystem variants make up 30% of all trending Hugging Face models",
+      "1/2-bit ternary quantization moves fully to mainstream for local hardware",
+      "Tencent Hy3 LLM releases under permissive Apache 2.0 open license",
+      "Demand for uncensored reasoning-optimized open models hits new highs"
+    ],
+    "ai-community": [
+      "New stat: Open models power 63% of all global LLM token traffic",
+      "Open LLM market share saw 12x 2-year jump forcing inference stack rewrites",
+      "AI bait walkthrough demonstrates detecting proprietary AI output scraping",
+      "Unoptimized PDF parsing wastes up to 70% of RAG workflow token budgets",
+      "Developers debate ubiquitous generic design of AI-generated websites",
+      "Discussions explore tiny tensor runtimes and 1960s ELIZA parallels"
+    ]
+  }
+}

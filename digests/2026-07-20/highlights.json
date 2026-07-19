@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code推送v2.1.215正式稳定版",
+      "Qwen Code同步发布3个版本覆盖多通道",
+      "Codex优化后长会话内存占用降40%",
+      "全赛道迭代重心转向生产级稳定性打磨",
+      "ACP/MCP统一开放协议普及超预期",
+      "国产AI CLI走差异化迭代路线"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.7.2-beta.3预发布版",
+      "云原生远程编码会话能力正式落地",
+      "项目迭代效率高于上月平均水平30%",
+      "v2026.7系列Bug修复完成率达75%",
+      "多语言国际化PR完成评审待测试",
+      "高优Bug平均修复时长小于24小时"
+    ],
+    "ai-trending": [
+      "《深入理解AI Agent》单日涨1734星",
+      "AirLLM实现4G显存跑通70B大模型",
+      "GitHub开放Copilot Agent全生态SDK",
+      "Ktransformers单日新增328星登热榜",
+      "Wigolo实现零成本无API Key AI编码",
+      "PostHog新增MCP协议AI全链路可观测"
+    ],
+    "ai-hn": [
+      "Claude Code底层切换Rust重写新版Bun",
+      "实测Claude Code编码速度提升超40%",
+      "研究显示AI建议拉低人准确率3倍",
+      "OpenAI悄悄下调Codex上下文至272k",
+      "单Token实现极低门槛大模型溯源",
+      "Anthropic公开千万行代码迁移方案"
+    ],
+    "ai-hf": [
+      "Gemma4-31B-it单周下载超1200万登顶",
+      "智源GLM-5.2登顶纯文模型热度榜",
+      "腾讯混元Hy3开源基座刚放权重冲榜",
+      "1B小模型蒸馏Claude Opus思维链能力",
+      "无审查多模态模型单周下载破200万",
+      "端侧轻量化衍生模型占比突破30%"
+    ],
+    "ai-community": [
+      "开发者分享TS栈社媒AI Agent落地方案",
+      "六行评分卡即可排查AI能力盲区",
+      "实探AI Agent极端死锁bug定位全流程",
+      "开发者重写OneNote MCP服务总结踩坑",
+      "GPT-5.6 Sol产出30年未解数学证明",
+      "聚焦AI从Demo落地的非LLM层瓶颈"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 tracked AI code CLI tools prioritize production reliability over new features",
+      "Ecosystem converges on MCP and ACP cross-industry open standards",
+      "Users prioritize predictable behavior, cost control, zero vendor lock-in",
+      "Claude Code shipped v2.1.215 stable on 2026-07-20",
+      "Ecosystem segments between big vendor, open community, vendor-agnostic tools",
+      "Digest covers major tools including Claude Code, Gemini CLI, Kimi Code CLI"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.7.2-beta.3 adds full remote coding session support",
+      "OpenClaw recorded 367 updated issues and 500 active PRs on 2026-07-20",
+      "New pre-release build targets distributed remote coding workflows",
+      "Community contributions focused on enterprise security hardening",
+      "13 AI agent projects are covered in the 2026-07-20 OpenClaw digest",
+      "No critical OpenClaw outages reported, overall project health remains excellent"
+    ],
+    "ai-trending": [
+      "New AI agent textbook hit 1734 single-day GitHub star spike",
+      "70B LLM inference solution runs on a single 4GB consumer GPU",
+      "GitHub released official Copilot SDK for third-party functionality integration",
+      "ktransformers gained 328 new stars for heterogeneous hardware LLM optimizations",
+      "PostHog AI observability platform earned 424 new stars, supports native MCP",
+      "Top trending AI projects prioritize local execution, no mandatory API keys"
+    ],
+    "ai-hn": [
+      "Claude Code tops HN AI leaderboard with Bun runtime shift viral thread",
+      "OpenAI cut Codex context window from 372k to 272k, sparking user pushback",
+      "New technique identifies LLM sources using only one output token",
+      "Study: AI advice makes users 3x less accurate, 2x more overconfident",
+      "Hundreds of developers debate Claude Code's new Rust Bun runtime performance",
+      "Single-token LLM fingerprinting solves AI content provenance pain points"
+    ],
+    "ai-hf": [
+      "GLM-5.2 leads weekly Hugging Face likes with over 4100 total",
+      "Google gemma-4-31B-it hit 12.3M+ weekly downloads as top model",
+      "Bonsai 27B 1/2-bit quantized models accumulated 1.6M+ weekly downloads",
+      "Low-bit quantization for consumer hardware remains dominant trending theme",
+      "GLM-5.2 matches top closed-source LLM performance at lower inference cost",
+      "Gemma-4-31B-it has permissive license for research and commercial use"
+    ],
+    "ai-community": [
+      "GPT-5.6 Sol solved 30-year math problem, flagged for unreported evasion risks",
+      "AI agent reliability is top dev topic, with shared real-world failure war stories",
+      "Communities shift past prompt engineering tutorials to production AI workflows",
+      "36 Stratagems AI threat model post earned 32 reactions on Dev.to",
+      "Developers share ELIZA deep dives to push back on unsubstantiated AI hype",
+      "Production TypeScript social media AI agent tutorial released on Dev.to"
+    ]
+  }
+}

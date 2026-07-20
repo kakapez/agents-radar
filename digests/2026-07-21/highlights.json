@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发v2.1.216修复长会话卡顿",
+      "OpenCode发v1.18.4优化多模型兼容",
+      "GitHub Copilot CLI发版修复钩子死循环",
+      "赛道重心转向Agent可靠性企业级合规",
+      "国内厂商CLI快速缩小与海外体验差距",
+      "核心诉求指向MCP生态稳定性扩展性"
+    ],
+    "ai-agents": [
+      "OpenClaw核心会话层P1级Bug全部闭环",
+      "落地游标式SQLite跨重启会话溯源能力",
+      "修复Node v26 gzip自动解压失败故障",
+      "当日P1级问题修复响应率超70%",
+      "解决上下文计数误报超限卡死故障",
+      "社区热议企业级安全长会话可用性"
+    ],
+    "ai-trending": [
+      "代码智能图工具日增1876星登AI榜第一",
+      "开源AI网关OmniRoute日增1300星",
+      "7个MCP相关新项目日增星超300",
+      "Kimi CLI开源登Trending日增405星",
+      "本地检索工具wigolo日增695星",
+      "全开源语音工作室voicebox日增839星"
+    ],
+    "ai-web": [
+      "Anthropic赠罕见病科研者最高5万刀API额度",
+      "Anthropic定向布局AI for Science生态",
+      "OpenAI上线长地平线模型对齐专属页面",
+      "头部厂商争夺下一代模型规则话语权",
+      "Anthropic切换资助为分主题定向招募",
+      "OpenAI前置布局超能力模型安全兜底"
+    ],
+    "ai-hn": [
+      "中国新模型跃升话题登顶HN热度榜首",
+      "曝Claude Fable 5辅助攻破雅可比猜想",
+      "开源流水线可自动生成10分钟AI长视频",
+      "新工具检测网站对AI代理友好度",
+      "论文梳理LLM动态调推理算力路径",
+      "OpenAI首次披露长时序大模型对齐框架"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2登顶HF周点赞热度榜首",
+      "谷歌多模态旗舰下载量破1198万领跑",
+      "腾讯Hy3开源支持百万级长上下文",
+      "首个1比特大模型累计下载破百万",
+      "百度开源全场景无限制OCR大模型",
+      "2比特量化大模型跑通消费级硬件"
+    ],
+    "ai-community": [
+      "热议AI生成代码的版权权责界定边界",
+      "分享smolagents框架重复重试Bug踩坑记",
+      "本地优先CLI保障开发数据零外传",
+      "打破本地部署AI绝对安全认知误区",
+      "公开CrewAI Agent上云全链路调试经验",
+      "热议AI工具下初级开发者能力退化隐忧"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI CLI tools are covered in the 2026-07-21 community digest",
+      "Ecosystem shifts to post-v1.0 stability and headless workload reliability",
+      "4 of 8 leading CLI tools shipped stable/pre-releases in 24h tracking window",
+      "All tools prioritize permission controls, cost tracking and MCP interoperability",
+      "Coding LLM inference quality parity reached across all top 8 AI CLI offerings",
+      "10 listed tools include Claude Code, GitHub Copilot CLI and Qwen Code"
+    ],
+    "ai-agents": [
+      "13 AI agent projects are tracked in 2026-07-21 OpenClaw digest",
+      "OpenClaw recorded 352 updated issues and 500 updated PRs in 24h",
+      "123 stale issues closed with 110 merged PRs showing high development throughput",
+      "Latest stable OpenClaw release remains 2026.7.1, no new 24h release",
+      "Active dev focuses on context regression fixes and security boundary hardening",
+      "12+ Claw-family agent variants including IronClaw, NanoClaw are listed"
+    ],
+    "ai-trending": [
+      "OmniRoute open AI gateway gained 1300 new GitHub stars on launch day",
+      "Code-review-graph MCP tool earned 1876 new stars for context reduction",
+      "New MCP tooling cuts large repo review context usage by 70%+",
+      "ai-engineering-from-scratch repo gained 846 new stars in one day",
+      "Top new AI projects are built for MCP interoperability with Claude Code, Kimi CLI",
+      "Token optimization and local-first deployment are top community priorities"
+    ],
+    "ai-web": [
+      "Anthropic launched new rare genetic disease research grant program",
+      "Grants offer up to $50k in Claude API credits over 6 months for researchers",
+      "Program targets 7000+ rare diseases affecting 400 million global people",
+      "OpenAI added new public page for Long Horizon Model Safety Alignment",
+      "OpenAI teases upcoming framework for long-duration task model alignment",
+      "Anthropic and OpenAI both published new official AI assets on 2026-07-20"
+    ],
+    "ai-hn": [
+      "Top HN discussion debates narrowing gap between Chinese and Western frontier models",
+      "Viral claim says Claude Fable 5 helped disprove decades-old Jacobian conjecture",
+      "Dynamic reasoning effort control tech will drastically cut LLM inference costs",
+      "Community debates proposed US restrictions on Chinese open source AI models",
+      "Users are skeptical of big closed model incumbents' long-term competitive moats",
+      "OpenAI's long horizon safety post gained early traction on Hacker News"
+    ],
+    "ai-hf": [
+      "GLM-5.2 tops trending list with 4220 weekly Hugging Face likes",
+      "Google Gemma-4-31B-it reached 11.98M+ downloads as top multimodal model",
+      "1-bit Bonsai 27B GGUF hit 1.26M weekly downloads for edge deployments",
+      "1/2-bit quantization moves from experimental to mainstream for edge AI",
+      "Tencent Hy3 Hunyuan 3 model uses Apache 2.0 unrestricted commercial license",
+      "Surge of community uncensored Qwen 3.6 fine-tunes for local consumer use"
+    ],
+    "ai-community": [
+      "Top debate focuses on AI-generated code legal liability for production use",
+      "Post debunks myth that local AI agents eliminate all security risks",
+      "Self-hosted agents still face unprompted injection and privilege escalation risks",
+      "Broken AI agents often return 200 OK status, raising dev debugging overhead",
+      "Lobste.rs draws ELIZA chatbot lessons to avoid modern AI design mistakes",
+      "New guide outlines actionable production guardrails for AI copilot tool teams"
+    ]
+  }
+}

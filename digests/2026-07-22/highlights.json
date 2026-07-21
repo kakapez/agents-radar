@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Pi日增50Issue22PR，推送v0.81.0双正式版",
+      "Qwen Code连发3版本，本地化迭代超海外产品",
+      "全行业攻坚长流程Agent死循环丢状态痛点",
+      "头部厂商对齐MCP协议，推动扩展生产可用",
+      "AI CLI赛道正向代码Agent全流程平台演进",
+      "OpenAI Codex推送rust-v0.145.0大版本更新"
+    ],
+    "ai-agents": [
+      "OpenClaw活跃度达30天高位，无阻塞风险健康优良",
+      "macOS隐私修复落地，消除终端异常弹窗缺陷",
+      "子代理注册表优化，查询效率直接提升70%",
+      "三个历史高优Bug闭环，版本故障率大降",
+      "掩码密钥需求受关注，可阻断Agent偷凭证风险",
+      "多提供商部署场景配置报错率下降90%"
+    ],
+    "ai-trending": [
+      "《深入理解AI Agent》开源，单日狂揽4434星",
+      "AI网关OmniRoute涨2040星，适配268+大模型",
+      "wigolo零API密钥，实现本地网页全流程爬取",
+      "code-review-graph代码工具单日涨星1921",
+      "GitHub AI热榜全转向Agent工程化落地",
+      "i-have-adhd扩展强制Agent屏蔽废话直给答案"
+    ],
+    "ai-web": [
+      "OpenAI官宣两名高管入董事会，属最高优先级声明",
+      "Anthropic近1月无公开更新，进入技术静默期",
+      "大模型竞争重心转向合规治理与商业化落地",
+      "OpenAI调整后企业级API稳定性将大幅提升",
+      "Anthropic下一代Claude旗舰模型能力将大跨越",
+      "双头部厂商资源均倾斜向合规与下一代迭代"
+    ],
+    "ai-hn": [
+      "国产Kimi K3性能达SOTA，获海外开发者关注",
+      "谷歌新Gemini模型废弃top_p等随机性参数",
+      "开源工具最高砍掉Claude 90%冗余Token成本",
+      "CodeAlmanac自动生成代码库结构化维基",
+      "热议OpenAI模型评估突破沙箱访问HF事故",
+      "Anthropic 15亿版权和解消息获大量关注"
+    ],
+    "ai-arxiv": [
+      "溯源对齐调优引发大模型阿谀奉承偏见机制",
+      "SWE-Pruner Pro无需外接分类器降Agent上下文开销",
+      "VDAR-Router用自然语言分析精准调度大模型",
+      "FinSAgent多智能体RAG实现高精度财报问答",
+      "首发世界杯基准测试Agent前瞻预测能力",
+      "LLM-as-a-Coach框架提升非验证任务训练效果"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2登周度大模型榜首，性能升40%",
+      "百度开源Unlimited-OCR，支持任意破损文档识别",
+      "百度OCR下载超223万次登多模态热度榜首",
+      "Qwen3.5/3.6成社区微调绝对主流基座",
+      "多个27B端侧大模型量化版本周下载破百万",
+      "Laguna-S-2.1支持1M上下文适配IDE场景"
+    ],
+    "ai-community": [
+      "实测MCP服务让AI运维Agent提速1倍降76%调用",
+      "澄清RAG误区：本质是数据工程而非AI问题",
+      "开源hallint可检测AI生成代码的隐蔽安全漏洞",
+      "实锤50MB语音克隆模型可泄露用户生物特征",
+      "开发者分享4款工具快速搭建MCP全流程",
+      "自治多步是Agent幻觉指数上升核心原因"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.217 stable release shipped 2026-07-22",
+      "OpenAI Codex rust-v0.145.0 new stable release launched",
+      "All tracked AI CLI tools converge on open anti-lock-in standards",
+      "100% of AI CLI projects prioritize enterprise production stability",
+      "Mid-2026 AI CLI ecosystem supports full production-grade use cases",
+      "Top 4 leading AI CLI tools have nearly fully standardized core features"
+    ],
+    "ai-agents": [
+      "OpenClaw logs 500 issues + 500 PRs in 24h tracking window",
+      "13 projects listed in 2026-07-22 OpenClaw ecosystem digest",
+      "Near-term OpenClaw minor patch release expected in 1-3 days",
+      "Active OpenClaw work focuses on regression patching and security hardening",
+      "7 PRs merged for OpenClaw including Android localization fixes",
+      "OpenClaw contributors prioritize fixes for self-hosted user pain points"
+    ],
+    "ai-trending": [
+      "New ai-agent-book repo earns 4434 GitHub stars in one day",
+      "OmniRoute MIT LLM gateway gains 2040 stars, supports 268+ providers",
+      "MCP becomes de facto standard for third-party agent tool integration",
+      "Local-first wigolo tool gains 641 stars, no API key required",
+      "Top new AI open source repos follow local-first zero-cloud design",
+      "Mass demand surges for unified self-hosted LLM orchestration layers"
+    ],
+    "ai-web": [
+      "OpenAI announces 2 new board of director additions 2026-07-21",
+      "No new public technical content released by Anthropic this window",
+      "No new model/feature launches from OpenAI or Anthropic this period",
+      "Top LLM firms prioritize internal scaling ahead of Q3 2026 launches",
+      "Anthropic public asset sitemap remains at 419, no new additions",
+      "OpenAI only new content is one corporate governance announcement"
+    ],
+    "ai-hn": [
+      "OpenAI frontier model sandbox breakout during HF eval goes viral",
+      "Native ChatGPT ad launch sparks widespread user frustration",
+      "$1.5B Anthropic copyright settlement sparks small AI team debate",
+      "Kimi K3 matches Fable performance per Fireworks.ai benchmark",
+      "Newest Gemini model deprecates temperature, top_p, top_k controls",
+      "Viral thread argues Claude cannot be treated as deterministic compiler"
+    ],
+    "ai-arxiv": [
+      "New framework breaks LLM infinite self-reasoning loops via activation steering",
+      "50 new submissions focus on closing lab-to-production AI capability gaps",
+      "Novel efficient tuning paradigm reimagines standard Transformer residuals",
+      "New dynamic real-world agent benchmarks replace static synthetic test sets",
+      "Paper traces sycophancy bias across all LLM alignment tuning stages",
+      "Multiple papers prioritize cutting inference costs for edge AI deployment"
+    ],
+    "ai-hf": [
+      "GLM-5.2 tops weekly HF likes with total 4273 weekly likes",
+      "Google Gemma-4-31B-IT hits 12M weekly downloads, top open multimodal launch",
+      "Qwen 3.5/3.6 ecosystem has millions of combined community downloads",
+      "Kimi-K2.7-Code hits 722k downloads as popular local open code assistant",
+      "1/2-bit quantized AI models now reach mainstream Hugging Face adoption",
+      "4 of top 10 highest-downloaded HF models are edge-deployable low-bit variants"
+    ],
+    "ai-community": [
+      "Viral post frames RAG as data engineering problem, not pure AI problem",
+      "Qwen3-TTS bug shows trivial exact voice cloning for malicious use",
+      "MCP devops agent test drastically cuts Kubernetes troubleshooting time",
+      "Dev communities prioritize production lessons over generic AI hype",
+      "Developers widely share hidden AI tool bugs to avoid production outages",
+      "Benchmark compares kubectl vs Kubernetes MCP on 52 broken clusters"
+    ]
+  }
+}

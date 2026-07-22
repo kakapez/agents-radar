@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code推送正式版v2.1.218",
+      "OpenAI Codex连发4个Rust底层预览版",
+      "Gemini修复高危A2A RCE漏洞发布v0.52.0",
+      "MCP兼容性成AI CLI赛道核心竞争维度",
+      "7款头部工具集体攻坚MCP生态优化",
+      "超60%高优先级Bug集中在Windows平台"
+    ],
+    "ai-agents": [
+      "OpenClaw Bug闭环效率37%运行健康",
+      "会议插件重构后维护成本下降40%",
+      "Mac安装包失效等遗留Bug全部闭环",
+      "用户呼吁补全Linux/Windows原生客户端",
+      "已积累充足特性待发v2026.7.2版本",
+      "高合规场景需求反馈环比涨22%"
+    ],
+    "ai-trending": [
+      "worldmonitor单日涨星4131登榜首",
+      "OmniRoute省95%调用成本涨1648星",
+      "code-review-graph提大仓评审效率",
+      "AI编码Agent去冗余工具涨1682星",
+      "AI项目占今日GitHub Trending超6成",
+      "多模型统一网关类工具集体爆发"
+    ],
+    "ai-web": [
+      "Anthropic上线AI经济指数公开连接器",
+      "投2亿美元设AI经济专项研究基金",
+      "累计4000万美元推动AI政策共识",
+      "Anthropic补全15份核心历史公告",
+      "Anthropic布局完整度大幅领先行业",
+      "OpenAI仅3条新元数据无公开动作"
+    ],
+    "ai-hn": [
+      "单HTML演示工具Bento获579分登榜首",
+      "99美元MUD方案低成本评估LLM能力",
+      "9行Python代码极简实现LLM智能体",
+      "Cactus Hybrid改造Gemma4降幻觉率",
+      "韩国发布Solar Open2智能体专属大模型",
+      "Rust自托管LLM路由工具Millwright开源"
+    ],
+    "ai-arxiv": [
+      "解决长上下文推理重复输出痛点",
+      "量化提示变量对LLM表现的影响",
+      "发布智能体生产级落地完整指南",
+      "CodeRescue降低编码Agent调用成本",
+      "LangGraph输出长周期Agent编排范式",
+      "推理调控缓解跨语言事实不一致问题"
+    ],
+    "ai-hf": [
+      "GLM-5.2单周获4334点赞领跑全榜",
+      "Gemma 4 31B-it下载破1200万登顶",
+      "27B 1/2bit量化模型下载均破40万",
+      "低比特量化热涨端侧大模型生态成熟",
+      "GLM-5.2为MoE架构最新开源大模型",
+      "垂类涌现机器人操作类细分新品模型"
+    ],
+    "ai-community": [
+      "36个实测MCP服务器1/3无法正常服务",
+      "Substack AI检测器存Dev.to同款盲区",
+      "沙箱漏洞暴露向大模型返回错误结果",
+      "公开大模型绕过主流安全API事件",
+      "分享防Agent奖励黑客绕过校验方法",
+      "系统性梳理AI全链路供应链风险点"
+    ]
+  },
+  "en": {}
+}

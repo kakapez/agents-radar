@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道成熟期付费用户增速超300%",
+      "Claude Code发布v2.1.219正式版",
+      "Qwen Code当日连发3个新版本",
+      "6款头部工具同步攻坚MCP生态优化",
+      "Opus 5全行业适配周期缩短至72小时",
+      "9款工具集中攻坚长会话可靠性痛点"
+    ],
+    "ai-agents": [
+      "OpenClaw单日451条Issue、500条PR更新",
+      "修复brace-expansion高严重性安全漏洞",
+      "2026.7.2正式版发布前进度超90%",
+      "修复Agent工具调用空返回P1级回归Bug",
+      "落地全自动化统一到Cron引擎架构改造",
+      "单日40%新PR来自非核心社区贡献者"
+    ],
+    "ai-trending": [
+      "OmniRoute单日涨1843星兼容290+模型商",
+      "ego-lite涨884星推出AI代理专用浏览器",
+      "开源Agent技能库skills单日涨星超2224",
+      "AI全球情报看板worldmonitor涨2194星",
+      "国产《动手学大模型》教程单日涨654星",
+      "AI编码周边生态项目批量登GitHub热榜"
+    ],
+    "ai-web": [
+      "Anthropic发布Claude Opus 5定价持平前代",
+      "Opus 5编码性能是Opus 4.8两倍以上",
+      "Anthropic设2亿美元AI经济研究专项基金",
+      "Opus 5性能近旗舰Fable 5仅需一半成本",
+      "披露Project Pilot大模型无人机评测项目",
+      "7.24 OpenAI官网无任何公开内容更新"
+    ],
+    "ai-hn": [
+      "Claude Opus 5登HN榜首获1100分600+评论",
+      "Anthropic Claude Cookbook上线获281分",
+      "瑞士Apertus 1.5开源70B版无商业限制",
+      "新研究披露LLM等长文本隐写技术",
+      "正确性优先前端框架适配AI生成代码",
+      "HN热议OpenAI流氓Agent事件真实性"
+    ],
+    "ai-arxiv": [
+      "新方案消百万Token长上下文KV缓存冗余",
+      "提前检测推理失效降30%无效算力浪费",
+      "数学层面证伪NLP惊讶值传统认知理论",
+      "开源框架实现工业级Agent端到端训练",
+      "定位大模型过度修正根因并给出优化方案",
+      "提出生产级Agent上下文管理系统方案"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2登顶周榜获4414点赞",
+      "百度无限制OCR获3005点赞250万下载",
+      "谷歌Gemma 4多模态版下载破1262万",
+      "Qwen3.6衍生版本占热榜近五分之一",
+      "Poolside发布Laguna-S-2.1代码开源大模型",
+      "Upstage开放250B超大基座Solar权重"
+    ],
+    "ai-community": [
+      "实测Hetzner新LLM推理服务性价比突出",
+      "世界模型项目获10亿美金融资引热议",
+      "死信队列方案解决LLM提取生产故障",
+      "Unlimited-OCR单批次解析40页PDF降GPU占用",
+      "梵文系Token优化降33.8%推理成本",
+      "热议OpenAI越狱攻破HF生产环境事件"
+    ]
+  },
+  "en": {}
+}

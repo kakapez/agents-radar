@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入生产级深耕期，聚焦安全加固",
+      "Claude Code发布v2.1.220修复计费bug",
+      "OpenAI Codex推出4个Rust重构alpha预览版",
+      "Qwen Code发布v0.21.0夜间构建版",
+      "Pi新增Claude Opus 5全平台支持",
+      "7成迭代资源集中投向5类公共需求"
+    ],
+    "ai-agents": [
+      "近24h总提交超800条，迭代状态健康",
+      "完成巨型Agent压缩单文件架构解耦",
+      "修复shell执行权限绕过高危漏洞",
+      "三类历史高频生产Bug全部闭环",
+      "最高票特性：记忆条目分级打信任标签",
+      "核心P0级遗留Bug占比低于7%"
+    ],
+    "ai-trending": [
+      "工程师技能库项目单日Star涨1743",
+      "阿里开源代码审查工具星增439",
+      "首款Agent专属浏览器星增986",
+      "《动手学大模型》教程星增405",
+      "Claude技能大全项目单日星增574",
+      "行业全面转向Agent工具链补全"
+    ],
+    "ai-web": [
+      "Anthropic发布Claude Opus 5，比肩旗舰",
+      "Opus 5定价不变，成本仅Fable5一半",
+      "Opus 5成为Pro用户可用最强模型",
+      "新增推理档位灵活控性能与成本",
+      "重推理场景落地成本直降50%",
+      "开启普惠型旗舰大模型竞争格局"
+    ],
+    "ai-hn": [
+      "砍掉Claude Code 80%冗余系统prompt",
+      "28.9M LLM可运行在8美元单片机",
+      "AMD开放ISA方便大模型写GPU内核",
+      "Claude辅助找到雅可比猜想反例",
+      "热议大模型推理档位后台算力逻辑",
+      "讨论Agent渗透HF平台安全事件"
+    ],
+    "ai-hf": [
+      "智源GLM-5.2登顶周榜获4445赞",
+      "2bit量化27B大模型低显存即可跑",
+      "1bit极致量化27B模型下载破200万",
+      "百度Unlimited-OCR获3000+周赞",
+      "Qwen十余款衍生微调版本生态活跃",
+      "百万级无损上下文LLM测试版发布"
+    ],
+    "ai-community": [
+      "多Agent集群全链路可观测经验分享",
+      "多MCP接入Agent越权风险引发热议",
+      "Opus5降价加剧闭源开源阵营博弈",
+      "全过389项测试仍被NIST查出漏洞",
+      "Git refs解决多编码Agent并行冲突",
+      "总结生产级RAG系统故障排查方案"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem tracks 7 vendor + 2 independent open source active tools",
+      "All leading CLI tools support baseline MCP functionality as of July 2026",
+      "Open source AI CLI contributions grew 30% QoQ across tracked repositories",
+      "Teams ship patches for regressions from new model entitlement checks",
+      "Ecosystem prioritizes stability overhauls and enterprise compliance features",
+      "Developers work to fix gaps for Linux Wayland and ARM64 64K page users"
+    ],
+    "ai-agents": [
+      "OpenClaw recorded 321 updated issues and 500 updated PRs in 24 hours",
+      "Maintainers triage high-priority regressions from 2026.7.x release branch",
+      "OpenClaw refactors monolithic code paths to reduce long-term technical debt",
+      "Team hardens security boundaries for agent tool and memory access controls",
+      "13 active ecosystem projects include PicoClaw, NanoClaw, and IronClaw",
+      "No new official OpenClaw releases shipped in 2026-07-26 tracking window"
+    ],
+    "ai-trending": [
+      "mattpocock/skills gained 1743 new 24h stars as top viral AI release",
+      "Alibaba open-code-review earned 439 new stars, battle-tested internal tool",
+      "Andrew Ng-backed aisuite gains 75 stars, unified 20+ LLM provider interface",
+      "Top trending AI projects prioritize local privacy-first zero-config deployment",
+      "Chinese translated 'Dive into LLMs' tutorial earned 405 new GitHub stars",
+      "vLLM remains top open inference engine with 87,147 total GitHub stars"
+    ],
+    "ai-web": [
+      "Anthropic launches Claude Opus 5 with SOTA coding and knowledge benchmarks",
+      "Opus 5 matches Opus 4.8 price with near-Fable 5 top-tier performance",
+      "Opus 5 set as default model for all Claude Max paid subscribers immediately",
+      "Opus 5 removes waitlist barriers for Claude Pro users to access SOTA capabilities",
+      "No new public product updates released by OpenAI in the tracking window",
+      "Anthropic blurs gaps between mass market and ultra-premium Claude tiers"
+    ],
+    "ai-hn": [
+      "Top HN discussion covers Anthropic's new Claude 5 context engineering rules",
+      "Anthropic cut 80% of Claude Code system prompt for Opus 5 and Fable 5",
+      "Legacy Claude 3 prompt workarounds are no longer functional for Claude 5",
+      "OpenAI missed agent breach detection for a full week sparks security worries",
+      "Heated debate argues AI mania is eroding global institutional decision-making",
+      "HN community pushes back against overhyped 10x AI productivity and AGI claims"
+    ],
+    "ai-hf": [
+      "GLM-5.2 leads trending LLMs with 4445 likes and 40% lower inference latency",
+      "6 of top 15 trending HF models are Chinese GLM, Qwen, MiniCPM families",
+      "Google's open multimodal LLM leads downloads at over 12.5 million",
+      "Production 1-bit/2-bit LLM runs near full precision on consumer hardware",
+      "Poolside Laguna-S-2.1 is dev-focused open LLM with 128k long context",
+      "Upstage 250B open LLM hits near-GPT-4 level benchmark performance"
+    ],
+    "ai-community": [
+      "Post breaks down lessons from instrumenting AI agent swarms with OpenTelemetry",
+      "3 connected MCP servers gave agent unplanned production deployment access",
+      "Community discusses urgent AI agent security and production LLM reliability gaps",
+      "Developers share horror stories of malicious MCP tool rug pull incidents",
+      "Stakeholders push for formal legal protections for open-weight AI models",
+      "Hobbyists share high-engagement desktop pet robot and tiny LLM builds"
+    ]
+  }
+}

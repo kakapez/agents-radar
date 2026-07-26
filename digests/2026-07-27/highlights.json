@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI工具进入生产级落地深水区迭代",
+      "MCP已成跨工具事实扩展标准",
+      "企业级管控需求超体验类成最高优先级",
+      "Gemini CLI推送v0.54.0夜间构建版本",
+      "Qwen Code推送v0.21.0夜间构建版本",
+      "OpenCode当日活跃PR达20活跃度居首"
+    ],
+    "ai-agents": [
+      "OpenClaw当日847条操作迭代活跃度拉满",
+      "v2026.7正式版稳定性修复进度达18%",
+      "完成native hook relay模块架构解耦",
+      "解决多渠道插件生命周期逻辑漂移问题",
+      "修复全平台客户端重连丢实时会话bug",
+      "完成Claude Opus 5全链路运行时适配"
+    ],
+    "ai-trending": [
+      "ego-lite单日涨星898成当日AI项目涨星王",
+      "阿里开源open-code-review日增星840",
+      "吴恩达推出aisuite简化多模型适配开发",
+      "Instatic为首个Agent原生开源CMS系统",
+      "社区注意力全面转向Agent生产级配套",
+      "热门AI项目单日新增星数普遍超300"
+    ],
+    "ai-hn": [
+      "Claude Opus 5故障占AI板块近半互动量",
+      "KV缓存卸载方案降长序列推理成本50%",
+      "HART OS目标端侧运行千亿级大模型",
+      "Claude Code系统提示词砍80%效果无下滑",
+      "社区热议大模型落地稳定性与成本合理性",
+      "Kimi K3实际推理成本远高于外界预期"
+    ],
+    "ai-hf": [
+      "智谱GLM-5.2以4473赞登顶本周HF榜首",
+      "百度Unlimited-OCR周赞3198居多模态第二",
+      "低比特量化模型下载量首超原生完整权重",
+      "国产模型上榜占比超40% 热度持续走高",
+      "韩厂开源Solar-Open2-250B千亿级大模型",
+      "antares-1b轻量模型主打代码漏洞检测场景"
+    ],
+    "ai-community": [
+      "开箱即用多Agent链路追踪方案已公开",
+      "全离线本地AI语音助手部署方案可复现",
+      "开发者分享本地RAG落地实战避坑经验",
+      "发起AI时代程序员职业转型公开大讨论",
+      "DeepSeek因供应链问题暂停新一轮融资",
+      "开源大模型进入类K8s产业发展新阶段"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem shifts to production-grade professional workflow readiness",
+      "Teams prioritize security fixes and MCP interoperability over new releases",
+      "Multi-agent workflow stability is top shared ecosystem priority",
+      "Context cost predictability is a key industry focus area",
+      "Cross-client session consistency is a top development priority",
+      "Power users now deploy AI CLI for business-critical workloads"
+    ],
+    "ai-agents": [
+      "OpenClaw activity rose 12% vs previous weekly average in 24 hours",
+      "237 of 500 PRs merged, 47.4% rate signals strong project health",
+      "Teams patch 2026.7.x beta regressions ahead of stable 2026.7 launch",
+      "97 long-open stability issues resolved for end users this window",
+      "Developers harden cross-channel message delivery reliability",
+      "Code deduplication work cuts long-term maintenance overhead"
+    ],
+    "ai-trending": [
+      "7 new AI projects gained 300+ GitHub stars in 24h, agent-focused",
+      "Ego-lite, zero-config agent browser, earned 898 new launch day stars",
+      "Alibaba's open-code-review gained 840 stars post hyperscale testing",
+      "No general base LLM hits trending, full shift to agent use cases",
+      "Ego-lite lets agents access logged-in web services seamlessly",
+      "Alibaba code review tool supports line-level security scanning"
+    ],
+    "ai-hn": [
+      "Top discussion: Anthropic Opus 5 faces widespread ongoing performance drops",
+      "Hundreds of devs report broken critical workloads from Opus 5 failures",
+      "OpenAI guardrail escape reports spurred AI safety policy debate",
+      "Community is skeptical of closed vendors' unannounced product changes",
+      "Many enterprise users see 50%+ inference cost cuts switching model stacks",
+      "Analysis debunks Kimi K3 drastic cost advantage claims"
+    ],
+    "ai-hf": [
+      "ZAI GLM-5.2 open MoE earned 4473+ likes, near closed-model performance",
+      "Qwen 3.6 fine-tunes make up 1/3 of top 30 trending models",
+      "Baidu Unlimited-OCR hit 2.5M downloads in its first trending week",
+      "Upstage released 250B open LLM for unrestricted commercial fine-tuning",
+      "New 1/2-bit quantized LLMs run 27B models on consumer edge hardware",
+      "Poolside Laguna-S-2.1 optimized for dev tooling with 128k context"
+    ],
+    "ai-community": [
+      "Top topic: urgent need for production AI agent reliability and observability",
+      "Open-weight AI ecosystem compared to 2015 Kubernetes inflection point",
+      "DeepSeek paused fundraise over Huawei component supply chain issues",
+      "New OTeL stack enables no-custom-code multi-agent workflow tracing",
+      "Devs share full local AI stack tutorials to eliminate recurring API costs",
+      "36 Stratagems framework applied to AI era developer career challenges"
+    ]
+  }
+}

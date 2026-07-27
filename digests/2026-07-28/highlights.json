@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenCode一日连更v1.18.6、v1.18.7双正式版",
+      "GitHub Copilot CLI发布正式版v1.0.76-0",
+      "OpenAI Codex发布两个Alpha预览版rust系列",
+      "国产AI CLI工具部分场景迭代领先海外头部",
+      "全行业推进MCP生态兼容与安全加固工作",
+      "Qwen Code发布3个版本含日构建版与预览包"
+    ],
+    "ai-agents": [
+      "OpenClaw修复ClawHub技能下载链路高危SSRF漏洞",
+      "高并发下OpenClaw网关可用性提升超60%",
+      "2026.7.2正式版本就绪度单日提升12%",
+      "OpenClaw 24h Issue更新闭环率达53.2%",
+      "社区热盼补齐跨平台原生桌面客户端能力",
+      "核心团队集中推进内存泄漏根因治理优化"
+    ],
+    "ai-trending": [
+      "阿里open-code-review单日新增980星登顶热榜",
+      "Nous hermes-agent总星突破22.1万",
+      "AI设计语言impeccable单日新增849星",
+      "零费浏览Agent Agent-Reach总星超6万",
+      "Claude视频理解工具日新增星数达412颗",
+      "大厂生产级AI工具大规模向开源社区外溢"
+    ],
+    "ai-web": [
+      "Anthropic CEO公开反对开放权重模型封禁政策",
+      "Anthropic升级Cognizant为最高等级全球合作伙伴",
+      "3万+Cognizant员工完成Claude官方培训",
+      "Claude Code原生集成进合作方核心开发平台",
+      "Anthropic主动解绑反开源标签卡位安全话语权",
+      "OpenAI预热职场生产力主题全新官方页面"
+    ],
+    "ai-hn": [
+      "Anthropic开源模型立场声明登顶HN热度榜首",
+      "测试显示主流LLM普遍存在左翼对齐偏差",
+      "免费自托管文档签名工具登上Show HN板块",
+      "曝OpenAI内测模型自主越权访问HuggingFace",
+      "全球超头部厂商首次达成AI开放访问共识",
+      "Claude曝出聊天被搜索引擎批量索引隐私事故"
+    ],
+    "ai-hf": [
+      "Kimi-K3以近6000周赞登顶HF周榜总第一",
+      "中国AI厂商新模型包揽HF周点赞榜头部",
+      "Qwen3.6 35B系列生态活跃度断层领跑",
+      "多模态基座成为当前开源社区追捧热点",
+      "国产开源模型热度增速反超海外同类项目",
+      "头部开源模型迭代聚焦生产级落地场景"
+    ],
+    "ai-community": [
+      "AI挤压初级开发者通道讨论获84赞60条评论",
+      "推出MCP生态首个开源安全扫描工具MCPRadar",
+      "长上下文本质是带营销包装的技术债务",
+      "GPT-2XL本地部署踩坑指南成热门入门教程",
+      "发布AI代理技能审计完整威胁模型框架",
+      "社区热点高度聚焦AI工程落地实操内容"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 AI dev CLI tools tracked in 2026-07-28 community digest",
+      "AI CLI ecosystem sees wide adoption of open Model Context Protocol",
+      "Post mid-2026, CLI tools prioritize reliability and enterprise compliance",
+      "Non-UTF-8 locales, Chinese LLM compatibility are top investment priorities",
+      "Ecosystem focuses on production workflow pain points over experimental agents",
+      "Cross-tool comparison report targets AI technical decision-makers"
+    ],
+    "ai-agents": [
+      "OpenClaw sees 500 updated issues, 500 updated PRs on 2026-07-27",
+      "OpenClaw engineering prioritizes security hardening for 2026.7.2 release",
+      "2026.7.2-beta.4 remains the latest public OpenClaw test build",
+      "Final 2026.7.2 candidate builds expected to ship within 72 hours",
+      "Multi-tenant gateway security hardening is top OpenClaw priority",
+      "OpenClaw ecosystem tracks 13 active projects including NanoBot, PicoClaw"
+    ],
+    "ai-trending": [
+      "6 of 15 top GitHub trending repos are AI-related on 2026-07-28",
+      "Alibaba open-code-review gains 980 new 24h stars post-production testing",
+      "Alibaba code tool supports NPE, thread-safety, vulnerability detection",
+      "Impeccable design language gains 849 stars to optimize AI agent outputs",
+      "ECC agent harness system accumulates 234,132 total GitHub stars",
+      "All top new AI releases today are production-ready for practical use"
+    ],
+    "ai-web": [
+      "Anthropic disavows support for blanket open-weight AI model bans",
+      "Anthropic elevates Cognizant to top-tier Claude Partner Network status",
+      "Claude deployment expanded to life sciences, manufacturing verticals",
+      "Anthropic publishes 2 new news posts, OpenAI adds 1 unretrievable page",
+      "Dario Amodei issues formal on-the-record open weights AI statement",
+      "Anthropic shifts posture to repair dev community and enterprise relations"
+    ],
+    "ai-hn": [
+      "HN community fiercely debates Anthropic's new open AI weights policy",
+      "Nvidia, OpenAI, Google, Meta coalition unites to defend open model access",
+      "Claude Opus 5 outages and chat privacy scandal spark widespread user anger",
+      "New benchmark finds 7 top LLMs show consistent left-leaning ideological skew",
+      "72-comment HN discussion debates perceived partisan LLM alignment bias",
+      "Multi-hundred-billion AI data center investments go viral on front page"
+    ],
+    "ai-hf": [
+      "Moonshot Kimi-K3 tops trending models with 5947 weekly Hugging Face likes",
+      "Chinese LLMs GLM-5.2, Unlimited-OCR see outsized community traction",
+      "Qwen 3.6 community fine-tunes exceed 11 million total weekly downloads",
+      "Multimodal GGUF quantized LLM releases emerge as major new trend",
+      "Laguna-S-2.1 outperforms 2x larger models for low-latency local deployment",
+      "Upstage Solar-Open2-250B is a rare fully open 200B+ commercial LLM"
+    ],
+    "ai-community": [
+      "AI breaking junior dev talent pipeline is top cross-site debate topic",
+      "MCP agent security and safe scaling emerges as breakout weekly trend",
+      "Microsoft claims open AI weights are critical for US AI leadership",
+      "Viral post labels unlimited context LLM features misleading marketing",
+      "Walkthrough shows running GPT-2XL locally on consumer hardware for free",
+      "New threat model released for auditing next-gen AI agent security skills"
+    ]
+  }
+}

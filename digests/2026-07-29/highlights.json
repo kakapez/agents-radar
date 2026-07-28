@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI进入生产级攻坚，MCP成全行业事实标准",
+      "Qwen Code发v0.21.1正式版，日合并50个PR",
+      "Gemini CLI当日连发3版覆盖正式、预览、夜构建",
+      "OpenCode紧急发双补丁修复MCP生态大面积故障",
+      "Pi核心模块Rust化迭代推进，日合并25个PR",
+      "全工具攻坚MCP兼容、细粒度会话管控方向"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.7.2-beta.5存储增强版",
+      "新增隔离存储区，库损坏仍可完整保留用户数据",
+      "崩溃可恢复SQLite快照，异常退出无需手动修库",
+      "CI启动耗时压至30秒，集成效率提升3倍",
+      "社区最高呼声：新增Linux/Windows原生客户端",
+      "公测进展顺利，项目健康度评级为优异"
+    ],
+    "ai-trending": [
+      "claude-video日增989星登GitHub AI热榜首位",
+      "吴恩达团队推aisuite，大幅降低多模型适配成本",
+      "微软发布Agent治理工具包，全覆盖OWASP安全标准",
+      "ECC日增692星，成编码Agent核心扩展底座",
+      "Hugging Face开源端到端本地语音Agent工具",
+      "开源热点全面转向Agent落地场景化痛点解决"
+    ],
+    "ai-web": [
+      "Claude Mythos可自主发现密码算法底层数学漏洞",
+      "Anthropic CEO发声反对开源权重保护主义禁令",
+      "Claude发现削弱后量子签名方案HAWK的新路径",
+      "OpenAI上线7篇内容全部聚焦企业端落地指导",
+      "Claude提出AES降轮版本全新实用攻击方法",
+      "OpenAI新增科学计算Agent官方索引页元数据"
+    ],
+    "ai-hn": [
+      "OpenAI开源Codex Security，漏洞检出率高30%",
+      "Anthropic公开Claude生成HAWK-256密钥恢复攻击",
+      "Bun新版init自动生成适配大模型的Claude.md",
+      "研究证实去对齐开源LLM比基座显著更乐观",
+      "Claude自主完成尖端密码研究颠覆传统安全范式",
+      "社区吐槽头部厂商订阅故障、聊天泄露等事故"
+    ],
+    "ai-arxiv": [
+      "月之暗面公开Kimi K3开源前沿大模型完整方案",
+      "D-Score零额外开销实现大模型轻量幻觉检测",
+      "LOCKS大幅降低长上下文解码KV缓存读写开销",
+      "逐样例动态调度预训练数据，显著提升模型效果",
+      "首次系统性揭示大模型长程规划能力习得机制",
+      "新代数框架从机制上防范Agent敏感数据泄露"
+    ],
+    "ai-hf": [
+      "中国厂商原生大模型包揽周点赞榜单前排席位",
+      "多模态、OCR热门模型单周下载量普遍破百万",
+      "1-2比特量化、GGUF衍生模型占比超三分之一",
+      "基座衍生无审查、个性化微调版本热度攀升",
+      "TTS、图像编辑小模型获开发者高关注度",
+      "工业级场景轻量可部署大模型需求持续释放"
+    ],
+    "ai-community": [
+      "拆解针对AI幻觉的Slopsquatting新供应链攻击",
+      "专家提醒持公仓写入权的AI Agent需立即审计",
+      "新方案解决AI网页自动化依赖CSS选择器痛点",
+      "科普MCP网关核心作用，降低开发者理解门槛",
+      "披露单恶意链接植入企业持久化Agent漏洞",
+      "梳理MCP服务从Demo到生产可用核心标准"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem fully transitions to production hardening phase",
+      "All tracked tools prioritize reliability, security and compliance patches",
+      "MCP standard compliance becomes core shared dev priority across all tools",
+      "Self-hosted LLM support moves to mainstream top-tier feature request",
+      "9+ leading tracked AI CLI tools include Claude Code, Gemini CLI",
+      "AI CLI tools repositioned as core daily developer workflow utilities"
+    ],
+    "ai-agents": [
+      "OpenClaw hits 500 updated issues, 500 updated PRs in 24h window",
+      "New v2026.7.2-beta.5 release focused entirely on state safety upgrades",
+      "New beta adds persistent quarantine store to survive DB damage",
+      "OpenClaw in pre-GA stabilization phase for 2026.7.2 release cycle",
+      "13 total projects covered across the full OpenClaw agent ecosystem",
+      "Small wave of regressions reported by Windows/Linux self-hosted users"
+    ],
+    "ai-trending": [
+      "Andrew Ng's aisuite SDK gains 92 stars, unifies 12+ LLM APIs",
+      "ECC agent harness system gets +692 stars to hit 234.75k total",
+      "New Microsoft enterprise agent governance toolkit officially released",
+      "Top new Claude video processing tool gains 989 24h GitHub stars",
+      "Customizable waifu AI companion project gains 796 new 24h stars",
+      "Trending list dominated by code-native AI agent extension tools"
+    ],
+    "ai-web": [
+      "Anthropic research proves Claude identifies hidden cryptographic flaws",
+      "Dario Amodei refutes rumors of supporting open-weight model bans",
+      "Anthropic published 2 new official public releases in the update window",
+      "OpenAI drops 7 new enterprise and developer enablement content assets",
+      "Claude Mythos is first frontier model with public crypto flaw detection",
+      "Global AI battleground shifts to reasoning, regulation, enterprise tooling"
+    ],
+    "ai-hn": [
+      "Claude crypto flaw research HN thread hits 150 score, 81 comments",
+      "Users debate proposal to grant LLMs full ACM Digital Library access",
+      "Study notes uncensored open LLMs show consistent measurable optimism bias",
+      "Community scrutinizes Anthropic over recent service failures and leaks",
+      "Enterprise users push back against wasteful unoptimized AI spending",
+      "Top conversations center on Anthropic and OpenAI cybersecurity breakthroughs"
+    ],
+    "ai-arxiv": [
+      "Kimi K3 2.8T MoE open model launches with 1M context + vision",
+      "New D-Score metric detects hallucinations via LLM hidden state signals",
+      "New efficiency breakthroughs cut large foundation model deployment costs",
+      "Multiple papers deliver formal production-grade AI agent security guarantees",
+      "Surge of domain AI advances for clinical care and extreme weather response",
+      "New Kimi Delta Attention solves long-sequence info flow bottlenecks"
+    ],
+    "ai-hf": [
+      "Moonshot Kimi-K3 tops trending with 7918 weekly Hugging Face likes",
+      "8 of top 30 trending models are Qwen 3.5/3.6 based variants",
+      "Zhipu GLM-5.2 hits 1.26M+ downloads for leading long-context performance",
+      "Upstage releases 250B parameter open-weight Solar-Open2-250B LLM",
+      "GGUF quantized model downloads far outpace full-precision releases",
+      "12 of top 30 trending models support edge vision-language workflows"
+    ],
+    "ai-community": [
+      "New slopsquatting attack exploits AI hallucinations for supply chain breaches",
+      "Developers urged to audit agents with public repo write access immediately",
+      "MCP ecosystem guides flood in as teams hit common integration pain points",
+      "Developers debate tradeoffs between open-weight and closed frontier AI",
+      "\"Vibe coding\" trend is reshaping modern AI-assisted developer workflows",
+      "Discussions predict AI agents will render K8s dashboards obsolete"
+    ]
+  }
+}

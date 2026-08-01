@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI完成向生产级全流程开发辅助跃迁",
+      "头部工具日均迭代达10+PR数十活跃Issue",
+      "Qwen Code发布v0.21.3正式+nightly版本",
+      "GitHub Copilot CLI发布稳定版v1.0.78-2",
+      "OpenCode发布v1.18.11正式版本",
+      "四大迭代方向聚焦多Agent运行稳定性"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.7.2-beta.6预览版本",
+      "活跃度达峰值累计500条Issue/PR更新",
+      "版本发布成功率从82%提升至100%",
+      "修复Linux exec工具管道字符解析逃逸漏洞",
+      "7.2正式版功能完成度提升至88%",
+      "多平台TTS异常拦截进入最终验证阶段"
+    ],
+    "ai-trending": [
+      "安全路由工具reverse-skill日增1360星登顶",
+      "字节开源长程超智能体框架deer-flow登榜",
+      "腾讯云发布团队级Agent共享内存枢纽",
+      "Hugging Face开源全本地语音代理套件",
+      "GitHub发布跨平台Copilot Agent集成SDK",
+      "开源重心全面转向Agent工程化工具链"
+    ],
+    "ai-web": [
+      "OpenAI首次公示十大数学领域AI技术进展",
+      "Anthropic全静默全力迭代下一代大模型",
+      "新战场转向前沿科研场景专用大模型",
+      "后续将推出高算力数学推理专属接口",
+      "行业已结束多模态竞赛转向基础学科比拼",
+      "OpenAI技术优先级转向硬核科研能力"
+    ],
+    "ai-hn": [
+      "OpenAI数学突破帖398分登顶HN热榜",
+      "扫7.6PB HF数据集曝光密钥泄露风险",
+      "MIT验证AI金融建议胜普通理财顾问",
+      "8GB显卡可完成全流程LLM后训练",
+      "社区呼吁推出统一数学大模型评测标准",
+      "从业者质疑OpenAI成果表述有公关放大"
+    ],
+    "ai-hf": [
+      "Kimi-K3以9467周点赞断层登顶HF周榜",
+      "DeepSeek-V4-Flash累计下载破280万",
+      "GLM-5.2下载破160万达国际第一梯队",
+      "DeepSeek-V4-Flash预览版推理速提3倍",
+      "代码模型准确率接近GPT-4广受关注",
+      "Qwen衍生微调模型占社区近三成"
+    ],
+    "ai-community": [
+      "热议AI辅助编码致开发者判断力下滑",
+      "OpenAI推送GPT-5.6 Luna升级代码评审",
+      "实测MCP新规范落地AWS AgentCore网关",
+      "分享AI Agent夜间自动构建Java服务方案",
+      "梳理Agent评测比模型评测更难核心点",
+      "分享零GPU部署RAG实操踩坑经验"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "8 leading AI CLI tools prioritize reliability over new feature launches",
+      "Industry-wide shift to open MCP standard to end single-vendor lock-in",
+      "Teams focus on cutting compute overhead and eliminating unaccounted quota drain",
+      "Dev teams prioritize compliance over raw new feature velocity",
+      "Claude Code logged 10 updated issues and 4 merged PRs in the window",
+      "No high-impact breaking releases shipped across the AI CLI ecosystem"
+    ],
+    "ai-agents": [
+      "OpenClaw shipped v2026.7.2-beta.6 focused on state safety for self-hosted use",
+      "New OpenClaw beta adds crash-recoverable SQLite snaps and data quarantine store",
+      "OpenClaw recorded 500 updated issues and 500 PRs in the 24h window",
+      "Devs are fixing P1 regressions across 2026.6.x and 2026.7.x release lines",
+      "Unpatched high-severity data-loss bugs remain top priority for OpenClaw maintainers",
+      "13 total AI agent projects are tracked in the 2026-08-02 ecosystem digest"
+    ],
+    "ai-trending": [
+      "AI skill router reverse-skill gained 1360 new stars on August 2",
+      "Hugging Face local speech-to-speech stack earned +393 new stars today",
+      "GitHub released official Copilot SDK for third-party Copilot Agent integration",
+      "Vectorless RAG and token-optimized agent harnesses emerged as hot new trends",
+      "5 production AI stacks released by Microsoft, Hugging Face, ByteDance, Tencent Cloud",
+      "Local offline AI deployments for voice and coding saw explosive star growth"
+    ],
+    "ai-web": [
+      "OpenAI pre-published hidden page titled Ten Advances In Mathematics",
+      "Anthropic has no new public content for 7 consecutive crawl windows",
+      "No public feature or enterprise product announcements detected for both vendors",
+      "Hidden OpenAI math page has a 2026-08-01 publication timestamp",
+      "Frontier reasoning announcements from Anthropic/OpenAI expected in next 72h",
+      "No new Anthropic disclosures found across anthropic.com and claude.com"
+    ],
+    "ai-hn": [
+      "OpenAI math advances post hit 398 points as top AI Hacker News story",
+      "Fields Medalist Jacob Tsimerman left academia to join OpenAI's research",
+      "7.6PB Hugging Face data audit uncovered massive volumes of exposed secrets",
+      "YC startup's tattoo-for-interview policy drew near-universal HN mockery",
+      "HN users debate if OpenAI math advances are real progress or o-series marketing",
+      "Today's digest covers 30 top AI-related stories from Hacker News"
+    ],
+    "ai-hf": [
+      "Moonshot AI's Kimi-K3 took top trending spot with 9400 weekly likes",
+      "7 trending Hugging Face models exceed 1 million total downloads each",
+      "DeepSeek-V4-Flash LLM logs over 2.8 million cumulative downloads",
+      "11 of top 30 trending models are GGUF formatted edge-deployable variants",
+      "Zhipu AI GLM-5.2 MoE LLM has over 1.68 million total downloads",
+      "40% of top trending models are multimodal image-text-to-text pipelines"
+    ],
+    "ai-community": [
+      "Top community discussion covers unique challenges of evaluating AI agents",
+      "OpenAI upgraded code auto-review to GPT-5.6 Luna for lower cost workflows",
+      "Practical AI tips outnumber generic LLM hype posts at 3:1 ratio",
+      "Devs prioritize lightweight low-infrastructure AI over heavy GPU setups",
+      "Users discuss harms of over-reliance on AI coding including eroded debugging skills",
+      "Conversations highlight neglected security risks from overusing AI code assistants"
+    ]
+  }
+}

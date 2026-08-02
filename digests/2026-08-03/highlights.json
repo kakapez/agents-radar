@@ -1,0 +1,94 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Gemini CLI发布v0.55.0夜间预览版",
+      "Qwen Code发布v0.21.3夜间预览版",
+      "OpenCode单日更新Issue超130条",
+      "多工具将跨厂商BYOK接入列为最高优先级",
+      "赛道进入生产级可靠性打磨深水区",
+      "开发者诉求转向嵌入全流程生产场景"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.7.2-beta.7预发布版",
+      "新版本升级全链路状态安全容灾能力",
+      "新增崩溃恢复、原子写入等5项核心能力",
+      "v2026.7.2正式版开发完成度达72%",
+      "当日累计合并108项PR修复多渠道兼容问题",
+      "迭代聚焦稳定性加固与跨渠道兼容修复"
+    ],
+    "ai-trending": [
+      "airllm单4GB跑70B大模型日增963星",
+      "安全路由包reverse-skill日增1145星",
+      "腾讯云Agent共享内存枢纽日增604星",
+      "Agent-Reach免API提供全平台联网能力",
+      "微软AI入门教程日合计新增超3200星",
+      "DeepSeek4专属推理引擎ds4正式登榜"
+    ],
+    "ai-hn": [
+      "OpenAI Astra破数学难题消息引发全网争议",
+      "哈布斯堡下颌青蛙SVG趣味基准热度登顶",
+      "论文指OpenAI数学猜想证否结果无效",
+      "Gary Marcus发文称Astra被过度营销",
+      "不足1MB C++实现编码Agent MicroCodex亮相",
+      "社区呼吁谨慎看待大模型科研突破宣传"
+    ],
+    "ai-hf": [
+      "Kimi-K3周点赞9629断层登顶HF周榜",
+      "GLM-5.2下载量破200万成爆款开源模型",
+      "DeepSeek-V4-Flash速度较前代提升300%",
+      "Qwen3.6社区微调衍生版本占比超15%",
+      "GGUF量化包下载量远超官方原版权重",
+      "250B参数Solar-Open2-250B开源发布"
+    ],
+    "ai-community": [
+      "OpenAI升级Auto-review到GPT-5.6 Luna版本",
+      "零API密钥为Cursor Agent扩展实操能力",
+      "推出校验闭环提升AI应用鲁棒性",
+      "开源Agent评测框架排查隐性故障",
+      "125M小模型脱敏速度超14B大模型",
+      "热议Agent上下文溢出隐性生产故障"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 major AI coding CLI tools tracked in 2026-08-03 digest",
+      "Gemini CLI and Qwen Code shipped incremental 24h nightly builds",
+      "60% of merged CLI repo changes are community-contributed",
+      "Ecosystem enters post-1.0 phase focused on stability and compliance",
+      "Landscape splits between vendor lock-in and multi-provider CLI tools",
+      "No full major AI CLI releases launched in 24h reporting window"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem 2026-08-03 digest covers 13 active agent projects",
+      "OpenClaw v2026.7.2-beta.7 pre-release adds state safety features",
+      "OpenClaw recorded 1000 total updated GitHub items across 24h",
+      "Team prioritizes stabilization for upcoming OpenClaw 2026.7.2 stable release",
+      "New quarantine store protects OpenClaw state on SQLite damage",
+      "OpenClaw P1 production bug triage turnaround is under 24 hours"
+    ],
+    "ai-trending": [
+      "AirLLM gains 963 stars, runs 70B LLM on 4GB consumer GPU",
+      "7 AI open source projects earned over 500 new GitHub stars in 24h",
+      "Microsoft 2026 AI curriculum update pulled 2617+ stars for learning repos",
+      "Antirez-built ds4 is purpose-built for DeepSeek 4 Flash/PRO inference",
+      "DeepSeek ecosystem sees high traction following latest local model release",
+      "Claude Code skill packs saw 2-3x new star growth vs previous weeks"
+    ],
+    "ai-hn": [
+      "Viral Habsburg jaw frog SVG benchmark tests multimodal visual reasoning",
+      "HN users show mixed skepticism to OpenAI Astra math breakthrough leak",
+      "EU AI Act officially enters full enforceability as top trending AI topic",
+      "Rising concern over unregulated AI agents causing corporate network breaches",
+      "45+ comments debate unconfirmed OpenAI Astra 10 open problems claim",
+      "Community praises lightweight, low-resource open source AI tooling"
+    ],
+    "ai-community": [
+      "OpenAI upgrades Auto-review to GPT-5.6 Luna for lower cost workflows",
+      "Developers push back against overcomplicated bloated agent frameworks",
+      "Tiny fine-tuned models outperform 100x larger counterparts for narrow tasks",
+      "Dev demoes functional Cursor agent with no extra third-party API keys",
+      "Unlogged agent pipeline silent failures are top discussed security concern",
+      "GPT-5.6 Luna low inference costs draw strong developer interest"
+    ]
+  }
+}

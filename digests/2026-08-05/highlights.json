@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发新版修复高危漏洞增VSCode Focus",
+      "OpenAI Codex发4alpha版落地跨端会话同步",
+      "Copilot CLI更新含沙箱配置破坏性变更",
+      "AI CLI赛道进入生产级精细化迭代周期",
+      "多工具合力推进跨端会话无缝同步功能",
+      "超5款工具共同优化MCP生态体验"
+    ],
+    "ai-agents": [
+      "OpenClaw发布2个热修复补丁无破坏性变更",
+      "2026.7.2正式版准备进度超90%符合规划",
+      "macOS网关重构重连故障率预计降30%以上",
+      "飞书Teams DM安全审计补全通过安全评审",
+      "新增Memory Core自愈能力自动恢复损坏索引",
+      "修复npm适配问题解决官方插件升级故障"
+    ],
+    "ai-trending": [
+      "AirLLM开源 4GB GPU即可运行70B大模型",
+      "reverse-skill日增2310星 适配主流编码客户端",
+      "Uber开源ADR 首个生产级Agent安全方案公开",
+      "Rust PDF解析库日增2524星 登顶当日涨幅榜",
+      "Ollama新增原生支持Kimi-K2.6、GLM-5.2模型",
+      "实时音视频Agent开发框架livekit/agents开源"
+    ],
+    "ai-web": [
+      "Anthropic首设C级首席全球事务官岗位",
+      "前卡内基和平基金会总裁任Anthropic高管",
+      "OpenAI待发布Codex开发者生态相关内容",
+      "OpenAI露出消费端硬件合作伙伴新页面",
+      "头部厂商竞争延伸至全球监管规则话语权",
+      "Anthropic加速布局高等级政企场景准入"
+    ],
+    "ai-hn": [
+      "HN热议苹果OpenAI纠纷 超580分520+评论",
+      "Suno输掉全球首个AI音乐生成版权诉讼",
+      "英国首次公开未披露高危大模型安全漏洞",
+      "开源技能包让Claude适配团队编码规范",
+      "纯Go PII检测工具性能超MS Presidio百倍",
+      "首个大模型量化RL训练环境EdotEnv发布"
+    ],
+    "ai-arxiv": [
+      "AURORA-LM用扩散架构破离散token生成范式",
+      "LiveMem实现LLM跨交互无断点状态延续",
+      "GradCuit解决测试时推理轨迹不可解释痛点",
+      "前沿科学LLM基准被证实普遍存捷径漏洞",
+      "低成本方案仅靠遥测实时检测Agent故障",
+      "Magnet可检测跨会话多Agent恶意滥用"
+    ],
+    "ai-community": [
+      "AirLLM技术拆解揭秘4GB跑70B大模型原理",
+      "MCP全链路开发实践成社区最高频讨论点",
+      "阿里云Qwen3.8-Max 2.4T大模型正式GA",
+      "开发者呼吁AI项目勿盲目追逐大模型跑分",
+      "基于沙箱逃逸事故提炼Agent安全避坑指南",
+      "低成本Agent网页布局生成MCP方案公开"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "10 popular AI coding CLI tools tracked in 2026-08-05 digest",
+      "AI CLI ecosystem shifts past parity to prioritize production reliability",
+      "Self-hosted local model support becomes baseline for all non-flagship AI CLIs",
+      "AI CLI market segments into enterprise, power user, regional tiers",
+      "Maintainers prioritize user pain point fixes over new core agent features",
+      "Cross-project alignment grows on shared open AI Coding Protocol standards"
+    ],
+    "ai-agents": [
+      "13 OpenClaw ecosystem AI agent projects covered in 2026-08-05 digest",
+      "OpenClaw recorded 500 updated issues and 500 PRs in 24 hours",
+      "OpenClaw shipped two 2026.7.x patch releases with no breaking changes",
+      "124 OpenClaw PRs merged/closed in 24h, 24% updated PR merge rate",
+      "Patches fixed Codex execution and npm plugin management regressions",
+      "No unresolved untriaged production-blocking bugs in OpenClaw today"
+    ],
+    "ai-trending": [
+      "AI agent tooling dominates 2026-08-05 GitHub AI trending rankings",
+      "Pdf-inspector gained 2524 new stars for AI ingestion optimization",
+      "AirLLM breakthrough runs 70B LLM inference on a single 4GB GPU",
+      "Uber open-sourced internal ADR agent observability and threat platform",
+      "Reverse-skill security pack earned 2318 new GitHub stars in one day",
+      "70% of top new AI repos are optimized for mainstream coding assistants"
+    ],
+    "ai-web": [
+      "Anthropic appoints Tino Cuellar as its first Chief Global Affairs Officer",
+      "Cuellar brings policy, intelligence and California Supreme Court experience",
+      "Anthropic escalates regulatory engagement ahead of new global AI rules",
+      "OpenAI published 2 unannotated pages pointing to unannounced upcoming products",
+      "Anthropic and OpenAI shift focus to non-technical strategic positioning",
+      "Major fall 2026 product launches are expected from both top AI firms"
+    ],
+    "ai-hn": [
+      "Apple vs OpenAI feud took top 2 HN AI posts, 583 total combined upvotes",
+      "HN community split on feud risking delayed iOS LLM deep integration",
+      "Open source tool enforces team coding standards for Claude Code and Codex",
+      "Threads highlight underreported surge of AI-fueled cybercrime cases",
+      "YC S26 launches EdotEnv, quant trading RL env for LLM research",
+      "HN users discuss trivial vulnerabilities that bypass LLM safety guardrails"
+    ],
+    "ai-arxiv": [
+      "AURORA-LM is continuous diffusion LLM competitive with discrete token models",
+      "LiveMem cuts LLM context prefill cost from O(n) to O(1) via SSM optimization",
+      "Research finds benchmark shortcut hacking invalidates most LLM reasoning tests",
+      "AURORA-LM removes discrete token barrier for unified multimodal design",
+      "LiveMem eliminates context drift for long-running LLM assistants",
+      "50 top cs.AI, cs.CL, cs.LG papers featured in 2026-08-05 digest"
+    ],
+    "ai-community": [
+      "Developers debate Alibaba Qwen3.8-Max 2.4T model performance tradeoffs",
+      "Model Context Protocol tutorials are fastest growing Dev.to AI topic",
+      "Pushback rises against using frontier models for trivial low-complexity tasks",
+      "Lobste.rs discusses custom C/C++ inference vs generic LLM backend tradeoffs",
+      "AirLLM breakdown shows consumer hardware can run top 70B open LLMs",
+      "Essay argues production LLMs need reliable task performance, not bar benchmarks"
+    ]
+  }
+}

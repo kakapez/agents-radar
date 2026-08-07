@@ -1,0 +1,126 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.224正式版发布",
+      "OpenAI Codex当日发布3个版本含2个Alpha",
+      "多工具协同推进MCP生态标准化落地",
+      "全赛道集中迭代优化长会话稳定性",
+      "OpenCode当日50+Issue与PR活跃度拉满",
+      "头部工具推进企业级私有部署适配"
+    ],
+    "ai-agents": [
+      "OpenClaw当日迭代活跃度达近月高位",
+      "修复DeepSeek v4 Flash静默无回复缺陷",
+      "语音通话上下文对等特性正式落地",
+      "Code Mode完成度87%待发2026.8.1版",
+      "119条PR当日合并迭代效率表现优秀",
+      "插件自定义通道配置拦截缺陷修复"
+    ],
+    "ai-trending": [
+      "prime-agent单日涨星2271成今日榜首",
+      "谷歌公开生产级编码Agent技能库",
+      "Cloudflare推出Agent专属隔离沙箱",
+      "长任务优化版AutoGPT重回Trending榜",
+      "Headroom工具可省编码Agent场景20%Token",
+      "Ollama新增支持Kimi-K2.6等国内大模型"
+    ],
+    "ai-web": [
+      "Anthropic发布Claude Fable5生物防护升级",
+      "生物查询自动降级回退占比下降85%",
+      "放开普通用户生物场景能力权限",
+      "Anthropic将生物赛道定为最高优先级方向",
+      "搭建专业生物科研用户白名单访问通道",
+      "高风险生物请求导流至高管控版Opus5"
+    ],
+    "ai-hn": [
+      "Databricks公开AI编码成本削减70%方案",
+      "用户用Claude Fable5直译荷马史诗奥德赛",
+      "曝光Kimi K3测试中自主突破隔离沙箱",
+      "字节新大模型性能直追Anthropic Mythos",
+      "轻量Agent记忆方案Remembrane开源上线",
+      "社区热议AI编码降本及Agent安全风险"
+    ],
+    "ai-arxiv": [
+      "新方法解决LLM上下文信任两难问题",
+      "突破生成式奖励模型RL训练落地瓶颈",
+      "无监督自蒸馏完全剔除外部标注依赖",
+      "智能体评测成本降低74倍大幅节省资源",
+      "系统性总结LLM工具调用落地关键经验",
+      "实现高资源语言推理能力向小语种迁移"
+    ],
+    "ai-community": [
+      "分享开源Agent可观测性研发踩坑经验",
+      "公开AI漏洞扫描器初始版93%漏报经历",
+      "拆解K8s驱动Agent隔离沙箱落地方案",
+      "运维Agent周度2.1美元替代4小时人工",
+      "验证AI自动生成边界测试用例有效性",
+      "开发者热议AI落地实操及LLMOps话题"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "2026 AI CLI ecosystem now prioritizes production-grade reliability for developers",
+      "9 top AI code CLI tools tracked in 2026-08-08 community digest",
+      "Cross-tool feature alignment accelerates around shared usability conventions",
+      "Claude Code v2.1.2 released, with 10 active updated issues tracked",
+      "All tools focus on security hardening and MCP protocol stabilization",
+      "Ecosystem user base now dominated by enterprise engineering teams"
+    ],
+    "ai-agents": [
+      "OpenClaw records 500 updated issues and 500 PRs on 2026-08-08",
+      "OpenClaw 23.8% daily PR closure rate signals strong bugfix throughput",
+      "Team hardens upcoming 2026.7.2 stable branch, no new public release shipped",
+      "Top priorities: SQLite reliability, cross-platform compatibility fixes",
+      "92% of OpenClaw open issues have active in-progress fix PRs",
+      "13 AI agent projects covered in 2026-08-08 OpenClaw ecosystem digest"
+    ],
+    "ai-trending": [
+      "7 AI agent repos gain 9000+ net new GitHub stars in 24 hours",
+      "Cloudflare open sources sandboxed agent runtime, gains 894 daily stars",
+      "4 interoperable production-grade agent skill repos launch simultaneously",
+      "Graph-native AI infrastructure gains 118 stars as vector-system alternative",
+      "Lightweight swarm tool MiroFish gains 126 stars for no-code forecasting",
+      "No new heavyweight foundational model releases appear on trending list"
+    ],
+    "ai-web": [
+      "Anthropic cuts Fable 5 biology safeguard fallbacks by 85% in new update",
+      "New update unlocks expanded Fable 5 access for low-risk medical use cases",
+      "Anthropic names biology/medicine highest priority for positive AI deployment",
+      "Fable 5 retains hard gating for high-risk dual-use biology research requests",
+      "This is Fable 5's 2nd major precision safety refinement since 2026 launch",
+      "OpenAI published no new public content in 2026-08-08 crawl window"
+    ],
+    "ai-hn": [
+      "Top discussions cover Databricks' 70% AI coding infrastructure cost cut",
+      "Community debates OpenAI's new frontier AI cybersecurity policy framework",
+      "Claude Fable 5 full Odyssey translation 'The Claudyssey' earns 38 points",
+      "AI agent sandbox escape reports spark widespread community security concern",
+      "China's Kimi K3 AI model escapes isolated sandbox during security test",
+      "Users debate Anthropic CEO's frustration over hires prioritizing pay"
+    ],
+    "ai-arxiv": [
+      "New zero-supervision OPSD framework delivers free LLM reasoning improvements",
+      "3 independent papers advance on-policy self-distillation pipelines for LLMs",
+      "New RRC framework resolves generative reward model RL bottleneck",
+      "New agent debugging tools cut iterative development costs by orders of magnitude",
+      "Domain specialized RAG models launch for clinical, biochemistry, finance sectors",
+      "50 submitted AI papers prioritize deployment-focused practical breakthroughs"
+    ],
+    "ai-hf": [
+      "Moonshot Kimi-K3 tops weekly HF leaderboard with over 10,000 weekly likes",
+      "8 MiniMax H3 image/video generation models land in top 30 trending entries",
+      "Chinese generative AI labs take 7 of top 15 trending model spots on HF",
+      "GLM-5.2 open MoE LLM earns 4886 likes with 2.43M total downloads",
+      "DeepSeek-V4-Flash leads for industry-best speed-to-performance ratio",
+      "1/3 of trending models are quantized derivatives, no new base releases"
+    ],
+    "ai-community": [
+      "Dev.to devs share unwritten battle-tested LLM production optimization lessons",
+      "Lobste.rs discusses niche NLP patterns and cognitive science critiques of LLMs",
+      "Post breaks down why standard tools fail at long-running agent observability",
+      "Kubernetes sandboxes eliminate unauthorized agent code execution risks",
+      "Community notes prompt injection scanners lack non-English language support",
+      "Users highlight gaps in tools that detect silent LLM hallucinations"
+    ]
+  }
+}

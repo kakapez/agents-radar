@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入体验精细化迭代深水区",
+      "MCP成行业扩展事实标准超80%工具升级",
+      "Qwen Code发布v0.21.7等两个新版本",
+      "Gemini CLI发布v0.54.0稳定版",
+      "Pi发布v0.84.0新增全屏TUI功能",
+      "GitHub Copilot CLI连发两个小迭代版本"
+    ],
+    "ai-agents": [
+      "OpenClaw24小时新增千条社区交互记录",
+      "7个P0/P1高优缺陷修复PR进入待审核",
+      "扩展稳定版2026.6.35即将全量推送",
+      "修复cron删除任务返回错误码历史缺陷",
+      "优化doctor --fix输出失效插件ID列表",
+      "修复钩子中继进程残留孤儿进程问题"
+    ],
+    "ai-trending": [
+      "Cloudflare Agent虚拟机单日涨2802星",
+      "腾讯云发布Agent共享内存枢纽项目",
+      "编码Agent技能库单日新增1873星",
+      "极速PDF提取库单日涨幅超千星",
+      "代码图谱工具降低上下文冗余率60%",
+      "长运行Agent状态内核单日涨847星"
+    ],
+    "ai-web": [
+      "OpenAI发布GPT 5.6 Sol体验优化更新",
+      "OpenAI联合APA推进负责任AI落地",
+      "Anthropic静默攻坚无公开内容更新",
+      "曝光ChatGPT产业落地实践专题内容",
+      "两厂商当前处于非对称竞争状态",
+      "OpenAI主导全球大模型行业公开议题"
+    ],
+    "ai-hn": [
+      "全免费用户开放GPT-5.6 Luna公测权限",
+      "专家质疑OpenAI数学突破学术不端",
+      "vLLM全栈架构深度拆解引从业者关注",
+      "Claude终端会话管理工具获34分热度",
+      "热议高阶模型开放拉低开发者成本",
+      "大模型研究可复现性痛点引发关注"
+    ],
+    "ai-arxiv": [
+      "轻量级SiPE编码提升句法任务性能",
+      "首个意第绪语大模型及评测基准发布",
+      "Poli-Bias量化大模型地缘政治偏见",
+      "随机数注入缓解LLM自动评分漂移",
+      "DreamGuard实现Agent运行时风险预判",
+      "首提Web智能体表示路由能力理论下界"
+    ],
+    "ai-hf": [
+      "FLUX.1-dev图像生成模型周赞超1.4万",
+      "Kimi-K3周点赞破万位列全站第三",
+      "DeepSeek-V4累计下载超260万",
+      "GLM-5.2累计下载量突破200万",
+      "端侧小模型LFM2.5性能接近7B基座",
+      "DeepSeek新基座推理速度提3倍"
+    ],
+    "ai-community": [
+      "AWS运维Agent单故障处理仅0.04美元",
+      "提出AI Agent领域专用熔断控制模式",
+      "新方案解决纯文本LLM评测漏判问题",
+      "验证9个AI辅助团队管理实操方法",
+      "热议Claude Code是否需保留CLAUDE.md",
+      "拆解最大开源模型Kimi K3部署门槛"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Gemini CLI v0.54.0 released in 24-hour reporting window",
+      "GitHub Copilot CLI shipped two v1.0.79-5/6 new updates",
+      "OpenAI Codex merged over 18 PRs in past 24 hours",
+      "AI CLI ecosystem now prioritizes reliability and MCP scalability",
+      "Top community pain points include cross-platform process leaks",
+      "10 AI coding CLI tools tracked in 2026-08-07 digest"
+    ],
+    "ai-agents": [
+      "OpenClaw recorded 500 total updated issues and PRs 2026-08-07",
+      "Draft PR preps extended-stable 2026.6.35 OpenClaw build",
+      "No new OpenClaw public releases published in 24h window",
+      "13 total AI agent projects tracked in OpenClaw ecosystem digest",
+      "Most OpenClaw work focused on security boundary hardening today",
+      "Maintainers process clawsweeper auto-triaged high-severity bugs"
+    ],
+    "ai-trending": [
+      "Cloudflare/computer gained 2802 new GitHub stars in 24 hours",
+      "Cloudflare/computer is sandboxed runtime for secure AI agent access",
+      "DeepSeek-Reasonix gained 888 stars, hits 32.4k total on GitHub",
+      "8 of top 10 new AI repos fill gaps for popular coding agents",
+      "Community shifts to modular, composable AI agent building blocks",
+      "Legacy AutoGPT gained 37 stars after adding new coding runtime support"
+    ],
+    "ai-web": [
+      "OpenAI published 3 new metadata-only indexed pages 2026-08/06-07",
+      "New OpenAI assets cover ChatGPT enterprise adoption updates",
+      "OpenAI shared refinements to its latest GPT 5.6 model line",
+      "OpenAI announced new formal responsible AI industry partnership",
+      "No new public Anthropic content detected in 24h crawl window",
+      "No Claude 3.5 or Claude Code announcements from Anthropic today"
+    ],
+    "ai-hn": [
+      "OpenAI unlocked free GPT-5.6 Luna access for all non-paying ChatGPT users",
+      "Viral discourse alleges OpenAI agents coordinated Hugging Face breach",
+      "Deep vLLM anatomy breakdown is top bookmark by LLM engineers",
+      "Users split on GPT-5.6 access vs unannounced free-tier throttles",
+      "Claims OpenAI math breakthrough research has misconduct issues",
+      "OpenAI topics draw highest Hacker News AI comment volume"
+    ],
+    "ai-arxiv": [
+      "New SiPE embeddings outperform baselines with zero inference overhead",
+      "OPD² distillation boosts multilingual mathematical reasoning",
+      "New frameworks prevent LLM agent skill contamination and unauthorized actions",
+      "Test-time scaling cuts reasoning inference costs by up to 100x",
+      "New low-resource ASR frameworks advance linguistic equity",
+      "50 new AI papers submitted across cs.AI, cs.CL, cs.LG"
+    ],
+    "ai-hf": [
+      "FLUX.1-dev leads HF weekly likes at 14010, top generative model",
+      "Kimi-K3 is first open model supporting 10M token context",
+      "DeepSeek-V4-Flash-0731 hits 617,900 total HF downloads",
+      "7 of top 10 most-liked HF models are from Chinese teams",
+      "40% trending HF models are consumer-deployable fast inference quants",
+      "Uncensored fine-tunes often outdownload official base models"
+    ],
+    "ai-community": [
+      "AWS Kiro Crew resolves P1 latency incidents for $0.04 per event",
+      "Viral analysis shows LLM judges miss critical problematic outputs",
+      "Circuit breaker guardrails pause AI agents at error thresholds",
+      "Dev.to author shared 9 actionable AI management learnings",
+      "Kimi K3 and GPT-5.6 access top dev project priorities",
+      "Community highlights widespread flaws in standard LLM evaluation"
+    ]
+  }
+}

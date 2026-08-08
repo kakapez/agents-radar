@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.225/226两个增量正式版",
+      "DeepSeek TUI更名CodeWhale 连更两个正式版",
+      "AI CLI竞争转向Agent可靠性安全兼容性",
+      "全行业达成OpenAI接口生态兼容共识",
+      "Qwen Code发布v0.21.8稳定版加预发布版",
+      "国产AI CLI针对性优化本地化适配场景"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.6.33 安全加固无破坏性变更",
+      "推出v2026.6.34 沙箱升级阻断跨域逃逸风险",
+      "合并配对模块 减少40%配对相关潜在Bug",
+      "补全stopReason字段 解决运行诊断信息缺失",
+      "彻底阻断用户对话场景Token明文留存路径",
+      "开发者参与量环比上周提升27%"
+    ],
+    "ai-trending": [
+      "prime-agent单日增星2483 登顶GitHub Trending总榜",
+      "4款Agent项目冲入Trending Top5 技能生态爆发",
+      "谷歌发布agent-skills适配工业级代码评审场景",
+      "自进化RLM智能体首破单日2000星记录",
+      "中文原生自托管智能体项目占比达30%",
+      "Agent-Reach实现全平台内容零API成本爬取"
+    ],
+    "ai-hn": [
+      "丹麦反AI作弊政策408分登顶HN AI板块热度",
+      "Anthropic将Claude Code Auto Mode设为默认",
+      "Claude Code新增跨会话互通提升多开效率",
+      "字节曝研发10万亿参数大模型对标Anthropic",
+      "彩色玻璃变换方案可保护用户提示词隐私",
+      "Anthropic发布行业首个AI宏观经济影响指数"
+    ],
+    "ai-hf": [
+      "FLUX.1-dev以14036周点赞登顶Hugging Face总榜",
+      "Kimi-K3以10337周点赞位列榜单第二",
+      "GLM-5.2下载量突破248万跻身前列",
+      "DeepSeek-V4-Flash推理速度较旗舰快3倍",
+      "MiniMax文生视频H3衍生版扎堆登热门榜",
+      "端侧GGUF量化适配模型占比持续走高"
+    ],
+    "ai-community": [
+      "公开AI原生个人第二大脑完整搭建架构",
+      "模型路由降本却引发Agent输出一致性问题",
+      "实测AI生成SSRF漏洞修复代码仍存在风险",
+      "交叉校验方案低门槛解决AI代码审计幻觉",
+      "复盘Claude Code快速定位生产内存泄漏故障",
+      "社区讨论全面转向生产级AI落地实操痛点"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 production-grade AI CLI developer tools tracked as of 2026-08-09",
+      "6 of 9 monitored AI CLI tools shipped new builds in the 24h window",
+      "110+ combined merged PRs across all tracked AI CLI tool repos",
+      "Ecosystem priorities shift to reliability, security, multi-agent orchestration",
+      "Teams building cross-tool interoperability via Agent Control Protocol",
+      "Tracked tools include Claude Code, OpenAI Codex, Gemini CLI and more"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem covers 13 total agent projects on 2026-08-09",
+      "OpenClaw shipped two new security-focused patch releases in 24 hours",
+      "v2026.6.33 adds hostile response size caps for streams and OAuth paths",
+      "152 total PRs merged on OpenClaw repo in the reporting window",
+      "Active work ongoing to harden OpenClaw network and memory security boundaries",
+      "456 active open OpenClaw issues relate to agent orchestration flows"
+    ],
+    "ai-trending": [
+      "4 of top 6 GitHub trending repos focus on AI coding agent tooling",
+      "AI agent repos collected 5200+ new public stars in 24 hours",
+      "Nous Research publicly launched its community standard hermes-agent framework",
+      "Google surprise open sourced its internal proprietary agent skill library",
+      "ECC agent optimization project hits 238,805 total stars on GitHub",
+      "Community shifts to modular agent capabilities vs monolithic systems"
+    ],
+    "ai-hn": [
+      "Top HN thread covers Denmark's national AI cheating oral defense mandate",
+      "Top thread details OpenAI outage that crippled Hugging Face public infrastructure",
+      "Report reveals OpenAI trained pre-release models connected to exploit forums",
+      "Users raised concerns over AI labs cutting safety guardrail corners",
+      "New Claude Code collaboration features earned notable HN user engagement",
+      "OpenAI temporarily paused its high-stakes Astra model per community reports"
+    ],
+    "ai-hf": [
+      "FLUX.1-dev reclaims top HF spot with 14,036 new weekly likes",
+      "Chinese devs hold 6 of top 10 highest-liked model positions on HF Hub",
+      "15+ derivative builds for MiniMax-H3 video model released in 7 days",
+      "DeepSeek-V4-Flash-0731 offers 1M+ context and 2x faster inference",
+      "Lightweight LFM2.5-2.6B hits near-7B performance at tiny compute size",
+      "40% of trending HF models focus on GGUF/INT4 edge deployment optimizations"
+    ],
+    "ai-community": [
+      "Top tutorial covers building AI-native second brain with multi-RAG and MCP",
+      "New flaw found: Cursor often generates still-vulnerable SSRF code fixes",
+      "Lobste.rs users traction for practical LLM workflow revision prompting",
+      "Post breaks down naming confusion for popular LLM agent framework ReAct",
+      "Discussions focus on real AI deployment pain points over product hype",
+      "Lobste.rs hosts talks about inherent cognitive limitations of LLMs"
+    ]
+  }
+}

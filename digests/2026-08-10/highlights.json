@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入生产级可用性打磨阶段",
+      "Gemini CLI发布v0.56.0-nightly预览版",
+      "MCP成跨工具扩展生态事实标准共识",
+      "8款工具启动MCP全链路兼容性优化",
+      "全行业推进多Agent调度核心基建迭代",
+      "各厂商发力本地私有部署场景能力适配"
+    ],
+    "ai-agents": [
+      "OpenClaw24小时500+Issue/PR迭代活跃度高",
+      "落地子Agent附件路径逃逸防护安全升级",
+      "修复单Agent异常跑飞15M token极端故障",
+      "多端配对功能开发完成70%待后续上线",
+      "微信渠道工具调用文本丢失P1问题已闭环",
+      "社区热议DeepSeek v4推理静默故障修复"
+    ],
+    "ai-trending": [
+      "自进化编码智能体prime-agent单日涨2319星",
+      "谷歌官方开源Agent技能库当日获532星",
+      "编码工程技能合集项目单日揽670星爆火",
+      "Hermes通用智能体框架星数达22.7万",
+      "AI开源热点全面转向生产级工程化工具",
+      "代码RAG向知识图谱融合路径迭代升级"
+    ],
+    "ai-hn": [
+      "Benzi代码代理实测表现超过原生Claude Code",
+      "跑分指标无法反映大模型真实使用成本",
+      "字节训练万亿参数大模型对标Anthropic",
+      "LLM非连续性跃迁推理新观点引讨论",
+      "自托管代码大模型实践分享获开发者追捧",
+      "社区热议AI厂商垄断与安全风险相关话题"
+    ],
+    "ai-hf": [
+      "Kimi-K3周点赞超1万 图文精度行业第一梯队",
+      "FLUX.1-dev以1.4万周点赞登顶HF全榜",
+      "MiniMax H3文生视频底模发布引爆生成社区",
+      "GLM-5.2累计下载近250万获中文社区认可",
+      "DeepSeek-V4-Flash周下载量近87万热度极高",
+      "百度工业级OCR模型累计下载量近300万"
+    ],
+    "ai-community": [
+      "生产级RAG分块优化打破512Token默认误区",
+      "长驻型AI Agent搭建全流程踩坑经验公开",
+      "拆解RAG全链路隐性成本给出落地降本方案",
+      "披露AI Agent回归测试反常识开发痛点",
+      "Dart生态Agent+MCP服务实操教程发布",
+      "输出破解AI生成前端同质化可行方案"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 AI CLI tools are covered in the 2026-08-10 community digest",
+      "Ecosystem hits maturity with 8 leading closed and open source offerings",
+      "No major new stable public CLI tool releases in the 24h window",
+      "Dev work focused on bug triage, performance hardening, roadmap iteration",
+      "User demand shifts to multi-agent workflows, interoperability, compliance",
+      "Open source CLI tools quickly close parity gaps with closed vendor tools"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026-08-10 digest covers 13 active agent ecosystem projects",
+      "500 updated issues and 500 updated PRs tracked across the ecosystem",
+      "No new official OpenClaw releases tagged in the 24-hour period",
+      "Eng focused on fixing 2026.6.x SQLite migration post-regression edge cases",
+      "Ongoing work for OpenClaw security hardening and Control UI UX polishing",
+      "3 critical bug fixes, 5 features reach final maintainer review stage"
+    ],
+    "ai-trending": [
+      "2026-08-10 GitHub AI trends led by exploding AI agent project traction",
+      "Self-improving coding RLM agent gains 2319 new GitHub stars in 24h",
+      "Google DeepMind open-sourced high-precision WeatherNext AI weather model",
+      "ComfyUI gains 333 new stars as production generative visual adoption rises",
+      "6 AI repos earn over 300 new GitHub stars in the single tracked day",
+      "Industry shifts to using prebuilt reusable production agent skill assets"
+    ],
+    "ai-hn": [
+      "Top HN AI post: Practical LLM guide to learn complex technical topics",
+      "Heated debate: OpenAI + Anthropic hold 70% of global generative AI market",
+      "Leaked OpenAI comment: AI labs should wield power comparable to governments",
+      "Rogue Israeli startup hacks confirmed targeting OpenAI, Anthropic, Meta AI",
+      "Anthropic enables auto mode by default for Claude Code paid users",
+      "New analysis: LLM benchmarks no longer link to real production cost"
+    ],
+    "ai-hf": [
+      "2026-08-10 HF trends led by breakout open model families and edge LLMs",
+      "FLUX.1-dev tops weekly likes, followed by Kimi-K3 and GLM-5.2 MoE",
+      "MiniMax-H3 spurs viral ecosystem of quantizations, LoRAs, ComfyUI ports",
+      "DeepSeek-V4-Flash-0731 hits 868k+ downloads, 2x speed over V3",
+      "GLM-5.2 MoE earns 4.9k likes, 2.48M downloads, rivals 70B closed models",
+      "Uncensored Qwen 3.6 fine tunes drive record local AI download volumes"
+    ],
+    "ai-community": [
+      "Top dev topics: Agent reliability, LLM costs, production RAG optimization",
+      "Dev threads expose hidden agent risks: fake test passes, accidental DDoS",
+      "Lobste.rs hosts critical counter-hype perspectives on real LLM limitations",
+      "Devs reject 'move fast' AI mindsets to prioritize robustness, cost predictability",
+      "Guide: Ditch default 512-token chunks for far better production RAG",
+      "Agent walkthrough breaks down caching, routing, persistent memory pain points"
+    ]
+  }
+}

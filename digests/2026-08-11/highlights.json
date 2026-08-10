@@ -1,0 +1,110 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenAI Codex发布2个Rust核心栈alpha预发布版",
+      "Gemini CLI推出v0.56.0每日构建版",
+      "Qwen Code单日50+PR，发v0.21.9正式版",
+      "MCP成AI CLI行业公认扩展事实标准",
+      "9款工具全量投入跨非标准环境适配",
+      "OpenCode发v1.18.16正式版合并20+PR"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时累计1000条Issue+PR更新",
+      "修复Windows下数据库句柄锁死CI问题",
+      "Telegram重复回复P0级问题完成闭环",
+      "安全诊断模块DM场景误报问题已修复",
+      "核心用户转向企业级生产部署",
+      "消息投递去重修复覆盖率达82%"
+    ],
+    "ai-trending": [
+      "prime-agent单日涨星2655成全场冠军",
+      "agency-agents单日涨星1352热度火爆",
+      "ComfyUI单日新增921星登顶工具榜",
+      "firecrawl单日涨星815创历史新高",
+      "首个通用级Agent生产技能仓库开源",
+      "图原生RAG获社区大量关注"
+    ],
+    "ai-web": [
+      "Claude Sonnet 5全量开放Agent性能追Opus",
+      "Claude把黎曼猜想下界提升至67.2%",
+      "数学成果经顶尖数论专家核验确认成立",
+      "大幅拉低自主Agent商业化落地成本",
+      "OpenAI新增4条B端方向官网索引内容",
+      "Sonnet 5成Free/Pro计划默认使用模型"
+    ],
+    "ai-hn": [
+      "14MB端侧Agent LLM支持IoT离线运行",
+      "HN热榜热议Claude推进黎曼猜想边界",
+      "实测校准主流大模型真实预训练截止时间",
+      "Claude Code靠对话上下文即可自我迭代",
+      "大模型产出纯数学全新结论引发热议",
+      "开发者讨论离线IoT Agent落地可能性"
+    ],
+    "ai-hf": [
+      "Kimi-K3获1万+点赞下载量破150万",
+      "DeepSeek-V4-Flash周下载量近百万",
+      "FLUX.1-dev总点赞14076居全榜第一",
+      "MiniMax-H3成本周最高热度生视频模型",
+      "Meta新30B多模态大模型引发行业关注",
+      "数小时产出热门模型多版低比特量化包"
+    ],
+    "ai-community": [
+      "单TPU部署轻量Agent后端方案流出",
+      "提出Agent手动签名权限防越权方案",
+      "大模型蒸馏认知误区干货引热议",
+      "AI Agent技能安全防护开源框架发布",
+      "开发者反思过度用AI导致能力退化",
+      "新方法拆解大模型认知偏差形成逻辑"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9+ AI CLI tools tracked for 2026-08-11 community digest",
+      "Ecosystem moves past feature parity to reliability and compliance hardening",
+      "Top AI CLI user pain points are edge bugs from 2025-2026 rapid growth",
+      "Industry sees growing standardization around Model Context Protocol interfaces",
+      "Claude Code prioritizes batch defensive security issue resolution in 24h window",
+      "10 active hot issues and 4 merged PRs recorded across top AI CLI tools"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem covers 13 projects in 2026-08-11 daily digest",
+      "500 updated issues and 500 updated PRs recorded for OpenClaw repository",
+      "Maintainers focus on regression triage and high-priority security patches",
+      "~23% of updated OpenClaw issues closed successfully in 24h tracking window",
+      "Latest stable OpenClaw build remains 2026.7.x generation, no new releases out",
+      "No widespread unplanned production outages flagged in active OpenClaw bug reports"
+    ],
+    "ai-trending": [
+      "Top trending AI repo gains over 2600 new single-day GitHub stars",
+      "ComfyUI adds 921 stars, hits 230k total as leading generative AI pipeline standard",
+      "Firecrawl gains 815 new stars, hits 165k total as top scalable web context API",
+      "addyosmani/agent-skills picks up 659 new stars for unifying coding agent capabilities",
+      "Ecosystem shifts from experimental agent demos to real-world task focused tooling",
+      "Niche AI hotspots include financial, productivity, and spatial intelligence agents"
+    ],
+    "ai-web": [
+      "Anthropic publishes Claude-generated Riemann hypothesis proof hitting 67.2% bound",
+      "Anthropic launches Claude Sonnet 5, default for free and low-paid Claude users",
+      "Claude Sonnet 5 delivers near Opus 4.8 performance at heavily reduced pricing",
+      "OpenAI indexes 4 unpublicized pages focused on cybersecurity and enterprise tooling",
+      "Unreleased Claude model produces expert-validated formal pure math breakthrough",
+      "OpenAI upcoming announcements cover ChatGPT Business and AI operations tools"
+    ],
+    "ai-hn": [
+      "Claude Riemann hypothesis breakthrough hits top of HN AI with 141 points",
+      "Viral 14MB on-device agentic LLM for wearables sparks widespread user testing",
+      "Debate erupts over OpenAI’s letter pushing for balanced Texas AI data center rules",
+      "Op-ed arguing forced LLM humanized outputs reduce utility sparks heated discussions",
+      "Highest-scoring AI post is a full voice-driven LLM murder mystery game",
+      "Deep analysis maps LLM recall gaps to infer actual pre-training timeline windows"
+    ],
+    "ai-community": [
+      "Dev community debates gaps between AI agent lab and real production reliability",
+      "Top post dismantles common myth that AI inherently makes developers lazy",
+      "Discussions highlight unforeseen security flaws in third-party AI agent skill sets",
+      "Guide walks through self-hosting lite agent backend on single Google TPU v5e",
+      "Community explores MCP optimizations to cut unnecessary AI context token bloat",
+      "Lobste.rs thread links AI clustering behavior to social media algorithm design"
+    ]
+  }
+}

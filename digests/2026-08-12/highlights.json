@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入生产可用体验深耕期",
+      "近24小时AI CLI BUG超60%为Windows相关",
+      "Claude Code发布v2.1.227/228补丁版本",
+      "Gemini CLI当日发布4个预览/正式混合版本",
+      "Qwen Code推出v0.21.10稳定版等3个版本",
+      "MCP成头部AI CLI跨工具扩展事实标准"
+    ],
+    "ai-agents": [
+      "OpenClaw24小时累计500条Issue、500条PR更新",
+      "OpenClaw P0级启动死循环事故完成全闭环",
+      "修复漏投bug 解决高等级消息丢失问题",
+      "闭环内存泄漏bug 提升systemd部署稳定性",
+      "封堵调用循环漏洞 避免204美元超额账单",
+      "补全Telegram渠道8k行用例 CI覆盖度提升"
+    ],
+    "ai-trending": [
+      "自改进RLM智能体日增1148星登GitHub热榜",
+      "Anthropic公开Agent技能仓库 日增468星",
+      "编码智能体技能库日增571星 成行业参考",
+      "图原生AI基础设施Semantica日增884星",
+      "港大AI家教DeepTutor日增829星引关注",
+      "开箱即用多智能体集群日增971星"
+    ],
+    "ai-web": [
+      "Anthropic修订Agent指南 导流托管Agent产品",
+      "Claude Managed Agents进入全量推广期",
+      "OpenAI Daybreak系列模型完成AWS适配上线",
+      "打破OpenAI核心模型仅独占Azure的惯例",
+      "Anthropic全力押注Agent生态标准制定权",
+      "OpenAI推进多云部署 覆盖政企合规客群"
+    ],
+    "ai-hn": [
+      "macOS虚拟机GPU直通 llama.cpp推理提速",
+      "OpenAI伦理主管离职 安全投入引社区质疑",
+      "普通VLM做视频检索效果优于专用方案",
+      "微软代码模型推理成本降至前代四分之一",
+      "开发者分享Claude Code适配产品流实操经验",
+      "Claude Code爆出批量bug漏洞引开发者吐槽"
+    ],
+    "ai-arxiv": [
+      "无验证器测试时缩放 降低推理增强门槛",
+      "揭露在线蒸馏token对齐但推理退化失效模式",
+      "动态Agent安全护栏 适配复杂未知场景",
+      "解码级LLM压力测试 暴露部署鲁棒性漏洞",
+      "科研智能体类比模糊测试 解决反馈稀疏痛点",
+      "融合训练大幅提升大模型数学泛化能力"
+    ],
+    "ai-hf": [
+      "Kimi-K3周获10524赞 登顶HF周榜",
+      "DeepSeek-V4-Flash下载量突破百万",
+      "MiniMax H3开源 衍生十余个社区版本",
+      "百度Unlimited-OCR单周下载近300万",
+      "2.6B小模型LFM2.5 主打边缘低资源部署",
+      "Mistral发布3B合规审核模型Shieldstral-1.0"
+    ],
+    "ai-community": [
+      "7招大幅降低AI Agent行为不可控性",
+      "100小时实测Pi Agent与Claude Code优劣",
+      "8层安全方案可直接过企业CISO审批",
+      "用macOS26 API搭建全离线实时翻译工具",
+      "Prompt版本管理工具 解决丢最优版痛点",
+      "拆解Agent虚报完成任务逻辑出优化方案"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI dev CLI tools tracked in 2026-08-12 community digest",
+      "MCP becomes universal interoperability layer across all major AI CLI tools",
+      "Ecosystem shifts from prototypes to production-grade enterprise infrastructure",
+      "Windows stability bugs are the top cross-industry AI CLI pain point",
+      "All major AI CLI tools support persistent cross-session agent memory",
+      "Top 8 projects prioritize stability hardening over untested new features"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.8 stabilization sprint hits peak development activity",
+      "13 OpenClaw ecosystem agent projects covered in latest digest",
+      "40% closed/merged rate across 500 issues and 500 PRs in 24h",
+      "No new OpenClaw production releases published in 24h tracking window",
+      "2026.8.1-beta.1 boot loop bug fixed but no patched build pushed publicly",
+      "Core team polishes UX for Control UI and multi-channel adapter suite"
+    ],
+    "ai-trending": [
+      "Prime-agent gained 1148 new GitHub stars in 24h, top daily gainer",
+      "Anthropic unexpectedly released official public anthropics/skills repo",
+      "7 agent-focused repos earned over 800 new GitHub stars each this period",
+      "semantica gained 884 stars, leading graph-native AI infrastructure category",
+      "Open source AI ecosystem shifts from RAG/chatbots to deployable agent workflows",
+      "transformers added native support for 12 new frontier reasoning models"
+    ],
+    "ai-web": [
+      "Anthropic updated 2024 Building Effective AI Agents guidance on August 10",
+      "Anthropic pushes devs to Claude Managed Agents over third-party orchestration",
+      "OpenAI Daybreak model family is now natively available for AWS deployment",
+      "Top LLM vendors prioritize native agent tooling for 2H 2026 competition",
+      "Providers skip benchmarking to focus on enterprise production workloads",
+      "New updates target 2H 2026 high-stakes AI enterprise monetization"
+    ],
+    "ai-hn": [
+      "Top AI HN post on macOS llama.cpp GPU passthrough earned 270 points",
+      "OpenAI ethics head exit story sparked 286 comments, most of any AI thread",
+      "Users link OpenAI churn to $7B private share sale and upcoming IPO roadmap",
+      "Claude Code and MCP tooling content earned steady traction among devs",
+      "Unannounced OpenAI Daybreak Blue listing sparked public launch speculation",
+      "New research shows VLMs outperform custom embeddings for visual search"
+    ],
+    "ai-arxiv": [
+      "New verifier-free test-time scaling framework removes key LLM deployment bottleneck",
+      "Latest ArXiv batch shifts to production domain-validated AI use cases",
+      "Optimized second-order Muon optimizer released for better LLM training efficiency",
+      "New safety harnesses for LLM agents fix real-world deployment failure modes",
+      "Curated new benchmarks eliminate test set contamination for LLM evaluation",
+      "Fusion Training method delivers major improvements in LLM math generalization"
+    ],
+    "ai-hf": [
+      "Moonshot Kimi-K3 earned 10524 weekly likes, top trending open LLM this week",
+      "MiniMax H3 line leads open source text-to-video model category",
+      "Baidu Unlimited-OCR hit nearly 3 million pulls as fastest downloaded model",
+      "12+ community derivatives of MiniMax-H3 have been released globally",
+      "DeepSeek-V4-Flash-0731 runs 3x faster than prior generations with matching performance",
+      "LiquidAI LFM2.5-2.6B lightweight SLM is optimized for edge deployment"
+    ],
+    "ai-community": [
+      "Devs highlight gaps between AI agent research and production reliability",
+      "7 actionable tips shared to make AI agents outputs more predictable",
+      "Unsponsored 100-hour side-by-side test of Pi Agent vs Claude Code published",
+      "Devs share guardrails to prevent agent false done status and sandbox escapes",
+      "AI cybersecurity updates from Black Hat USA 2026 are trending widely",
+      "Community debates ethics of AI training data sourcing from rare books"
+    ]
+  }
+}

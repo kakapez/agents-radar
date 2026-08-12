@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道成熟 MCP成头部厂商事实扩展标准",
+      "Qwen Code单日发布4个迭代版本迭代效率拉满",
+      "OpenCode当日20+PR 发布v1.18.17正式版",
+      "CodeWhale完成品牌迁移 发布v0.9.6正式版",
+      "Claude Code发布v2.1.229正式版 跟进MCP落地",
+      "国内AI CLI中文私有化适配能力反超海外"
+    ],
+    "ai-agents": [
+      "OpenClaw单日500条PR更新 200个PR完成合并",
+      "核心CI流水线优化 执行效率最高提升80%",
+      "修复xAI视频下载死锁 补全边界容错逻辑",
+      "社区热议静默丢消息 要求补充全链路埋点",
+      "语音会话内存泄漏 呼吁增加资源硬上限",
+      "优先级倾斜 响应企业自托管用户需求"
+    ],
+    "ai-trending": [
+      "diagram-design单日涨星2951 适配Claude Code",
+      "agency-agents涨星1969 全角色Agent开箱即用",
+      "orca涨星1215 多编码Agent并行跨端适配",
+      "ppt-master总星45k+ 直接生成原生可编辑PPT",
+      "英伟达推出Switchyard 优化高并发Agent调度",
+      "semantica图原生AI基础设施单日涨星834"
+    ],
+    "ai-web": [
+      "Anthropic发布AI再培训研究 输出政策话语权",
+      "传统职业培训投入产出比不足10%",
+      "OpenAI官网新增企业AI落地核心导航板块",
+      "头部厂商竞争重心向B端服务生态纵深转移",
+      "AI职业培训应用将成开发者新蓝海赛道",
+      "Anthropic开辟AI治理差异化竞争新赛道"
+    ],
+    "ai-hn": [
+      "伪造ClaudeBot爬虫扫漏洞 引发AI安全大讨论",
+      "YC新项目AI Agent加速新材料研发突破",
+      "开源Decant工具精细化统计Token消耗去向",
+      "浏览器端可直接加载大模型跑基准测试",
+      "OpenAI ChatGPT桌面端首次适配Linux系统",
+      "OJCP协议统一Agent获取岗位数据行业标准"
+    ],
+    "ai-arxiv": [
+      "发现稀疏自编码器不稳定性 可解释性新突破",
+      "注意力脆弱性指标 无需训练识别LLM可靠性",
+      "低资源语言场景大模型安全对齐完全失效",
+      "ReRound方法大幅提升LLM免校准量化效果",
+      "SkillZip解决Agent技能库膨胀推理开销问题",
+      "首次找到编码Agent「灾难性记忆」缺陷根因"
+    ],
+    "ai-hf": [
+      "Kimi-K3周点赞破万 登HF多模态热度榜首",
+      "DeepSeek-V4-Flash下载破百万 主流商用开源模型",
+      "MiniMax-H3带动十余款衍生微调模型入榜",
+      "Unlimited-OCR下载近300万 登顶工具类榜首",
+      "2.6B小模型LFM2.5效果接近7B 适配端侧",
+      "英伟达发FP4量化大模型 硬件专属加速降本"
+    ],
+    "ai-community": [
+      "分享零成本本地搭建RAG应用完整实操指南",
+      "谷歌云发布Gemini企业级Agent部署全教程",
+      "实测OpenAI安全从业者专属豁免权限用法",
+      "探讨AI Agent插件运行时权限认证核心痛点",
+      "梳理AI时代开发者向Agent统筹角色演进路径",
+      "公开多起AI编码助手引发的真实生产故障案例"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 tracked AI CLI tools, 7 shipped new builds in 24h window",
+      "MCP support emerges as universal production-grade baseline",
+      "6 of 9 projects have >50% community code contribution throughput",
+      "Claude Code shipped v2.1.229 stable core feature release 2026-08-13",
+      "Claude Code recorded 10 hot issues and 5 PRs updated in 24h",
+      "AI CLI ecosystem shifts from feature expansion to reliability polish"
+    ],
+    "ai-agents": [
+      "OpenClaw recorded 500 updated issues and 500 PRs in 24h",
+      "172 bugs/feature requests closed, 200 PRs merged 2026-08-13",
+      "OpenClaw core work prioritizes self-hosted production stability hardening",
+      "13 total AI agent projects tracked in 2026-08-13 digest",
+      "12% item resolution rate signals strong OpenClaw project health",
+      "No new official OpenClaw releases in the 24-hour reporting window"
+    ],
+    "ai-trending": [
+      "7 AI agent projects gained over 1000 new GitHub stars in 24h",
+      "Claude Code diagram utility earned 2951 stars, top trending AI project",
+      "NVIDIA released Rust-based NeMo Switchyard agent orchestration tool",
+      "Deterministic non-vector RAG infrastructure sees strong user traction",
+      "14MB tiny edge LLM earned 346 stars with zero pre-release marketing",
+      "Langchain updated with native Claude Code integration for agents"
+    ],
+    "ai-web": [
+      "Anthropic published peer-reviewed worker retraining research 2026-08-12",
+      "OpenAI released new public enterprise AI deployment resource page",
+      "Anthropic report co-authored with labor researcher David Roodman",
+      "Anthropic analyzed 56 U.S. retraining studies for its new report",
+      "Leading AI vendors shift focus to real-world non-model outcomes",
+      "This is OpenAI's first enterprise content update in 3 weeks"
+    ],
+    "ai-hn": [
+      "ClaudeBot spoofing scan story earned 209 points and 130 comments",
+      "YC S26 Discovered Materials uses AI to accelerate materials R&D",
+      "New Trunchbull tool runs ML model benchmarks directly in browser",
+      "Open source memory graph outperforms Memora on LLM long-term retention",
+      "HN debates proposals for U.S. nationalization of leading AI labs",
+      "Discussions of Anthropic's upcoming invisible watermarks gain traction"
+    ],
+    "ai-arxiv": [
+      "50 new submissions include AI-aided pure mathematical research breakthroughs",
+      "Research finds critical unaddressed safety gaps in multilingual LLMs",
+      "Sparse autoencoder instability poses risk to existing alignment workflows",
+      "New ASMI metric derives LLM uncertainty from attention path fragility",
+      "AI field shifts focus to reliable agent deployment over static benchmarks",
+      "Work advances human-AI collaboration to improve Grothendieck constant bounds"
+    ],
+    "ai-hf": [
+      "Kimi-K3 multimodal LLM hit 10500 weekly likes, fastest rising on HF",
+      "MiniMax H3 video ecosystem has 12 derivatives, 7M+ total downloads",
+      "Baidu's Unlimited-OCR earned 4039 weekly likes, high specialized tool demand",
+      "DeepSeek-V4-Flash crosses 1M downloads, near GPT-4 performance",
+      "2.4T Qwen MoE LLM is one of the largest open text models released",
+      "Unsloth's GGUF local model quantizations see disproportionate downloads"
+    ],
+    "ai-community": [
+      "Devs share production AI coding assistant failure horror stories",
+      "Zero-cost local LLM tutorials trend to cut closed API costs",
+      "Developer role framed as shifting to intent definition and orchestration",
+      "Debate pushes back on AI software engineering job loss doomsday takes",
+      "New step-by-step Google Cloud Gemini Enterprise deployment guide released",
+      "EU DSA AI rules and training data externality discussions gain traction"
+    ]
+  }
+}

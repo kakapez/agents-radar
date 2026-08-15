@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Qwen Code当日合入50个PR活跃度登顶",
+      "Claude Code推送v2.1.233正式版",
+      "全行业跟进适配MCP最新2026标准",
+      "推理链路可观测性成生产级硬性要求",
+      "国产AI CLI私有化部署成核心优势",
+      "AI CLI赛道转向生产级落地深耕期"
+    ],
+    "ai-agents": [
+      "OpenClaw发布v2026.8.1-beta.2测试版",
+      "新增密钥主机绑定降低泄漏风险",
+      "消息投递成功率提升至99.2%",
+      "插件全链路安全校验体系正式落地",
+      "支持GPT-5.6 Ultra运行时热切换",
+      "正式版里程碑完成度已达72%"
+    ],
+    "ai-trending": [
+      "diagram-design单日星增1619登顶榜首",
+      "ego-lite日增546星解决浏览器校验痛点",
+      "cordis时空元框架今日新增616星",
+      "Agent适配类工具项目占比超40%",
+      "无向量知识图谱工具星量破10万",
+      "AI开源生态全面转向Agent生产力落地"
+    ],
+    "ai-web": [
+      "Anthropic发布多智能体系统安全新研究",
+      "Claude新水印零损耗适配欧盟AI法案",
+      "跨厂商AI生成内容溯源可互通",
+      "Anthropic卡位多Agent安全标准话语权",
+      "企业出海欧盟AI合规成本大幅降低",
+      "OpenAI本期无任何公开新内容发布"
+    ],
+    "ai-hn": [
+      "高赞帖称AI数学优势来自超大工作内存",
+      "Anthropic搁置更强Model 2发布计划",
+      "Netflix公开LLM原生推荐系统实践",
+      "Debian启动AI代码贡献规则投票",
+      "AI药物研发仍需湿实验验证",
+      "开源自托管AI推荐监控工具上线"
+    ],
+    "ai-hf": [
+      "Kimi-K3周点赞破万登顶HF热榜",
+      "DeepSeek-V4-Flash推理提速300%",
+      "国产模型占HF热榜近4成席位",
+      "MiniMax-H3衍生适配模型达8款",
+      "端侧量化模型下载量超原版3-10倍",
+      "英伟达发布硬件优化30B级基座"
+    ],
+    "ai-community": [
+      "实测曝光OpenAI权限体系安全漏洞",
+      "10天完成印度多语种金融Agent落地",
+      "通义千问2.4T MoE部署实操配方公开",
+      "4200次试验总结LLM Agent高频故障点",
+      "零服务端轻量语义搜索无需向量库",
+      "解析欧盟AI法案标识现存漏洞"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "10 leading AI code CLI tools included in 2026-08-16 community digest",
+      "AI CLI ecosystem prioritizes production reliability and enterprise compliance",
+      "All tracked tools support new Model Context Protocol (MCP) standard",
+      "Landscape splits into LLM vendor offerings and privacy community projects",
+      "R&D now targets long-tail pain points like safety filter false positives",
+      "24h updates focus only on incremental stability and security hardening"
+    ],
+    "ai-agents": [
+      "OpenClaw hits final sprint phase ahead of 2026.8 stable release",
+      "1000 total updated issues and PRs recorded for OpenClaw today",
+      "New v2026.8.1-beta.2 pre-release ships with critical security hardening",
+      "New secret egress host binding feature added to latest OpenClaw beta",
+      "13 total OpenClaw ecosystem projects listed in 2026-08-16 digest",
+      "Team resolved 19 issues and merged 43 PRs in the 24h window"
+    ],
+    "ai-trending": [
+      "Agent-focused AI open source projects dominate 2026-08-16 GitHub trending",
+      "citrolabs/ego-lite gains +546 stars as zero-config AI agent browser",
+      "cursor/plugins adds +152 stars for open Cursor coding agent spec",
+      "HKUDS/CLI-Anything gains +100 stars to make legacy tools agent-native",
+      "Community shifts from chat interfaces to agent-native integration tools",
+      "14MB edge foundation model for wearables draws massive dev attention"
+    ],
+    "ai-web": [
+      "Anthropic released 2 new updates 2026-08-16, no new content from OpenAI",
+      "Anthropic published landmark multiagent safety research on ungoverned risks",
+      "Anthropic detailed new EU AI Act compliant text watermarking system",
+      "Research warns ungoverned agent traffic will outpace human-mediated AI traffic",
+      "Watermark details resolve user concerns over performance and inference costs",
+      "Anthropic positions itself as proactive AI regulation standard-setter"
+    ],
+    "ai-hn": [
+      "Top HN discussion argues AI working memory beats reasoning for math leads",
+      "Viral AI math essay earned 332 votes and 285 active comments on HN",
+      "Debian held vote to set rules for LLM-originated open source contributions",
+      "Science deep dive covers real-world AI-powered drug discovery progress",
+      "Netflix rolled out its LLM-native GenRec recommendation system publicly",
+      "HN sentiment leans to practical use cases, away from speculative AGI hype"
+    ],
+    "ai-hf": [
+      "moonshotai/Kimi-K3 takes top weekly likes spot on Hugging Face trending",
+      "7 of 30 trending models are from MiniMax's open text-to-video H3 family",
+      "Unsloth's edge model variants hit 6-7 figure download counts",
+      "711-parameter Qwen uncensored fine-tune neared 3M downloads first week",
+      "DeepSeek-V4-Flash-0731 delivers sub-100ms latency on consumer GPUs",
+      "Qwen/Qwen3.8-27B ranks second for weekly likes as top visual LLM"
+    ],
+    "ai-community": [
+      "Dev.to viral 10-day voice agent builds for grassroots Indian use cases",
+      "4200-trial study unpacks under-documented LLM agent reliability failures",
+      "Critique finds EU AI Act 'AI Badge' does not verify real content provenance",
+      "Lobste.rs active discussion centers on OpenAI-Hugging Face security incident",
+      "FinEd Saathi 10-day build is Indian multilingual financial literacy voice agent",
+      "Community focus shifts to real-world AI deployment pain points and education"
+    ]
+  }
+}

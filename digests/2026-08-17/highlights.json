@@ -1,0 +1,94 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进入成熟期，MCP成扩展事实标准",
+      "国产AI CLI迭代快，与海外代差缩至6个月内",
+      "OpenAI Codex发布rust-v0.148.0-alpha.20预览版",
+      "Gemini CLI发布v0.56.0夜间构建版本",
+      "Claude Code当日30条活跃Issues全部闭环",
+      "Gemini CLI当日25条合并PR居活跃度榜首"
+    ],
+    "ai-agents": [
+      "OpenClaw当日Issue+PR千条，活跃度创近周新高",
+      "发布pr-124528-profiles网关性能调优专属版本",
+      "修复邮箱识别缺陷解决业务消息邮箱丢失问题",
+      "修复子agent通知丢弃bug提升状态同步可靠性",
+      "CLI场景下codex插件初始化报错问题已修复",
+      "高关注度存量Issue清零进度超额完成周目标"
+    ],
+    "ai-trending": [
+      "端侧轻量大模型单日涨星破500成爆发赛道",
+      "unsloth日增580星，成本地LLM部署首选",
+      "ollama累计178.7k星，适配国内全系列开源模型",
+      "dify累计152.6k星，最流行开源Agent开发平台",
+      "mem0累计63.3k星，Agent通用记忆层受关注",
+      "开源AI剪映OpenCut上线，支持全链路AI剪辑"
+    ],
+    "ai-hn": [
+      "Claude开放自定义提示词登顶HN热度榜",
+      "低龄语料小模型训练研究获204条深度讨论",
+      "Anthropic发布多智能体落地瓶颈研究报告",
+      "DeepSeek V4 Flash压缩至57GB可运行在Mac",
+      "Widen端侧Postgres GUI用本地LLM保隐私",
+      "传Stripe拟70亿美元收购AI网关OpenRouter"
+    ],
+    "ai-hf": [
+      "Kimi-K3周点赞破万登顶HF周榜榜首",
+      "国产开源模型占本周热门榜比例超60%",
+      "社区量化版平均下载量是官方原版4.7倍",
+      "DeepSeek V4 Flash下载量187万+部署量极高",
+      "Qwen推出2.4T参数超大MoE纯文本新模型",
+      "英伟达推出适配自家硬件的30B FP4大模型"
+    ],
+    "ai-community": [
+      "社区AI内容全面转向生产落地实操分享",
+      "LLM无需图形基础直接生成图表方案流出",
+      "2026AI工程师书单覆盖RAG、Agent等方向",
+      "拆解LLM上下文丢失本质为存储架构缺陷",
+      "深度分析Kimi K3 2.8T大模型落地服务难点",
+      "实测ChatGPT爬虫抓取量远超Googlebot"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI CLI tools tracked in 2026-08-17 community digest",
+      "Ecosystem prioritizes enterprise reliability and MCP interoperability",
+      "All tools share top priority for transparent billing tracking",
+      "Ecosystem splits between commercial offerings and open-source alternatives",
+      "Teams focus on resolving release regressions, no untested flagship launches",
+      "Universal high-priority: zero-config MCP management across all CLI tools"
+    ],
+    "ai-agents": [
+      "OpenClaw saw record high 24h contributor activity on 2026-08-17",
+      "6.4% of tracked OpenClaw issues resolved in the last 24 hours",
+      "New OpenClaw gateway test profile artifact release published today",
+      "Clawsweeper triage cuts 70% of high-severity bug reproduction time",
+      "13 total projects tracked in 2026-08-17 OpenClaw ecosystem digest",
+      "Dev priorities focus on core gateway stability and self-hosted UX"
+    ],
+    "ai-trending": [
+      "Top trending cordiverse/cordis gained 719 new GitHub stars today",
+      "Unsloth's all-in-one local AI UI picked up 580 new GitHub stars",
+      "14MB tiny IoT LLM cactus-compute/needle debuted with 447 new stars",
+      "Cordis enables spatiotemporal coordination for distributed AI agents",
+      "Unsloth supports all 2026 top frontier LLMs out of the box natively",
+      "Community surges in demand for local edge-deployable AI systems"
+    ],
+    "ai-hn": [
+      "Anthropic's customizable Claude system prompt hit 463 top HN score",
+      "Stripe plans $7B blockbuster acquisition of LLM routing platform OpenRouter",
+      "5th-grade only training LLM study defies standard scaling assumptions",
+      "Limited-training 5th-grade LLM produces far fewer hallucinations",
+      "HN users report unannounced Claude watermarking and widespread outages",
+      "Anthropic released public research on production multi-agent failure modes"
+    ],
+    "ai-community": [
+      "Dev community debates deterministic agent design over larger context windows",
+      "Broken command injection protections found in Cursor code editor",
+      "ChatGPT crawler now outpaces Googlebot for small independent sites",
+      "No-raster LLM workflow generates bug-free production charts without pixels",
+      "2026 AI engineer reading list skips outdated introductory ML content",
+      "New OpenAI-Hugging Face data security incident surfaced to developers"
+    ]
+  }
+}

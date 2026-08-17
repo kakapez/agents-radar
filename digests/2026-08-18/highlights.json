@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.234稳定版",
+      "Qwen Code推出v0.21.13正式版",
+      "DeepSeek TUI发布v0.9.9稳定版",
+      "AI CLI进入生产级可靠性攻坚期",
+      "30%迭代资源投入MCP生态适配",
+      "头部工具已解决内存泄漏核心痛点"
+    ],
+    "ai-agents": [
+      "OpenClaw活跃度创近3个月新高",
+      "下月稳定版功能完成度达87%",
+      "落地插件全链路安全校验机制",
+      "网关加载CPU占用降低约40%",
+      "高并发场景网关CPU最高降60%",
+      "热议Agent全链路行为轨迹追踪"
+    ],
+    "ai-trending": [
+      "短视频项目MoneyPrinterTurbo日增1275星",
+      "Rust适配工具llmfit日增239星",
+      "短视频项目登顶GitHub AI全榜",
+      "AI记忆方案ai-memory日增207星",
+      "求职助手career-ops日增147星",
+      "Rust栈AI工具集体闯入Trending"
+    ],
+    "ai-web": [
+      "OpenAI加入Ports Pike专项项目",
+      "Anthropic零更新疑似攻坚新旗舰",
+      "大厂竞争转向落地生态卡位",
+      "政企大模型合规门槛将标准化",
+      "Anthropic1-2个月迎重磅发布",
+      "AI产业协作权重提至模型级"
+    ],
+    "ai-hn": [
+      "AI摘要工具AI;DR登顶HN热度榜",
+      "GPT 5.6 Sol视觉能力实测引热议",
+      "Llama.cpp发布v0.1.0里程碑版",
+      "语音AI聚合网关Speko上线",
+      "小说创作终端LLM工具1667上线",
+      "GPT 5.6 Sol图纸解析效果优异"
+    ],
+    "ai-hf": [
+      "周榜头部由国产开源大模型主导",
+      "Qwen3.8登顶语言模型周榜",
+      "DeepSeek-V4-Flash下载近200万",
+      "音视频模型下载量首次破百万",
+      "社区量化版下载远超官方原版",
+      "MiniMax视频类模型下载破百万"
+    ],
+    "ai-community": [
+      "热议AI生成代码可靠性落地方案",
+      "多篇高赞内容聚焦MCP避坑指南",
+      "分享CI捕获Agent调用异常方法",
+      "科普MCP常规测试过仍失效原因",
+      "分享识别恶意MCP服务器方案",
+      "指出大模型生命周期短于OS现状"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI dev CLI tools tracked in 2026-08-18 community digest",
+      "Vendors prioritize production reliability over new headline features",
+      "APAC AI CLI tools roll out region-specific local market features",
+      "Open source CLIs outperform closed tools on niche user patch support",
+      "Top tools resolve longstanding pain points including memory leaks",
+      "All mature AI CLIs already support full large context and MCP integration"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem covers 13 active AI agent projects as of 2026-08-18",
+      "OpenClaw merged 91 high-priority PRs in 24h for stability fixes",
+      "Team finalizes validation for upcoming 2026.8.x point release",
+      "Maintainers fix self-hosted deployment issues including message loss",
+      "6 Claw-branded derivative AI agent projects listed in ecosystem",
+      "No new official OpenClaw public releases shipped on 2026-08-18"
+    ],
+    "ai-trending": [
+      "AI short video workflow gains 1275 GitHub stars in a single day",
+      "Rust llmfit gains 239 stars, auto-optimizes local LLM deployment",
+      "Strong community demand for cross-vendor AI coding CLI compatibility",
+      "Trend shifts from generic vector DBs to low-resource on-device solutions",
+      "omlx for Apple Silicon cuts local LLM inference memory overhead",
+      "Rust becomes dominant stack for performance-critical AI tooling"
+    ],
+    "ai-web": [
+      "Anthropic published zero new public content 2026-08-18",
+      "OpenAI released 1 untexted metadata-only 2026-08-17 announcement",
+      "No new frontier model launches from OpenAI/Anthropic this window",
+      "Anthropic only published 1 safety paper in the past 7 days",
+      "Top AI firms prioritize internal roadmap work over Q3 public comms",
+      "No new enterprise service rollouts from OpenAI or Anthropic"
+    ],
+    "ai-hn": [
+      "AI;DR filler-stripping tool earns 400+ points, 255 comments as top post",
+      "GPT 5.6 Sol vision model delivers unprecedented multi-modal performance",
+      "Multiple threads criticize Anthropic's perceived anti-open source policies",
+      "Llama.cpp releases first stable v0.1.0 major version after years of work",
+      "GPT 5.6 Sol leads on diagram parsing and handwritten OCR tasks",
+      "Most new AI submissions are practical dev tools, not AGI research"
+    ],
+    "ai-hf": [
+      "Moonshot Kimi-K3 tops HF weekly likes with 10,800 upvotes",
+      "MiniMax H3 video model hits 14M downloads, most pulled HF asset",
+      "Qwen3.8-2.4T-A95B trends for top complex reasoning performance",
+      "DeepSeek-V4-Pro-0813 gains traction for low-hallucination enterprise use",
+      "Qwen 3.8 family remains the most widely adopted open base LLM ecosystem",
+      "GGUF/FP8 quantizations see rapid growth for local consumer hardware runs"
+    ],
+    "ai-community": [
+      "Top topic: underrecognized operational risks of production AI deployments",
+      "Model Context Protocol (MCP) is fastest growing niche dev trend",
+      "Devs push back on over-reliance on unit testing for AI-generated code",
+      "MCP Eval catches critical gaps standard unit tests cannot surface",
+      "Lobste.rs hosts deep discussions on AI ethics and interpretability",
+      "Un-audited production AI code is far riskier than AI coding itself"
+    ]
+  }
+}

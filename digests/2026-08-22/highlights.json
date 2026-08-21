@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.239正式版当日Issue全闭环",
+      "OpenAI Codex推出5个Rust栈底层组件Alpha版",
+      "AI CLI赛道转向生产级体验与企业级合规建设",
+      "MCP成全行业AI CLI通用扩展共识标准",
+      "多工具集中补全Agent全生命周期追踪能力",
+      "头部AI CLI扎堆推进私有化多云部署适配"
+    ],
+    "ai-agents": [
+      "OpenClaw活跃度创30天新高 健康度评分87",
+      "v2026.8.1正式版完成度达92% 迭代排期正常",
+      "修复Claude CLI网关重启丢失刷新权限故障",
+      "新增插件安装二次确认 降低恶意安装风险",
+      "修复多租户Agent会话消息跨渠道泄露问题",
+      "新增Web插件审核入口 完善全链路安全管控"
+    ],
+    "ai-trending": [
+      "公开Agent技能库单日涨3368星登GitHub全站榜首",
+      "AI开源生态全面转向Agent落地配套工具开发",
+      "开源AI求职助手career-ops单日新增918星",
+      "Cursor官方插件集单日增391星成开发者热点",
+      "Agent性能增强工具ECC总星突破24万",
+      "国产AI项目在多赛道冲入全球开源榜前列"
+    ],
+    "ai-hn": [
+      "Claude去浮夸文风工具获149分登HN热度第一",
+      "AWS Bedrock托管Codex出现10倍异常计费bug",
+      "开发者实测Codex一周体验引代码模型优劣讨论",
+      "实测Claude Opus 4.6 Agent场景100%返回空",
+      "低成本微调让Qwen3 4B快速掌握新领域知识",
+      "热议自托管沙箱化Agent软件工厂搭建实践"
+    ],
+    "ai-arxiv": [
+      "首个上下文场景LLM选择性遗忘基准发布",
+      "无检索文档知识内化方案大幅降低部署成本",
+      "业界首个原生适配普通CPU的轻量推理小模型",
+      "Agent预训练中期工具合成数据生成方案发布",
+      "首次明确LLM智能体跨任务技能迁移边界",
+      "自适应推理算力分配机制优化Agent运行效率"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B拿下HF本周最高11942次点赞",
+      "Kimi-K3周获10912点赞居开源大模型第二",
+      "文生视频模型MiniMax-H3下载破360万",
+      "DeepSeek-V4-Flash累计近300万次下载",
+      "LTX-2.5全链路视频生成模型下载超65万",
+      "社区衍生轻量化模型下载是原版2-3倍"
+    ],
+    "ai-community": [
+      "实测157组Agent规划 核心瓶颈不在执行在规划",
+      "百小时实测对比Pi Agent与OpenCode优劣",
+      "树莓派Zero实现5.3%占用率常驻唤醒词",
+      "发布7个LLM规划实验可信度校验标准",
+      "对抗式LLM校验大幅降低Agent规划漏项概率",
+      "提出放弃Agent长内存 回溯历史检索新思路"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "10 popular AI coding CLI tools listed in 2026-08-22 community digest",
+      "AI CLI ecosystem now prioritizes enterprise readiness over hobbyist users",
+      "AI CLIs support production unattended multi-hour DevOps/audit workloads",
+      "Commercial AI CLI tools are actively hardening security and compliance postures",
+      "Open source AI CLIs add self-hosted air-gapped deployment support",
+      "MCP is now standard extensibility framework across full AI CLI ecosystem"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.8.1 stable release pending active beta 2 validation",
+      "OpenClaw hit peak dev velocity with 99 merged PRs in 24h window",
+      "OpenClaw 19.8% daily PR merge rate signals strong project health",
+      "13 total OpenClaw ecosystem projects tracked in latest digest",
+      "OpenClaw beta 2 tested across Windows, macOS, Linux, Docker and WSL2",
+      "OpenClaw stable release expected within 1-3 business days"
+    ],
+    "ai-trending": [
+      "mattpocock/skills gained 3368 new GitHub stars, top trending AI project",
+      "MoneyPrinterTurbo hits 113.8k total stars with 1187 new stars today",
+      "obra/superpowers earned 789 new adopters as 2nd top trending AI project",
+      "Rust is de facto standard for new zero-telemetry local AI utility tools",
+      "Nearly all top agent tools added native Anthropic MCP compatibility",
+      "modular/modular gained 905 new stars as high-performance AI workload platform"
+    ],
+    "ai-hn": [
+      "Viral Claude tone fix open-source wrapper is top HN AI discussion",
+      "AWS Bedrock Codex 10x billing bug draws hundreds of HN user comments",
+      "LFM2.5-DSpark delivers 3.2x inference speedup on H100 and MacBooks",
+      "Small Qwen 3 4B fine-tune proves niche domain adaptation needs no big compute",
+      "HN users heavily favor self-hosted sandboxed AI agent stacks over closed tools",
+      "HN users frustrated by flood of low-quality unlabeled AI-generated technical content"
+    ],
+    "ai-arxiv": [
+      "New ConceptGuard benchmark tests context-sensitive LLM knowledge unlearning",
+      "Daedalus-150M hybrid LLM optimized for fast CPU-only 4-bit inference",
+      "New LLM research focuses on real-world deployment safety and reliability gaps",
+      "New benchmarks measure previously untested LLM hallucination failure modes",
+      "Teams push for artifact-free LLM performance auditing workflows",
+      "AI research prioritizes industry-compliant usable ML systems over SOTA chasing"
+    ],
+    "ai-hf": [
+      "Qwen 3.8 27B multimodal leads HF trending with 12k weekly likes",
+      "Moonshot Kimi-K3 ranks 2nd on HF with 10,910 likes and 2.4M downloads",
+      "Open generative video models see explosive growth replacing closed SaaS tools",
+      "Dozens of uncensored LLM fine-tunes released for local offline use cases",
+      "DeepSeek-V4-Flash-0731 gains 3605 likes for low-latency production use",
+      "DeepSeek-V4-Pro-0813 is latest high-performance open text generation model"
+    ],
+    "ai-community": [
+      "157 agent plan tests find planning, not execution, is top production bottleneck",
+      "Devs crowdsource widespread unaddressed AI agent memory context loss flaws",
+      "$15 Raspberry Pi Zero 2 W runs full on-device always-on wake word system",
+      "Unsponsored Pi Agent vs OpenCode 100+ hour head-to-head comparison released",
+      "Lobste.rs hosts critical discussions pushing back against overhyped AI claims",
+      "New analysis published on latent reasoning model interpretability gaps"
+    ]
+  }
+}

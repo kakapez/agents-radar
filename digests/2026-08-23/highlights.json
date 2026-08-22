@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发布v2.1.240正式小版本",
+      "Qwen Code发布v0.22.0正式版",
+      "OpenAI Codex发布3个Rust运行时Alpha版",
+      "MCP成跨AI CLI工具全行业开放标准",
+      "DeepSeek TUI待发布v0.9.11候选版本",
+      "赛道核心资源聚焦沙箱长会话可靠性"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.8正式版完成度达87%",
+      "修复多Agent会话跨租户串流漏洞",
+      "新增高风险插件安装管理员审核机制",
+      "解决网关重启Claude凭证丢失问题",
+      "核心Bug响应速率较上周提升32%",
+      "推进v2026.8.1-beta.2全量验证"
+    ],
+    "ai-trending": [
+      "OpenAI Codex上线首日新增1978星登顶",
+      "编码通用技能库单日涨2684星登全榜",
+      "腾讯开源AI红队平台新增161星",
+      "跨平台Agent优化ECC单日增428星",
+      "Modular Mojo平台单日新增395星",
+      "多生态打通形成统一编码Agent标准"
+    ],
+    "ai-hn": [
+      "拆解本地LLM体验差9种非模型诱因",
+      "OpenAI官宣GPT-5.6 Sol降价超20%",
+      "单开源LLM可替代223节点Agent图",
+      "曝Claude Code A/B测试降算力遭吐槽",
+      "指出LLM生产库权限回收空白痛点",
+      "推出人Agent共用团队共享知识库OzBrain"
+    ],
+    "ai-hf": [
+      "Qwen多模态基座周点赞12118登榜首",
+      "Kimi-K3周点赞破万居国产榜第二",
+      "DeepSeek-V4-Flash推理速度提3倍",
+      "国产模型占HF头部榜单超8成",
+      "Meta多模态模型下载突破50万",
+      "Qwen发布2.4T参数级MoE大模型"
+    ],
+    "ai-community": [
+      "12岁少年用安卓搭全栈AI SaaS",
+      "分享9种经实战验证RAG优化方案",
+      "曝AI辅助后代码评审能力退化痛点",
+      "闲置LLM中断逻辑可大幅降低成本",
+      "通俗拆解推理引擎排查响应慢问题",
+      "堆大模型无法解决Agent规划通病"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 top AI CLI tools are covered in the 2026-08-23 community digest",
+      "Ecosystem shifts focus to reliability, MCP interoperability, enterprise security",
+      "All 8 leading tools fixed earlier Computer Use related regressions",
+      "Ecosystem converges on standards for prompt caching, sandboxing, session resumption",
+      "Vendors differentiate via regulatory support, self-hosted deployments, niche use cases",
+      "Community demands lower costs, fewer silent failures, better agent debuggability"
+    ],
+    "ai-agents": [
+      "13 OpenClaw ecosystem projects are tracked in 2026-08-23 digest",
+      "OpenClaw recorded 500 updated issues and 500 updated PRs in 24h",
+      "Maintainers harden stability ahead of v2026.8.1-beta.2 upcoming release",
+      "85 PRs merged or closed, 19 issues resolved in the past 24 hours",
+      "Community focuses on channel reliability, subagent fixes, LLM UX improvements",
+      "No new official OpenClaw versions released this reporting window"
+    ],
+    "ai-trending": [
+      "OpenAI codex CLI hits top GitHub trending with 1978 new 24h stars",
+      "Anthropic claude-code terminal coding agent sees wide rapid adoption",
+      "Hundreds of coding agent ecosystem projects launched in lockstep",
+      "Ecosystem shifts to production-grade developer focused agentic workflows",
+      "Cross-model unified access tools see surging developer adoption",
+      "AI agent red teaming platforms see fast growing user demand"
+    ],
+    "ai-hn": [
+      "Top HN talk covers Claude Code quality cuts and 20% GPT-5.6 Sol price drop",
+      "Viral Claudish translator tool pokes fun at Anthropic output quirks",
+      "Post explains misconfigs that make local LLMs appear far less capable",
+      "Anthropic IPO lists public AI backlash as core formal risk factor",
+      "Linus Torvalds used AI to rescue multi-hour Linux kernel debug session",
+      "New 2026 paper covers LLM serving evolution, caching, load balancing"
+    ],
+    "ai-hf": [
+      "Qwen 3.8-27B leads trending LLMs with 12,118 weekly HF likes",
+      "Kimi-K3 crosses 10k weekly likes to hit 10,923 this week",
+      "Over half trending entries are fine-tunes derived from Qwen 3.8-27B",
+      "MiniMax H3 video generator earns 3.8+ million weekly downloads",
+      "Uncensored fine-tunes make up 1/3 of trending LLM entries",
+      "Qwen 3.8-27B records over 2 million weekly total downloads"
+    ],
+    "ai-community": [
+      "Dev.to discusses eroded code review skills from regular AI coding use",
+      "12yo dev built full-stack AI SaaS on low-end Android phone with no laptop",
+      "Larger models cannot fix well-documented LLM planning agent failure modes",
+      "Users highlight unplanned LLM cost bloat as hidden AI coding side effect",
+      "Lobste.rs community discusses AI limitations and low-level ML compilers",
+      "Lobste.rs digs up 1985 AI capability discussions that feel surprisingly relevant"
+    ]
+  }
+}

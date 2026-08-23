@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Qwen Code v0.22.0发布，当日新增50个PR",
+      "CodeWhale发v0.9.11完成品牌切换",
+      "Copilot CLI新增支持Grok 4.6",
+      "多工具共推移动端远程管控CLI执行",
+      "多款工具优化本地LLM私有部署接入",
+      "AI CLI赛道竞争转向生产级深水区"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.8.1-beta.2全场景验证中",
+      "修复子进程泄漏解决开发机内存耗尽问题",
+      "修复Claude CLI OAuth凭证网关重启丢失Bug",
+      "项目活跃度较上周日均提升17%",
+      "v2026.8稳定版开发完成度达89%",
+      "打通beta.3全流程自动化发布校验链路"
+    ],
+    "ai-trending": [
+      "OpenAI开源Codex单日增星2729登顶热榜",
+      "个人Agent技能库项目单日增星2448",
+      "编码代理优化系统ECC单日增星427",
+      "本地优先无遥测成端侧AI共识",
+      "Ollama已全量兼容国内主流开源大模型",
+      "Dify为国内主流一站式Agent搭建平台"
+    ],
+    "ai-hn": [
+      "曝开源模型存在定时触发后门风险",
+      "极客用7块ESP32拼出4亿参数小LLM",
+      "吴恩达发布AI应用全链路技能图谱",
+      "热议多模态模型拟合物理世界上限",
+      "开源工具解决Agent部署配置不一致痛点",
+      "AI行业狂热预期回落，侧重务实落地"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B登顶Hugging Face周点赞榜",
+      "Kimi-K3上线获1.09万周点赞热度极高",
+      "MiniMax H3生视频单周下载破400万",
+      "DeepSeek V4 Flash主打低延迟高吞吐",
+      "端侧大模型部署需求超云侧原生需求",
+      "LTX-2.5支持长时序高清视频生成"
+    ],
+    "ai-community": [
+      "12岁少年用安卓搭建AI编程导师项目",
+      "实测MCP服务器最高空耗4.7万tokens",
+      "9种经实战验证的RAG优化方案公开",
+      "开源框架支持消费级GPU协作训大模型",
+      "纯离线Flutter边缘AI崩溃检测方案出炉",
+      "社区热议OpenAI最新功能更新进展"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI coding CLI tools covered in 2026-08-24 digest",
+      "Ecosystem prioritizes reliability, compliance, self-hosted LLM support",
+      "All major CLI tools integrating shared MCP extensibility layer",
+      "Open-source CLI tools lead first-party vendors on airgapped use cases",
+      "Claude Code released v2.1.241 maintenance patch in 24h window",
+      "User demand for transparent billing outpaces existing vendor roadmaps"
+    ],
+    "ai-agents": [
+      "13 OpenClaw ecosystem agent projects tracked in 2026-08-24 digest",
+      "OpenClaw recorded 1000 total issue and PR updates in 24h",
+      "Team validating pre-release v2026.8.1-beta.2 build for launch",
+      "22% of updated PRs merged, indicating high maintainer bandwidth",
+      "Hundreds of testers participate in OpenClaw pre-release validation",
+      "No new official OpenClaw releases published in the 24h window"
+    ],
+    "ai-trending": [
+      "OpenAI Codex hits GitHub top trend with 2729 new 24-hour stars",
+      "70% of top AI projects built to work with coding CLI agents",
+      "Agent skill abstraction is fast-growing new open-source AI category",
+      "free-claude-code gains 1040 stars for no-cost multi-agent access",
+      "ECC gains 427 stars as top agent performance optimization system",
+      "New AI projects default to local-first, no-telemetry privacy design"
+    ],
+    "ai-hn": [
+      "Top discussion focuses on backlash against unregulated workplace AI mandates",
+      "Viral worker anti-AI-mandate story sparks AI labor rights debate",
+      "HN community notes AI hype cycle entering more pragmatic phase",
+      "Report documents hidden time-release backdoor risk for open source LLMs",
+      "Demo wires 7 ESP32 chips to run a 0.4B parameter LLM",
+      "Investor fatigue will reshape AI industry in next 12 months per consensus"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B and Kimi-K3 hit 5M combined downloads in 7 days",
+      "Qwen/Qwen3.8-27B tops trends with 12302 likes as 27B multimodal LLM",
+      "Kimi-K3 offers 2M+ long context, cuts inference costs by 40%",
+      "60% of trending models are custom variants of Qwen 3.8-27B",
+      "DeepSeek V4 Flash leads low-latency production conversational agents",
+      "Open-weight text-to-video releases hit 4.7M aggregate downloads"
+    ],
+    "ai-community": [
+      "Top discussions cover practical AI agent and RAG optimization hacks",
+      "Community rejects narrative that larger models are always better",
+      "OpenAI launched kid-safe ChatGPT for Teens this reporting period",
+      "Indie dev built 100% offline TFLite Flutter crash detection tool",
+      "9 actionable RAG improvement guide earns strong Dev.to reception",
+      "Lobste.rs trends on 1985 talk exploring early identified AI limits"
+    ]
+  }
+}

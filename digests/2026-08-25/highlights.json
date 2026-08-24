@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道全面向生产级企业级场景演进",
+      "OpenAI Codex当日发布3个Rust分支新版本",
+      "OpenCode、Pi当日同步推送正式新版本",
+      "多头部工具集体迭代MCP全链路优化能力",
+      "全行业推进多Agent协同协议标准化落地",
+      "主流厂商快速补齐Windows/WSL场景短板"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.8.1-beta.3版本正式发布",
+      "全链路适配GPT-5.6全系列推理模型",
+      "新增原生CDP中继服务支持联动Chrome会话",
+      "修复Claude CLI OAuth认证丢失回归缺陷",
+      "版本校验优化将beta发布耗时缩短60%",
+      "新增插件审批能力大幅提升第三方生态安全"
+    ],
+    "ai-trending": [
+      "OpenAI codex单日涨1990星登顶GitHub热榜",
+      "国内提示词库项目日增2442星为全榜第一",
+      "千余款跨平台Agent技能合集日增600星大热",
+      "Hermes Agent总星23.5万为头部开源Agent底座",
+      "Andrej编码经验配置包日获491星广受追捧",
+      "Apache Maka本地优先Agent工作空间热度飙升"
+    ],
+    "ai-web": [
+      "Claude生物安全优化场景可用率提升85%",
+      "无成本隐式水印完全对齐欧盟AI法案要求",
+      "经济研究升级为Anthropic五大核心序列",
+      "推进生物医药科研场景合规能力开放",
+      "OpenAI上线GPT 5.6索引入口公测临近",
+      "大模型竞争转向垂直场景精细化落地阶段"
+    ],
+    "ai-hn": [
+      "LLM可利用推理引擎漏洞直接获取宿主机权限",
+      "大量开源大模型被植入定时触发后门风险",
+      "全新连续扩散架构有望解决长文本痛点",
+      "超轻量本地开源OCR工具获开发者热捧",
+      "纯前端GPU算力测算工具成本地部署刚需",
+      "Claude服务多次宕机成HN社区吐槽热点"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B登顶本周Hugging Face热度榜首",
+      "DeepSeek-V4-Flash下载量超320万居第二",
+      "Qwen衍生解码版推理速度比原生快2倍",
+      "MiniMax-H3下载量破446万创音视频新高",
+      "消费级6G显卡可跑Ornith-1.5-9B多模态",
+      "LTX-2.5全链路视频生成模型下载近80万"
+    ],
+    "ai-community": [
+      "AI Agent效果差多为内存而非推理问题",
+      "7条AI应用过度设计避坑指南广受关注",
+      "公开Claude Code真实生产项目可复用工作流",
+      "0.49美元跑Agent目标挖出单元测试盲区",
+      "曝光RAG差点上线生成虚假API的踩坑实录",
+      "深度分析MCP协议能力边界避免过度套用"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 leading AI CLI tools prioritize Model Context Protocol alignment",
+      "Half tracked AI CLI tools resolve v2 multi-agent rollout regressions",
+      "AI CLI ecosystem splits between vendor-backed and open agnostic tools",
+      "All AI CLI projects are adding compliance and self-hosting capabilities",
+      "Claude Code logged 10 new issues and 3 PRs in the 24h window",
+      "10 AI CLI projects are covered in the 2026-08-25 digest"
+    ],
+    "ai-agents": [
+      "OpenClaw released new v2026.8.1-beta.3 pre-release on 2026-08-25",
+      "New beta adds full native support for GPT-5.6 Sol, Terra, Luna, Ultra",
+      "OpenClaw recorded 1000 total updated issues and PRs across codebase",
+      "OpenClaw team is finalizing prep for 2026.8 stable public launch",
+      "13 AI agent projects are featured in the OpenClaw ecosystem digest",
+      "94.6% of updated OpenClaw issues remain open for triage or fixes"
+    ],
+    "ai-trending": [
+      "OpenAI Codex Rust coding agent gained 1990 stars on its launch day",
+      "GPT-Image2 prompt library gained 2442 new stars, top trending today",
+      "6 of top 10 AI trending spots are Claude Code compatible tools",
+      "Top cross-agent skill repo gained 600 new stars in the 24h window",
+      "Developers shift to local-first zero-telemetry AI agent runtimes",
+      "OpenAI open sourced its first native local-execution AI agent runtime"
+    ],
+    "ai-web": [
+      "Anthropic published 4 new official content pieces on 2026-08-24",
+      "Anthropic Fable 5 has 85% reduction in biology-related model fallbacks",
+      "Anthropic hit 93% success rate for de novo protein binder design",
+      "Anthropic released zero-overhead EU AI Act compliant text watermark",
+      "OpenAI posted a page referencing upcoming GPT-5.6 final preps",
+      "Anthropic and OpenAI target regulated vertical use cases late 2026"
+    ],
+    "ai-hn": [
+      "Top HN post covers LLMs exploiting inference engines to control hosts",
+      "Paper warns open source LLMs may have hidden time-release backdoors",
+      "Anthropic Claude multi-hour outage spawned viral satirical HN threads",
+      "OpenAI announced permanent price cut for GPT 5.6 Sol model",
+      "Xiaomi new high-performance CPU trends for low-cost AI inference",
+      "HN users raise alarm over unpatched LLM inference vulnerabilities"
+    ],
+    "ai-hf": [
+      "Qwen/Qwen3.8-27B hit 12505 likes, 2.64M HF downloads",
+      "Over 15 Qwen 3.8 model variants are trending on weekly HF rankings",
+      "DeepSeek-V4-Flash-0731 exceeded 3.27M total HF downloads",
+      "Two generative video models crossed 3M downloads this week on HF",
+      "Chinese AI vendors' models broke top 15 HF trending positions",
+      "DeepSeek-V4-Flash delivers 3x faster near-full performance inference"
+    ],
+    "ai-community": [
+      "Dev consensus: Most bad AI agents suffer from poor memory layers",
+      "Guide outlines 7 common AI app overengineering traps and fixes",
+      "Standard unit tests consistently miss silent high-impact LLM hallucinations",
+      "Devs discuss real-world limitations of the MCP agent standard",
+      "Community shares no-fluff practical 'vibe coding' AI workflow guides",
+      "Discussions shift to AI production pain points away from capability hype"
+    ]
+  }
+}

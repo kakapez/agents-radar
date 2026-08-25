@@ -1,0 +1,126 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code发v2.1.245修复glibc 2.44启动崩溃",
+      "OpenAI Codex连推3个rust预览版 闭环Linux桌面需求",
+      "Gemini CLI发布4个版本 修复OAuth、IDE兼容问题",
+      "Copilot CLI发v1.0.81-10 全量开放插件仪表盘",
+      "MCP成行业事实标准 厂商集中攻坚安全优化",
+      "国内工具依托中文适配 抢占海外长尾用户"
+    ],
+    "ai-agents": [
+      "OpenClaw迭代活跃度历史高位 响应时效升40%",
+      "v2026.8.1 beta3实测中 攻坚三类P1缺陷",
+      "闭环Codex会话父任务无法唤醒核心缺陷",
+      "快照超时配置缺陷过审 支持用户自定义",
+      "修复多租户场景消息跨Agent串发风险",
+      "6个P1缺陷修复 占新版本阻塞项35%"
+    ],
+    "ai-trending": [
+      "OpenAI新开源codex单日涨星1183 登热榜",
+      "ponytail涨944星 引导AI复用成熟代码",
+      "828星Claude配置 大幅提升Claude Code表现",
+      "Apache孵化maka 解决Agent运行可审计性",
+      "hermes-agent 23万+星 最高星开源Agent",
+      "openhuman获541星 本地优先个人AI方案"
+    ],
+    "ai-web": [
+      "Anthropic投500万美金 设AI福祉评估资助",
+      "Anthropic公开2亿经济未来研究基金议程",
+      "OpenAI披露自研Jalapeno旗舰大模型结果",
+      "推经济指数连接器 自然语言调取脱敏数据",
+      "Anthropic落地欧盟 适配AI法案合规研究",
+      "公开AI劳动力冲击数据 影响全球监管"
+    ],
+    "ai-hn": [
+      "OpenAI公开自研Jalapeño芯片推理实测数据",
+      "树莓派+Qwen 打造全本地运行车载AI",
+      "无截图转屏幕内容为Markdown 降OCR开销",
+      "热议AI普及后全员当评审无配套校验",
+      "数学新进展 或解释大模型涌现底层逻辑",
+      "本地LLM红队测试工具 评分全透明无黑箱"
+    ],
+    "ai-arxiv": [
+      "新critic训练方案 替代GRPO降后训练成本",
+      "安全惩罚机制 消推理微调对齐漏洞",
+      "双流注意力架构 直撑十万级超长序列推理",
+      "SRPO优化长链路推理 提10步以上任务表现",
+      "Prime Agent开源 解决长周期Agent调度可靠性",
+      "首次证明流语言模型训练可收敛到token嵌入"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B登周榜 下载量近300万",
+      "Kimi-K3点赞10995 长上下文能力突出",
+      "DeepSeek-V4-Flash下载352万+ 高并发优化",
+      "MiniMax H3下载463万 登多模态榜第一",
+      "LTX-2.5 达消费级文生视频商用标准",
+      "MiniMax开源Music3 长音频生成受关注"
+    ],
+    "ai-community": [
+      "热议AI生成代码 全员当评审无配套校验",
+      "自研Agent多层设计 可抵抗提示注入攻击",
+      "RAG上线校验清单 规避绝大多数输出错误",
+      "探讨AI编码间隙 开发者高效用碎片化时间",
+      "分布式推理架构 算力分散到家用普通设备",
+      "指出RAG隐性漏洞 聊天历史需权限管控"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "10 leading AI CLI tools are tracked in 2026-08-26 digest",
+      "AI CLI ecosystem prioritizes enterprise compliance and agent extensibility",
+      "Claude Code released v2.1.245 stable hotfix in 24h window",
+      "OpenAI Codex recorded 10 merged/updated PRs in the last day",
+      "APAC devs drive demand for provider-agnostic AI CLI architecture",
+      "Credential security hardening is top shared priority for CLI tools"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026-08-26 digest covers 13 total active AI agent projects",
+      "OpenClaw saw 500 updated issues and 500 updated PRs in 24h",
+      "Team nears v2026.8.1 beta testing cycle completion with no outages",
+      "Maintainers fix high-severity multi-agent gateway reliability bugs",
+      "Multiple small form-factor Claw agent variants are in active development",
+      "Validation for upcoming v2026.8.1-beta.3 OpenClaw release is ongoing"
+    ],
+    "ai-trending": [
+      "OpenAI Codex gained 1183 new GitHub stars on 2026-08-26",
+      "Apache launched incubating local-first AI agent workspace apache/maka",
+      "apache/maka picked up 538 new GitHub stars in a single day",
+      "Ponytail is a new coding agent tuned to produce minimal non-bloated code",
+      "claude-obsidian AI second brain for Obsidian hit 810 new stars total",
+      "12 trending AI projects gained 500+ stars each, 3x 2-week average"
+    ],
+    "ai-web": [
+      "Anthropic released full public Anthropic Economic Index research corpus",
+      "Anthropic launched $5M AI wellbeing evaluation grant program",
+      "Anthropic commits $205M total to independent AI impact research",
+      "Zero-install Economic Index Claude connector is now available to all users",
+      "OpenAI published 3 unannounced Jalapeno technical preview pages",
+      "Anthropic added 23 new public articles to its official site"
+    ],
+    "ai-hn": [
+      "Top HN post covers OpenAI's custom Jalapeño AI accelerator results",
+      "Jalapeño silicon outperforms Nvidia Blackwell on AI inference efficiency",
+      "OpenAI reversed unpopular ChatGPT Plus Codex and Work usage cuts",
+      "Community debates Anthropic's claimed $30T long-term total addressable market",
+      "Riemann hypothesis math research earned 44 points and 18 comments",
+      "Local low-cost AI side projects received broad positive HN community support"
+    ],
+    "ai-arxiv": [
+      "New stable RLHF critic method cuts sampling overhead by up to 50%",
+      "Provably convergent flow-based language model ConvergeFlow is introduced",
+      "Research documents new unpatched memory injection attacks on LLM agents",
+      "Interaction tax reduces decision diversity in multi-agent LLM teams",
+      "New benchmarks test agents on full cross-repository stack migration tasks",
+      "New architectures reduce long context AI compute for edge deployments"
+    ],
+    "ai-community": [
+      "Dev community debates AI turning all devs into untrained code reviewers",
+      "Developer shares reliable prompt injection blocking guardrail design",
+      "Apple M5 Ultra sparks discussions on accessible high-power local AI hardware",
+      "Viral reviewer competency post earned 38 reactions and 39 comments",
+      "Users share actionable battle-tested guides to avoid common RAG failures",
+      "Community prioritizes production AI reliability over unsubstantiated model hype"
+    ]
+  }
+}

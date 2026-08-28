@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道全面进入生产化落地周期",
+      "MCP成为全行业默认扩展能力标准",
+      "Claude Code新增--restricted安全模式",
+      "Copilot CLI全量适配MCP 2026-07规范",
+      "OpenAI Codex当日发5个Rust Alpha预览版",
+      "超8成工具集中补全Windows平台兼容性"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.8.1完成度达92%待发布",
+      "修复tsgo包装器僵尸进程泄漏问题",
+      "新增插件安装全端风险校验拦截机制",
+      "修复Web UI会话目录刷新风暴负载问题",
+      "生态适配需求提交量环比上升27%",
+      "社区用户反馈响应维持在24小时内"
+    ],
+    "ai-trending": [
+      "archify日增4239星登顶AI开源热榜第一",
+      "ponytail让Agent优先复用成熟代码降冗余",
+      "OpenMontage为首款开源Agent化视频生产系统",
+      "Claude官方插件目录项目今日新增292星",
+      "科研Agent技能库覆盖百余个专业数据库",
+      "AI生态下沉到Agent落地层效率工具迭代"
+    ],
+    "ai-web": [
+      "Anthropic发布全球首个MHS模型硬件开放规范",
+      "开放万级免费Claude科研专属用户席位",
+      "研究指出多智能体交互量将超人类总和",
+      "实现Agent直连实体科研/工业设备能力",
+      "推出15美元/月高用量科研Premium席位",
+      "OpenAI推进教育落地与拉美市场扩张"
+    ],
+    "ai-hn": [
+      "Claude承重词汇研究帖获430分成当日顶流",
+      "开源大模型网关Experiential填补行业空白",
+      "美法院判决拉黑Anthropic行政行为非法",
+      "终端科研Agent基准测试跳出刷题模式",
+      "Claude用量排查工具解决高频用户核心痛点",
+      "MHS硬件标准引发芯片从业者集中讨论"
+    ],
+    "ai-arxiv": [
+      "5090美元可完成大模型预训练平民化方案",
+      "CritICL实现推理时弱到强泛化无外部标注",
+      "ES推理覆盖度超越主流GRPO训练方案",
+      "提出无标注测试时策略优化TTPO新范式",
+      "XTTSv2可复用为语音匿名化工具降成本",
+      "RedEvoAgent实现自动进化的红队测试能力"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B点赞量登顶本周热门榜单",
+      "Kimi-K3周点赞破1.1万长文本能力突出",
+      "DeepSeek-V4-Flash下载量近400万商用热门",
+      "GLM-5.3-Flash兼顾图文理解与文本生成",
+      "MiniMax-H3累计下载量突破485万次",
+      "文生视频模型LTX-2.5累计下载近百万次"
+    ],
+    "ai-community": [
+      "热议AI提效后项目维护成本未同步下降",
+      "63条评论集中拆解AI编码工具隐坑点",
+      "NexPath工具拦截模糊Prompt生成隐蔽Bug",
+      "复盘Agent越权发布到错误账号故障",
+      "双LLM引擎揭秘市面多数AI二次校验造假",
+      "发布Claude生成代码系统性人工评审指南"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "10 AI CLI tools tracked in 2026-08-28 community digest",
+      "7 of 8 leading AI CLI tools support the MCP spec baseline",
+      "Market splits between enterprise closed AI CLI and open self-hosted tools",
+      "AI CLI vendors now prioritize stability and enterprise compliance",
+      "Dev tools focus on native integration with existing developer workflows",
+      "Teams are hardening security for untrusted code execution environments"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.8.1-beta.3 is in active public validation cycle",
+      "196 PRs were merged or closed for OpenClaw on 2026-08-28",
+      "OpenClaw v2026.8.1 stable pending 7 high-severity beta blockers",
+      "13 AI agent ecosystem projects covered in latest OpenClaw digest",
+      "39% OpenClaw PR merge rate indicates steady backlog progress",
+      "OpenClaw team prioritizes session reliability and security hardening"
+    ],
+    "ai-trending": [
+      "Archify gains 4239 new stars for production diagram generation agent skill",
+      "Anthropic releases official curated Claude Plugins directory",
+      "4 AI agent ecosystem projects gained over 1500 new stars each",
+      "JetBrains go-modern-guidelines gains 300 stars to teach idiomatic Go to agents",
+      "No monolithic base LLM releases appear on 2026-08-28 GitHub trending",
+      "Cross-runtime vertical agent skill libraries see surging popularity"
+    ],
+    "ai-web": [
+      "Anthropic publishes Model Hardware Standard public research preview",
+      "Anthropic opens 10k free discounted Claude subscriptions for researchers",
+      "18 unpublicized old Anthropic announcements were newly indexed",
+      "New MHS spec cuts lab AI agent integration time from weeks to minutes",
+      "OpenAI teases upcoming Brazil expansion and student AI training announcements",
+      "Anthropic AI for Science program adds math and quantum research support"
+    ],
+    "ai-hn": [
+      "Anthropic-related posts dominate top 2026-08-28 Hacker News AI charts",
+      "Court ruling against Anthropic blacklisting hailed as AI industry landmark win",
+      "Alphabet $700B market cap loss linked to outpacing AI infrastructure costs",
+      "Claude 'load-bearing vocabulary' viral post sparks massive LLM dev curiosity",
+      "Devs widely criticize low-effort AI slop submissions to open source projects",
+      "MHS preview earns 104 points and 35 discussion comments on Hacker News"
+    ],
+    "ai-arxiv": [
+      "Puro-2B LLM trains on single RTX 5090 with total cost under $510",
+      "New frameworks boost LLM reasoning without ground truth labels",
+      "Latest papers shift focus from parameter scaling to robust cost-effective AI",
+      "New replayable benchmarks fix LLM agent test reproducibility issues",
+      "Papers target structural flaws in common LLM judge evaluation pipelines",
+      "Low-cost pretraining makes small LLM dev accessible to small academic labs"
+    ],
+    "ai-hf": [
+      "Qwen family takes over half of top 30 Hugging Face trending AI models",
+      "Qwen3.8-27B hits 13064 likes, 3.45M+ downloads as top open LLM",
+      "Moonshot Kimi-K3 earns 11044 likes with GPT-4o comparable reasoning",
+      "DeepSeek V4 Flash logs 3.95M+ downloads for fast long-context inference",
+      "Open Chinese foundation models dominate latest HF trending leaderboard",
+      "Community GGUF derivative models outdownload official base counterparts"
+    ],
+    "ai-community": [
+      "Devs debate AI speed gains vs exploding unplanned software maintenance debt",
+      "Hidden production AI agent failure modes draw heavy developer attention",
+      "Devs push back on overhyped AI second opinion tools with no real checks",
+      "Lobste.rs thread discusses biases making users overestimate AI capability",
+      "Devs question if out-of-the-box RAG works for production agent memory",
+      "Top post highlights widespread unaddressed AI era technical debt gaps"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenAI Codex发布rust-v0.151.0正式版+3预发布",
+      "GitHub Copilot CLI连推v1.0.82两正式补丁版",
+      "AI CLI赛道迭代重心转向可靠性MCP企业适配",
+      "MCP成全行业AI CLI公认事实扩展标准",
+      "Kimi Code CLI曝超10倍超额计费生产漏洞",
+      "Qwen Code发布v0.22.3-nightly夜间预览版"
+    ],
+    "ai-agents": [
+      "OpenClaw修复P0级网关事件循环阻塞故障",
+      "大流量实例核心故障修复覆盖率超60%",
+      "PR#132858修复profiler参数校验过晚问题",
+      "网关内存泄漏将致运行3天OOM重启成最大隐患",
+      "本月多渠道消息送达可靠性进度达75%",
+      "Codex长回复调用无提示截断影响任务完整性"
+    ],
+    "ai-trending": [
+      "archify日增3927星登今日AI开源星榜第一",
+      "截图转代码工具日增558星可直接生产交付",
+      "清华OpenMAIC日增907星登GitHub全球热榜",
+      "科学Agent技能库日增1604星覆盖百+数据库",
+      "毫秒级模型路由组件可降40%-70%推理成本",
+      "开源视频生产系统OpenMontage日增809星"
+    ],
+    "ai-web": [
+      "Anthropic首发全球首个MHS模型硬件标准预览",
+      "MHS将专业硬件集成周期从数周缩至分钟级",
+      "Anthropic跳消费级机器人抢滩实体AI标准赛道",
+      "MHS支持AI代理操控工业机械臂等专业设备",
+      "OpenAI追踪周期内无任何官网公开新增内容",
+      "MHS预计将实体AI集成成本下降90%以上"
+    ],
+    "ai-hn": [
+      "vLLM v0.28.0发布本地部署吞吐量提升近20%",
+      "实测Claude Auto Mode提示注入成功率达80%",
+      "OpenAI官宣Cursor被SpaceX收购后调整合作关系",
+      "700行C实现轻量LLM Runtime引发开发者关注",
+      "多LLM代理集群可蚁群式协同自发技术迭代",
+      "滑铁卢大学披露主流开源大模型共性安全漏洞"
+    ],
+    "ai-hf": [
+      "Qwen3.8 27B登顶HF榜首周下载超400万",
+      "智谱发布GLM-5.3-Flash主打低延迟图文生成",
+      "国产文生视频新模型集体霸榜HF热门赛道",
+      "大模型量化去对齐衍生版本占比显著提升",
+      "MoE+FP8/GGUF大幅降低端侧部署门槛",
+      "大模型轻量化部署用户需求持续走高"
+    ],
+    "ai-community": [
+      "实测6B激活大模型性能反超17B激活模型",
+      "12天用Claude Code迁移40REST端点到GraphQL",
+      "高表现模型组合实测存在严重可靠性隐患",
+      "多智能体故障需优先校验Prompt一致性",
+      "GraphRAG评测结果随评测工具不同出现反转",
+      "补全Anthropic AI原生SDLC缺失的关键管控"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 AI CLI tools are covered in 2026-08-30 community digest",
+      "7/8 tracked CLI tools are expanding MCP support and multi-agent features",
+      "2026 AI CLI user base has expanded 10x year-over-year",
+      "70+ PRs merged across tracked AI CLI projects in 24 hours",
+      "OpenAI Codex shipped rust-v0.151.0 stable + 3 alpha pre-releases",
+      "Claude Code had 10 active hot issues, no new public releases"
+    ],
+    "ai-agents": [
+      "13 OpenClaw ecosystem projects covered in 2026-08-30 digest",
+      "OpenClaw hit 1000 total updated GitHub artifacts in 24 hours",
+      "OpenClaw closed 79 bugs and merged 158 PRs in reporting window",
+      "OpenClaw stays on 2026.8.x beta track with no new public releases",
+      "OpenClaw prioritizes production runtime stability over new features",
+      "Ecosystem includes PicoClaw, IronClaw, CoPaw and LobsterAI projects"
+    ],
+    "ai-trending": [
+      "Top 3 AI repos gained nearly 6,500 new stars in 24-hour window",
+      "workweave/router cuts multi-model agent inference costs 40-70% at 284 stars",
+      "JetBrains Go agent guidelines earned 294 stars for standardized LLM outputs",
+      "Ecosystem prioritizes reusable validated agent skills over experimental frameworks",
+      "Anthropic and JetBrains released open agent output standardization resources",
+      "Local AI deployment niche tools see rapid community adoption"
+    ],
+    "ai-web": [
+      "Anthropic released Model Hardware Standard (MHS) research preview 2026-08-29",
+      "MHS cuts hardware integration timelines from months to hours or minutes",
+      "MHS lets AI agents safely operate physical lab and manufacturing hardware",
+      "Initial MHS access limited to curated labs and advanced manufacturers",
+      "Anthropic extends Claude agent capabilities to physical high-stakes infrastructure",
+      "OpenAI published zero new public content in the tracking window"
+    ],
+    "ai-hn": [
+      "Top story: OpenAI ended partnership with coding tool Cursor post SpaceX acquisition",
+      "SwarmWorld preprint studies uncoordinated LLM agent collective tech evolution",
+      "UWaterloo found critical unpatched vulnerabilities in leading open-weight LLMs",
+      "Community debated Claude usage limits and widespread prompt injection risks",
+      "Threads reignited discussions on AI boom's SF cost of living impacts",
+      "Users shared essays on unanticipated daily LLM productivity side effects"
+    ],
+    "ai-hf": [
+      "Qwen 3.8 series makes up half of top 30 Hugging Face trending models",
+      "GLM-5.3-Flash hit 189k+ downloads for sub-100ms per token generation",
+      "Tencent released 1M+ token Hunyuan 4 Hy4-preview public preview",
+      "Kimi-K3 and DeepSeek-V4-Flash rank top trending open LLM releases",
+      "MiniMax H3 leads explosive open text-to-video generation ecosystem growth",
+      "Uncensored community fine-tunes make up 40% of top 30 trending models"
+    ],
+    "ai-community": [
+      "Developers push back against the 'bigger LLM = better' mainstream hype",
+      "6B Qwen3.8-Flash-Next outperforms 17B variants at far lower cost",
+      "Bad prompts cause most production multi-agent failures, not architecture",
+      "Unconfirmed bug rumors can generate working exploits in hours with AI tools",
+      "Devs adopt stable self-hosted local AI stacks skipping frequent new releases",
+      "Community researches security risks in AI-augmented 'vibecoding' workflows"
+    ]
+  }
+}

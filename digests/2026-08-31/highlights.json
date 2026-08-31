@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenAI Codex发布v0.152.0-alpha.4预览版",
+      "Gemini CLI发布v0.59.0夜间构建版本",
+      "全行业推进MCP跨工具互联标准对齐",
+      "厂商集中修复Windows端AI CLI体验Bug",
+      "DeepSeek TUI v0.9.12候选版进入终审",
+      "国产AI CLI本地化迭代速度反超海外"
+    ],
+    "ai-agents": [
+      "OpenClaw单日完成500 Issue/500 PR更新",
+      "修复消息串流漏洞 交付准确率达100%",
+      "SQLite大实例校验耗时降低92%",
+      "子Agent通知送达率提升至99.99%",
+      "2026.7.33稳定扩展版预发布准备完成",
+      "企业用户热议Agent网关成本管控需求"
+    ],
+    "ai-trending": [
+      "GitHub AI热榜当日新增Star突破8200",
+      "archify单日涨星3722登顶热榜第一",
+      "清华OpenMAIC单日涨星1370",
+      "科研Agent技能库单日涨星1114服务19万人",
+      "freellmapi免费用月74亿Token额度",
+      "MCP资源首次大规模登GitHub Trending"
+    ],
+    "ai-hn": [
+      "Claude Code默认带溯源链接遭201人吐槽",
+      "Anthropic年化营收突破650亿美元",
+      "CDLM新范式引发长文本生成潜力热议",
+      "Nature发文量化大模型挤压小语种效应",
+      "Debian LLM披露规则投票引发开发者辞职",
+      "AI自动生成STEM教学视频获社区关注"
+    ],
+    "ai-hf": [
+      "Kimi-K3开源首周点赞破1.1万登顶头部",
+      "DeepSeek-V4-Flash下载量破450万次",
+      "GLM-5.3系列两款新模型下载量暴涨",
+      "腾讯混元4代预览版首次开源权重",
+      "通义Qwen3.8多模态模型热度排名前三",
+      "GGUF量化模型下载量远超全精度版本"
+    ],
+    "ai-community": [
+      "40行Go代码实现LLM成本直降71%",
+      "演示AI Agent生产权限渗透典型路径",
+      "点出MCP权限自证核心安全漏洞",
+      "同模型自辩论比跨模型更具批判性",
+      "Claude空配置前置消耗近万Token引热议",
+      "梳理两种主流RAG架构选型差异"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "9 tracked AI CLI tools hit 2026 production maturity inflection point",
+      "6 of 9 CLI tools shipped no new stable releases in 24 hour window",
+      "MCP emerges as universal integration layer across nearly all AI CLI tools",
+      "Claude Code recorded 10 active issues and 1 merged PR in the 24h window",
+      "Self-hosted air-gapped AI CLI use cases see growing developer investment",
+      "Community converges on shared baseline for terminal compatibility and cost control"
+    ],
+    "ai-agents": [
+      "OpenClaw ecosystem tracks 13 full agent projects as of 2026-08-31",
+      "OpenClaw repo saw 500 updated issues and 500 PRs in 24 hours",
+      "No new stable OpenClaw release, team prioritizes v2026.8.1 beta feedback triage",
+      "Latest OpenClaw pre-release is v2026.8.1-beta.3, feedback actively collected",
+      "Team optimizes SQLite performance and polishes cross-platform mobile clients",
+      "160 total OpenClaw PRs merged or closed in the 24h reporting window"
+    ],
+    "ai-trending": [
+      "Archify diagram agent gained 3722 new GitHub stars as top trend",
+      "Tsinghua OpenMAIC multi-agent classroom platform earned 1370 launch day stars",
+      "FreeLLMAPI gained 504 stars, offers 7.4B free monthly LLM tokens",
+      "Crawl4AI LLM scraper gained 221 stars, outputs structured agent-ready data",
+      "Awesome MCP Servers curated index picked up 96 new trending stars",
+      "Trends shift away from monolithic agents to modular domain-specific skills"
+    ],
+    "ai-hn": [
+      "Viral thread covers Claude Code unplanned behavior risking accidental data leaks",
+      "New CDLM research proposes LLM design eliminating hard tokenization constraints",
+      "Study finds LLMs are accelerating extinction of low-resource digital languages",
+      "Controversial Debian vote permits unacknowledged corporate LLM code contributions",
+      "Court rules Anthropic was illegally blacklisted by prior US administration",
+      "Discussion covers unexpected OpenAI custom compute strategy shifts"
+    ],
+    "ai-hf": [
+      "Qwen 3.8 27B multimodal earned 13346 new weekly likes atop trending ranks",
+      "Moonshot's newly open Kimi-K3 notched 11100 weekly likes at #2 spot",
+      "DeepSeek-V4-Flash recorded 4.57M downloads for strong code/math reasoning",
+      "GLM-5.3-Flash logs 346k+ downloads for optimized long-context inference",
+      "Open text-to-video generation is this week's fastest growing HF vertical",
+      "Community fine-tunes outpace downloads of small official preview releases"
+    ],
+    "ai-community": [
+      "MCP vulnerabilities can easily bypass claimed read-only permission controls",
+      "MCP tool definition oversight can break AI agent critical production approval gates",
+      "Top Lobste.rs thread discusses Bill Gates' new AI era guidance essay",
+      "Devs share workarounds for bloated Claude Code config token overhead issues",
+      "Warning against relying solely on MCP servers' self-reported read-only hint flag",
+      "Community shares actionable best practices to cut production LLM costs without lag"
+    ]
+  }
+}

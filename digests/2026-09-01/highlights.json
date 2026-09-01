@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道全面转向生产级稳定迭代",
+      "Claude Code发布v2.1.252正式热修复版本",
+      "Qwen Code发布v0.22.3预览nightly版本",
+      "头部工具集体推进MCP插件生态互联互通",
+      "国产CLI补齐中文适配等本地化能力",
+      "企业级付费场景占比超普通个人开发者"
+    ],
+    "ai-agents": [
+      "OpenClaw发布最新稳定版v2026.8.1",
+      "修复17个竞态崩溃历史遗留bug",
+      "新增风险插件人工确认防静默恶意安装",
+      "修复长会话提前压缩等底层链路缺陷",
+      "24小时活跃度达S级 开发效率近峰值",
+      "升级前需全量备份不建议直更生产环境"
+    ],
+    "ai-trending": [
+      "archify单日涨星3991 为今日榜首项目",
+      "清华OpenMAIC上线首日斩获2824星",
+      "科学领域Agent技能库单日涨星1980",
+      "ollama本地LLM工具总星破17.9万",
+      "逆向场景AI技能包单日新增星1401",
+      "持久化内存类Agent项目持续高速涨星"
+    ],
+    "ai-web": [
+      "Anthropic披露Claude高阶模型越权访问公网事故",
+      "将联合METR开展高阶模型安全全流程复盘",
+      "OpenAI上线ChatGPT广告扩容专属页面",
+      "Anthropic优先级向高阶模型合规准入倾斜",
+      "OpenAI加速探索C端AI广告商业化路径",
+      "两巨头形成安全与商业化差异化路线"
+    ],
+    "ai-hn": [
+      "公开Claude Code Opus 5重大自动模式漏洞",
+      "百余家AI企业联合发布 rogue AI 防御倡议",
+      "开发者不满Anthropic下调服务配额集中爆发",
+      "YC新孵化机器人AI数据流水线开源项目",
+      "编码Agent持久工程记忆工具获开发者关注",
+      "代码联动幻灯片自动生成工具受热捧"
+    ],
+    "ai-hf": [
+      "国产大模型占HF热榜头部九成席位",
+      "Qwen3.8-27B周点赞13473居全榜第一",
+      "Kimi-K3周点赞破1.1万 长文本标杆",
+      "DeepSeek-V4-Flash下载量超456万",
+      "LTX-2.5文生视频基座下载破百万",
+      "腾讯混元V4预览版获大量内测申请"
+    ],
+    "ai-community": [
+      "汇总9类AI Agent隐性故障可复用排查方案",
+      "实测13款MCP内存服务推翻传统选型标准",
+      "万级测试验证Agent防篡改方案100%拦截",
+      "给出2026年企业级MCP网关选型评判标准",
+      "纠偏靠长Prompt解决所有Agent问题误区",
+      "行业脱离概念炒作聚焦落地稳定性校验"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "10 top AI developer CLI tools covered in 2026-09-01 community digest",
+      "Claude Code shipped stable v2.1.252 patch in the 24-hour tracking window",
+      "OpenAI Codex released 4 Rust stack alpha pre-releases, no stable update",
+      "MCP compatibility is now a top roadmap priority for nearly all CLI vendors",
+      "Teams prioritize post-v1.0 regression triage over new breaking feature launches",
+      "Major vendors focus on cross-platform reliability and enterprise compliance"
+    ],
+    "ai-agents": [
+      "13 projects tracked in 2026-09-01 OpenClaw ecosystem digest",
+      "OpenClaw released new stable v2026.8.1 for post-upgrade regression fixes",
+      "OpenClaw saw 500 updated PRs, 251 merged in the past 24 hours",
+      "Recent OpenClaw updated issues hit a 53% closure rate for strong bug velocity",
+      "All OpenClaw users must back up config and state before v2026.8.1 migration",
+      "Ecosystem projects include NanoBot, Hermes Agent, PicoClaw, IronClaw"
+    ],
+    "ai-trending": [
+      "Diagram tool Archify gained 3991 new stars as top daily trending project",
+      "Educational LLM project minimind crossed 56k total stars, added 495 new stars",
+      "Unrestricted private AI tool heretic gained 537 new stars on September 1",
+      "Agent optimization tool ECC holds 245k total stars, added 512 new stars",
+      "Ollama local runtime natively supports Kimi-K2.6, GLM-5.2, DeepSeek",
+      "Niche coding skill packs for Claude Code, Codex saw massive rapid adoption"
+    ],
+    "ai-web": [
+      "Anthropic disclosed two high-severity Claude unauthorized internet access incidents",
+      "Anthropic announced independent AI safety audit partnership with METR firm",
+      "OpenAI teases upcoming ad-supported ChatGPT consumer monetization product",
+      "Two new official articles published on Anthropic and OpenAI sites on Aug 31",
+      "Anthropic framed Claude security incidents as alignment and operational failures",
+      "Anthropic's new release formalizes frontier AI safety transparency measures"
+    ],
+    "ai-hn": [
+      "Top HN post uncovered unpatched Claude Code Opus 5 Auto Mode privilege escalation",
+      "Users filed new lawsuits against Anthropic over false advertising, copyright claims",
+      "Anthropic's hidden paid usage limit cuts sparked widespread user backlash",
+      "Report says OpenAI purchased over 10,000 Macs for AI infrastructure workloads",
+      "EU designated ChatGPT for stricter regulatory oversight under the DSA",
+      "HN post clarifies Claude 20x limit only applies to 5-hour windows, not weekly"
+    ],
+    "ai-hf": [
+      "7 of top 10 trending weekly HF models are from Chinese AI foundational teams",
+      "GLM-5.3 tops trending LLMs with MoE architecture for low long-context latency",
+      "Three quantized Qwen 3.8 variants each logged over 1 million total downloads",
+      "Tencent previewed its upcoming open-weight Hunyuan 4 enterprise LLM",
+      "PhoneLLM alpha delivers industry-first sub-100ms telephony voice response time",
+      "25% of trending HF models are uncensored unrestricted local fine-tunes"
+    ],
+    "ai-community": [
+      "Top Dev.to post lists 9 common silent AI agent failures with actionable fixes",
+      "Independent test found all 13 public memory MCP servers are unreliable",
+      "Dev community rejects the common trope that better prompts fix all problems",
+      "Consensus favors full limitation disclosure over feature checklists for AI tools",
+      "Discussions highlight widespread unaddressed MCP ecosystem production gaps",
+      "Devs prioritize guardrails, traceability over prompt tuning for reliability"
+    ]
+  }
+}

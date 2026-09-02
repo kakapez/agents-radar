@@ -1,8 +1,8 @@
 /**
  * Product Hunt AI products fetched via the GraphQL API.
  *
- * Strategy: fetch yesterday's top products (which have accumulated votes),
- * then filter locally for AI-related topics.
+ * Strategy: fetch top products from the requested window, then filter locally
+ * for AI-related topics and rank by votes.
  */
 
 // ---------------------------------------------------------------------------

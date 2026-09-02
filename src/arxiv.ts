@@ -147,8 +147,10 @@ export async function fetchArxivData(since: Date): Promise<ArxivData> {
   }
 
   const papers = [...seen.values()]
-    .filter((p) => new Date(p.published).getTime() >= since.getTime())
-    .sort((a, b) => new Date(b.published).getTime() - new Date(a.published).getTime())
+    .map((paper) => ({ paper, publishedAt: new Date(paper.published).getTime() }))
+    .filter(({ publishedAt }) => Number.isFinite(publishedAt) && publishedAt >= since.getTime())
+    .sort((a, b) => b.publishedAt - a.publishedAt)
+    .map(({ paper }) => paper)
     .slice(0, ARXIV_MAX_RESULTS);
 
   console.log(`  [arxiv] ${papers.length} papers (from ${seen.size} unique)`);

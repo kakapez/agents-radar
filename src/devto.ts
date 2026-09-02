@@ -62,37 +62,48 @@ export async function fetchDevtoData(since: Date): Promise<DevtoData> {
     await Promise.all(
       TAGS.map(async (tag) => {
         try {
-          const params = new URLSearchParams({
-            tag,
-            per_page: String(DEVTO_PER_PAGE),
-          });
+          for (let page = 1; ; page += 1) {
+            const params = new URLSearchParams({
+              tag,
+              per_page: String(DEVTO_PER_PAGE),
+              page: String(page),
+            });
 
-          const resp = await fetch(`${API_URL}?${params}`, {
-            headers: { "User-Agent": "agents-radar/1.0" },
-          });
+            const resp = await fetch(`${API_URL}?${params}`, {
+              headers: { "User-Agent": "agents-radar/1.0" },
+            });
 
-          if (!resp.ok) {
-            console.error(`  [devto] "${tag}": HTTP ${resp.status}`);
-            return;
-          }
-
-          const raw = (await resp.json()) as DevtoApiArticle[];
-          for (const a of raw) {
-            if (new Date(a.published_at).getTime() < since.getTime()) continue;
-            if (!seen.has(a.id)) {
-              seen.set(a.id, {
-                id: a.id,
-                title: a.title,
-                description: a.description,
-                url: a.url,
-                publishedAt: a.published_at,
-                positiveReactionsCount: a.positive_reactions_count,
-                commentsCount: a.comments_count,
-                readingTimeMinutes: a.reading_time_minutes,
-                tags: a.tag_list,
-                user: a.user.name,
-              });
+            if (!resp.ok) {
+              console.error(`  [devto] "${tag}" page ${page}: HTTP ${resp.status}`);
+              return;
             }
+
+            const raw = (await resp.json()) as DevtoApiArticle[];
+            let reachedCutoff = false;
+            for (const a of raw) {
+              const publishedAt = new Date(a.published_at).getTime();
+              if (!Number.isFinite(publishedAt)) continue;
+              if (publishedAt < since.getTime()) {
+                reachedCutoff = true;
+                continue;
+              }
+              if (!seen.has(a.id)) {
+                seen.set(a.id, {
+                  id: a.id,
+                  title: a.title,
+                  description: a.description,
+                  url: a.url,
+                  publishedAt: a.published_at,
+                  positiveReactionsCount: a.positive_reactions_count,
+                  commentsCount: a.comments_count,
+                  readingTimeMinutes: a.reading_time_minutes,
+                  tags: a.tag_list,
+                  user: a.user.name,
+                });
+              }
+            }
+
+            if (raw.length < DEVTO_PER_PAGE || reachedCutoff) break;
           }
         } catch (err) {
           console.error(`  [devto] "${tag}": ${err}`);

@@ -98,8 +98,8 @@ export const ARXIV_REPORT = {
     lang === "en" ? `📚 ArXiv AI Research Digest ${dateStr}` : `📚 ArXiv AI 研究日报 ${dateStr}`,
 } as const;
 
-// The HF report runs weekly (see HF_REPORT_WEEKDAY in index.ts) — the Hub's
-// download-ranked list barely moves day to day, so the titles say "weekly".
+// The HF report uses the native weekly digest window; the Hub's download-ranked
+// list barely moves day to day, so the titles say "weekly".
 export const HF_REPORT = {
   title: t("Hugging Face 热门模型周报", "Hugging Face Trending Models Weekly"),
   issueTitle: (dateStr: string, lang: Lang) =>

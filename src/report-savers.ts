@@ -304,7 +304,7 @@ export async function saveArxivReport(
 }
 
 // ---------------------------------------------------------------------------
-// Hugging Face report — weekly, see HF_REPORT_WEEKDAY in index.ts
+// Hugging Face report — generated on every run using the weekly window.
 // ---------------------------------------------------------------------------
 
 export async function saveHfReport(

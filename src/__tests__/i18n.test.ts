@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
   MSG,
+  HF_REPORT,
   CLI_REPORT,
   OPENCLAW_REPORT,
   WEB_REPORT,
@@ -83,13 +84,20 @@ describe("issue title functions", () => {
   });
 
   it("TRENDING_REPORT.issueTitle produces zh and en", () => {
-    expect(TRENDING_REPORT.issueTitle("2026-03-12", "zh")).toContain("开源趋势");
-    expect(TRENDING_REPORT.issueTitle("2026-03-12", "en")).toContain("Open Source Trends");
+    expect(TRENDING_REPORT.issueTitle("2026-03-12", "zh")).toContain("开源趋势周报");
+    expect(TRENDING_REPORT.issueTitle("2026-03-12", "en")).toContain("Open Source Trends Weekly Digest");
   });
 
   it("HN_REPORT.issueTitle produces zh and en", () => {
     expect(HN_REPORT.issueTitle("2026-03-12", "zh")).toContain("Hacker News");
     expect(HN_REPORT.issueTitle("2026-03-12", "en")).toContain("Hacker News");
+  });
+
+  it("HF_REPORT.issueTitle explicitly identifies the weekly digest", () => {
+    expect(HF_REPORT.title.zh).toContain("周报");
+    expect(HF_REPORT.title.en).toContain("Weekly Digest");
+    expect(HF_REPORT.issueTitle("2026-03-12", "zh")).toContain("周报");
+    expect(HF_REPORT.issueTitle("2026-03-12", "en")).toContain("Weekly Digest");
   });
 });
 

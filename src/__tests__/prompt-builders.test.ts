@@ -8,12 +8,25 @@ import {
   buildPeersComparisonPrompt,
   buildSkillsPrompt,
 } from "../prompts.ts";
-import { buildTrendingPrompt, buildWebReportPrompt, buildHnPrompt } from "../prompts-data.ts";
+import {
+  buildTrendingPrompt,
+  buildWebReportPrompt,
+  buildHnPrompt,
+  buildPhPrompt,
+  buildArxivPrompt,
+  buildHfPrompt,
+  buildCommunityPrompt,
+} from "../prompts-data.ts";
 import type { RepoConfig, GitHubItem, GitHubRelease, GitHubDiscussion } from "../github.ts";
 import type { RepoDigest } from "../prompts.ts";
 import type { TrendingData } from "../trending.ts";
 import type { HnData } from "../hn.ts";
 import type { WebFetchResult } from "../web.ts";
+import type { PhData } from "../ph.ts";
+import type { ArxivData } from "../arxiv.ts";
+import type { HfData } from "../hf.ts";
+import type { DevtoData } from "../devto.ts";
+import type { LobstersData } from "../lobsters.ts";
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -62,6 +75,62 @@ const release: GitHubRelease = {
   published_at: "2026-03-09T00:00:00Z",
 };
 
+const phData: PhData = {
+  products: [
+    {
+      id: "ph-1",
+      name: "AI Product",
+      tagline: "Weekly product",
+      url: "https://producthunt.com/posts/ai-product",
+      website: "https://example.com",
+      votesCount: 100,
+      commentsCount: 10,
+      createdAt: "2026-03-09T00:00:00Z",
+      topics: ["ai"],
+    },
+  ],
+  fetchSuccess: true,
+};
+const arxivData: ArxivData = {
+  papers: [
+    {
+      id: "paper-1",
+      title: "AI Paper",
+      summary: "Summary",
+      authors: ["Author"],
+      published: "2026-03-09T00:00:00Z",
+      updated: "2026-03-09T00:00:00Z",
+      categories: ["cs.AI"],
+      url: "https://arxiv.org/abs/paper-1",
+      pdfUrl: "https://arxiv.org/pdf/paper-1",
+    },
+  ],
+  fetchSuccess: true,
+};
+const hfData: HfData = {
+  models: [
+    {
+      id: "org/model",
+      author: "org",
+      likes: 100,
+      downloads: 1000,
+      tags: ["text"],
+      pipelineTag: "text-generation",
+      lastModified: "2026-03-09T00:00:00Z",
+      url: "https://huggingface.co/org/model",
+    },
+  ],
+  fetchSuccess: true,
+};
+const devtoData: DevtoData = {
+  articles: [],
+  fetchSuccess: true,
+};
+const lobstersData: LobstersData = {
+  stories: [],
+  fetchSuccess: true,
+};
+
 function makeDigest(overrides: Partial<RepoDigest> = {}): RepoDigest {
   return {
     config: cfg,
@@ -86,12 +155,16 @@ describe("buildCliPrompt", () => {
     expect(result).toContain("2026-03-09");
     expect(result).toContain("org/test");
     expect(result).toContain("v1.0.0");
+    expect(result).toContain("社区动态周报");
+    expect(result).toContain("过去7天");
   });
 
   it("generates English prompt", () => {
     const result = buildCliPrompt(cfg, [makeItem()], [], [], [], "2026-03-09", "en");
     expect(result).toContain("technical analyst");
     expect(result).toContain("TestTool");
+    expect(result).toContain("weekly digest");
+    expect(result).toContain("the last 7 days");
     expect(result).toContain("Hot Issues");
   });
 
@@ -149,11 +222,15 @@ describe("buildPeerPrompt", () => {
     expect(result).toContain("数据概览");
     expect(result).toContain("新开/活跃: 1");
     expect(result).toContain("已关闭: 1");
+    expect(result).toContain("项目动态周报");
+    expect(result).toContain("过去7天");
   });
 
   it("generates English prompt", () => {
     const result = buildPeerPrompt(cfg, [], [], [], "2026-03-09", 30, 20, "en");
     expect(result).toContain("Data Overview");
+    expect(result).toContain("weekly project digest");
+    expect(result).toContain("the last 7 days");
     expect(result).toContain("None");
   });
 });
@@ -169,11 +246,14 @@ describe("buildInfraPrompt", () => {
     expect(result).toContain("新模型与硬件支持");
     expect(result).toContain("TestTool");
     expect(result).toContain("v1.0.0");
+    expect(result).toContain("过去7天");
   });
 
   it("generates English prompt", () => {
     const result = buildInfraPrompt(cfg, [makeItem()], [], [], "2026-03-09", "en");
     expect(result).toContain("AI infrastructure");
+    expect(result).toContain("weekly digest");
+    expect(result).toContain("the last 7 days");
     expect(result).toContain("New Model & Hardware Support");
     expect(result).toContain("None");
   });
@@ -257,6 +337,15 @@ describe("buildPeersComparisonPrompt", () => {
     expect(result).toContain("OpenClaw（核心参照");
     expect(result).toContain("OC summary");
     expect(result).toContain("Peer summary");
+    expect(result).toContain("过去7天");
+  });
+
+  it("uses the last-seven-days window in English", () => {
+    const openclawDigest = makeDigest({
+      config: { id: "openclaw", repo: "openclaw/openclaw", name: "OpenClaw" },
+    });
+    const result = buildPeersComparisonPrompt(openclawDigest, [makeDigest()], "2026-03-09", "en");
+    expect(result).toContain("No activity in the last 7 days.");
   });
 });
 
@@ -269,11 +358,15 @@ describe("buildSkillsPrompt", () => {
     const result = buildSkillsPrompt([makeItem()], [makeItem()], "2026-03-09");
     expect(result).toContain("anthropics/skills");
     expect(result).toContain("Claude Code Skills");
+    expect(result).toContain("数据截止 2026-03-09");
+    expect(result).not.toContain("过去7天");
   });
 
   it("generates English variant", () => {
     const result = buildSkillsPrompt([], [], "2026-03-09", "en");
     expect(result).toContain("Claude Code ecosystem");
+    expect(result).toContain("data as of 2026-03-09");
+    expect(result).not.toContain("last 7 days");
     expect(result).toContain("None");
   });
 });
@@ -331,6 +424,57 @@ describe("buildTrendingPrompt", () => {
     const result = buildTrendingPrompt(data, "2026-03-09");
     expect(result).toContain("[topic:ai-agent]");
     expect(result).toContain("1,000");
+  });
+});
+
+describe("weekly data-source prompt wording", () => {
+  it("keeps Trending as a current snapshot while using a seven-day search window", () => {
+    const data: TrendingData = {
+      trendingRepos: [
+        {
+          fullName: "org/repo",
+          description: "d",
+          language: "TS",
+          todayStars: 7,
+          totalStars: 10,
+          forks: 1,
+          url: "https://github.com/org/repo",
+        },
+      ],
+      searchRepos: [],
+      trendingFetchSuccess: true,
+    };
+    const zh = buildTrendingPrompt(data, "2026-03-09");
+    const en = buildTrendingPrompt(data, "2026-03-09", "en");
+    expect(zh).toContain("今日 Trending");
+    expect(zh).toContain("今日新增 stars");
+    expect(zh).toContain("7天内活跃");
+    expect(en).toContain("Today's Trending");
+    expect(en).toContain("today's new stars");
+    expect(en).toContain("active in last 7 days");
+  });
+
+  it("identifies Product Hunt, ArXiv, HF, and Community prompts as weekly", () => {
+    for (const prompt of [
+      buildPhPrompt(phData, "2026-03-09"),
+      buildArxivPrompt(arxivData, "2026-03-09"),
+      buildHfPrompt(hfData, "2026-03-09"),
+      buildCommunityPrompt(devtoData, lobstersData, "2026-03-09"),
+    ]) {
+      expect(prompt).toContain("周报");
+      expect(prompt).toContain("过去7天");
+    }
+    for (const prompt of [
+      buildPhPrompt(phData, "2026-03-09", "en"),
+      buildArxivPrompt(arxivData, "2026-03-09", "en"),
+      buildCommunityPrompt(devtoData, lobstersData, "2026-03-09", "en"),
+    ]) {
+      expect(prompt).toContain("Weekly");
+      expect(prompt).toContain("last 7 days");
+    }
+    const hf = buildHfPrompt(hfData, "2026-03-09", "en");
+    expect(hf).toContain("Weekly");
+    expect(hf).toContain("weekly likes");
   });
 });
 
@@ -401,6 +545,8 @@ describe("buildHnPrompt", () => {
     expect(result).toContain("评论: 50");
     expect(result).toContain("作者: bob");
     expect(result).toContain("共 1 条");
+    expect(result).toContain("社区动态周报");
+    expect(result).toContain("过去7天");
   });
 
   it("generates English variant", () => {
@@ -422,6 +568,7 @@ describe("buildHnPrompt", () => {
     const result = buildHnPrompt(data, "2026-03-09", "en");
     expect(result).toContain("Score: 10");
     expect(result).toContain("Comments: 2");
-    expect(result).toContain("Hacker News");
+    expect(result).toContain("Hacker News AI Community Weekly Digest");
+    expect(result).toContain("last 7 days");
   });
 });

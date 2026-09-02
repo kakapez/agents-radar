@@ -173,7 +173,7 @@ ${prsText}
 ${discussionsSection}
 ---
 
-Generate a structured English digest with the following sections:
+Generate a structured English weekly digest with the following sections:
 
 1. **Last 7 Days' Highlights** - 2-3 sentences summarizing the most important updates
 2. **Releases** - If new versions exist, summarize changes; omit if none
@@ -256,13 +256,13 @@ ${prsText}
 
 ---
 
-Generate a structured English digest with the following sections:
+Generate a structured English weekly digest with the following sections:
 
 1. **Last 7 Days' Highlights** - 2-3 sentences summarizing the most important updates
 2. **Releases & Breaking Changes** - New versions, API/config changes, migration notes; omit if none
 3. **New Model & Hardware Support** - Newly supported models, architectures, backends (CUDA/ROCm/Metal/CPU), quantization formats
 4. **Performance & Optimization** - Throughput, latency, memory and kernel work landed or in progress, with concrete numbers when available
-5. **Stability & Regressions** - Crashes, correctness bugs, regressions reported the last 7 days, ranked by severity, note if fix PRs exist
+5. **Stability & Regressions** - Crashes, correctness bugs, regressions reported in the last 7 days, ranked by severity, note if fix PRs exist
 6. **What This Means for Application Developers** - Practical takeaways for people building agents/apps on top of this project
 
 Style: concise and professional, suited for infrastructure engineers. Include GitHub links for each item.
@@ -290,7 +290,7 @@ ${prsText}
 2. **版本发布与破坏性变更** - 新版本、API/配置变更、迁移注意事项；无则省略
 3. **新模型与硬件支持** - 新增支持的模型、架构、后端（CUDA/ROCm/Metal/CPU）、量化格式
 4. **性能与优化** - 已落地或进行中的吞吐、延迟、显存、算子优化，有具体数字时请引用
-5. **稳定性与回归** - 今周报告的崩溃、正确性 Bug、回归问题，按严重程度排列，标注是否已有 fix PR
+5. **稳定性与回归** - 过去7天报告的崩溃、正确性 Bug、回归问题，按严重程度排列，标注是否已有 fix PR
 6. **对应用开发者的意义** - 对在此项目之上构建 Agent/应用的开发者有什么实际影响
 
 语言要求：简洁专业，适合基础设施工程师阅读。每个条目附上 GitHub 链接。
@@ -386,7 +386,7 @@ export function buildPeerPrompt(
   const prSampleNote = sampleNote(totalPrs, sampledPrs.length, lang);
 
   if (lang === "en") {
-    return `You are an analyst of AI agent and personal AI assistant open-source projects. Based on the following GitHub data from ${cfg.name} (github.com/${cfg.repo}), generate a project digest for ${dateStr}.
+    return `You are an analyst of AI agent and personal AI assistant open-source projects. Based on the following GitHub data from ${cfg.name} (github.com/${cfg.repo}), generate a weekly project digest for ${dateStr}.
 
 # Data Overview
 - Issues updated in the last 7 days: ${totalIssues} (open/active: ${openIssues}, closed: ${closedIssues})
@@ -404,13 +404,13 @@ ${prsText}
 
 ---
 
-Generate a structured English ${cfg.name} project digest with the following sections:
+Generate a structured English ${cfg.name} weekly project digest with the following sections:
 
 1. **Last 7 Days' Overview** - 3-5 sentences summarizing project status, including activity assessment
 2. **Releases** - If new versions exist, detail changes, breaking changes, migration notes; omit if none
 3. **Project Progress** - Merged/closed PRs the last 7 days, what features advanced or were fixed
 4. **Community Hot Topics** - Most active Issues/PRs with most comments/reactions (with links), analyze underlying needs
-5. **Bugs & Stability** - Bugs, crashes, regressions reported the last 7 days, ranked by severity, note if fix PRs exist
+5. **Bugs & Stability** - Bugs, crashes, regressions reported in the last 7 days, ranked by severity, note if fix PRs exist
 6. **Feature Requests & Roadmap Signals** - User-requested features, predict which might be in next version
 7. **User Feedback Summary** - Real user pain points, use cases, satisfaction/dissatisfaction
 8. **Backlog Watch** - Long-unanswered important Issues or PRs needing maintainer attention
@@ -443,7 +443,7 @@ ${prsText}
 2. **版本发布** - 如有新版本，详细说明更新内容、破坏性变更、迁移注意事项；无则省略
 3. **项目进展** - 过去7天合并/关闭的重要 PR，说明推进了哪些功能或修复，项目整体向前迈进了多少
 4. **社区热点** - 过去7天讨论最活跃、评论最多、反应最多的 Issues/PRs（附链接），分析背后的诉求
-5. **Bug 与稳定性** - 今周报告的 Bug、崩溃、回归问题，按严重程度排列，标注是否已有 fix PR
+5. **Bug 与稳定性** - 过去7天报告的 Bug、崩溃、回归问题，按严重程度排列，标注是否已有 fix PR
 6. **功能请求与路线图信号** - 用户提出的新功能需求，结合已有 PR 判断哪些可能被纳入下一版本
 7. **用户反馈摘要** - 从 Issues 评论中提炼真实用户痛点、使用场景、满意/不满意的地方
 8. **待处理积压** - 长期未响应的重要 Issue 或 PR，提醒维护者关注

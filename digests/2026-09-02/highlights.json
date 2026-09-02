@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI赛道进生产前夜，日迭代1-2版本",
+      "MCP成行业事实标准，头部全推兼容开放",
+      "安全合规成最高优先级，重点加固权限管控",
+      "OpenAI Codex单日发6版本，迭代密度登顶",
+      "DeepSeek TUI 15个PR，灰度v0.9.12待发布",
+      "本地化部署需求环比增速超100%"
+    ],
+    "ai-agents": [
+      "OpenClaw日更千条，活跃度达近3月峰值",
+      "OpenClaw发v2026.8.2，自动修复配置异常",
+      "新增悬浮dock，低耗预览工作上下文快照",
+      "空闲内存占用降42%，全平台适配符合计划",
+      "修复macOS签名问题，发布耗时缩至5分钟",
+      "加固多Agent会话隔离，封堵上下文泄露"
+    ],
+    "ai-trending": [
+      "清华OpenMAIC单日增3122星登GitHub热榜",
+      "Agent性能调优ECC工具单日新增621星",
+      "Crawl4AI专为Agent优化输出结构化内容",
+      "Ollama新增支持Kimi-K2.6等国产模型部署",
+      "科研Agent技能库单日涨914星覆盖多学科",
+      "视频剪辑AI工具video-use单日增509星登榜"
+    ],
+    "ai-web": [
+      "Anthropic首发企业防护方案，数据完全自主管控",
+      "Claude水印零成本不损质量适配欧盟合规",
+      "Anthropic披露越权事故将委托第三方审计",
+      "OpenAI披露Astra路线图占位下一代产品矩阵",
+      "两巨头冲刺2026秋旗舰模型商业化窗口",
+      "Claude零数据留存向Fable 5用户免费开放"
+    ],
+    "ai-hn": [
+      "Claude Fable 5.1发布，HN帖842分登顶",
+      "新Claude长文本推理能力获实测质的提升",
+      "OpenAI披露Astra路线图主打人类级科研能力",
+      "新Claude ARC得分超所有过往公开模型",
+      "插件支持一键屏蔽YouTube所有AI生成视频",
+      "YC推低成本人形机器人，降低开发门槛"
+    ],
+    "ai-arxiv": [
+      "新研究验证LLM可从模糊目标自主完成自进化",
+      "归一化LoRA大幅提升微调收敛速度与效果",
+      "提出无人类监督大推理模型超人类缩放路径",
+      "数据治理框架解决大模型后训练能力退化",
+      "揭秘奉承对齐迁移机制缓解事实性损失问题",
+      "解决Agent优化过程监督结果分配不匹配问题"
+    ],
+    "ai-hf": [
+      "国产Kimi-K3开源，周赞1.1万下载超278万",
+      "MiniMax H3视频基座开源下载破553万",
+      "腾讯混元V4预览版开放权重试水登热榜",
+      "Qwen3.8端侧多模态模型推理亚毫秒级延迟",
+      "语音大模型phonellm端侧推理速度快3倍",
+      "国产大模型上新占超7成覆盖全梯度能力"
+    ],
+    "ai-community": [
+      "实测低价大模型生产场景表现反超高价款",
+      "谷歌输出可落地AI评测方法解决效果退化",
+      "MCP生态曝40+高危CVE安全风险引关注",
+      "10款高价值MCP工具可直接集成编码工作流",
+      "AI自改写提示词所有请求被安全网关拦截",
+      "语义缓存本质揭露多数AI功能实为FAQ bot"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem now prioritizes reliability, governance, third-party extensions",
+      "All major CLI projects ship incremental updates, no large architecture overhauls",
+      "Cross-tool priority shifts to support the emerging Model Context Protocol standard",
+      "Security hardening for extension workflows is top task for nearly all maintainers",
+      "Market segments into commercial, open multi-provider, regionally focused tools",
+      "10 leading AI coding CLI tools are covered in the 2026-09-02 digest"
+    ],
+    "ai-agents": [
+      "OpenClaw releases new stable v2026.8.2 minor version on 2026-09-02",
+      "New Home agent persistent sidebar dock launches via Cmd/Ctrl+Shift+H shortcut",
+      "24h activity counts 500 updated issues and 500 updated PRs across ecosystem",
+      "OpenClaw hits 30% close rate fixing 2026.8.1 release regression bugs",
+      "13 AI agent projects are tracked in the latest OpenClaw community digest",
+      "Maintainers balance stability work with cross-platform native client roadmap"
+    ],
+    "ai-trending": [
+      "Tsinghua multi-agent project gains 3122 new GitHub stars as top daily gainer",
+      "Viral new repos are reusable cross-platform agent skills, not monolithic frameworks",
+      "64M 2-hour full LLM training project earns 1000+ new GitHub stars",
+      "affaan-m/ECC gains 621 stars, hits 245k total as leading agent harness system",
+      "firecrawl/pdf-inspector Rust library fixes long-running PDF preprocessing pain point",
+      "Community shifts focus to production-ready domain-specific agent utilities"
+    ],
+    "ai-web": [
+      "Anthropic launches Enterprise Frontier Safeguards for regulated industry use cases",
+      "Anthropic releases EU AI Act-aligned watermarking specs with zero inference cost",
+      "Anthropic discloses fixes for two Claude Fable 5 unauthorized access incidents",
+      "Anthropic will undergo independent safety audit by leading firm METR",
+      "OpenAI publishes metadata pages covering unconfirmed Astra model roadmap",
+      "OpenAI teases ChatGPT healthcare integration and youth safety compliance tools"
+    ],
+    "ai-hn": [
+      "Claude 5.1 lines top HN AI posts with 842 votes and 802 discussion comments",
+      "Tests show new 5.1 models outperform old Claude Opus on long-context tasks",
+      "Dwarf Fortress creator shares viral views on AI-fueled gaming industry collapse",
+      "New evidence emerges in Apple's trade secrets lawsuit against OpenAI",
+      "OpenAI's Astra safety roadmap gets mostly skeptical HN community reception",
+      "HN users voice frustration at big tech AI hype enabling privacy erasure"
+    ],
+    "ai-arxiv": [
+      "New submissions shift focus from model scaling to real-world performance validation",
+      "\"A Model with No Head\" cuts inference costs, eliminates token output bottleneck",
+      "Normalized LoRA variant fixes unstable fine-tuning, boosts cross-task performance",
+      "Studies expose LLM pipeline flaws that invalidate many old benchmark results",
+      "New self-improvement frameworks avoid 2027 forecast frontier model data scarcity",
+      "Auditable hallucination-mitigated AI systems are cleared for clinical deployment"
+    ],
+    "ai-hf": [
+      "Top trending open LLM logs 9.3M weekly downloads for local runtime use",
+      "Zhipu AI's GLM-5.3 launches as high-performance GLM-4 drop-in replacement",
+      "Tencent Hy4-preview features 2M native context for enterprise document processing",
+      "Phonellm-alpha-1 delivers <100ms latency for real-time voice assistants",
+      "Uncensored quantized models make up half of trending Hugging Face listings",
+      "New low-step text-to-video models cut inference runtime by 75% year over half-year"
+    ],
+    "ai-community": [
+      "40+ new CVEs disclosed for widely deployed Model Context Protocol servers",
+      "Self-editing AI agent series earns 33 reactions as top Dev.to AI content",
+      "Google AI publishes guide for designing reliable, actionable AI evaluations",
+      "Lobste.rs debates Gates Notes essay on turbulent AI era societal impacts",
+      "Users warn \"vibecoding\" leaves uncaught security flaws in production code",
+      "Beginner AI architecture guide helps new builders avoid common design pitfalls"
+    ]
+  }
+}

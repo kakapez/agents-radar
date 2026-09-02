@@ -28,8 +28,8 @@ export function buildTrendingPrompt(data: TrendingData, dateStr: string, lang: L
           )
           .join("\n")
       : lang === "en"
-        ? "(Unable to fetch today's GitHub Trending list)"
-        : "（未能抓取今日 GitHub Trending 榜单）";
+        ? "(Unable to fetch today's GitHub Trending snapshot)"
+        : "（未能抓取过去7天 GitHub Trending 榜单）";
 
   const searchSection =
     data.searchRepos.length > 0
@@ -66,7 +66,7 @@ ${searchSection}
 
 ---
 
-Generate a structured AI Open Source Trends Report in English:
+Generate a structured AI Open Source Trends Weekly Digest in English:
 
 **Step 1 (Filter)**: From the above data, select projects clearly related to AI/ML (exclude unrelated general tools, frontend frameworks, games, etc.). Skip non-AI trending repos.
 
@@ -79,17 +79,17 @@ Generate a structured AI Open Source Trends Report in English:
 
 **Step 3 (Output Report)** with these sections:
 
-1. **Today's Highlights** — 3-5 sentences on the most noteworthy AI open-source developments today
+1. **Last 7 Days' Highlights** — 3-5 sentences on the most noteworthy AI open-source developments the last 7 days
 
 2. **Top Projects by Category** — For each category, render a **Markdown table** with exactly these columns:
 
-   | Project | Lang | Stars (total / today) | Summary |
+   | Project | Lang | Stars (total / the last 7 days) | Summary |
    | :--- | :--- | ---: | :--- |
 
    - **Project**: repo name as a Markdown link to its GitHub URL
    - **Lang**: primary language (leave blank if unknown)
    - **Stars**: total stars, plus today's new stars in parentheses when available (e.g. "86,392 (+1,851)"); copy the numbers from the input verbatim, do not recompute
-   - **Summary**: 2 sentences — what the project is and why it's worth attention today, including any standout data point or momentum signal
+   - **Summary**: 2 sentences — what the project is and why it's worth attention the last 7 days, including any standout data point or momentum signal
    - List 3-8 projects per category; omit a category's table entirely if no project falls under it
 
 3. **Trend Signal Analysis** — 200-300 words, distill from today's hot list:
@@ -106,12 +106,12 @@ Style: English, professional and concise, must include GitHub links for every pr
   return `你是一位专注于 AI 开源生态的技术分析师。以下是 ${dateStr} 的 GitHub AI 相关热门仓库数据，请进行 AI 相关性筛选、分类和趋势分析。
 
 ## 数据说明
-- **Trending 榜单**（github.com/trending，今日 stars 数最可信）：今日实时热榜，含今日新增 stars
+- **Trending 榜单**（github.com/trending，过去7天 stars 数最可信）：过去7天实时热榜，含过去7天新增 stars
 - **主题搜索**（GitHub Search API，topic 标签）：7天内活跃的 AI 相关项目，按主题分类
 
 ---
 
-## GitHub 今日 Trending 榜单（共 ${data.trendingRepos.length} 个仓库）
+## GitHub 过去7天 Trending 榜单（共 ${data.trendingRepos.length} 个仓库）
 ${trendingSection}
 
 ---
@@ -121,7 +121,7 @@ ${searchSection}
 
 ---
 
-请生成一份结构清晰的《AI 开源趋势日报》，要求：
+请生成一份结构清晰的《AI 开源趋势周报》，要求：
 
 **第一步（过滤）**：从以上数据中筛选出与 AI/ML 明确相关的项目（排除与 AI 无关的通用工具、前端框架、游戏等），对于 Trending 榜单中的非 AI 项目直接略去。
 
@@ -134,20 +134,20 @@ ${searchSection}
 
 **第三步（输出报告）**，包含以下部分：
 
-1. **今日速览** — 3~5 句话概括今日 AI 开源领域最值得关注的动向
+1. **过去7天速览** — 3~5 句话概括过去7天 AI 开源领域最值得关注的动向
 
 2. **各维度热门项目** — 每个维度用 **Markdown 表格**呈现，列固定为：
 
-   | 项目 | 语言 | Stars（总量 / 今日） | 简要说明 |
+   | 项目 | 语言 | Stars（总量 / 过去7天） | 简要说明 |
    | :--- | :--- | ---: | :--- |
 
    - **项目**：仓库名，做成指向其 GitHub 链接的 Markdown 链接
    - **语言**：主要语言（未知则留空）
-   - **Stars**：总 star 数，有今日新增则在括号中标注（如 "86,392（+1,851）"）；数字照抄输入，不要重算
+   - **Stars**：总 star 数，有过去7天新增则在括号中标注（如 "86,392（+1,851）"）；数字照抄输入，不要重算
    - **简要说明**：2 句话——项目是什么、今天为什么值得关注，点出关键数据或增长信号
    - 每个维度列 3~8 个项目；某维度下若无项目则整张表省略
 
-3. **趋势信号分析** — 200~300 字，从今日热榜中提炼：
+3. **趋势信号分析** — 200~300 字，从过去7天热榜中提炼：
    - 哪类 AI 工具正在获得社区爆发性关注？
    - 有无新兴技术栈或方向首次登榜？
    - 与近期大模型发布/行业事件的关联
@@ -167,10 +167,10 @@ export function buildWebReportPrompt(results: WebFetchResult[], dateStr: string,
         lang === "en"
           ? isFirstRun
             ? `First full crawl (sitemap total ${totalDiscovered} URLs, showing latest ${newItems.length} articles)`
-            : `Incremental update, ${newItems.length} new articles today`
+            : `Incremental update, ${newItems.length} new articles the last 7 days`
           : isFirstRun
             ? `首次全量抓取（sitemap 共 ${totalDiscovered} 条 URL，以下为最新 ${newItems.length} 篇正文内容）`
-            : `今日增量更新，共 ${newItems.length} 篇新内容`;
+            : `过去7天增量更新，共 ${newItems.length} 篇新内容`;
 
       if (newItems.length === 0) {
         const noContent =
@@ -214,7 +214,7 @@ export function buildWebReportPrompt(results: WebFetchResult[], dateStr: string,
         : "This is an incremental update. Please focus on today's new content and assess its strategic significance in context."
       : isAnyFirstRun
         ? "本次为首次全量抓取，请重点梳理各站点的内容格局、历史脉络与核心主题，而非仅关注单篇文章。"
-        : "本次为增量更新，请聚焦今日新增内容，并结合上下文判断其战略意义。";
+        : "本次为增量更新，请聚焦过去7天新增内容，并结合上下文判断其战略意义。";
 
   if (lang === "en") {
     return `You are a deep content analyst focused on AI, skilled at extracting strategic signals from official announcements, technical blogs, research papers, and product documentation.
@@ -227,7 +227,7 @@ ${siteSections}
 
 Generate a detailed AI Official Content Tracking Report in English with these sections:
 
-1. **Today's Highlights** — 3-5 sentences on the most important new releases or developments, calling out key highlights
+1. **Last 7 Days' Highlights** — 3-5 sentences on the most important new releases or developments, calling out key highlights
 
 2. **Anthropic / Claude Content Highlights** — Organize important content by category (news / research / engineering / learn, etc.):
    - For each piece, 2-4 sentences extracting core insights, technical details, or business significance
@@ -261,7 +261,7 @@ ${siteSections}
 
 请生成一份详实的《AI 官方内容追踪报告》，包含以下部分：
 
-1. **今日速览** — 3~5 句话概括最重要的新发布或动向，点出核心亮点
+1. **过去7天速览** — 3~5 句话概括最重要的新发布或动向，点出核心亮点
 
 2. **Anthropic / Claude 内容精选** — 按分类（news / research / engineering / learn 等）逐条整理重要内容：
    - 每篇用 2~4 句话提炼核心观点、技术细节或业务意义
@@ -323,7 +323,7 @@ Rules:
 - Be specific: include project names, version numbers, star counts where relevant`;
   }
 
-  return `你是一位简洁的新闻编辑。以下是今日 AI 生态各报告的摘要，每个报告用 ID 标注。
+  return `你是一位简洁的新闻编辑。以下是过去7天 AI 生态各报告的摘要，每个报告用 ID 标注。
 
 ${sections}
 
@@ -367,9 +367,9 @@ ${storiesText}
 
 ---
 
-Generate a structured Hacker News AI Community Digest in English:
+Generate a structured Hacker News AI Community Weekly Digest in English:
 
-1. **Today's Highlights** — 3-5 sentences on the hottest AI discussion topics and community sentiment on HN today
+1. **Last 7 Days' Highlights** — 3-5 sentences on the hottest AI discussion topics and community sentiment on HN the last 7 days
 
 2. **Top News & Discussions** — Organized by category, render a **Markdown table** per category with exactly these columns:
 
@@ -406,9 +406,9 @@ ${storiesText}
 
 ---
 
-请生成一份结构清晰的《Hacker News AI 社区动态日报》，要求：
+请生成一份结构清晰的《Hacker News AI 社区动态周报》，要求：
 
-1. **今日速览** — 3~5 句话，概括今日 HN 社区围绕 AI 最热门的讨论方向和情绪
+1. **过去7天速览** — 3~5 句话，概括过去7天 HN 社区围绕 AI 最热门的讨论方向和情绪
 
 2. **热门新闻与讨论** — 按以下分类整理，每个分类用 **Markdown 表格**呈现，列固定为：
 
@@ -426,12 +426,12 @@ ${storiesText}
    - 🏢 产业动态（公司新闻、融资、产品发布）
    - 💬 观点与争议（值得关注的 Ask HN、Show HN 或热议帖子）
 
-3. **社区情绪信号** — 100~200 字，分析今日 HN AI 讨论的整体情绪和关注重点：
+3. **社区情绪信号** — 100~200 字，分析过去7天 HN AI 讨论的整体情绪和关注重点：
    - 社区对哪类话题最活跃（高分 + 高评论）？
    - 有无明显的争议点或共识？
    - 与上周期相比，关注方向有无明显变化？
 
-4. **值得深读** — 列出 2~3 条今日最值得开发者/研究者深入阅读的内容，简述理由
+4. **值得深读** — 列出 2~3 条过去7天最值得开发者/研究者深入阅读的内容，简述理由
 
 语言要求：中文，简洁专业，保留所有原文链接。
 `;
@@ -453,7 +453,7 @@ export function buildPhPrompt(data: PhData, dateStr: string, lang: Lang = "zh"):
     .join("\n\n");
 
   if (lang === "en") {
-    return `You are an AI product analyst. The following are AI-related products launched on Product Hunt in the past 24 hours as of ${dateStr} (sorted by votes, ${data.products.length} total):
+    return `You are an AI product analyst. The following are AI-related products launched on Product Hunt in the last 7 days as of ${dateStr} (sorted by votes, ${data.products.length} total):
 
 ---
 
@@ -461,9 +461,9 @@ ${productsText}
 
 ---
 
-Generate a structured Product Hunt AI Products Digest in English:
+Generate a structured Product Hunt AI Products Weekly Digest in English:
 
-1. **Today's Highlights** — 3-5 sentences on the most notable AI product launches and trends on Product Hunt today
+1. **Last 7 Days' Highlights** — 3-5 sentences on the most notable AI product launches and trends on Product Hunt the last 7 days
 
 2. **Top Products** — Organized by category, render a **Markdown table** per category with exactly these columns:
 
@@ -493,7 +493,7 @@ Style: English, concise and professional, preserve all original links.
 `;
   }
 
-  return `你是 AI 产品分析师。以下是 ${dateStr} 从 Product Hunt 抓取的过去 24 小时内 AI 相关产品发布（按投票数降序，共 ${data.products.length} 个）：
+  return `你是 AI 产品分析师。以下是 ${dateStr} 从 Product Hunt 抓取的过去7天内 AI 相关产品发布（按投票数降序，共 ${data.products.length} 个）：
 
 ---
 
@@ -501,9 +501,9 @@ ${productsText}
 
 ---
 
-请生成一份结构清晰的《Product Hunt AI 产品日报》，要求：
+请生成一份结构清晰的《Product Hunt AI 产品周报》，要求：
 
-1. **今日速览** — 3~5 句话，概括今日 Product Hunt 上 AI 产品发布的整体趋势和亮点
+1. **过去7天速览** — 3~5 句话，概括过去7天 Product Hunt 上 AI 产品发布的整体趋势和亮点
 
 2. **热门产品** — 按以下分类整理，每个分类用 **Markdown 表格**呈现，列固定为：
 
@@ -522,7 +522,7 @@ ${productsText}
    - 🎨 创意与内容（图像/视频/文本生成、设计工具）
    - 🔧 基础设施与模型（模型服务、微调、MLOps）
 
-3. **市场信号** — 100~200 字，分析今日 Product Hunt AI 产品的发布规律：
+3. **市场信号** — 100~200 字，分析过去7天 Product Hunt AI 产品的发布规律：
    - 哪些类别最密集？
    - 有无创新性的思路或新颖的应用场景？
    - 开源 vs 闭源的趋势
@@ -566,9 +566,9 @@ ${papersText}
 
 ---
 
-Generate a structured ArXiv AI Research Digest in English:
+Generate a structured ArXiv AI Research Weekly Digest in English:
 
-1. **Today's Highlights** — 3-5 sentences on the most significant research directions and breakthroughs
+1. **Last 7 Days' Highlights** — 3-5 sentences on the most significant research directions and breakthroughs
 
 2. **Key Papers** — Select 8-15 most important papers, organized by theme. Under each theme header, render a **Markdown table** with exactly these columns:
 
@@ -602,9 +602,9 @@ ${papersText}
 
 ---
 
-请生成一份结构清晰的《ArXiv AI 研究日报》，要求：
+请生成一份结构清晰的《ArXiv AI 研究周报》，要求：
 
-1. **今日速览** — 3~5 句话，概括今日最值得关注的研究方向和突破
+1. **过去7天速览** — 3~5 句话，概括过去7天最值得关注的研究方向和突破
 
 2. **重点论文** — 选出 8~15 篇最重要的论文，按主题分类。在每个主题标题下用 **Markdown 表格**呈现，列固定为：
 
@@ -622,7 +622,7 @@ ${papersText}
    - 🔧 方法与框架（新技术、基准测试、效率优化）
    - 📊 应用（垂直领域、多模态、代码生成）
 
-3. **研究趋势信号** — 100~200 字，从今日投稿中观察到的新兴研究方向
+3. **研究趋势信号** — 100~200 字，从过去7天投稿中观察到的新兴研究方向
 
 4. **值得精读** — 2~3 篇最值得完整阅读的论文，简述理由
 
@@ -660,9 +660,9 @@ ${modelsText}
 
 ---
 
-Generate a structured Hugging Face Trending Models Digest in English:
+Generate a structured Hugging Face Trending Models Weekly Digest in English:
 
-1. **Today's Highlights** — 3-5 sentences on the most notable model releases and trends on Hugging Face
+1. **Last 7 Days' Highlights** — 3-5 sentences on the most notable model releases and trends on Hugging Face
 
 2. **Trending Models** — Organized by category. Under each category header, render a **Markdown table** with exactly these columns:
 
@@ -699,9 +699,9 @@ ${modelsText}
 
 ---
 
-请生成一份结构清晰的《Hugging Face 热门模型日报》，要求：
+请生成一份结构清晰的《Hugging Face 热门模型周报》，要求：
 
-1. **今日速览** — 3~5 句话，概括 Hugging Face 上最值得关注的模型发布和趋势
+1. **过去7天速览** — 3~5 句话，概括 Hugging Face 上最值得关注的模型发布和趋势
 
 2. **热门模型** — 按以下分类整理。在每个分类标题下，用 **Markdown 表格**呈现，列固定为：
 
@@ -795,9 +795,9 @@ ${lobstersText}
 
 ---
 
-Generate a structured Tech Community AI Digest in English:
+Generate a structured Tech Community AI Weekly Digest in English:
 
-1. **Today's Highlights** — 3-5 sentences on the most discussed AI topics across these communities today
+1. **Last 7 Days' Highlights** — 3-5 sentences on the most discussed AI topics across these communities the last 7 days
 
 2. **Dev.to Highlights** — Select 5-10 most valuable articles as a **Markdown table**:
 
@@ -842,9 +842,9 @@ ${lobstersText}
 
 ---
 
-请生成一份结构清晰的《技术社区 AI 动态日报》，要求：
+请生成一份结构清晰的《技术社区 AI 动态周报》，要求：
 
-1. **今日速览** — 3~5 句话，概括今日技术社区围绕 AI 最热门的讨论方向
+1. **过去7天速览** — 3~5 句话，概括过去7天技术社区围绕 AI 最热门的讨论方向
 
 2. **Dev.to 精选** — 选出 5~10 篇最有价值的文章，用 **Markdown 表格**呈现：
 

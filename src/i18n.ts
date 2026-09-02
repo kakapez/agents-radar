@@ -14,7 +14,7 @@ function t(zh: string, en: string): Record<Lang, string> {
 // ---------------------------------------------------------------------------
 
 export const MSG = {
-  noActivity: t("过去24小时无活动。", "No activity in the last 24 hours."),
+  noActivity: t("过去7天无活动。", "No activity in the last 7 days."),
   summaryFailed: t("⚠️ 摘要生成失败。", "⚠️ Summary generation failed."),
   skillsFailed: t("⚠️ Skills 摘要生成失败。", "⚠️ Skills summary generation failed."),
   trendingNoData: t(
@@ -30,7 +30,7 @@ export const MSG = {
 // ---------------------------------------------------------------------------
 
 export const CLI_REPORT = {
-  title: t("AI CLI 工具社区动态日报", "AI CLI Tools Community Digest"),
+  title: t("AI CLI 工具社区周报", "AI CLI Tools Weekly Digest"),
   meta: (utcStr: string, count: number, lang: Lang) =>
     lang === "en"
       ? `> Generated: ${utcStr} UTC | Tools covered: ${count}\n\n`
@@ -42,14 +42,14 @@ export const CLI_REPORT = {
 } as const;
 
 export const OPENCLAW_REPORT = {
-  title: t("OpenClaw 生态日报", "OpenClaw Ecosystem Digest"),
+  title: t("OpenClaw 生态周报", "OpenClaw Ecosystem Weekly Digest"),
   deepDive: t("OpenClaw 项目深度报告", "OpenClaw Deep Dive"),
   comparison: t("横向生态对比", "Cross-Ecosystem Comparison"),
   peers: t("同赛道项目详细报告", "Peer Project Reports"),
 } as const;
 
 export const INFRA_REPORT = {
-  title: t("AI 基础设施日报", "AI Infrastructure Digest"),
+  title: t("AI 基础设施周报", "AI Infrastructure Weekly Digest"),
   meta: (utcStr: string, count: number, lang: Lang) =>
     lang === "en"
       ? `> Generated: ${utcStr} UTC | Projects covered: ${count}\n\n`
@@ -74,28 +74,32 @@ export const WEB_REPORT = {
 } as const;
 
 export const TRENDING_REPORT = {
-  title: t("AI 开源趋势日报", "AI Open Source Trends"),
+  title: t("AI 开源趋势周报", "AI Open Source Trends Weekly Digest"),
   sources: t("数据来源: GitHub Trending + GitHub Search API", "Sources: GitHub Trending + GitHub Search API"),
   issueTitle: (dateStr: string, lang: Lang) =>
-    lang === "en" ? `📈 AI Open Source Trends ${dateStr}` : `📈 AI 开源趋势日报 ${dateStr}`,
+    lang === "en" ? `📈 AI Open Source Trends Weekly Digest ${dateStr}` : `📈 AI 开源趋势周报 ${dateStr}`,
 } as const;
 
 export const HN_REPORT = {
-  title: t("Hacker News AI 社区动态日报", "Hacker News AI Community Digest"),
+  title: t("Hacker News AI 社区动态周报", "Hacker News AI Community Weekly Digest"),
   issueTitle: (dateStr: string, lang: Lang) =>
-    lang === "en" ? `📰 Hacker News AI Digest ${dateStr}` : `📰 Hacker News AI 社区动态日报 ${dateStr}`,
+    lang === "en"
+      ? `📰 Hacker News AI Community Weekly Digest ${dateStr}`
+      : `📰 Hacker News AI 社区动态周报 ${dateStr}`,
 } as const;
 
 export const PH_REPORT = {
-  title: t("Product Hunt AI 产品日报", "Product Hunt AI Products Digest"),
+  title: t("Product Hunt AI 产品周报", "Product Hunt AI Products Weekly Digest"),
   issueTitle: (dateStr: string, lang: Lang) =>
-    lang === "en" ? `🚀 Product Hunt AI Digest ${dateStr}` : `🚀 Product Hunt AI 产品日报 ${dateStr}`,
+    lang === "en"
+      ? `🚀 Product Hunt AI Products Weekly Digest ${dateStr}`
+      : `🚀 Product Hunt AI 产品周报 ${dateStr}`,
 } as const;
 
 export const ARXIV_REPORT = {
-  title: t("ArXiv AI 研究日报", "ArXiv AI Research Digest"),
+  title: t("ArXiv AI 研究周报", "ArXiv AI Research Weekly Digest"),
   issueTitle: (dateStr: string, lang: Lang) =>
-    lang === "en" ? `📚 ArXiv AI Research Digest ${dateStr}` : `📚 ArXiv AI 研究日报 ${dateStr}`,
+    lang === "en" ? `📚 ArXiv AI Research Weekly Digest ${dateStr}` : `📚 ArXiv AI 研究周报 ${dateStr}`,
 } as const;
 
 // The HF report uses the native weekly digest window; the Hub's download-ranked
@@ -107,9 +111,9 @@ export const HF_REPORT = {
 } as const;
 
 export const COMMUNITY_REPORT = {
-  title: t("技术社区 AI 动态日报", "Tech Community AI Digest"),
+  title: t("技术社区 AI 动态周报", "Tech Community AI Weekly Digest"),
   issueTitle: (dateStr: string, lang: Lang) =>
-    lang === "en" ? `💬 Tech Community AI Digest ${dateStr}` : `💬 技术社区 AI 动态日报 ${dateStr}`,
+    lang === "en" ? `💬 Tech Community AI Weekly Digest ${dateStr}` : `💬 技术社区 AI 动态周报 ${dateStr}`,
 } as const;
 
 export const ISSUE_LABELS = {
@@ -126,20 +130,20 @@ export const ISSUE_LABELS = {
 } as const;
 
 export const CLI_ISSUE_TITLE = (dateStr: string, lang: Lang) =>
-  lang === "en" ? `📊 AI CLI Tools Digest ${dateStr}` : `📊 AI CLI 工具社区动态日报 ${dateStr}`;
+  lang === "en" ? `📊 AI CLI Tools Weekly Digest ${dateStr}` : `📊 AI CLI 工具社区周报 ${dateStr}`;
 
 export const OPENCLAW_ISSUE_TITLE = (dateStr: string, lang: Lang) =>
-  lang === "en" ? `🦞 OpenClaw Ecosystem Digest ${dateStr}` : `🦞 OpenClaw 生态日报 ${dateStr}`;
+  lang === "en" ? `🦞 OpenClaw Ecosystem Weekly Digest ${dateStr}` : `🦞 OpenClaw 生态周报 ${dateStr}`;
 
 export const INFRA_ISSUE_TITLE = (dateStr: string, lang: Lang) =>
-  lang === "en" ? `⚙️ AI Infrastructure Digest ${dateStr}` : `⚙️ AI 基础设施日报 ${dateStr}`;
+  lang === "en" ? `⚙️ AI Infrastructure Weekly Digest ${dateStr}` : `⚙️ AI 基础设施周报 ${dateStr}`;
 
 // ---------------------------------------------------------------------------
 // Footer (used in report.ts)
 // ---------------------------------------------------------------------------
 
 export const FOOTER = {
-  autoGen: t("本日报由", "This digest is auto-generated by"),
+  autoGen: t("本周报由", "This weekly digest is auto-generated by"),
 } as const;
 
 // ---------------------------------------------------------------------------
@@ -151,26 +155,26 @@ export const FOOTER = {
 // ---------------------------------------------------------------------------
 
 export const REPORT_LABELS: Record<string, string> = {
-  "ai-cli": "AI CLI 工具社区动态日报",
-  "ai-cli-en": "AI CLI Tools Digest",
-  "ai-agents": "AI Agents 生态日报",
-  "ai-agents-en": "AI Agents Ecosystem Digest",
-  "ai-infra": "AI 基础设施日报",
-  "ai-infra-en": "AI Infrastructure Digest",
+  "ai-cli": "AI CLI 工具社区周报",
+  "ai-cli-en": "AI CLI Tools Weekly Digest",
+  "ai-agents": "AI Agents 生态周报",
+  "ai-agents-en": "AI Agents Ecosystem Weekly Digest",
+  "ai-infra": "AI 基础设施周报",
+  "ai-infra-en": "AI Infrastructure Weekly Digest",
   "ai-web": "AI 官方内容追踪报告",
   "ai-web-en": "Official AI Content Report",
-  "ai-trending": "AI 开源趋势日报",
-  "ai-trending-en": "AI Open Source Trends",
-  "ai-hn": "Hacker News AI 社区动态日报",
-  "ai-hn-en": "Hacker News AI Community Digest",
-  "ai-ph": "Product Hunt AI 产品日报",
-  "ai-ph-en": "Product Hunt AI Products Digest",
-  "ai-arxiv": "ArXiv AI 研究日报",
-  "ai-arxiv-en": "ArXiv AI Research Digest",
+  "ai-trending": "AI 开源趋势周报",
+  "ai-trending-en": "AI Open Source Trends Weekly Digest",
+  "ai-hn": "Hacker News AI 社区动态周报",
+  "ai-hn-en": "Hacker News AI Community Weekly Digest",
+  "ai-ph": "Product Hunt AI 产品周报",
+  "ai-ph-en": "Product Hunt AI Products Weekly Digest",
+  "ai-arxiv": "ArXiv AI 研究周报",
+  "ai-arxiv-en": "ArXiv AI Research Weekly Digest",
   "ai-hf": "Hugging Face 热门模型周报",
   "ai-hf-en": "Hugging Face Trending Models Weekly",
-  "ai-community": "技术社区 AI 动态日报",
-  "ai-community-en": "Tech Community AI Digest",
+  "ai-community": "技术社区 AI 动态周报",
+  "ai-community-en": "Tech Community AI Weekly Digest",
   // Weekly/monthly rollups are no longer generated; kept so archived reports
   // still render a proper title in the sidebar and RSS feed.
   "ai-weekly": "AI 工具生态周报",

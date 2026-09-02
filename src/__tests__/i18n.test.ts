@@ -62,18 +62,18 @@ describe("issue title functions", () => {
   it("CLI_ISSUE_TITLE produces zh and en titles", () => {
     expect(CLI_ISSUE_TITLE("2026-03-12", "zh")).toContain("AI CLI");
     expect(CLI_ISSUE_TITLE("2026-03-12", "zh")).toContain("2026-03-12");
-    expect(CLI_ISSUE_TITLE("2026-03-12", "en")).toContain("AI CLI Tools Digest");
+    expect(CLI_ISSUE_TITLE("2026-03-12", "en")).toContain("AI CLI Tools Weekly Digest");
   });
 
   it("OPENCLAW_ISSUE_TITLE produces zh and en titles", () => {
     expect(OPENCLAW_ISSUE_TITLE("2026-03-12", "zh")).toContain("OpenClaw");
-    expect(OPENCLAW_ISSUE_TITLE("2026-03-12", "en")).toContain("OpenClaw Ecosystem Digest");
+    expect(OPENCLAW_ISSUE_TITLE("2026-03-12", "en")).toContain("OpenClaw Ecosystem Weekly Digest");
   });
 
   it("INFRA_ISSUE_TITLE produces zh and en titles", () => {
-    expect(INFRA_ISSUE_TITLE("2026-03-12", "zh")).toContain("AI 基础设施日报");
+    expect(INFRA_ISSUE_TITLE("2026-03-12", "zh")).toContain("AI 基础设施周报");
     expect(INFRA_ISSUE_TITLE("2026-03-12", "zh")).toContain("2026-03-12");
-    expect(INFRA_ISSUE_TITLE("2026-03-12", "en")).toContain("AI Infrastructure Digest");
+    expect(INFRA_ISSUE_TITLE("2026-03-12", "en")).toContain("AI Infrastructure Weekly Digest");
   });
 
   it("WEB_REPORT.issueTitle includes first crawl flag", () => {
@@ -141,8 +141,8 @@ describe("ISSUE_LABELS", () => {
 
 describe("REPORT_LABELS", () => {
   it("covers the infra report in both languages", () => {
-    expect(REPORT_LABELS["ai-infra"]).toBe("AI 基础设施日报");
-    expect(REPORT_LABELS["ai-infra-en"]).toBe("AI Infrastructure Digest");
+    expect(REPORT_LABELS["ai-infra"]).toBe("AI 基础设施周报");
+    expect(REPORT_LABELS["ai-infra-en"]).toBe("AI Infrastructure Weekly Digest");
   });
 });
 

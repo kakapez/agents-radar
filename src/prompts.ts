@@ -151,8 +151,8 @@ export function buildCliPrompt(
   // empty one the model would feel obliged to comment on.
   const discussionsSection = sampledDiscussions.length
     ? (lang === "en"
-        ? `\n## Latest Discussions (updated in last 24h)${sampleNote(discussions.length, sampledDiscussions.length, lang, "engagement")}\n`
-        : `\n## 最新 Discussions（过去24小时内更新）${sampleNote(discussions.length, sampledDiscussions.length, lang, "engagement")}\n`) +
+        ? `\n## Latest Discussions (updated in the last 7 days)${sampleNote(discussions.length, sampledDiscussions.length, lang, "engagement")}\n`
+        : `\n## 最新 Discussions（过去7天内更新）${sampleNote(discussions.length, sampledDiscussions.length, lang, "engagement")}\n`) +
       sampledDiscussions.map((d) => formatDiscussion(d, lang)).join("\n") +
       "\n"
     : "";
@@ -162,20 +162,20 @@ export function buildCliPrompt(
 
 # Data source: github.com/${cfg.repo}
 
-## Latest Releases (last 24h)
+## Latest Releases (the last 7 days)
 ${releasesText}
 
-## Latest Issues (updated in last 24h)${issueNote}
+## Latest Issues (updated in the last 7 days)${issueNote}
 ${issuesText}
 
-## Latest Pull Requests (updated in last 24h)${prNote}
+## Latest Pull Requests (updated in the last 7 days)${prNote}
 ${prsText}
 ${discussionsSection}
 ---
 
 Generate a structured English digest with the following sections:
 
-1. **Today's Highlights** - 2-3 sentences summarizing the most important updates
+1. **Last 7 Days' Highlights** - 2-3 sentences summarizing the most important updates
 2. **Releases** - If new versions exist, summarize changes; omit if none
 3. **Hot Issues** - Pick 10 noteworthy Issues, explain why they matter and community reaction
 4. **Key PR Progress** - Pick 10 important PRs, describe features or fixes
@@ -187,24 +187,24 @@ Style: concise and professional, suited for technical developers. Include GitHub
 `;
   }
 
-  return `你是一位专注于 AI 开发工具的技术分析师。请根据以下 GitHub 数据，生成 ${dateStr} 的 ${cfg.name} 社区动态日报。
+  return `你是一位专注于 AI 开发工具的技术分析师。请根据以下 GitHub 数据，生成 ${dateStr} 的 ${cfg.name} 社区动态周报。
 
 # 数据来源: github.com/${cfg.repo}
 
-## 最新 Releases（过去24小时）
+## 最新 Releases（过去7天）
 ${releasesText}
 
-## 最新 Issues（过去24小时内更新）${issueNote}
+## 最新 Issues（过去7天内更新）${issueNote}
 ${issuesText}
 
-## 最新 Pull Requests（过去24小时内更新）${prNote}
+## 最新 Pull Requests（过去7天内更新）${prNote}
 ${prsText}
 ${discussionsSection}
 ---
 
-请生成一份结构清晰的中文日报，包含以下部分：
+请生成一份结构清晰的中文周报，包含以下部分：
 
-1. **今日速览** - 用2-3句话概括今天最重要的动态
+1. **过去7天速览** - 用2-3句话概括过去7天最重要的动态
 2. **版本发布** - 如有新版本，总结更新内容；无则省略
 3. **社区热点 Issues** - 挑选 10 个最值得关注的 Issue，说明为什么重要、社区反应如何
 4. **重要 PR 进展** - 挑选 10 个重要的 PR，说明功能或修复内容
@@ -245,52 +245,52 @@ export function buildInfraPrompt(
 
 # Data source: github.com/${cfg.repo}
 
-## Latest Releases (last 24h)
+## Latest Releases (the last 7 days)
 ${releasesText}
 
-## Latest Issues (updated in last 24h)${issueNote}
+## Latest Issues (updated in the last 7 days)${issueNote}
 ${issuesText}
 
-## Latest Pull Requests (updated in last 24h)${prNote}
+## Latest Pull Requests (updated in the last 7 days)${prNote}
 ${prsText}
 
 ---
 
 Generate a structured English digest with the following sections:
 
-1. **Today's Highlights** - 2-3 sentences summarizing the most important updates
+1. **Last 7 Days' Highlights** - 2-3 sentences summarizing the most important updates
 2. **Releases & Breaking Changes** - New versions, API/config changes, migration notes; omit if none
 3. **New Model & Hardware Support** - Newly supported models, architectures, backends (CUDA/ROCm/Metal/CPU), quantization formats
 4. **Performance & Optimization** - Throughput, latency, memory and kernel work landed or in progress, with concrete numbers when available
-5. **Stability & Regressions** - Crashes, correctness bugs, regressions reported today, ranked by severity, note if fix PRs exist
+5. **Stability & Regressions** - Crashes, correctness bugs, regressions reported the last 7 days, ranked by severity, note if fix PRs exist
 6. **What This Means for Application Developers** - Practical takeaways for people building agents/apps on top of this project
 
 Style: concise and professional, suited for infrastructure engineers. Include GitHub links for each item.
 `;
   }
 
-  return `你是一位专注于 AI 基础设施（推理引擎、模型服务、LLM 网关、微调框架）的技术分析师。请根据以下 GitHub 数据，生成 ${dateStr} 的 ${cfg.name} 动态日报。
+  return `你是一位专注于 AI 基础设施（推理引擎、模型服务、LLM 网关、微调框架）的技术分析师。请根据以下 GitHub 数据，生成 ${dateStr} 的 ${cfg.name} 动态周报。
 
 # 数据来源: github.com/${cfg.repo}
 
-## 最新 Releases（过去24小时）
+## 最新 Releases（过去7天）
 ${releasesText}
 
-## 最新 Issues（过去24小时内更新）${issueNote}
+## 最新 Issues（过去7天内更新）${issueNote}
 ${issuesText}
 
-## 最新 Pull Requests（过去24小时内更新）${prNote}
+## 最新 Pull Requests（过去7天内更新）${prNote}
 ${prsText}
 
 ---
 
-请生成一份结构清晰的中文日报，包含以下部分：
+请生成一份结构清晰的中文周报，包含以下部分：
 
-1. **今日速览** - 用2-3句话概括今天最重要的动态
+1. **过去7天速览** - 用2-3句话概括过去7天最重要的动态
 2. **版本发布与破坏性变更** - 新版本、API/配置变更、迁移注意事项；无则省略
 3. **新模型与硬件支持** - 新增支持的模型、架构、后端（CUDA/ROCm/Metal/CPU）、量化格式
 4. **性能与优化** - 已落地或进行中的吞吐、延迟、显存、算子优化，有具体数字时请引用
-5. **稳定性与回归** - 今日报告的崩溃、正确性 Bug、回归问题，按严重程度排列，标注是否已有 fix PR
+5. **稳定性与回归** - 今周报告的崩溃、正确性 Bug、回归问题，按严重程度排列，标注是否已有 fix PR
 6. **对应用开发者的意义** - 对在此项目之上构建 Agent/应用的开发者有什么实际影响
 
 语言要求：简洁专业，适合基础设施工程师阅读。每个条目附上 GitHub 链接。
@@ -302,7 +302,7 @@ export function buildInfraComparisonPrompt(
   dateStr: string,
   lang: Lang = "zh",
 ): string {
-  const noActivityStr = lang === "en" ? "No activity in the last 24 hours." : "过去24小时无活动。";
+  const noActivityStr = lang === "en" ? "No activity in the last 7 days." : "过去7天无活动。";
 
   const sections = digests
     .map((d) => {
@@ -321,12 +321,12 @@ ${sections}
 
 Generate a cross-project comparison report in English with these sections:
 
-1. **Ecosystem Overview** - 3-5 sentences on the overall AI infrastructure landscape today
+1. **Ecosystem Overview** - 3-5 sentences on the overall AI infrastructure landscape the last 7 days
 2. **Activity Comparison** - Table comparing Issues count, PR count and Release status for each project
 3. **Model Support Race** - Which projects shipped support for which new models/architectures, and who is ahead
 4. **Performance Frontier** - Where the optimization effort is concentrated (KV cache, batching, quantization, distributed serving, kernels)
 5. **Layer Positioning** - How these projects differ by layer: serving engine vs local runtime vs gateway vs training/fine-tuning
-6. **Trend Signals** - Industry trends extracted from today's activity, and what agent/application developers should watch
+6. **Trend Signals** - Industry trends extracted from the last 7 days' activity, and what agent/application developers should watch
 
 Style: concise and professional, data-backed, suited for infrastructure engineers and technical decision-makers.
 `;
@@ -341,11 +341,11 @@ ${sections}
 请基于上述各项目的动态，生成一份横向对比分析报告，包含以下部分：
 
 1. **生态全景** - 用3-5句话概括当前 AI 基础设施整体态势
-2. **各项目活跃度对比** - 以表格形式汇总各项目今日的 Issues 数、PR 数、Release 情况
+2. **各项目活跃度对比** - 以表格形式汇总各项目过去7天的 Issues 数、PR 数、Release 情况
 3. **模型支持竞速** - 哪些项目支持了哪些新模型/新架构，谁跑在前面
 4. **性能优化前沿** - 优化火力集中在哪些方向（KV cache、批处理、量化、分布式推理、算子）
 5. **分层定位差异** - 这些项目在分层上的差异：推理引擎 vs 本地运行时 vs 网关 vs 训练/微调
-6. **值得关注的趋势信号** - 从今日动态中提炼行业趋势，以及 Agent/应用开发者应当关注什么
+6. **值得关注的趋势信号** - 从过去7天动态中提炼行业趋势，以及 Agent/应用开发者应当关注什么
 
 语言要求：简洁专业，有数据支撑，适合基础设施工程师和技术决策者阅读。
 `;
@@ -389,8 +389,8 @@ export function buildPeerPrompt(
     return `You are an analyst of AI agent and personal AI assistant open-source projects. Based on the following GitHub data from ${cfg.name} (github.com/${cfg.repo}), generate a project digest for ${dateStr}.
 
 # Data Overview
-- Issues updated in last 24h: ${totalIssues} (open/active: ${openIssues}, closed: ${closedIssues})
-- PRs updated in last 24h: ${totalPrs} (open: ${openPrs}, merged/closed: ${mergedPrs})
+- Issues updated in the last 7 days: ${totalIssues} (open/active: ${openIssues}, closed: ${closedIssues})
+- PRs updated in the last 7 days: ${totalPrs} (open: ${openPrs}, merged/closed: ${mergedPrs})
 - New releases: ${releases.length}
 
 ## Latest Releases
@@ -406,11 +406,11 @@ ${prsText}
 
 Generate a structured English ${cfg.name} project digest with the following sections:
 
-1. **Today's Overview** - 3-5 sentences summarizing project status, including activity assessment
+1. **Last 7 Days' Overview** - 3-5 sentences summarizing project status, including activity assessment
 2. **Releases** - If new versions exist, detail changes, breaking changes, migration notes; omit if none
-3. **Project Progress** - Merged/closed PRs today, what features advanced or were fixed
+3. **Project Progress** - Merged/closed PRs the last 7 days, what features advanced or were fixed
 4. **Community Hot Topics** - Most active Issues/PRs with most comments/reactions (with links), analyze underlying needs
-5. **Bugs & Stability** - Bugs, crashes, regressions reported today, ranked by severity, note if fix PRs exist
+5. **Bugs & Stability** - Bugs, crashes, regressions reported the last 7 days, ranked by severity, note if fix PRs exist
 6. **Feature Requests & Roadmap Signals** - User-requested features, predict which might be in next version
 7. **User Feedback Summary** - Real user pain points, use cases, satisfaction/dissatisfaction
 8. **Backlog Watch** - Long-unanswered important Issues or PRs needing maintainer attention
@@ -419,11 +419,11 @@ Style: objective, data-driven, highlighting project health. Include GitHub links
 `;
   }
 
-  return `你是一位 AI 智能体与个人 AI 助手领域开源项目分析师。请根据以下来自 ${cfg.name} (github.com/${cfg.repo}) 的 GitHub 数据，生成 ${dateStr} 的项目动态日报。
+  return `你是一位 AI 智能体与个人 AI 助手领域开源项目分析师。请根据以下来自 ${cfg.name} (github.com/${cfg.repo}) 的 GitHub 数据，生成 ${dateStr} 的项目动态周报。
 
 # 数据概览
-- 过去24小时 Issues 更新：${totalIssues} 条（新开/活跃: ${openIssues}，已关闭: ${closedIssues}）
-- 过去24小时 PR 更新：${totalPrs} 条（待合并: ${openPrs}，已合并/关闭: ${mergedPrs}）
+- 过去7天 Issues 更新：${totalIssues} 条（新开/活跃: ${openIssues}，已关闭: ${closedIssues}）
+- 过去7天 PR 更新：${totalPrs} 条（待合并: ${openPrs}，已合并/关闭: ${mergedPrs}）
 - 新版本发布：${releases.length} 个
 
 ## 最新 Releases
@@ -437,13 +437,13 @@ ${prsText}
 
 ---
 
-请生成一份结构清晰的 ${cfg.name} 项目日报，包含以下部分：
+请生成一份结构清晰的 ${cfg.name} 项目周报，包含以下部分：
 
-1. **今日速览** - 用3-5句话概括项目今日整体状态，包括活跃度评估
+1. **过去7天速览** - 用3-5句话概括项目过去7天整体状态，包括活跃度评估
 2. **版本发布** - 如有新版本，详细说明更新内容、破坏性变更、迁移注意事项；无则省略
-3. **项目进展** - 今日合并/关闭的重要 PR，说明推进了哪些功能或修复，项目整体向前迈进了多少
-4. **社区热点** - 今日讨论最活跃、评论最多、反应最多的 Issues/PRs（附链接），分析背后的诉求
-5. **Bug 与稳定性** - 今日报告的 Bug、崩溃、回归问题，按严重程度排列，标注是否已有 fix PR
+3. **项目进展** - 过去7天合并/关闭的重要 PR，说明推进了哪些功能或修复，项目整体向前迈进了多少
+4. **社区热点** - 过去7天讨论最活跃、评论最多、反应最多的 Issues/PRs（附链接），分析背后的诉求
+5. **Bug 与稳定性** - 今周报告的 Bug、崩溃、回归问题，按严重程度排列，标注是否已有 fix PR
 6. **功能请求与路线图信号** - 用户提出的新功能需求，结合已有 PR 判断哪些可能被纳入下一版本
 7. **用户反馈摘要** - 从 Issues 评论中提炼真实用户痛点、使用场景、满意/不满意的地方
 8. **待处理积压** - 长期未响应的重要 Issue 或 PR，提醒维护者关注
@@ -458,7 +458,7 @@ export function buildPeersComparisonPrompt(
   dateStr: string,
   lang: Lang = "zh",
 ): string {
-  const noActivityStr = lang === "en" ? "No activity in the last 24 hours." : "过去24小时无活动。";
+  const noActivityStr = lang === "en" ? "No activity in the last 7 days." : "过去7天无活动。";
 
   const openclawSection =
     lang === "en"
@@ -511,7 +511,7 @@ ${peerSections}
 请基于上述各项目的动态，生成一份横向对比分析报告，包含以下部分：
 
 1. **生态全景** - 用3-5句话概括个人 AI 助手/自主智能体开源生态整体态势
-2. **各项目活跃度对比** - 以表格形式汇总各项目今日的 Issues 数、PR 数、Release 情况及健康度评估
+2. **各项目活跃度对比** - 以表格形式汇总各项目过去7天的 Issues 数、PR 数、Release 情况及健康度评估
 3. **OpenClaw 在生态中的定位** - 与同类相比的优势、技术路线差异、社区规模对比
 4. **共同关注的技术方向** - 多项目共同涌现的需求（注明涉及哪些项目、具体诉求）
 5. **差异化定位分析** - 功能侧重、目标用户、技术架构的关键差异
@@ -585,7 +585,7 @@ ${issuesText}
 }
 
 export function buildComparisonPrompt(digests: RepoDigest[], dateStr: string, lang: Lang = "zh"): string {
-  const noActivityStr = lang === "en" ? "No activity in the last 24 hours." : "过去24小时无活动。";
+  const noActivityStr = lang === "en" ? "No activity in the last 7 days." : "过去7天无活动。";
 
   const sections = digests
     .map((d) => {
@@ -605,7 +605,7 @@ ${sections}
 Generate a cross-tool comparison report in English with these sections:
 
 1. **Ecosystem Overview** - 3-5 sentences on the overall AI CLI tools development landscape
-2. **Activity Comparison** - Table comparing Issues count, PR count, Discussions count and Release status for each tool today. Some repos have Issues/PRs disabled upstream and use Discussions as their only community channel — mark those as "N/A" rather than reporting them as inactive
+2. **Activity Comparison** - Table comparing Issues count, PR count, Discussions count and Release status for each tool the last 7 days. Some repos have Issues/PRs disabled upstream and use Discussions as their only community channel — mark those as "N/A" rather than reporting them as inactive
 3. **Shared Feature Directions** - Requirements appearing across multiple tool communities (note which tools, specific needs)
 4. **Differentiation Analysis** - Differences in feature focus, target users, and technical approach
 5. **Community Momentum & Maturity** - Which tools have more active communities, which are rapidly iterating
@@ -624,7 +624,7 @@ ${sections}
 请基于上述各工具的动态，生成一份横向对比分析报告，包含以下部分：
 
 1. **生态全景** - 用3-5句话概括当前 AI CLI 工具整体发展态势
-2. **各工具活跃度对比** - 以表格形式汇总各工具今日的 Issues 数、PR 数、Discussions 数、Release 情况。部分仓库上游关闭了 Issues/PR，仅以 Discussions 作为社区渠道，这类请标注 "N/A"，不要判定为不活跃
+2. **各工具活跃度对比** - 以表格形式汇总各工具过去7天的 Issues 数、PR 数、Discussions 数、Release 情况。部分仓库上游关闭了 Issues/PR，仅以 Discussions 作为社区渠道，这类请标注 "N/A"，不要判定为不活跃
 3. **共同关注的功能方向** - 多个工具社区都在关注的需求（说明哪些工具、具体诉求）
 4. **差异化定位分析** - 各工具在功能侧重、目标用户、技术路线上的差异
 5. **社区热度与成熟度** - 哪些工具社区更活跃，哪些处于快速迭代阶段

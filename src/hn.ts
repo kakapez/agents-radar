@@ -98,7 +98,7 @@ function toHnStory(item: HnFirebaseItem, hnRank: number): HnStory {
 // Fetch
 // ---------------------------------------------------------------------------
 
-export async function fetchHnData(): Promise<HnData> {
+export async function fetchHnData(since: Date): Promise<HnData> {
   try {
     const topResp = await fetch(HN_TOPSTORIES_URL, {
       headers: { "User-Agent": "agents-radar/1.0" },
@@ -129,6 +129,9 @@ export async function fetchHnData(): Promise<HnData> {
       for (let j = 0; j < items.length && stories.length < HN_TOP_STORIES; j += 1) {
         const item = items[j];
         if (!item || item.deleted || item.dead || item.type !== "story" || !item.title) {
+          continue;
+        }
+        if (item.time === undefined || item.time * 1000 < since.getTime()) {
           continue;
         }
         if (isAiRelated(item)) {

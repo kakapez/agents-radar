@@ -104,17 +104,15 @@ interface PhResponse {
 // Fetch
 // ---------------------------------------------------------------------------
 
-export async function fetchPhData(): Promise<PhData> {
+export async function fetchPhData(since: Date): Promise<PhData> {
   const token = process.env["PRODUCTHUNT_TOKEN"] ?? "";
   if (!token) {
     console.log("  [ph] PRODUCTHUNT_TOKEN not set — skipping.");
     return { products: [], fetchSuccess: false };
   }
 
-  // Fetch yesterday's products (they've had a full day to accumulate votes)
-  const now = new Date();
-  const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-  const twoDaysAgo = new Date(now.getTime() - 48 * 60 * 60 * 1000);
+  // Query the complete requested window; ranking remains vote-based.
+  const until = new Date();
 
   try {
     const resp = await fetch(API_URL, {
@@ -128,8 +126,8 @@ export async function fetchPhData(): Promise<PhData> {
         query: POSTS_QUERY,
         variables: {
           first: PH_FETCH_COUNT,
-          postedAfter: twoDaysAgo.toISOString(),
-          postedBefore: yesterday.toISOString(),
+          postedAfter: since.toISOString(),
+          postedBefore: until.toISOString(),
         },
       }),
     });
@@ -149,6 +147,8 @@ export async function fetchPhData(): Promise<PhData> {
     const allProducts: PhProduct[] = [];
     for (const edge of json.data?.posts?.edges ?? []) {
       const node = edge.node;
+      const createdAt = new Date(node.createdAt).getTime();
+      if (createdAt < since.getTime() || createdAt > until.getTime()) continue;
       const topicSlugs = node.topics?.edges?.map((e) => e.node.slug) ?? [];
       const topicNames = node.topics?.edges?.map((e) => e.node.name) ?? [];
 

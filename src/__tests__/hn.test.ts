@@ -13,7 +13,8 @@ describe("fetchHnData", () => {
     vi.restoreAllMocks();
   });
 
-  it("preserves Hacker News rank order after filtering AI stories", async () => {
+  it("filters AI stories to the requested seven-day window", async () => {
+    const since = new Date(1_800_000_100 * 1000);
     vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
       const url = String(input);
 
@@ -30,7 +31,7 @@ describe("fetchHnData", () => {
             type: "story",
             by: "alice",
             time: 1_800_000_000,
-            title: "Open hardware router",
+            title: "Old AI hardware router",
             score: 500,
             descendants: 20,
             url: "https://example.com/router",
@@ -80,7 +81,7 @@ describe("fetchHnData", () => {
       return jsonResponse(items.get(id) ?? null);
     });
 
-    const result = await fetchHnData();
+    const result = await fetchHnData(since);
 
     expect(result.fetchSuccess).toBe(true);
     expect(result.stories.map((story) => story.id)).toEqual(["102", "103"]);
@@ -91,7 +92,7 @@ describe("fetchHnData", () => {
   it("returns an unsuccessful result when the topstories request fails", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(jsonResponse({ error: "failed" }, 500));
 
-    const result = await fetchHnData();
+    const result = await fetchHnData(new Date());
 
     expect(result).toEqual({ stories: [], fetchSuccess: false });
   });

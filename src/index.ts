@@ -188,13 +188,13 @@ async function fetchAllData(
         trendingFetchSuccess: false,
       }),
     ),
-    fetchHnData().catch((): HnData => ({ stories: [], fetchSuccess: false })),
-    fetchPhData().catch((): PhData => ({ products: [], fetchSuccess: false })),
-    fetchArxivData().catch((): ArxivData => ({ papers: [], fetchSuccess: false })),
+    fetchHnData(since).catch((): HnData => ({ stories: [], fetchSuccess: false })),
+    fetchPhData(since).catch((): PhData => ({ products: [], fetchSuccess: false })),
+    fetchArxivData(since).catch((): ArxivData => ({ papers: [], fetchSuccess: false })),
     fetchHf
       ? fetchHfData().catch((): HfData => ({ models: [], fetchSuccess: false }))
       : Promise.resolve<HfData>({ models: [], fetchSuccess: false }),
-    fetchDevtoData().catch((): DevtoData => ({ articles: [], fetchSuccess: false })),
+    fetchDevtoData(since).catch((): DevtoData => ({ articles: [], fetchSuccess: false })),
     fetchLobstersData().catch((): LobstersData => ({ stories: [], fetchSuccess: false })),
   ]);
 

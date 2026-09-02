@@ -55,7 +55,7 @@ interface DevtoApiArticle {
 // Fetch
 // ---------------------------------------------------------------------------
 
-export async function fetchDevtoData(): Promise<DevtoData> {
+export async function fetchDevtoData(since: Date): Promise<DevtoData> {
   const seen = new Map<number, DevtoArticle>();
 
   try {
@@ -65,7 +65,6 @@ export async function fetchDevtoData(): Promise<DevtoData> {
           const params = new URLSearchParams({
             tag,
             per_page: String(DEVTO_PER_PAGE),
-            top: "1", // top articles from the past 1 day
           });
 
           const resp = await fetch(`${API_URL}?${params}`, {
@@ -79,6 +78,7 @@ export async function fetchDevtoData(): Promise<DevtoData> {
 
           const raw = (await resp.json()) as DevtoApiArticle[];
           for (const a of raw) {
+            if (new Date(a.published_at).getTime() < since.getTime()) continue;
             if (!seen.has(a.id)) {
               seen.set(a.id, {
                 id: a.id,

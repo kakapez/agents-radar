@@ -2,7 +2,8 @@
  * ArXiv AI papers fetched via the ArXiv API (Atom feed).
  *
  * Strategy: query cs.AI + cs.CL + cs.LG categories for the newest papers,
- * sorted by submission date, filtered to last 48h.
+ * sorted by submission date, filtered to the requested window (best effort because
+ * the API result cap can omit older papers from a busy category).
  */
 
 // ---------------------------------------------------------------------------
@@ -104,7 +105,7 @@ async function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function fetchArxivData(): Promise<ArxivData> {
+export async function fetchArxivData(since: Date): Promise<ArxivData> {
   const seen = new Map<string, ArxivPaper>();
 
   for (let i = 0; i < CATEGORIES.length; i++) {
@@ -145,10 +146,8 @@ export async function fetchArxivData(): Promise<ArxivData> {
     }
   }
 
-  // Filter to last 48h (ArXiv has a ~1-day publishing delay, so 24h would miss today's batch)
-  const cutoff = Date.now() - 48 * 60 * 60 * 1000;
   const papers = [...seen.values()]
-    .filter((p) => new Date(p.published).getTime() > cutoff)
+    .filter((p) => new Date(p.published).getTime() >= since.getTime())
     .sort((a, b) => new Date(b.published).getTime() - new Date(a.published).getTime())
     .slice(0, ARXIV_MAX_RESULTS);
 

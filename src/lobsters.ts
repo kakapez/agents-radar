@@ -51,7 +51,7 @@ interface LobstersApiStory {
 // Fetch
 // ---------------------------------------------------------------------------
 
-export async function fetchLobstersData(): Promise<LobstersData> {
+export async function fetchLobstersData(since: Date): Promise<LobstersData> {
   const seen = new Map<string, LobstersStory>();
 
   try {
@@ -88,10 +88,9 @@ export async function fetchLobstersData(): Promise<LobstersData> {
       }),
     );
 
-    // Filter to last 7 days (Lobste.rs AI/ML tag volume is low)
-    const sevenDaysAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    // Filter using the shared cutoff supplied by the orchestration layer.
     const stories = [...seen.values()]
-      .filter((s) => new Date(s.publishedAt).getTime() > sevenDaysAgo)
+      .filter((s) => new Date(s.publishedAt).getTime() > since.getTime())
       .sort((a, b) => b.score - a.score)
       .slice(0, LOBSTERS_TOP);
 

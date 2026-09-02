@@ -193,8 +193,8 @@ async function searchAiRepos(sevenDaysAgo: string): Promise<SearchRepo[]> {
 // Export
 // ---------------------------------------------------------------------------
 
-export async function fetchTrendingData(): Promise<TrendingData> {
-  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+export async function fetchTrendingData(since: Date): Promise<TrendingData> {
+  const sevenDaysAgo = since.toISOString().slice(0, 10);
 
   const [{ repos: trendingRepos, success }, searchRepos] = await Promise.all([
     fetchGitHubTrending(),

@@ -7,6 +7,21 @@ const CST_OFFSET_MS = 8 * 60 * 60 * 1000;
 /** Duration of the rolling seven-day digest window in milliseconds. */
 export const WEEKLY_WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
 
+export interface WeeklyWindow {
+  now: Date;
+  since: Date;
+  hfEnabled: true;
+}
+
+/** Build the shared seven-day source cutoff used by every digest run. */
+export function createWeeklyWindow(now: Date): WeeklyWindow {
+  return {
+    now,
+    since: new Date(now.getTime() - WEEKLY_WINDOW_MS),
+    hfEnabled: true,
+  };
+}
+
 /** Convert a Date to a CST (UTC+8) date string like "2026-03-11". */
 export function toCstDateStr(date: Date): string {
   return new Date(date.getTime() + CST_OFFSET_MS).toISOString().slice(0, 10);

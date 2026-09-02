@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { toCstDateStr, toUtcStr, weekdayOf, WEEKLY_WINDOW_MS } from "../date.ts";
+import { createWeeklyWindow, toCstDateStr, toUtcStr, weekdayOf, WEEKLY_WINDOW_MS } from "../date.ts";
 
 describe("toCstDateStr", () => {
   it("shifts a late-UTC timestamp to the next CST day", () => {
@@ -19,12 +19,30 @@ describe("toUtcStr", () => {
 });
 
 describe("weekly window", () => {
-  it("builds a seven-day cutoff from the run timestamp", () => {
+  it("builds a seven-day cutoff from the run timestamp and enables HF", () => {
     const runAt = new Date("2026-09-07T23:00:00Z");
-    const since = new Date(runAt.getTime() - WEEKLY_WINDOW_MS);
-    expect(since.toISOString()).toBe("2026-08-31T23:00:00.000Z");
-    expect(new Date("2026-08-31T23:00:00Z") >= since).toBe(true);
-    expect(new Date("2026-08-31T22:59:59.999Z") >= since).toBe(false);
+    const window = createWeeklyWindow(runAt);
+
+    expect(window.now).toBe(runAt);
+    expect(window.since.toISOString()).toBe("2026-08-31T23:00:00.000Z");
+    expect(window.hfEnabled).toBe(true);
+    expect(new Date("2026-08-31T23:00:00Z") >= window.since).toBe(true);
+    expect(new Date("2026-08-31T22:59:59.999Z") >= window.since).toBe(false);
+  });
+
+  it("returns one cutoff object for all source fetchers", () => {
+    const window = createWeeklyWindow(new Date("2026-09-02T12:00:00Z"));
+    const sourceCutoffs = [
+      window.since,
+      window.since,
+      window.since,
+      window.since,
+      window.since,
+      window.since,
+    ];
+
+    expect(new Set(sourceCutoffs).size).toBe(1);
+    expect(window.since.getTime()).toBe(window.now.getTime() - WEEKLY_WINDOW_MS);
   });
 });
 

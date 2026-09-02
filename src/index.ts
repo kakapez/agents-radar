@@ -181,11 +181,13 @@ async function fetchAllData(
         return { site: "openai", siteName: "OpenAI", isFirstRun: false, newItems: [], totalDiscovered: 0 };
       }),
     ]),
-    fetchTrendingData().catch((): TrendingData => ({
-      trendingRepos: [],
-      searchRepos: [],
-      trendingFetchSuccess: false,
-    })),
+    fetchTrendingData().catch(
+      (): TrendingData => ({
+        trendingRepos: [],
+        searchRepos: [],
+        trendingFetchSuccess: false,
+      }),
+    ),
     fetchHnData().catch((): HnData => ({ stories: [], fetchSuccess: false })),
     fetchPhData().catch((): PhData => ({ products: [], fetchSuccess: false })),
     fetchArxivData().catch((): ArxivData => ({ papers: [], fetchSuccess: false })),

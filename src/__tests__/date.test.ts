@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { toCstDateStr, toUtcStr, weekdayOf } from "../date.ts";
+import { toCstDateStr, toUtcStr, weekdayOf, WEEKLY_WINDOW_MS } from "../date.ts";
 
 describe("toCstDateStr", () => {
   it("shifts a late-UTC timestamp to the next CST day", () => {
@@ -15,6 +15,16 @@ describe("toCstDateStr", () => {
 describe("toUtcStr", () => {
   it("formats as 'YYYY-MM-DD HH:MM'", () => {
     expect(toUtcStr(new Date("2026-08-27T04:07:31Z"))).toBe("2026-08-27 04:07");
+  });
+});
+
+describe("weekly window", () => {
+  it("builds a seven-day cutoff from the run timestamp", () => {
+    const runAt = new Date("2026-09-07T23:00:00Z");
+    const since = new Date(runAt.getTime() - WEEKLY_WINDOW_MS);
+    expect(since.toISOString()).toBe("2026-08-31T23:00:00.000Z");
+    expect(new Date("2026-08-31T23:00:00Z") >= since).toBe(true);
+    expect(new Date("2026-08-31T22:59:59.999Z") >= since).toBe(false);
   });
 });
 

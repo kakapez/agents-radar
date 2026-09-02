@@ -1,17 +1,10 @@
-name: Daily Agents Radar
+name: Weekly Agents Radar
 
 on:
   schedule:
-    # 22:37 UTC daily = 06:37 CST (UTC+8) the next day. A ~20 min run started
-    # then lands the digest around 07:00 CST, which is when it is expected.
-    #
-    # The minute is deliberately off the hour. GitHub queues scheduled runs and
-    # drops them under load, and the :00 slot is the most contended one. At
-    # "0 23 * * *" this workflow degraded badly in August 2026: the 08-26 run
-    # was dispatched 5h07m late and the 08-27 run was never created at all.
-    # qwen-flash has flat pricing, so moving the slot costs nothing (it would
-    # have, under DeepSeek's peak/off-peak scheme).
-    - cron: "37 22 * * *"
+    # Sunday 23:00 UTC = Monday 07:00 CST (UTC+8), producing one native
+    # seven-day digest at the start of each week.
+    - cron: "0 23 * * 0"
   workflow_dispatch:
 
 permissions:
@@ -20,13 +13,11 @@ permissions:
   pages: write
   id-token: write
 
-# A late scheduled run must not overlap a manual catch-up run: both would build
-# the same CST day's digest and open a duplicate set of issues (as happened on
-# 2026-08-27, which produced 18 duplicates). Queue rather than cancel, so the
-# scheduled run reaches the guard job below only after the manual one has
-# committed its digest — and then skips.
+# A delayed scheduled run must not overlap a manual regeneration: both could
+# build the same CST week's digest and open duplicate issues. Queue rather than
+# cancel so the scheduled run reaches the guard after the manual run commits.
 concurrency:
-  group: daily-digest
+  group: weekly-digest
   cancel-in-progress: false
 
 jobs:
@@ -36,7 +27,7 @@ jobs:
       should_run: ${{ steps.check.outputs.should_run }}
 
     steps:
-      - name: Skip a scheduled run when today's digest already exists
+      - name: Skip a scheduled run when this week's digest already exists
         id: check
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -46,13 +37,14 @@ jobs:
             echo "should_run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # CST date, matching the digests/YYYY-MM-DD/ folder produced by toCstDateStr
+          # CST date, matching the digests/YYYY-MM-DD/ folder produced by the
+          # native weekly digest's toCstDateStr report date.
           DATE=$(TZ=Asia/Shanghai date +%Y-%m-%d)
           if gh api "repos/${{ github.repository }}/contents/digests/$DATE" --silent 2>/dev/null; then
-            echo "digests/$DATE is already committed — a manual run covered today. Skipping."
+            echo "digests/$DATE is already committed — this week's digest exists. Skipping."
             echo "should_run=false" >> "$GITHUB_OUTPUT"
           else
-            echo "No digests/$DATE yet — proceeding."
+            echo "No digests/$DATE yet — proceeding with this week's digest."
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -83,7 +75,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run daily digest
+      - name: Run weekly digest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
@@ -105,7 +97,7 @@ jobs:
           else
             # CST date, matching the digests/YYYY-MM-DD/ folder produced by toCstDateStr
             DATE=$(TZ=Asia/Shanghai date +%Y-%m-%d)
-            git commit -m "digest: ${DATE} daily digest"
+            git commit -m "digest: ${DATE} weekly digest"
             git pull --rebase
             git push
           fi

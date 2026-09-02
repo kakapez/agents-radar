@@ -11,6 +11,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { NOTIFY_LABELS } from "./i18n.ts";
 import type { Highlights } from "./notify.ts";
 
@@ -63,20 +64,11 @@ export function buildFeishuMessage(
   highlights?: Highlights | null,
 ): string {
   const PAGES_URL = (pagesUrl ?? process.env["PAGES_URL"] ?? PAGES_URL_DEFAULT).replace(/\/$/, "");
-  const baseReports = reports.filter((r) => !r.endsWith("-en"));
-  const isWeekly = baseReports.includes("ai-weekly");
-  const isMonthly = baseReports.includes("ai-monthly");
-
-  const icon = isMonthly ? "📆" : isWeekly ? "📅" : "📡";
-  const suffix = isMonthly ? " 月报" : isWeekly ? " 周报" : "";
-  const lines: string[] = [`${icon} **agents-radar${suffix} · ${date}**`];
-
-  const ordered = [
-    ...baseReports.filter((r) => !r.includes("weekly") && !r.includes("monthly")),
-    ...baseReports.filter((r) => r.includes("weekly") || r.includes("monthly")),
-  ];
+  const ordered = reports.filter((r) => !r.endsWith("-en"));
+  const lines: string[] = [`📡 **agents-radar · ${date}**`];
 
   const zhHighlights = highlights?.zh ?? {};
+  const enHighlights = highlights?.en ?? {};
 
   for (const r of ordered) {
     const zhLabel = NOTIFY_LABELS[r]?.zh ?? r;
@@ -92,7 +84,9 @@ export function buildFeishuMessage(
       lines.push(`• [${zhLabel}](${zhUrl})`);
     }
 
-    const items = zhHighlights[r];
+    // Fall back to en when a report's zh highlights are missing so a
+    // single-language failure never blanks the message.
+    const items = zhHighlights[r] ?? enHighlights[r];
     if (items?.length) {
       for (const h of items) {
         lines.push(`  ◦ ${h}`);
@@ -137,11 +131,7 @@ async function main(): Promise<void> {
     }
   }
 
-  const isMonthly = reports.some((r) => r === "ai-monthly");
-  const isWeekly = reports.some((r) => r === "ai-weekly");
-  const icon = isMonthly ? "📆" : isWeekly ? "📅" : "📡";
-  const suffix = isMonthly ? " 月报" : isWeekly ? " 周报" : "";
-  const title = `${icon} agents-radar${suffix} · ${date}`;
+  const title = `📡 agents-radar · ${date}`;
 
   const content = buildFeishuMessage(date, reports, undefined, highlights);
 
@@ -150,7 +140,11 @@ async function main(): Promise<void> {
   console.log("[feishu] Done!");
 }
 
-main().catch((e: unknown) => {
-  console.error("[feishu]", e instanceof Error ? e.message : e);
-  process.exit(1);
-});
+// Only auto-send when run directly (`tsx src/feishu.ts`). Guard prevents an
+// accidental send when another module imports from here.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((e: unknown) => {
+    console.error("[feishu]", e instanceof Error ? e.message : e);
+    process.exit(1);
+  });
+}

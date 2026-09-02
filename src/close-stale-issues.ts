@@ -1,10 +1,8 @@
-import { closeStaleIssues } from "./github.ts";
-
-const STALE_DAYS = 7;
+import { closeSupersededIssues } from "./github.ts";
 
 async function main(): Promise<void> {
-  const closed = await closeStaleIssues(STALE_DAYS);
-  console.log(`[close-stale] Closed ${closed} issue(s) older than ${STALE_DAYS} days.`);
+  const closed = await closeSupersededIssues();
+  console.log(`[close-stale] Closed ${closed} superseded issue(s).`);
 }
 
 main().catch((e: unknown) => {

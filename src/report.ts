@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { type Lang, FOOTER } from "./i18n.ts";
+import { buildTranslationPrompt } from "./prompts.ts";
 import { sleep } from "./date.ts";
 
 // ---------------------------------------------------------------------------
@@ -13,19 +14,13 @@ import { sleep } from "./date.ts";
 
 export const LLM_TOKENS_DEFAULT = 4096;
 export const LLM_TOKENS_TRENDING = 6144;
+/** Table-formatted listing reports (HN, PH, ArXiv, HF, Community) need extra
+ *  headroom for the multi-row tables plus 2-sentence summaries. */
+export const LLM_TOKENS_LISTING = 6144;
 export const LLM_TOKENS_WEB = 8192;
-export const LLM_TOKENS_ROLLUP = 8192;
 import { type LlmProvider, createProvider } from "./providers/index.ts";
-import { DeepSeekProvider } from "./providers/deepseek.ts";
 
 const provider: LlmProvider = createProvider();
-
-const fallbackProvider: LlmProvider | null = (() => {
-  const key = process.env["DEEPSEEK_API_KEY"];
-  if (!key) return null;
-  console.log("[providers] Fallback provider configured: deepseek");
-  return new DeepSeekProvider(key);
-})();
 
 // ---------------------------------------------------------------------------
 // Concurrency limiter — prevents rate-limit (429) errors when many LLM calls
@@ -65,8 +60,47 @@ export function is429(err: unknown): boolean {
   return (err as { status?: number })?.status === 429 || String(err).includes("429");
 }
 
-function is403(err: unknown): boolean {
-  return (err as { status?: number })?.status === 403 || String(err).includes("permission_error");
+/** Node/undici error codes for a connection that never carried a request. */
+const CONNECTION_ERROR_CODES = new Set([
+  "ETIMEDOUT",
+  "ECONNRESET",
+  "ECONNREFUSED",
+  "ENOTFOUND",
+  "EAI_AGAIN",
+  "EPIPE",
+  "UND_ERR_CONNECT_TIMEOUT",
+  "UND_ERR_HEADERS_TIMEOUT",
+  "UND_ERR_SOCKET",
+]);
+
+/**
+ * True when the request never reached the model — DNS, TCP or TLS failed.
+ *
+ * The signal is buried: the OpenAI SDK reports these as `APIConnectionError`
+ * with `status: undefined`, wrapping a `TypeError: fetch failed`, wrapping the
+ * `AggregateError` that actually carries `code`. So walk the cause chain rather
+ * than inspecting only the outermost error. The depth cap guards against a
+ * self-referencing chain.
+ */
+export function isConnectionError(err: unknown): boolean {
+  for (let cur: unknown = err, depth = 0; cur != null && depth < 5; depth++) {
+    const e = cur as { name?: string; code?: string; message?: string; cause?: unknown };
+    if (e.name === "APIConnectionError" || e.name === "APIConnectionTimeoutError") return true;
+    if (typeof e.code === "string" && CONNECTION_ERROR_CODES.has(e.code)) return true;
+    if (typeof e.message === "string" && /fetch failed|Connection error/i.test(e.message)) return true;
+    cur = e.cause;
+  }
+  return false;
+}
+
+/**
+ * Retry rate limits and connection failures; let everything else through.
+ *
+ * A 4xx that is not 429 will fail identically on the next attempt, and retrying
+ * a 5xx risks a duplicate generation that already billed.
+ */
+export function isRetryable(err: unknown): boolean {
+  return is429(err) || isConnectionError(err);
 }
 
 export async function callLlm(prompt: string, maxTokens = LLM_TOKENS_DEFAULT): Promise<string> {
@@ -76,23 +110,96 @@ export async function callLlm(prompt: string, maxTokens = LLM_TOKENS_DEFAULT): P
     try {
       return await provider.call(prompt, maxTokens);
     } catch (err) {
-      if (attempt < MAX_RETRIES && is429(err)) {
+      if (attempt < MAX_RETRIES && isRetryable(err)) {
         releaseSlot();
         released = true;
         const wait = RETRY_BASE_MS * 2 ** attempt;
-        console.error(`[llm] 429 — retry ${attempt + 1}/${MAX_RETRIES} in ${wait / 1000}s...`);
+        const reason = is429(err) ? "429" : "connection error";
+        console.error(`[llm] ${reason} — retry ${attempt + 1}/${MAX_RETRIES} in ${wait / 1000}s...`);
         await sleep(wait);
         continue;
-      }
-      if (is403(err) && fallbackProvider) {
-        console.error(`[llm] 403 quota exceeded — switching to fallback provider`);
-        return await fallbackProvider.call(prompt, maxTokens);
       }
       throw err;
     } finally {
       if (!released) releaseSlot();
     }
   }
+}
+
+// ---------------------------------------------------------------------------
+// Translation
+// ---------------------------------------------------------------------------
+
+/**
+ * Translate a finished English report body into Chinese.
+ *
+ * Report bodies are generated once in English and translated from there. The
+ * previous design ran the whole pipeline twice — once per language — over the
+ * same GitHub/API data, which doubled the bill for identical information. A
+ * translation prompt carries only the finished report instead of the raw item
+ * dump, so it costs a fraction of the input tokens.
+ *
+ * `maxTokens` should match the budget the English body was generated with, or
+ * a long report gets truncated mid-translation.
+ *
+ * Falls back to the English text on failure: a Chinese report that is partly
+ * English still carries the day's information, an empty one carries none.
+ */
+export async function translateToZh(text: string, maxTokens = LLM_TOKENS_DEFAULT): Promise<string> {
+  if (!text.trim()) return text;
+  try {
+    return await callLlm(buildTranslationPrompt(text), maxTokens);
+  } catch (err) {
+    console.error(`[translate] Failed, falling back to English: ${err}`);
+    return text;
+  }
+}
+
+// Matches ASCII control characters U+0000–U+001F. Built from a string so no
+// literal control character appears in the source (keeps it readable + lint-clean).
+// eslint-disable-next-line no-control-regex
+const CONTROL_CHARS = new RegExp("[\\u0000-\\u001F]", "g");
+
+/**
+ * Parse JSON returned by an LLM. Strips markdown code fences and replaces raw
+ * control characters with spaces before parsing. The model occasionally emits
+ * an unescaped control character (e.g. a bare newline) inside a string literal,
+ * which is illegal in JSON and makes `JSON.parse` throw "Bad control character
+ * in string literal". Control chars outside strings are only insignificant
+ * whitespace, so replacing them is safe either way.
+ *
+ * If the strict parse still fails, the payload is repaired once (drop any prose
+ * wrapper around the JSON, strip trailing commas) and retried — a single stray
+ * character (e.g. a trailing comma before `}`) used to wipe an entire language's
+ * highlights.json.
+ */
+export function parseLlmJson<T = unknown>(raw: string): T {
+  const cleaned = raw
+    .replace(/```json?\n?/g, "")
+    .replace(/```/g, "")
+    .replace(CONTROL_CHARS, " ")
+    .trim();
+  try {
+    return JSON.parse(cleaned) as T;
+  } catch (err) {
+    const repaired = repairJson(cleaned);
+    if (repaired !== cleaned) return JSON.parse(repaired) as T;
+    throw err;
+  }
+}
+
+/**
+ * Best-effort repair of common LLM JSON defects: narrow to the outermost
+ * object/array (dropping surrounding prose) and remove trailing commas before a
+ * closing brace or bracket. Returns the input unchanged when nothing applies.
+ */
+function repairJson(s: string): string {
+  const first = s.search(/[{[]/);
+  const lastBrace = s.lastIndexOf("}");
+  const lastBracket = s.lastIndexOf("]");
+  const last = Math.max(lastBrace, lastBracket);
+  const narrowed = first >= 0 && last > first ? s.slice(first, last + 1) : s;
+  return narrowed.replace(/,(\s*[}\]])/g, "$1");
 }
 
 // ---------------------------------------------------------------------------

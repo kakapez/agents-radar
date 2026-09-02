@@ -2,7 +2,7 @@
  * LLM prompt builders and item formatting.
  */
 
-import type { RepoConfig, GitHubItem, GitHubRelease } from "./github.ts";
+import type { RepoConfig, GitHubItem, GitHubRelease, GitHubDiscussion } from "./github.ts";
 import type { Lang } from "./i18n.ts";
 
 // ---------------------------------------------------------------------------
@@ -14,6 +14,7 @@ export interface RepoDigest {
   issues: GitHubItem[];
   prs: GitHubItem[];
   releases: GitHubRelease[];
+  discussions: GitHubDiscussion[];
   summary: string;
 }
 
@@ -49,25 +50,72 @@ export function formatItem(item: GitHubItem, lang: Lang = "zh"): string {
   ].join("\n");
 }
 
+export function formatDiscussion(d: GitHubDiscussion, lang: Lang = "zh"): string {
+  const body = (d.body ?? "").replace(/\n/g, " ").trim().slice(0, 300);
+  const ellipsis = (d.body ?? "").length > 300 ? "..." : "";
+  const t =
+    lang === "en"
+      ? { author: "Author", created: "Created", updated: "Updated", comments: "Comments", url: "URL" }
+      : { author: "作者", created: "创建", updated: "更新", comments: "评论", url: "链接" };
+  const answered = d.answered ? (lang === "en" ? " [ANSWERED]" : " [已解决]") : "";
+  // Same URL-shortening as formatItem: keep "owner/repo" only, so the rendered
+  // issue body never contains a full github.com link that triggers back-refs.
+  const repoSlug = d.html_url.replace(/^https:\/\/github\.com\//, "").replace(/\/discussions\/\d+$/, "");
+  return [
+    `#${d.number} [${d.category}]${answered} ${d.title}`,
+    `  ${t.author}: ${d.author} | ${t.created}: ${d.created_at.slice(0, 10)} | ${t.updated}: ${d.updated_at.slice(0, 10)} | ${t.comments}: ${d.comments} | 👍: ${d.upvotes}`,
+    `  ${t.url}: ${repoSlug} Discussion #${d.number}`,
+    `  ${lang === "en" ? "Summary" : "摘要"}: ${body}${ellipsis}`,
+  ].join("\n");
+}
+
 // ---------------------------------------------------------------------------
 // Sampling helpers (shared)
 // ---------------------------------------------------------------------------
 
 const CLI_ISSUE_LIMIT = 30;
 const CLI_PR_LIMIT = 20;
+// Higher than the issue/PR limits: for a repo with Issues/PRs disabled the
+// discussion list is the entire report, not a supplement to them.
+const CLI_DISCUSSION_LIMIT = 40;
 
 /** Sort by comment count desc, take top N. */
 export function topN(items: GitHubItem[], n: number): GitHubItem[] {
   return [...items].sort((a, b) => b.comments - a.comments).slice(0, n);
 }
 
-export function sampleNote(total: number, sampled: number, lang: Lang = "zh"): string {
+/**
+ * Sort discussions by engagement (comments + upvotes) desc, take top N.
+ * Unlike issues, upvotes are the primary signal on a discussion board — many
+ * high-value threads are feature requests with votes but no replies.
+ */
+export function topDiscussions(items: GitHubDiscussion[], n: number): GitHubDiscussion[] {
+  return [...items].sort((a, b) => b.comments + b.upvotes - (a.comments + a.upvotes)).slice(0, n);
+}
+
+/** What the top-N sample was ranked by, so the note doesn't misstate the sort. */
+export type SampleBy = "comments" | "engagement";
+
+const SAMPLE_BY_TEXT: Record<SampleBy, Record<Lang, string>> = {
+  comments: { en: "comment count", zh: "评论数" },
+  engagement: { en: "comments + upvotes", zh: "评论数 + 点赞数" },
+};
+
+export function sampleNote(
+  total: number,
+  sampled: number,
+  lang: Lang = "zh",
+  by: SampleBy = "comments",
+): string {
+  const criterion = SAMPLE_BY_TEXT[by][lang];
   if (lang === "en") {
     return total > sampled
-      ? `(Total: ${total} items; showing top ${sampled} by comment count)`
+      ? `(Total: ${total} items; showing top ${sampled} by ${criterion})`
       : `(Total: ${total} items)`;
   }
-  return total > sampled ? `（共 ${total} 条，以下展示评论数最多的 ${sampled} 条）` : `（共 ${total} 条）`;
+  return total > sampled
+    ? `（共 ${total} 条，以下展示${criterion}最多的 ${sampled} 条）`
+    : `（共 ${total} 条）`;
 }
 
 // ---------------------------------------------------------------------------
@@ -79,11 +127,13 @@ export function buildCliPrompt(
   issues: GitHubItem[],
   prs: GitHubItem[],
   releases: GitHubRelease[],
+  discussions: GitHubDiscussion[],
   dateStr: string,
   lang: Lang = "zh",
 ): string {
   const sampledIssues = topN(issues, CLI_ISSUE_LIMIT);
   const sampledPrs = topN(prs, CLI_PR_LIMIT);
+  const sampledDiscussions = topDiscussions(discussions, CLI_DISCUSSION_LIMIT);
 
   const issuesText =
     sampledIssues.map((i) => formatItem(i, lang)).join("\n") || (lang === "en" ? "None" : "无");
@@ -96,6 +146,16 @@ export function buildCliPrompt(
 
   const issueNote = sampleNote(issues.length, sampledIssues.length, lang);
   const prNote = sampleNote(prs.length, sampledPrs.length, lang);
+
+  // Repos without discussions enabled get no section at all, rather than an
+  // empty one the model would feel obliged to comment on.
+  const discussionsSection = sampledDiscussions.length
+    ? (lang === "en"
+        ? `\n## Latest Discussions (updated in last 24h)${sampleNote(discussions.length, sampledDiscussions.length, lang, "engagement")}\n`
+        : `\n## 最新 Discussions（过去24小时内更新）${sampleNote(discussions.length, sampledDiscussions.length, lang, "engagement")}\n`) +
+      sampledDiscussions.map((d) => formatDiscussion(d, lang)).join("\n") +
+      "\n"
+    : "";
 
   if (lang === "en") {
     return `You are a technical analyst focused on AI developer tools. Based on the following GitHub data, generate the ${cfg.name} community digest for ${dateStr}.
@@ -110,7 +170,7 @@ ${issuesText}
 
 ## Latest Pull Requests (updated in last 24h)${prNote}
 ${prsText}
-
+${discussionsSection}
 ---
 
 Generate a structured English digest with the following sections:
@@ -119,8 +179,9 @@ Generate a structured English digest with the following sections:
 2. **Releases** - If new versions exist, summarize changes; omit if none
 3. **Hot Issues** - Pick 10 noteworthy Issues, explain why they matter and community reaction
 4. **Key PR Progress** - Pick 10 important PRs, describe features or fixes
-5. **Feature Request Trends** - Distill the most-requested feature directions from all Issues
-6. **Developer Pain Points** - Summarize recurring developer frustrations or high-frequency requests
+5. **Hot Discussions** - Pick up to 10 noteworthy Discussions, grouped by category (Ideas / Q&A / Show and tell). Omit this section entirely if no discussion data was provided
+6. **Feature Request Trends** - Distill the most-requested feature directions from all Issues and Discussions
+7. **Developer Pain Points** - Summarize recurring developer frustrations or high-frequency requests
 
 Style: concise and professional, suited for technical developers. Include GitHub links for each item.
 `;
@@ -138,7 +199,7 @@ ${issuesText}
 
 ## 最新 Pull Requests（过去24小时内更新）${prNote}
 ${prsText}
-
+${discussionsSection}
 ---
 
 请生成一份结构清晰的中文日报，包含以下部分：
@@ -147,10 +208,146 @@ ${prsText}
 2. **版本发布** - 如有新版本，总结更新内容；无则省略
 3. **社区热点 Issues** - 挑选 10 个最值得关注的 Issue，说明为什么重要、社区反应如何
 4. **重要 PR 进展** - 挑选 10 个重要的 PR，说明功能或修复内容
-5. **功能需求趋势** - 从所有 Issues 中提炼出社区最关注的功能方向（如 IDE 集成、性能、新模型支持等）
-6. **开发者关注点** - 总结开发者反馈中的痛点或高频需求
+5. **热门 Discussions** - 挑选最多 10 个值得关注的 Discussion，按分区（Ideas / Q&A / Show and tell）归类。若未提供 Discussions 数据则整节省略
+6. **功能需求趋势** - 从所有 Issues 与 Discussions 中提炼出社区最关注的功能方向（如 IDE 集成、性能、新模型支持等）
+7. **开发者关注点** - 总结开发者反馈中的痛点或高频需求
 
 语言要求：简洁专业，适合技术开发者阅读。每个条目附上 GitHub 链接。
+`;
+}
+
+const INFRA_ISSUE_LIMIT = 30;
+const INFRA_PR_LIMIT = 20;
+
+export function buildInfraPrompt(
+  cfg: RepoConfig,
+  issues: GitHubItem[],
+  prs: GitHubItem[],
+  releases: GitHubRelease[],
+  dateStr: string,
+  lang: Lang = "zh",
+): string {
+  const sampledIssues = topN(issues, INFRA_ISSUE_LIMIT);
+  const sampledPrs = topN(prs, INFRA_PR_LIMIT);
+
+  const noneStr = lang === "en" ? "None" : "无";
+  const issuesText = sampledIssues.map((i) => formatItem(i, lang)).join("\n") || noneStr;
+  const prsText = sampledPrs.map((p) => formatItem(p, lang)).join("\n") || noneStr;
+  const releasesText = releases.length
+    ? releases.map((r) => `- ${r.tag_name}: ${r.name}\n  ${(r.body ?? "").slice(0, 300)}`).join("\n")
+    : noneStr;
+
+  const issueNote = sampleNote(issues.length, sampledIssues.length, lang);
+  const prNote = sampleNote(prs.length, sampledPrs.length, lang);
+
+  if (lang === "en") {
+    return `You are a technical analyst focused on AI infrastructure — inference engines, model serving, LLM gateways and fine-tuning frameworks. Based on the following GitHub data, generate the ${cfg.name} digest for ${dateStr}.
+
+# Data source: github.com/${cfg.repo}
+
+## Latest Releases (last 24h)
+${releasesText}
+
+## Latest Issues (updated in last 24h)${issueNote}
+${issuesText}
+
+## Latest Pull Requests (updated in last 24h)${prNote}
+${prsText}
+
+---
+
+Generate a structured English digest with the following sections:
+
+1. **Today's Highlights** - 2-3 sentences summarizing the most important updates
+2. **Releases & Breaking Changes** - New versions, API/config changes, migration notes; omit if none
+3. **New Model & Hardware Support** - Newly supported models, architectures, backends (CUDA/ROCm/Metal/CPU), quantization formats
+4. **Performance & Optimization** - Throughput, latency, memory and kernel work landed or in progress, with concrete numbers when available
+5. **Stability & Regressions** - Crashes, correctness bugs, regressions reported today, ranked by severity, note if fix PRs exist
+6. **What This Means for Application Developers** - Practical takeaways for people building agents/apps on top of this project
+
+Style: concise and professional, suited for infrastructure engineers. Include GitHub links for each item.
+`;
+  }
+
+  return `你是一位专注于 AI 基础设施（推理引擎、模型服务、LLM 网关、微调框架）的技术分析师。请根据以下 GitHub 数据，生成 ${dateStr} 的 ${cfg.name} 动态日报。
+
+# 数据来源: github.com/${cfg.repo}
+
+## 最新 Releases（过去24小时）
+${releasesText}
+
+## 最新 Issues（过去24小时内更新）${issueNote}
+${issuesText}
+
+## 最新 Pull Requests（过去24小时内更新）${prNote}
+${prsText}
+
+---
+
+请生成一份结构清晰的中文日报，包含以下部分：
+
+1. **今日速览** - 用2-3句话概括今天最重要的动态
+2. **版本发布与破坏性变更** - 新版本、API/配置变更、迁移注意事项；无则省略
+3. **新模型与硬件支持** - 新增支持的模型、架构、后端（CUDA/ROCm/Metal/CPU）、量化格式
+4. **性能与优化** - 已落地或进行中的吞吐、延迟、显存、算子优化，有具体数字时请引用
+5. **稳定性与回归** - 今日报告的崩溃、正确性 Bug、回归问题，按严重程度排列，标注是否已有 fix PR
+6. **对应用开发者的意义** - 对在此项目之上构建 Agent/应用的开发者有什么实际影响
+
+语言要求：简洁专业，适合基础设施工程师阅读。每个条目附上 GitHub 链接。
+`;
+}
+
+export function buildInfraComparisonPrompt(
+  digests: RepoDigest[],
+  dateStr: string,
+  lang: Lang = "zh",
+): string {
+  const noActivityStr = lang === "en" ? "No activity in the last 24 hours." : "过去24小时无活动。";
+
+  const sections = digests
+    .map((d) => {
+      const hasData = d.issues.length || d.prs.length || d.releases.length || d.discussions.length;
+      if (!hasData) return `## ${d.config.name} (github.com/${d.config.repo})\n${noActivityStr}`;
+      return `## ${d.config.name} (github.com/${d.config.repo})\n${d.summary}`;
+    })
+    .join("\n\n---\n\n");
+
+  if (lang === "en") {
+    return `You are a senior analyst of the AI infrastructure ecosystem — inference engines, model serving, LLM gateways and fine-tuning frameworks. The following are ${dateStr} digest summaries for each project:
+
+${sections}
+
+---
+
+Generate a cross-project comparison report in English with these sections:
+
+1. **Ecosystem Overview** - 3-5 sentences on the overall AI infrastructure landscape today
+2. **Activity Comparison** - Table comparing Issues count, PR count and Release status for each project
+3. **Model Support Race** - Which projects shipped support for which new models/architectures, and who is ahead
+4. **Performance Frontier** - Where the optimization effort is concentrated (KV cache, batching, quantization, distributed serving, kernels)
+5. **Layer Positioning** - How these projects differ by layer: serving engine vs local runtime vs gateway vs training/fine-tuning
+6. **Trend Signals** - Industry trends extracted from today's activity, and what agent/application developers should watch
+
+Style: concise and professional, data-backed, suited for infrastructure engineers and technical decision-makers.
+`;
+  }
+
+  return `你是一位专注于 AI 基础设施（推理引擎、模型服务、LLM 网关、微调框架）生态的资深技术分析师。以下是 ${dateStr} 各项目的动态摘要：
+
+${sections}
+
+---
+
+请基于上述各项目的动态，生成一份横向对比分析报告，包含以下部分：
+
+1. **生态全景** - 用3-5句话概括当前 AI 基础设施整体态势
+2. **各项目活跃度对比** - 以表格形式汇总各项目今日的 Issues 数、PR 数、Release 情况
+3. **模型支持竞速** - 哪些项目支持了哪些新模型/新架构，谁跑在前面
+4. **性能优化前沿** - 优化火力集中在哪些方向（KV cache、批处理、量化、分布式推理、算子）
+5. **分层定位差异** - 这些项目在分层上的差异：推理引擎 vs 本地运行时 vs 网关 vs 训练/微调
+6. **值得关注的趋势信号** - 从今日动态中提炼行业趋势，以及 Agent/应用开发者应当关注什么
+
+语言要求：简洁专业，有数据支撑，适合基础设施工程师和技术决策者阅读。
 `;
 }
 
@@ -270,7 +467,7 @@ export function buildPeersComparisonPrompt(
 
   const peerSections = peerDigests
     .map((d) => {
-      const hasData = d.issues.length || d.prs.length || d.releases.length;
+      const hasData = d.issues.length || d.prs.length || d.releases.length || d.discussions.length;
       if (!hasData) return `## ${d.config.name} (github.com/${d.config.repo})\n${noActivityStr}`;
       return `## ${d.config.name} (github.com/${d.config.repo})\n${d.summary}`;
     })
@@ -392,7 +589,7 @@ export function buildComparisonPrompt(digests: RepoDigest[], dateStr: string, la
 
   const sections = digests
     .map((d) => {
-      const hasData = d.issues.length || d.prs.length || d.releases.length;
+      const hasData = d.issues.length || d.prs.length || d.releases.length || d.discussions.length;
       if (!hasData) return `## ${d.config.name} (github.com/${d.config.repo})\n${noActivityStr}`;
       return `## ${d.config.name} (github.com/${d.config.repo})\n${d.summary}`;
     })
@@ -408,7 +605,7 @@ ${sections}
 Generate a cross-tool comparison report in English with these sections:
 
 1. **Ecosystem Overview** - 3-5 sentences on the overall AI CLI tools development landscape
-2. **Activity Comparison** - Table comparing Issues count, PR count, Release status for each tool today
+2. **Activity Comparison** - Table comparing Issues count, PR count, Discussions count and Release status for each tool today. Some repos have Issues/PRs disabled upstream and use Discussions as their only community channel — mark those as "N/A" rather than reporting them as inactive
 3. **Shared Feature Directions** - Requirements appearing across multiple tool communities (note which tools, specific needs)
 4. **Differentiation Analysis** - Differences in feature focus, target users, and technical approach
 5. **Community Momentum & Maturity** - Which tools have more active communities, which are rapidly iterating
@@ -427,7 +624,7 @@ ${sections}
 请基于上述各工具的动态，生成一份横向对比分析报告，包含以下部分：
 
 1. **生态全景** - 用3-5句话概括当前 AI CLI 工具整体发展态势
-2. **各工具活跃度对比** - 以表格形式汇总各工具今日的 Issues 数、PR 数、Release 情况
+2. **各工具活跃度对比** - 以表格形式汇总各工具今日的 Issues 数、PR 数、Discussions 数、Release 情况。部分仓库上游关闭了 Issues/PR，仅以 Discussions 作为社区渠道，这类请标注 "N/A"，不要判定为不活跃
 3. **共同关注的功能方向** - 多个工具社区都在关注的需求（说明哪些工具、具体诉求）
 4. **差异化定位分析** - 各工具在功能侧重、目标用户、技术路线上的差异
 5. **社区热度与成熟度** - 哪些工具社区更活跃，哪些处于快速迭代阶段
@@ -435,4 +632,45 @@ ${sections}
 
 语言要求：简洁专业，有数据支撑，适合技术决策者和开发者阅读。
 `;
+}
+
+// ---------------------------------------------------------------------------
+// Translation
+// ---------------------------------------------------------------------------
+// Every report body is generated once in English, then translated to Chinese.
+// Generating both languages from the raw GitHub/API data doubled the LLM bill
+// for identical information; a translation pass costs a fraction of the input
+// tokens because its prompt is the finished report, not the source data.
+
+/** Prompt that translates a finished English report body into Chinese. */
+export function buildTranslationPrompt(text: string): string {
+  return `Translate the following English technical report into Simplified Chinese.
+
+${text}
+
+---
+
+Rules:
+- Output ONLY the translation. No preamble, no explanation, no markdown fences around the whole output.
+- Preserve the Markdown structure exactly: headings, tables (including column alignment rows), lists, blockquotes, bold/italic, horizontal rules, emoji.
+- Keep URLs, link targets, code spans, code blocks, numbers and dates verbatim.
+- Keep project names, repository slugs, usernames, version tags, file paths and API/config identifiers in their original form — do not translate them.
+- Issue/PR references like #12345 and their link text stay as-is.
+- Use natural technical Chinese, the register of a Chinese developer newsletter — not a literal word-for-word rendering.`;
+}
+
+/** Prompt that translates the string values of a JSON object into Chinese. */
+export function buildJsonTranslationPrompt(json: string): string {
+  return `Translate the string values in the following JSON into Simplified Chinese.
+
+${json}
+
+---
+
+Rules:
+- Return ONLY valid JSON. No markdown fences, no explanation.
+- Keep every key exactly as-is. Keep the array lengths and nesting identical.
+- Translate only the string values.
+- Keep project names, repository slugs, version tags and numbers in their original form.
+- Each translated string must stay under 30 Chinese characters.`;
 }

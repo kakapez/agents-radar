@@ -18,3 +18,8 @@ export function toUtcStr(date: Date): string {
 export function sleep(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
+
+/** Day of week for a "YYYY-MM-DD" date string, 0 = Sunday. */
+export function weekdayOf(dateStr: string): number {
+  return new Date(`${dateStr}T00:00:00Z`).getUTCDay();
+}

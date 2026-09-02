@@ -22,11 +22,9 @@
 <li><a href="https://github.com/openai/codex">OpenAI Codex</a></li>
 <li><a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a></li>
 <li><a href="https://github.com/github/copilot-cli">GitHub Copilot CLI</a></li>
-<li><a href="https://github.com/MoonshotAI/kimi-cli">Kimi Code CLI</a></li>
 <li><a href="https://github.com/anomalyco/opencode">OpenCode</a></li>
-<li><a href="https://github.com/badlogic/pi-mono">Pi</a></li>
+<li><a href="https://github.com/earendil-works/pi">Pi</a></li>
 <li><a href="https://github.com/QwenLM/qwen-code">Qwen Code</a></li>
-<li><a href="https://github.com/Hmbown/DeepSeek-TUI">DeepSeek TUI</a></li>
 <li><a href="https://github.com/anthropics/skills">Claude Code Skills</a></li>
 </ul>
 <hr>
@@ -37,7 +35,7 @@
 <h2>1. 生态全景</h2>
 <p>当前国内国际AI CLI赛道已全面脱离原型验证期，进入生产级落地爆发阶段，头部产品的迭代重心从功能创新转向核心稳定性、企业级特性补全，整体市场渗透率快速提升。MCP、ACP等Agent交互协议已形成全行业共识标准，跨工具、跨服务的互操作门槛大幅降低，生态碎片化问题得到明显缓解。闭源大厂产品集中在合规管控、云边协同、大模型原生适配方向投入，开源/国产新锐工具则重点覆盖本地模型部署、个性化定制、离线场景等细分需求。用户核心诉求已从“能不能生成代码”转向“能不能在全终端场景下稳定运行、不泄露敏感数据、不产生超额无效成本”，AI CLI正在逐步替代交互式GUI编码工具，成为开发者日常工作流的核心组件。</p>
 <hr>
-<h2>2. 各工具活跃度对比</h2>
+<h3><strong>2. 活动对比</strong></h3>
 <table>
 <thead>
 <tr>
@@ -770,7 +768,7 @@ Bug修复：修复此前完全逻辑错误的空Key校验规则，避免空密�
 </details>
 
 <details>
-<summary><strong>Pi</strong> — <a href="https://github.com/badlogic/pi-mono">badlogic/pi-mono</a></summary>
+<summary><strong>Pi</strong> — <a href="https://github.com/earendil-works/pi">earendil-works/pi</a></summary>
 
 <h1>Pi 社区动态日报 2026-05-27</h1>
 <p>数据来源：GitHub 仓库 <a href="https://github.com/badlogic/pi-mono">badlogic/pi-mono</a></p>
@@ -987,11 +985,9 @@ Bug修复：修复此前完全逻辑错误的空Key校验规则，避免空密�
 <li><a href="https://github.com/openai/codex">OpenAI Codex</a></li>
 <li><a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a></li>
 <li><a href="https://github.com/github/copilot-cli">GitHub Copilot CLI</a></li>
-<li><a href="https://github.com/MoonshotAI/kimi-cli">Kimi Code CLI</a></li>
 <li><a href="https://github.com/anomalyco/opencode">OpenCode</a></li>
-<li><a href="https://github.com/badlogic/pi-mono">Pi</a></li>
+<li><a href="https://github.com/earendil-works/pi">Pi</a></li>
 <li><a href="https://github.com/QwenLM/qwen-code">Qwen Code</a></li>
-<li><a href="https://github.com/Hmbown/DeepSeek-TUI">DeepSeek TUI</a></li>
 <li><a href="https://github.com/anthropics/skills">Claude Code Skills</a></li>
 </ul>
 <hr>
@@ -5833,86 +5829,70 @@ OpenClaw is presumed to have the largest <strong>active contributor base</strong
 <thead>
 <tr>
 <th>Dimension</th>
-<th>Assessment</th>
+<th>Key Differentiators</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>Model Capabilities</strong></td>
-<td>Not directly addressed in today&#39;s content; continued inference that core R&amp;D proceeds below public visibility</td>
-</tr>
-<tr>
-<td><strong>Safety</strong></td>
-<td><strong>Dominant visible priority</strong>—but expanding from technical alignment to institutional, philosophical, and theological engagement. &quot;Mechanistic interpretability&quot; (Olah&#39;s research background) now paired with macro-governance frameworks</td>
-</tr>
-<tr>
-<td><strong>Productization</strong></td>
-<td>No product announcements; brand positioning emphasizes responsibility over capability claims</td>
-</tr>
-<tr>
-<td><strong>Ecosystem</strong></td>
-<td>Cultivation of non-traditional stakeholders (Vatican, global religious institutions, philosophical communities) as influence multipliers</td>
+<td><strong>Target Users</strong></td>
+<td></td>
 </tr>
 </tbody></table>
-<h3>OpenAI&#39;s Technical Priorities</h3>
-<p><strong>Insufficient data for assessment.</strong> Zero publications preclude pattern inference.</p>
-<h3>Competitive Dynamics</h3>
-<table>
-<thead>
-<tr>
-<th>Aspect</th>
-<th>Analysis</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Agenda-Setting</strong></td>
-<td>Anthropic is currently <strong>uncontested in the public narrative space</strong> for AI governance philosophy. The Vatican engagement creates a distinctive brand association that competitors cannot easily replicate without appearing reactive</td>
-</tr>
-<tr>
-<td><strong>Capability vs. Values Framing</strong></td>
-<td>Anthropic&#39;s choice to highlight governance constraints rather than technical triumphs suggests a <strong>differentiation strategy</strong>—if OpenAI/others compete on benchmark performance, Anthropic competes on institutional trustworthiness and long-term legitimacy</td>
-</tr>
-<tr>
-<td><strong>Temporal Advantage</strong></td>
-<td>OpenAI&#39;s silence, whether strategic or incidental, creates a narrative vacuum that Anthropic is filling with high-symbolic-value content</td>
-</tr>
-</tbody></table>
-<h3>Impact on Developers and Enterprise Users</h3>
 <ul>
-<li><strong>Enterprise Procurement Signal:</strong> Anthropic&#39;s Vatican engagement may resonate with risk-averse enterprise buyers (financial services, healthcare, government) where &quot;ethical AI&quot; credentials increasingly appear in RFP criteria</li>
-<li><strong>Developer Sentiment:</strong> Technical developers may perceive this as distraction from API improvements, model capabilities, or pricing—unless framed as part of predictable long-term safety that enables sustainable building</li>
-<li><strong>Regulatory Anticipation:</strong> Engagement with papal encyclicals suggests Anthropic is positioning for EU AI Act implementation, potential US federal frameworks, and Global South regulatory development where Vatican influence persists</li>
+<li><strong>Claude Code</strong>: Power users in reverse engineering, firmware analysis, and security research (despite safety filter friction).  </li>
+<li><strong>OpenAI Codex</strong>: Enterprise developers relying on automation and cross-platform remote workflows (Windows + Android instability noted).  </li>
+<li><strong>Gemini CLI</strong>: DevOps and systems engineers prioritizing agent reliability and sandboxed execution (strong focus on subagent recovery).  </li>
+<li><strong>GitHub Copilot CLI</strong>: Enterprise adopters requiring mTLS proxy support, OAuth compliance, and strict policy enforcement.  </li>
+<li><strong>OpenCode</strong>: Early adopters seeking free-tier access and community-driven innovation (but facing sustainability concerns).  </li>
+<li><strong>Pi</strong>: Developers valuing extensibility, open provider models, and embedded control flows (e.g., <code>pi-verdict</code>).  </li>
+<li><strong>Qwen Code</strong>: Chinese-region users and developers leveraging domestic AI infrastructure (Bailian Token Plan, Tencent APIs). |</li>
+</ul>
+<p>| <strong>Technical Approach</strong> |  </p>
+<ul>
+<li><strong>Claude Code</strong>: Heavy reliance on safety filters → high false-positive rate in legitimate R&amp;D.  </li>
+<li><strong>OpenAI Codex</strong>: Focus on runtime tracing, turn cost telemetry, and agent state reconciliation.  </li>
+<li><strong>Gemini CLI</strong>: Emphasis on secure I/O routing, ACL enforcement, and memory hygiene.  </li>
+<li><strong>GitHub Copilot CLI</strong>: Prioritizes enterprise-grade networking (mTLS, proxies) and stable session lifecycles.  </li>
+<li><strong>OpenCode</strong>: Experimental, rapidly evolving — high risk/reward for early adopters.  </li>
+<li><strong>Pi</strong>: Modular, provider-agnostic design with experimental TCP/WS transports and headless deployment support.  </li>
+<li><strong>Qwen Code</strong>: Strong focus on auditability (<code>coverage ledger</code>), atomic skill installs, and session integrity.</li>
 </ul>
 <hr>
-<h2>5. Notable Details</h2>
-<h3>Hidden Signals in Anthropic Content</h3>
+<h3><strong>5. Community Momentum &amp; Maturity</strong></h3>
 <table>
 <thead>
 <tr>
-<th>Signal</th>
-<th>Interpretation</th>
+<th>Indicator</th>
+<th>Most Active</th>
+<th>Least Active</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>&quot;Magnifica humanitas&quot; title echo</strong></td>
-<td>Pope&#39;s title evokes both &quot;Magnificat&quot; (biblical hymn of social justice) and Renaissance humanism; Anthropic&#39;s participation claims lineage in human-centered technological tradition</td>
+<td><strong>Issue Volume (High Severity)</strong></td>
+<td><strong>OpenAI Codex</strong>, <strong>Claude Code</strong>, <strong>OpenCode</strong></td>
+<td>Qwen Code (lower volume, but high-priority bugs)</td>
 </tr>
 <tr>
-<td><strong>Olah as speaker, not Amodei</strong></td>
-<td>CEO Dario Amodei&#39;s absence suggests either: (a) Olah&#39;s mechanistic interpretability credibility lends technical gravitas, or (b) deliberate separation of commercial leadership from moral positioning to avoid perceived conflicts of interest</td>
+<td><strong>PR Velocity</strong></td>
+<td><strong>Pi</strong>, <strong>Gemini CLI</strong>, <strong>OpenCode</strong>, <strong>Qwen Code</strong></td>
+<td>GitHub Copilot CLI (no new PRs merged recently)</td>
 </tr>
 <tr>
-<td><strong>&quot;Widen the conversation&quot; framing</strong></td>
-<td>Anthropic&#39;s self-described initiative positions the company as convenor rather than dominant voice—strategic modesty that may disarm critics of corporate AI ethics</td>
+<td><strong>Release Cadence</strong></td>
+<td><strong>OpenAI Codex</strong> (3 alphas in 24h) &gt; <strong>Claude Code</strong> &gt; <strong>Gemini CLI</strong> (nightly)</td>
+<td>GitHub Copilot CLI (stable, infrequent updates)</td>
 </tr>
 <tr>
-<td><strong>Date precision: &quot;Monday May 25, 2026&quot;</strong></td>
-<td>Unusual day-of-week inclusion suggests formal/official documentation style, possibly reflecting Vatican protocol requirements or legal/archival considerations</td>
+<td><strong>Community Engagement</strong></td>
+<td><strong>OpenCode</strong> (126 comments on clipboard bug), <strong>Claude Code</strong> (88 comments on Windows crash)</td>
+<td>Qwen Code (low engagement despite high severity issues)</td>
 </tr>
 </tbody></table>
-<h3>First-Observation Terms</h3>
+<blockquote>
+<p>📈 <strong>Maturity Signal</strong>:  </p>
 <ul>
-<li><strong>&quot;Magnifica humanitas&quot;</strong> — First papal encyclical on AI; new reference point for AI ethics discourse</li>
-<li><strong>&quot;People outside those incentives&quot;</strong> — Novel formulation in corporate AI discourse, potentially becoming Anthropic-specific terminology for external governance advocates</li>
+<li><strong>OpenAI Codex</strong> shows signs of maturity through structured diagnostics (turn cost logging, <code>codex doctor</code>) and consistent API improvements.  </li>
+<li><strong>Pi</strong> and <strong>OpenCode</strong> demonstrate high momentum and innovation, but with growing pains (stability, UX).  </li>
+<li><strong>GitHub Copilot CLI</strong> remains stable but reactive—focused on fixing regressions rather than driving new features.</li>
 </ul>
 <h3>Release Cadence Anomaly</h3>
 <p>Anthropic&#39;s single high-investment content piece (Vatican remarks with full transcription) versus typical technical blog patterns suggests <strong>event-driven publication</strong> rather than regular cadence. This may indicate:</p>

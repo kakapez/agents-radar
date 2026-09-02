@@ -3,6 +3,9 @@
  * Reads GITHUB_TOKEN and DIGEST_REPO from environment at call time.
  */
 
+import { ISSUE_LABELS } from "./i18n.ts";
+import { toCstDateStr, sleep } from "./date.ts";
+
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
@@ -19,6 +22,12 @@ export interface RepoConfig {
    * Use for high-volume repos with many daily updates.
    */
   paginated?: boolean;
+  /**
+   * Also fetch GitHub Discussions (GraphQL). Enable only for repos whose
+   * discussion board is actually active — most tracked repos have it enabled
+   * but dormant, and the extra call would just burn GraphQL quota.
+   */
+  discussions?: boolean;
 }
 
 export interface GitHubUser {
@@ -55,11 +64,27 @@ export interface GitHubRelease {
   published_at: string;
 }
 
+export interface GitHubDiscussion {
+  number: number;
+  title: string;
+  body?: string | null;
+  category: string;
+  author: string;
+  created_at: string;
+  updated_at: string;
+  comments: number;
+  upvotes: number;
+  /** True when the thread has an accepted answer (Q&A categories only). */
+  answered: boolean;
+  html_url: string;
+}
+
 export interface RepoFetch {
   cfg: RepoConfig;
   issues: GitHubItem[];
   prs: GitHubItem[];
   releases: GitHubRelease[];
+  discussions: GitHubDiscussion[];
 }
 
 // ---------------------------------------------------------------------------
@@ -153,6 +178,124 @@ export async function fetchRecentReleases(repo: string, since: Date): Promise<Gi
   return releases.filter((r) => new Date(r.published_at) >= since);
 }
 
+interface DiscussionNode {
+  number: number;
+  title: string;
+  body?: string | null;
+  createdAt: string;
+  updatedAt: string;
+  upvoteCount: number;
+  url: string;
+  answer: { id: string } | null;
+  category: { name: string } | null;
+  author: { login: string } | null;
+  comments: { totalCount: number };
+}
+
+interface DiscussionsResponse {
+  data?: {
+    repository?: {
+      discussions?: {
+        pageInfo: { hasNextPage: boolean; endCursor: string | null };
+        nodes: DiscussionNode[];
+      } | null;
+    } | null;
+  };
+  errors?: { message: string }[];
+}
+
+const DISCUSSIONS_QUERY = `
+query($owner: String!, $name: String!, $after: String) {
+  repository(owner: $owner, name: $name) {
+    discussions(first: 100, after: $after, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      pageInfo { hasNextPage endCursor }
+      nodes {
+        number
+        title
+        body
+        createdAt
+        updatedAt
+        upvoteCount
+        url
+        answer { id }
+        category { name }
+        author { login }
+        comments { totalCount }
+      }
+    }
+  }
+}`;
+
+/** Discussion bodies are trimmed at fetch time — prompts only ever show a snippet. */
+const DISCUSSION_BODY_LIMIT = 500;
+
+/**
+ * Higher than MAX_PAGES: a repo with Issues/PRs disabled routes its entire
+ * community through Discussions, so a day's worth easily exceeds 500 threads.
+ * GraphQL pages are cheap (~1 rate-limit point each) and the loop still stops
+ * as soon as a page ends before `since`.
+ */
+const MAX_DISCUSSION_PAGES = 20;
+
+function toDiscussion(n: DiscussionNode): GitHubDiscussion {
+  return {
+    number: n.number,
+    title: n.title,
+    body: (n.body ?? "").slice(0, DISCUSSION_BODY_LIMIT),
+    category: n.category?.name ?? "General",
+    author: n.author?.login ?? "ghost",
+    created_at: n.createdAt,
+    updated_at: n.updatedAt,
+    comments: n.comments.totalCount,
+    upvotes: n.upvoteCount,
+    answered: n.answer !== null,
+    html_url: n.url,
+  };
+}
+
+/**
+ * Fetch discussions updated since `since`, newest first.
+ * Discussions have no REST endpoint, so this goes through GraphQL.
+ * Paginates until a page ends before `since` or MAX_DISCUSSION_PAGES is reached.
+ */
+export async function fetchRecentDiscussions(repo: string, since: Date): Promise<GitHubDiscussion[]> {
+  const [owner, name] = repo.split("/");
+  if (!owner || !name) throw new Error(`Invalid repo slug: ${repo}`);
+
+  const all: GitHubDiscussion[] = [];
+  let after: string | null = null;
+
+  for (let page = 0; page < MAX_DISCUSSION_PAGES; page++) {
+    const resp = await fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: { ...headers(), "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: DISCUSSIONS_QUERY,
+        variables: { owner, name, after },
+      }),
+    });
+    if (!resp.ok) throw new Error(`GitHub GraphQL error ${resp.status} (${repo}): ${await resp.text()}`);
+
+    const json = (await resp.json()) as DiscussionsResponse;
+    // GraphQL reports failures with HTTP 200 and an `errors` array
+    if (json.errors?.length) {
+      throw new Error(`GitHub GraphQL error (${repo}): ${json.errors.map((e) => e.message).join("; ")}`);
+    }
+
+    const conn = json.data?.repository?.discussions;
+    if (!conn || conn.nodes.length === 0) break;
+
+    all.push(...conn.nodes.filter((n) => new Date(n.updatedAt) >= since).map(toDiscussion));
+
+    const last = conn.nodes[conn.nodes.length - 1];
+    if (last && new Date(last.updatedAt) < since) break;
+    if (!conn.pageInfo.hasNextPage) break;
+    after = conn.pageInfo.endCursor;
+  }
+
+  return all;
+}
+
 export async function ensureLabel(name: string, color: string): Promise<void> {
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
   const resp = await fetch(`https://api.github.com/repos/${digestRepo}/labels`, {
@@ -197,8 +340,6 @@ const LABEL_COLORS: Record<string, string> = {
   trending: "f9a825",
   hn: "ff6600",
   ph: "da552f",
-  weekly: "7c3aed",
-  monthly: "0d9488",
   "digest-en": "1d76db",
   "openclaw-en": "f472b6",
   "web-en": "6366f1",
@@ -211,6 +352,8 @@ const LABEL_COLORS: Record<string, string> = {
   "hf-en": "ffb84d",
   community: "2563eb",
   "community-en": "60a5fa",
+  infra: "0891b2",
+  "infra-en": "22d3ee",
 };
 
 /**
@@ -232,35 +375,91 @@ function neutralizeGitHubRefs(text: string): string {
  * Close open issues created more than `days` days ago.
  * Uses pagination to handle large backlogs. Returns the number of issues closed.
  */
-export async function closeStaleIssues(days: number): Promise<number> {
+/**
+ * Every label the digest pipeline attaches, plus the discontinued rollup
+ * labels that older archived issues still carry. Only issues bearing one of
+ * these are eligible for auto-closing, so an issue a person opened is never
+ * touched.
+ */
+const DIGEST_ISSUE_LABELS = new Set([
+  ...Object.values(ISSUE_LABELS).flatMap((l) => [l.zh, l.en]),
+  "weekly",
+  "weekly-en",
+  "monthly",
+  "monthly-en",
+]);
+
+interface OpenIssue {
+  number: number;
+  created_at: string;
+  /** Present only on pull requests — the /issues endpoint returns both. */
+  pull_request?: unknown;
+  labels: { name: string }[];
+}
+
+function isDigestIssue(i: OpenIssue): boolean {
+  return i.pull_request === undefined && i.labels.some((l) => DIGEST_ISSUE_LABELS.has(l.name));
+}
+
+/** Stop paginating well before a runaway loop could exhaust the rate limit. */
+const MAX_ISSUE_PAGES = 50;
+/** Closes are spaced out: GitHub throttles bursts of mutating requests. */
+const CLOSE_BATCH = 10;
+
+/**
+ * Close every digest issue except those from the most recent digest day.
+ *
+ * The retained day is derived from the newest digest issue that is actually
+ * open, not from today's date: when a run fails, yesterday's reports stay up
+ * rather than the repo being left with nothing open. Dates are compared as CST
+ * days so that one run's issues — created just before 23:00 UTC — group
+ * together the way the digests/YYYY-MM-DD folders do.
+ *
+ * The full open list is collected before anything is closed. Closing shifts
+ * pagination, so interleaving the two skips items.
+ */
+export async function closeSupersededIssues(): Promise<number> {
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
   if (!digestRepo) return 0;
-  const cutoff = new Date(Date.now() - days * 86_400_000);
+
+  const open: OpenIssue[] = [];
+  for (let page = 1; page <= MAX_ISSUE_PAGES; page++) {
+    const batch = await githubGet<OpenIssue[]>(`https://api.github.com/repos/${digestRepo}/issues`, {
+      state: "open",
+      sort: "created",
+      direction: "asc",
+      per_page: "100",
+      page: String(page),
+    });
+    open.push(...batch);
+    if (batch.length < 100) break;
+  }
+
+  const digestIssues = open.filter(isDigestIssue);
+  if (digestIssues.length === 0) return 0;
+
+  const keepDate = digestIssues
+    .map((i) => toCstDateStr(new Date(i.created_at)))
+    .reduce((a, b) => (a > b ? a : b));
+  const toClose = digestIssues.filter((i) => toCstDateStr(new Date(i.created_at)) !== keepDate);
+  if (toClose.length === 0) return 0;
+
+  console.log(`[github] Keeping ${digestIssues.length - toClose.length} issue(s) from ${keepDate}.`);
+
   let closed = 0;
-
-  // Always re-fetch page 1: closing issues shifts pagination, so incrementing
-  // pages would skip items.
-  while (true) {
-    const issues = await githubGet<{ number: number; created_at: string }[]>(
-      `https://api.github.com/repos/${digestRepo}/issues`,
-      { state: "open", sort: "created", direction: "asc", per_page: "100" },
-    );
-    if (issues.length === 0) break;
-
-    const stale = issues.filter((i) => new Date(i.created_at) < cutoff);
-    if (stale.length === 0) break;
-
+  for (let i = 0; i < toClose.length; i += CLOSE_BATCH) {
+    if (i > 0) await sleep(1_000);
     await Promise.all(
-      stale.map(async (i) => {
-        const resp = await fetch(`https://api.github.com/repos/${digestRepo}/issues/${i.number}`, {
+      toClose.slice(i, i + CLOSE_BATCH).map(async (issue) => {
+        const resp = await fetch(`https://api.github.com/repos/${digestRepo}/issues/${issue.number}`, {
           method: "PATCH",
           headers: { ...headers(), "Content-Type": "application/json" },
           body: JSON.stringify({ state: "closed" }),
         });
-        if (!resp.ok) console.error(`[github] Failed to close #${i.number}: ${resp.status}`);
+        if (resp.ok) closed++;
+        else console.error(`[github] Failed to close #${issue.number}: ${resp.status}`);
       }),
     );
-    closed += stale.length;
   }
   return closed;
 }

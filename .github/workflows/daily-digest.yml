@@ -2,8 +2,16 @@ name: Daily Agents Radar
 
 on:
   schedule:
-    # 每天 00:00 UTC = 08:00 CST (UTC+8)
-    - cron: "0 0 * * *"
+    # 22:37 UTC daily = 06:37 CST (UTC+8) the next day. A ~20 min run started
+    # then lands the digest around 07:00 CST, which is when it is expected.
+    #
+    # The minute is deliberately off the hour. GitHub queues scheduled runs and
+    # drops them under load, and the :00 slot is the most contended one. At
+    # "0 23 * * *" this workflow degraded badly in August 2026: the 08-26 run
+    # was dispatched 5h07m late and the 08-27 run was never created at all.
+    # qwen-flash has flat pricing, so moving the slot costs nothing (it would
+    # have, under DeepSeek's peak/off-peak scheme).
+    - cron: "37 22 * * *"
   workflow_dispatch:
 
 permissions:
@@ -12,8 +20,45 @@ permissions:
   pages: write
   id-token: write
 
+# A late scheduled run must not overlap a manual catch-up run: both would build
+# the same CST day's digest and open a duplicate set of issues (as happened on
+# 2026-08-27, which produced 18 duplicates). Queue rather than cancel, so the
+# scheduled run reaches the guard job below only after the manual one has
+# committed its digest — and then skips.
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
 jobs:
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+
+    steps:
+      - name: Skip a scheduled run when today's digest already exists
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "Event is ${{ github.event_name }} — manual runs always proceed."
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # CST date, matching the digests/YYYY-MM-DD/ folder produced by toCstDateStr
+          DATE=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          if gh api "repos/${{ github.repository }}/contents/digests/$DATE" --silent 2>/dev/null; then
+            echo "digests/$DATE is already committed — a manual run covered today. Skipping."
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "No digests/$DATE yet — proceeding."
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          fi
+
   digest:
+    needs: guard
+    if: needs.guard.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     # Web content fetching adds ~60-120 s of HTTP requests on incremental runs;
     # the first-ever run (fetching 50 articles) may need up to 20 min.
@@ -58,7 +103,8 @@ jobs:
           if git diff --cached --quiet; then
             echo "No new digest files to commit"
           else
-            DATE=$(date -u +%Y-%m-%d)
+            # CST date, matching the digests/YYYY-MM-DD/ folder produced by toCstDateStr
+            DATE=$(TZ=Asia/Shanghai date +%Y-%m-%d)
             git commit -m "digest: ${DATE} daily digest"
             git pull --rebase
             git push

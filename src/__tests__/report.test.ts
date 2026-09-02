@@ -18,7 +18,16 @@ vi.mock("../providers/index.ts", async (importOriginal) => {
   };
 });
 
-import { is429, callLlm, saveFile, autoGenFooter } from "../report.ts";
+import {
+  is429,
+  isConnectionError,
+  isRetryable,
+  callLlm,
+  translateToZh,
+  saveFile,
+  autoGenFooter,
+  parseLlmJson,
+} from "../report.ts";
 
 // ---------------------------------------------------------------------------
 // is429
@@ -137,6 +146,106 @@ describe("autoGenFooter", () => {
 });
 
 // ---------------------------------------------------------------------------
+// parseLlmJson
+// ---------------------------------------------------------------------------
+
+describe("parseLlmJson", () => {
+  it("parses plain JSON", () => {
+    expect(parseLlmJson('{"a": 1, "b": ["x"]}')).toEqual({ a: 1, b: ["x"] });
+  });
+
+  it("strips ```json code fences", () => {
+    const raw = '```json\n{"a": 1}\n```';
+    expect(parseLlmJson(raw)).toEqual({ a: 1 });
+  });
+
+  it("strips bare ``` code fences", () => {
+    expect(parseLlmJson('```\n{"a": 1}\n```')).toEqual({ a: 1 });
+  });
+
+  it("tolerates an unescaped newline inside a string literal", () => {
+    // This is the failure that wiped highlights.json: a raw control character
+    // inside a string literal makes JSON.parse throw without sanitization.
+    const raw = '{"x": ["line one\nline two"]}';
+    expect(() => JSON.parse(raw)).toThrow();
+    expect(parseLlmJson(raw)).toEqual({ x: ["line one line two"] });
+  });
+
+  it("tolerates other raw control characters (tab) in strings", () => {
+    const raw = '{"x": ["a\tb"]}';
+    expect(parseLlmJson(raw)).toEqual({ x: ["a b"] });
+  });
+
+  it("tolerates a trailing comma before a closing brace", () => {
+    // The exact failure that wiped zh highlights on 2026-07-07:
+    // "Expected double-quoted property name in JSON" from a trailing comma.
+    const raw = '{"a": [1, 2,], "b": 3,}';
+    expect(() => JSON.parse(raw)).toThrow();
+    expect(parseLlmJson(raw)).toEqual({ a: [1, 2], b: 3 });
+  });
+
+  it("strips prose around the JSON payload", () => {
+    const raw = 'Here are the highlights:\n{"a": 1}\nHope that helps!';
+    expect(parseLlmJson(raw)).toEqual({ a: 1 });
+  });
+
+  it("throws on genuinely malformed JSON", () => {
+    expect(() => parseLlmJson("{not json")).toThrow();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// isConnectionError / isRetryable
+// ---------------------------------------------------------------------------
+
+describe("isConnectionError", () => {
+  it("detects the OpenAI SDK APIConnectionError shape", () => {
+    const err = Object.assign(new Error("Connection error."), {
+      name: "APIConnectionError",
+      status: undefined,
+    });
+    expect(isConnectionError(err)).toBe(true);
+  });
+
+  it("detects a connection code buried in the cause chain", () => {
+    // The real shape seen on 2026-08-28: APIConnectionError -> TypeError:
+    // fetch failed -> AggregateError carrying code ETIMEDOUT.
+    const aggregate = Object.assign(new Error("connect timeout"), { code: "ETIMEDOUT" });
+    const fetchFailed = Object.assign(new TypeError("boom"), { cause: aggregate });
+    const outer = Object.assign(new Error("wrapped"), { cause: fetchFailed });
+    expect(isConnectionError(outer)).toBe(true);
+  });
+
+  it("detects a bare undici 'fetch failed'", () => {
+    expect(isConnectionError(new TypeError("fetch failed"))).toBe(true);
+  });
+
+  it("returns false for HTTP errors and unrelated failures", () => {
+    expect(isConnectionError({ status: 500, message: "server error" })).toBe(false);
+    expect(isConnectionError(new Error("Unexpected empty response from qwen"))).toBe(false);
+    expect(isConnectionError(null)).toBe(false);
+  });
+
+  it("terminates on a self-referencing cause chain", () => {
+    const err: { message: string; cause?: unknown } = { message: "loop" };
+    err.cause = err;
+    expect(isConnectionError(err)).toBe(false);
+  });
+});
+
+describe("isRetryable", () => {
+  it("covers both rate limits and connection failures", () => {
+    expect(isRetryable({ status: 429 })).toBe(true);
+    expect(isRetryable(new TypeError("fetch failed"))).toBe(true);
+  });
+
+  it("excludes errors that would fail identically on a retry", () => {
+    expect(isRetryable({ status: 400, message: "bad request" })).toBe(false);
+    expect(isRetryable({ status: 500, message: "server error" })).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // callLlm
 // ---------------------------------------------------------------------------
 
@@ -206,7 +315,19 @@ describe("callLlm", () => {
     expect(mockCall).toHaveBeenCalledTimes(4);
   });
 
-  it("throws immediately on non-429 errors", async () => {
+  it("retries on a connection error", async () => {
+    const connErr = Object.assign(new Error("Connection error."), { name: "APIConnectionError" });
+    mockCall.mockRejectedValueOnce(connErr);
+    mockCall.mockResolvedValueOnce("success after retry");
+
+    const promise = callLlm("prompt", 1024);
+    await vi.advanceTimersByTimeAsync(5_000);
+
+    expect(await promise).toBe("success after retry");
+    expect(mockCall).toHaveBeenCalledTimes(2);
+  });
+
+  it("throws immediately on errors that are neither 429 nor connection failures", async () => {
     mockCall.mockRejectedValueOnce(new Error("server error"));
 
     await expect(callLlm("prompt")).rejects.toThrow("server error");
@@ -228,5 +349,44 @@ describe("callLlm", () => {
     const batch = Array.from({ length: 5 }, (_, i) => callLlm(`p${i}`));
     const results = await Promise.all(batch);
     expect(results).toEqual(["ok", "ok", "ok", "ok", "ok"]);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// translateToZh
+// ---------------------------------------------------------------------------
+
+describe("translateToZh", () => {
+  beforeEach(() => {
+    mockCall.mockReset();
+  });
+
+  it("sends the English body through the translation prompt", async () => {
+    mockCall.mockResolvedValue("中文报告");
+    const out = await translateToZh("# English report");
+    expect(out).toBe("中文报告");
+    expect(mockCall).toHaveBeenCalledTimes(1);
+    const prompt = mockCall.mock.calls[0]![0];
+    expect(prompt).toContain("Simplified Chinese");
+    expect(prompt).toContain("# English report");
+  });
+
+  it("passes the caller's token budget through", async () => {
+    mockCall.mockResolvedValue("中文");
+    await translateToZh("body", 6144);
+    expect(mockCall.mock.calls[0]![1]).toBe(6144);
+  });
+
+  it("skips the LLM entirely for empty input", async () => {
+    const out = await translateToZh("   ");
+    expect(out).toBe("   ");
+    expect(mockCall).not.toHaveBeenCalled();
+  });
+
+  it("falls back to the English text when the call fails", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    mockCall.mockRejectedValue(new Error("boom"));
+    const out = await translateToZh("English body");
+    expect(out).toBe("English body");
   });
 });

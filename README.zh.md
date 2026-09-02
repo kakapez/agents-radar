@@ -2,19 +2,19 @@
 
 [English](./README.md) | 中文
 
-每天早上 08:00 CST 自动运行的 GitHub Actions 工作流。聚合 10 个 AI 生态数据源，以中英双语每日简报的形式发布为 GitHub Issues 并提交为 Markdown 文件。每周和每月自动生成汇总报告。
+每天早上 07:00 CST 自动运行的 GitHub Actions 工作流。聚合 10 个 AI 生态数据源，以中英双语每日简报的形式发布为 GitHub Issues 并提交为 Markdown 文件。每周和每月自动生成汇总报告。
 
 ### 数据源
 
 | 来源 | 类型 | 数据内容 |
 |------|------|---------|
-| [GitHub Repos](https://github.com) | API | 17+ 个 AI 工具仓库的 Issues、PR、Releases |
+| [GitHub Repos](https://github.com) | API | 18 个 AI 工具仓库的 Issues、PR、Releases |
 | [Claude Code Skills](https://github.com/anthropics/skills) | API | 按社区活跃度排序的热门 Skills |
 | [GitHub Trending](https://github.com/trending) | HTML + API | 每日热门仓库 + AI 主题搜索（7 天窗口） |
 | [Hacker News](https://news.ycombinator.com) | [Algolia API](https://hn.algolia.com/api) | 过去 24 小时 Top 30 AI 热帖，6 组并行查询 |
 | [Product Hunt](https://www.producthunt.com) | GraphQL API | 昨日 AI 产品按投票排序 |
 | [ArXiv](https://arxiv.org) | [ArXiv API](https://export.arxiv.org/api/query) | cs.AI、cs.CL、cs.LG 最新论文（48 小时内） |
-| [Hugging Face](https://huggingface.co) | [Hub API](https://huggingface.co/api/models) | 按周点赞排序的 30 个热门模型 |
+| [Hugging Face](https://huggingface.co) | [Hub API](https://huggingface.co/api/models) | 按周点赞排序的 30 个热门模型 —— **周更**，仅周一 |
 | [Dev.to](https://dev.to) | [Forem API](https://dev.to/api) | 5 个标签下的 AI/LLM 热门文章 |
 | [Lobste.rs](https://lobste.rs) | JSON API | 7 天内 AI/ML 标签内容 |
 | [Anthropic](https://anthropic.com) + [OpenAI](https://openai.com) | Sitemap | 通过 `lastmod` 差异检测新文章 |
@@ -122,10 +122,11 @@ wrangler deploy
 | OpenAI Codex | [openai/codex](https://github.com/openai/codex) |
 | Gemini CLI | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) |
 | GitHub Copilot CLI | [github/copilot-cli](https://github.com/github/copilot-cli) |
-| Kimi Code CLI | [MoonshotAI/kimi-cli](https://github.com/MoonshotAI/kimi-cli) |
 | OpenCode | [anomalyco/opencode](https://github.com/anomalyco/opencode) |
+| Pi | [earendil-works/pi](https://github.com/earendil-works/pi) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
-| DeepSeek TUI | [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) |
+
+在 `config.yml` 中标记 `discussions: true` 的仓库（Codex、Pi）会额外抓取 GitHub Discussions。
 
 ### Claude Code Skills（GitHub）
 
@@ -141,19 +142,26 @@ OpenClaw 作为重点追踪项目，同时横向对比多个同赛道项目，�
 
 | 项目 | 仓库 | Stars |
 |------|------|-------|
-| OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 348.1k |
-| NanoBot | [HKUDS/nanobot](https://github.com/HKUDS/nanobot) | 37.9k |
-| Hermes Agent | [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 32.3k |
-| PicoClaw | [sipeed/picoclaw](https://github.com/sipeed/picoclaw) | 27.5k |
-| NanoClaw | [qwibitai/nanoclaw](https://github.com/qwibitai/nanoclaw) | 26.5k |
-| ZeroClaw | [zeroclaw-labs/zeroclaw](https://github.com/zeroclaw-labs/zeroclaw) | 30.1k |
-| CoPaw | [agentscope-ai/CoPaw](https://github.com/agentscope-ai/CoPaw) | 14.4k |
-| IronClaw | [nearai/ironclaw](https://github.com/nearai/ironclaw) | 11.4k |
-| NullClaw | [nullclaw/nullclaw](https://github.com/nullclaw/nullclaw) | 7.0k |
-| LobsterAI | [netease-youdao/LobsterAI](https://github.com/netease-youdao/LobsterAI) | 4.8k |
-| TinyClaw | [TinyAGI/tinyagi](https://github.com/TinyAGI/tinyagi) | 3.5k |
-| Moltis | [moltis-org/moltis](https://github.com/moltis-org/moltis) | 2.5k |
-| ZeptoClaw | [qhkm/zeptoclaw](https://github.com/qhkm/zeptoclaw) | 567 |
+| OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 387.8k |
+| Hermes Agent | [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 237.0k |
+| QwenPaw | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 34.5k |
+| ZeroClaw | [zeroclaw-labs/zeroclaw](https://github.com/zeroclaw-labs/zeroclaw) | 32.7k |
+| IronClaw | [nearai/ironclaw](https://github.com/nearai/ironclaw) | 12.6k |
+
+### AI 基础设施（GitHub）
+
+Agent / CLI 工具赖以运行的推理与服务层，独立成报，附横向对比。
+
+| 项目 | 仓库 | 分层 | Stars |
+|------|------|------|-------|
+| Ollama | [ollama/ollama](https://github.com/ollama/ollama) | 本地运行时 | 177.2k |
+| llama.cpp | [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | 推理引擎 | 121.9k |
+| vLLM | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 服务引擎 | 87.5k |
+| Unsloth | [unslothai/unsloth](https://github.com/unslothai/unsloth) | 微调框架 | 69.0k |
+| LiteLLM | [BerriAI/litellm](https://github.com/BerriAI/litellm) | LLM 网关 | 55.0k |
+| SGLang | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 服务引擎 | 30.9k |
+
+摘要聚焦新模型 / 硬件支持、性能优化、破坏性变更，以及这些变化对上层应用开发者的实际影响。
 
 ### GitHub AI 趋势热榜
 
@@ -184,11 +192,13 @@ LLM 负责过滤非 AI 项目，将结果按维度分类（AI 基础工具 / AI 
 - 抓取所有追踪仓库过去 24 小时内更新的 Issues、PR 和 Releases
 - 追踪热门 Claude Code Skills，按社区参与度而非时间排序
 - 为每个 CLI 仓库生成单独摘要，并输出跨工具横向对比分析
-- 生成 OpenClaw 深度项目报告，并与 11 个同赛道项目进行横向对比
+- 生成 OpenClaw 深度项目报告，并与 4 个同赛道项目进行横向对比
+- 追踪 6 个 AI 基础设施项目（推理引擎、网关、微调框架），独立成报并输出横向对比
 - 通过 Sitemap 抓取 Anthropic 和 OpenAI 官网内容，增量检测新文章
 - 每日监测 GitHub Trending + 搜索 6 个 AI 主题标签，按维度分类并提炼趋势信号
 - 抓取 Hacker News 过去 24 小时 AI 热门帖子（top 30，按分数排序），生成社区情绪报告
 - 以 GitHub Issues 形式发布报告，同时提交 Markdown 文件至 `digests/YYYY-MM-DD/`
+- 每份报告只用英文生成一次，再翻译成中文，不再对同一份数据跑两遍完整流水线
 - 每日通过 GitHub Actions 定时运行，支持手动触发
 - 所有追踪仓库均可通过 `config.yml` 配置，无需修改代码
 
@@ -212,6 +222,13 @@ openclaw_peers:
   - id: my-agent
     repo: owner/my-agent
     name: My Agent
+
+# 添加新的 AI 基础设施项目
+infra_repos:
+  - id: my-engine
+    repo: owner/my-engine
+    name: My Engine
+    paginated: true   # 每日 issue/PR 更新超过 100 条时开启
 ```
 
 ### 3. 添加 Secrets
@@ -220,12 +237,14 @@ openclaw_peers:
 
 | Secret | 必填 | 说明 |
 |--------|------|------|
-| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot` 或 `openrouter` |
+| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter`、`deepseek` 或 `qwen` |
 | `ANTHROPIC_API_KEY` | Anthropic 时 | API 密钥，兼容 Anthropic 和 Kimi Code |
 | `ANTHROPIC_BASE_URL` | 可选 | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
 | `OPENAI_API_KEY` | OpenAI 时 | OpenAI API 密钥 |
 | `OPENAI_BASE_URL` | 可选 | OpenAI 端点覆盖 |
 | `OPENROUTER_API_KEY` | OpenRouter 时 | OpenRouter API 密钥 |
+| `DEEPSEEK_API_KEY` | DeepSeek 时 | DeepSeek API 密钥 |
+| `DASHSCOPE_API_KEY` | Qwen 时 | 阿里云百炼 API 密钥 |
 | `TELEGRAM_BOT_TOKEN` | 可选 | Telegram bot token，从 [@BotFather](https://t.me/BotFather) 获取。设置后每次 digest 完成自动推送通知 |
 | `TELEGRAM_CHAT_ID` | 可选 | 接收通知的 Telegram 频道 / 群组 / 用户 ID |
 | `FEISHU_WEBHOOK_URLS` | 可选 | 飞书自定义机器人 Webhook URL，多个用英文逗号分隔。设置后每次 digest 完成自动推送卡片通知到所有群 |
@@ -258,8 +277,12 @@ openclaw_peers:
 | OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
+| DeepSeek | `deepseek` | `DEEPSEEK_API_KEY` | `deepseek-v4-flash` |
+| Qwen | `qwen` | `DASHSCOPE_API_KEY` | `qwen-flash` |
 
-可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
+可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL`、`OPENROUTER_MODEL`、`DEEPSEEK_MODEL` 或 `QWEN_MODEL` 分别覆盖默认模型名称；Qwen 的接入点可用 `DASHSCOPE_BASE_URL` 覆盖。
+
+每日定时任务使用 `qwen` / `qwen-flash`。
 
 Provider 抽象层位于 `src/providers/`，每个供应商对应独立文件并实现 `LlmProvider` 接口。新增供应商只需创建新文件并在工厂函数中注册。
 
@@ -284,6 +307,14 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # export LLM_PROVIDER=openrouter
 # export OPENROUTER_API_KEY=sk-or-xxxxxxxx
 
+# 方式 E: DeepSeek
+# export LLM_PROVIDER=deepseek
+# export DEEPSEEK_API_KEY=sk-xxxxxxxx
+
+# Qwen（阿里云百炼）
+# export LLM_PROVIDER=qwen
+# export DASHSCOPE_API_KEY=sk-xxxxxxxx
+
 export DIGEST_REPO=your-username/agents-radar  # 可选，留空则仅写入本地文件
 
 pnpm start
@@ -296,7 +327,8 @@ pnpm start
 | 文件 | 内容 | GitHub Issue 标签 |
 |------|------|------------------|
 | `ai-cli.md` | CLI 简报 — 跨工具横向对比 + 各工具详细报告 | `digest` |
-| `ai-agents.md` | OpenClaw 深度报告 + 横向生态对比 + 11 个同赛道项目详情 | `openclaw` |
+| `ai-agents.md` | OpenClaw 深度报告 + 横向生态对比 + 4 个同赛道项目详情 | `openclaw` |
+| `ai-infra.md` | AI 基础设施日报 — 横向对比 + 各项目详细报告 | `infra` |
 | `ai-web.md` | 官网内容报告（仅在有新内容时生成） | `web` |
 | `ai-trending.md` | GitHub AI 趋势热榜 — 按维度分类 + 趋势信号分析（仅在有数据时生成） | `trending` |
 | `ai-hn.md` | Hacker News AI 社区动态 — 热门帖子分类 + 情绪分析（仅在抓取成功时生成） | `hn` |
@@ -317,15 +349,14 @@ pnpm start
                              今日速览 / 热点 Issues / PR 进展 / 趋势
   <details> OpenAI Codex   — 今日速览 / 热点 Issues / PR 进展 / 趋势
   <details> Gemini CLI     — ...
-  <details> Kimi Code CLI  — ...
   <details> OpenCode       — ...
+  <details> Pi             — ...
   <details> Qwen Code      — ...
-  <details> DeepSeek TUI   — ...
 ```
 
 `ai-agents.md` 结构：
 ```
-Issues: N | PRs: N | 覆盖项目: 10 个
+Issues: N | PRs: N | 覆盖项目: 5 个
 
 ## OpenClaw 项目深度报告
   今日速览 / 版本发布 / 项目进展 / 社区热点 /
@@ -336,17 +367,28 @@ Issues: N | PRs: N | 覆盖项目: 10 个
   共同技术方向 / 差异化定位 / 社区热度与成熟度 / 趋势信号
 
 ## 同赛道项目详细报告
-  <details> Zeroclaw   — 今日速览 / 版本发布 / 项目进展 / ...（8节）
-  <details> EasyClaw   — ...
-  <details> LobsterAI  — ...
-  <details> ZeptoClaw  — ...
-  <details> NanoBot      — ...
+  <details> ZeroClaw     — 今日速览 / 版本发布 / 项目进展 / ...（8节）
   <details> Hermes Agent — ...
-  <details> PicoClaw     — ...
-  <details> NanoClaw   — ...
-  <details> IronClaw   — ...
-  <details> TinyClaw   — ...
-  <details> CoPaw      — ...
+  <details> IronClaw     — ...
+  <details> QwenPaw      — ...
+```
+
+`ai-infra.md` 结构：
+```
+覆盖项目: 6 个
+
+## 横向对比
+  生态全景 / 活跃度对比表 / 模型支持竞速 /
+  性能优化前沿 / 分层定位差异 / 趋势信号
+
+## 各项目详细报告
+  <details> vLLM       — 今日速览 / 版本发布与破坏性变更 / 新模型与硬件支持 /
+                         性能与优化 / 稳定性与回归 / 对应用开发者的意义
+  <details> SGLang     — ...
+  <details> llama.cpp  — ...
+  <details> Ollama     — ...
+  <details> LiteLLM    — ...
+  <details> Unsloth    — ...
 ```
 
 `ai-web.md` 结构：
@@ -390,19 +432,25 @@ OpenAI 内容精选            (research / release / company / safety / ...)
 值得深读
 ```
 
-历史简报存储在 [`digests/`](./digests/)。已发布的 Issues 按类型打标签：[`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending) · [`hn`](../../issues?label=hn)。
+只有最近一天的 Issue 保持 open —— 每次运行 `pnpm close-stale` 会关闭更早的全部日报 Issue，列表因此稳定在一天的量级，而不是几千条。不会删除任何内容：上面的标签链接包含已关闭的 Issue，完整存档同时保存在 `digests/` 和 Web UI 里。没有日报标签的 Issue 以及 Pull Request 不会被动到。
+
+历史简报存储在 [`digests/`](./digests/)。已发布的 Issues 按类型打标签：[`digest`](../../issues?q=is%3Aissue+label%3Adigest) · [`openclaw`](../../issues?q=is%3Aissue+label%3Aopenclaw) · [`web`](../../issues?q=is%3Aissue+label%3Aweb) · [`trending`](../../issues?q=is%3Aissue+label%3Atrending) · [`hn`](../../issues?q=is%3Aissue+label%3Ahn)。
 
 ## 定时计划
 
-默认 cron 表达式 `"0 0 * * *"` = **00:00 UTC = 08:00 CST**。
+默认 cron 表达式 `"37 22 * * *"` = **22:37 UTC = 次日 06:37 CST**。
+
+GitHub 的定时任务是排队执行的，并不准时 —— 本工作流实测延迟通常在 10~15 分钟，所以 06:37 CST 启动、约 07:00 CST 出报告。分钟数刻意避开整点：`:00` 是排队最挤的时段，工作流用 `0 23 * * *` 期间延迟从几分钟恶化到几小时（2026-08-26 那次晚了 5 小时 07 分才派发，2026-08-27 那次干脆没被创建）。
+
+定时任务迟到、你手动补跑一次之后，延迟的定时任务仍可能再跑一遍，生成同一天的报告并开出重复 issue。两道保险防止这种情况：workflow 级 `concurrency: daily-digest` 让重叠的 run 串行执行；`guard` job 会跳过 `digests/YYYY-MM-DD`（CST 日期）已提交的**定时** run。手动 `workflow_dispatch` 永远照常执行，需要重新生成时不受影响。
 
 修改时间请编辑 `.github/workflows/daily-digest.yml` 中的 cron 表达式：
 
-| CST   | UTC cron      |
-|-------|---------------|
-| 08:00 | `0 0 * * *`  |
-| 09:00 | `0 1 * * *`  |
-| 10:00 | `0 2 * * *`  |
+| CST      | UTC cron       |
+|----------|----------------|
+| 06:37 次日 | `37 22 * * *` |
+| 07:37 次日 | `37 23 * * *` |
+| 08:37    | `37 0 * * *`   |
 
 ## Star History
 

@@ -4,6 +4,7 @@ import {
   OpenAIProvider,
   GitHubCopilotProvider,
   OpenRouterProvider,
+  QwenProvider,
   createProvider,
   VALID_PROVIDER_NAMES,
   type LlmProvider,
@@ -100,12 +101,18 @@ describe("LlmProvider interface", () => {
     expect(p.name).toBe("openrouter");
   });
 
+  it("QwenProvider has correct name", () => {
+    const p = new QwenProvider({ apiKey: "test" });
+    expect(p.name).toBe("qwen");
+  });
+
   it("all providers implement LlmProvider with call()", () => {
     const providers: LlmProvider[] = [
       new AnthropicProvider(),
       new OpenAIProvider({ apiKey: "k" }),
       new GitHubCopilotProvider({ apiKey: "k" }),
       new OpenRouterProvider({ apiKey: "k" }),
+      new QwenProvider({ apiKey: "k" }),
     ];
     for (const p of providers) {
       expect(typeof p.name).toBe("string");
@@ -119,8 +126,15 @@ describe("LlmProvider interface", () => {
 // ---------------------------------------------------------------------------
 
 describe("VALID_PROVIDER_NAMES", () => {
-  it("contains all four supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter"]);
+  it("contains all six supported providers", () => {
+    expect(VALID_PROVIDER_NAMES).toEqual([
+      "anthropic",
+      "openai",
+      "github-copilot",
+      "openrouter",
+      "deepseek",
+      "qwen",
+    ]);
   });
 });
 
@@ -314,6 +328,59 @@ describe("OpenRouterProvider", () => {
 });
 
 // ---------------------------------------------------------------------------
+// QwenProvider
+// ---------------------------------------------------------------------------
+
+describe("QwenProvider", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("call returns text", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [{ message: { content: "Hello from Qwen" } }],
+    });
+
+    const p = new QwenProvider({ apiKey: "sk-test" });
+    const result = await p.call("prompt", 256);
+    expect(result).toBe("Hello from Qwen");
+  });
+
+  it(
+    "uses QWEN_MODEL env",
+    withEnv({ QWEN_MODEL: "qwen3.5-flash" }, async () => {
+      const mockCreate = await getOpenAIMockCreate();
+      mockCreate.mockResolvedValueOnce({ choices: [{ message: { content: "ok" } }] });
+
+      const p = new QwenProvider({ apiKey: "k" });
+      await p.call("prompt", 128);
+      expect(mockCreate).toHaveBeenCalledWith(expect.objectContaining({ model: "qwen3.5-flash" }));
+    }),
+  );
+
+  it(
+    "defaults to qwen-flash when QWEN_MODEL is unset",
+    withEnv({ QWEN_MODEL: undefined }, async () => {
+      const mockCreate = await getOpenAIMockCreate();
+      mockCreate.mockResolvedValueOnce({ choices: [{ message: { content: "ok" } }] });
+
+      const p = new QwenProvider({ apiKey: "k" });
+      await p.call("prompt", 128);
+      expect(mockCreate).toHaveBeenCalledWith(expect.objectContaining({ model: "qwen-flash" }));
+    }),
+  );
+
+  it("throws on empty response", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({ choices: [{ message: { content: "" } }] });
+
+    const p = new QwenProvider({ apiKey: "k" });
+    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from qwen");
+  });
+});
+
+// ---------------------------------------------------------------------------
 // createProvider factory
 // ---------------------------------------------------------------------------
 
@@ -355,6 +422,11 @@ describe("createProvider", () => {
     expect(p).toBeInstanceOf(OpenRouterProvider);
   });
 
+  it("creates qwen provider", () => {
+    const p = createProvider("qwen");
+    expect(p).toBeInstanceOf(QwenProvider);
+  });
+
   it(
     "reads LLM_PROVIDER from env",
     withEnv({ LLM_PROVIDER: "openai" }, () => {
@@ -365,7 +437,7 @@ describe("createProvider", () => {
 
   it("throws descriptive error for unknown provider", () => {
     expect(() => createProvider("bogus" as never)).toThrow(
-      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter/,
+      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, deepseek, qwen/,
     );
   });
 

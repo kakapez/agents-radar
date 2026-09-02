@@ -11,14 +11,9 @@
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "manifest": "tsx src/generate-manifest.ts",
-    "weekly": "tsx src/weekly.ts",
-    "monthly": "tsx src/monthly.ts",
     "notify": "tsx src/notify.ts",
     "notify:feishu": "tsx src/feishu.ts",
     "close-stale": "tsx src/close-stale-issues.ts",
-    "xiaohongshu": "tsx src/social.ts xiaohongshu",
-    "wechat": "tsx src/social.ts wechat",
-    "wechat:monthly": "tsx src/social.ts wechat:monthly",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -26,7 +21,6 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
-    "dotenv": "^17.3.1",
     "js-yaml": "^4.1.1",
     "marked": "^17.0.4",
     "openai": "^6.27.0"

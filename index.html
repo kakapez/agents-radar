@@ -317,6 +317,8 @@ const LABELS = {
   'ai-cli-en':       'AI CLI Tools',
   'ai-agents':       'AI Agents 生态',
   'ai-agents-en':    'AI Agents Ecosystem',
+  'ai-infra':        'AI 基础设施',
+  'ai-infra-en':     'AI Infrastructure',
   'ai-web':          'OpenAI & Anthropic 官网动态',
   'ai-web-en':       'OpenAI & Anthropic Updates',
   'ai-trending':     'GitHub AI 趋势',
@@ -401,22 +403,33 @@ function applyDateSearch(query) {
 
 async function buildSearchIndex(dates) {
   const index = new Map();
-  await Promise.all(
-    dates.map(async ({ date, reports }) => {
-      const chunks = await Promise.all(
-        reports.map(async (report) => {
-          try {
-            const res = await fetch(`./digests/${date}/${report}.md`);
-            if (!res.ok) return '';
-            return await res.text();
-          } catch {
-            return '';
-          }
-        })
-      );
-      index.set(date, chunks.join('\n').toLowerCase());
-    })
-  );
+  dates.forEach(({ date }) => index.set(date, ''));
+
+  // Flatten into a single task list and drain with a small worker pool so we
+  // never flood the browser's connection pool (a fetch storm here was starving
+  // the primary content fetch and causing "Failed to fetch" on initial load).
+  const tasks = [];
+  dates.forEach(({ date, reports }) => {
+    reports.forEach((report) => tasks.push({ date, report }));
+  });
+
+  const chunks = new Map(dates.map(({ date }) => [date, []]));
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < tasks.length) {
+      const { date, report } = tasks[cursor++];
+      try {
+        const res = await fetch(`./digests/${date}/${report}.md`);
+        if (res.ok) chunks.get(date).push(await res.text());
+      } catch {
+        /* ignore — missing report just won't be searchable */
+      }
+    }
+  };
+  const POOL = 6;
+  await Promise.all(Array.from({ length: POOL }, worker));
+
+  chunks.forEach((arr, date) => index.set(date, arr.join('\n').toLowerCase()));
   return index;
 }
 
@@ -479,7 +492,17 @@ async function loadReport(date, report, push = true) {
   cwrap.scrollTop = 0;
 
   try {
-    const res = await fetch(`./digests/${date}/${report}.md`);
+    let res;
+    // Retry transient network failures (e.g. a cold CDN edge) before giving up.
+    for (let attempt = 0; ; attempt++) {
+      try {
+        res = await fetch(`./digests/${date}/${report}.md`);
+        break;
+      } catch (netErr) {
+        if (attempt >= 2) throw netErr;
+        await new Promise((r) => setTimeout(r, 300 * (attempt + 1)));
+      }
+    }
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.text();
     const safe = renderMarkdown(raw);
@@ -611,17 +634,22 @@ window.addEventListener('popstate', () => {
     if (!dates?.length) throw new Error('manifest is empty');
 
     buildNav(dates);
-    initSearch(dates);
 
+    // Load the visible report BEFORE kicking off search indexing. Indexing
+    // fetches every report across every date; doing it first would flood the
+    // connection pool and cause the primary content fetch to fail on initial
+    // load (the "Failed to fetch" seen on external deep-links / refresh).
     const hash = getHash();
     const first = dates[0];
     if (hash && dates.find(d => d.date === hash.date && d.reports.includes(hash.report))) {
-      loadReport(hash.date, hash.report, false);
+      await loadReport(hash.date, hash.report, false);
     } else if (first?.reports?.length) {
       const r0 = first.reports[0];
       history.replaceState(null, '', `#${first.date}/${r0}`);
-      loadReport(first.date, r0, false);
+      await loadReport(first.date, r0, false);
     }
+
+    initSearch(dates);
   } catch (e) {
     document.getElementById('nav').innerHTML =
       '<div class="msg" style="height:80px;font-size:10px">⚠️ ' + e.message + '</div>';

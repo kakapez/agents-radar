@@ -17,6 +17,7 @@ interface RawRepoEntry {
   repo: string;
   name: string;
   paginated?: boolean;
+  discussions?: boolean;
 }
 
 interface RawConfig {
@@ -24,6 +25,7 @@ interface RawConfig {
   skills_repo?: string;
   openclaw?: RawRepoEntry;
   openclaw_peers?: RawRepoEntry[];
+  infra_repos?: RawRepoEntry[];
 }
 
 export interface RadarConfig {
@@ -31,6 +33,7 @@ export interface RadarConfig {
   skillsRepo: string;
   openclaw: RepoConfig;
   openclawPeers: RepoConfig[];
+  infraRepos: RepoConfig[];
 }
 
 // ---------------------------------------------------------------------------
@@ -39,11 +42,11 @@ export interface RadarConfig {
 
 const DEFAULT_CLI_REPOS: RepoConfig[] = [
   { id: "claude-code", repo: "anthropics/claude-code", name: "Claude Code" },
-  { id: "codex", repo: "openai/codex", name: "OpenAI Codex" },
+  { id: "codex", repo: "openai/codex", name: "OpenAI Codex", discussions: true },
   { id: "gemini-cli", repo: "google-gemini/gemini-cli", name: "Gemini CLI" },
   { id: "copilot-cli", repo: "github/copilot-cli", name: "GitHub Copilot CLI" },
-  { id: "kimi-cli", repo: "MoonshotAI/kimi-cli", name: "Kimi Code CLI" },
   { id: "opencode", repo: "anomalyco/opencode", name: "OpenCode" },
+  { id: "pi", repo: "earendil-works/pi", name: "Pi", discussions: true },
   { id: "qwen-code", repo: "QwenLM/qwen-code", name: "Qwen Code" },
 ];
 
@@ -57,19 +60,21 @@ const DEFAULT_OPENCLAW: RepoConfig = {
 };
 
 const DEFAULT_OPENCLAW_PEERS: RepoConfig[] = [
-  { id: "nanobot", repo: "HKUDS/nanobot", name: "NanoBot", paginated: true },
   { id: "hermes-agent", repo: "nousresearch/hermes-agent", name: "Hermes Agent" },
-  { id: "picoclaw", repo: "sipeed/picoclaw", name: "PicoClaw", paginated: true },
-  { id: "nanoclaw", repo: "qwibitai/nanoclaw", name: "NanoClaw" },
-  { id: "nullclaw", repo: "nullclaw/nullclaw", name: "NullClaw" },
   { id: "ironclaw", repo: "nearai/ironclaw", name: "IronClaw" },
-  { id: "lobsterai", repo: "netease-youdao/LobsterAI", name: "LobsterAI" },
-  { id: "tinyclaw", repo: "TinyAGI/tinyclaw", name: "TinyClaw" },
-  { id: "copaw", repo: "agentscope-ai/CoPaw", name: "CoPaw" },
-  { id: "moltis", repo: "moltis-org/moltis", name: "Moltis" },
-  { id: "zeptoclaw", repo: "qhkm/zeptoclaw", name: "ZeptoClaw" },
-  { id: "easyclaw", repo: "gaoyangz77/easyclaw", name: "EasyClaw" },
+  { id: "qwenpaw", repo: "agentscope-ai/QwenPaw", name: "QwenPaw" },
   { id: "zeroclaw", repo: "zeroclaw-labs/zeroclaw", name: "ZeroClaw" },
+];
+
+// Inference engines, gateways and fine-tuning frameworks — the layer the CLI
+// agents run on top of. High daily volume, so most are paginated.
+const DEFAULT_INFRA_REPOS: RepoConfig[] = [
+  { id: "vllm", repo: "vllm-project/vllm", name: "vLLM", paginated: true },
+  { id: "sglang", repo: "sgl-project/sglang", name: "SGLang", paginated: true },
+  { id: "llama-cpp", repo: "ggml-org/llama.cpp", name: "llama.cpp", paginated: true },
+  { id: "ollama", repo: "ollama/ollama", name: "Ollama" },
+  { id: "litellm", repo: "BerriAI/litellm", name: "LiteLLM", paginated: true },
+  { id: "unsloth", repo: "unslothai/unsloth", name: "Unsloth", paginated: true },
 ];
 
 // ---------------------------------------------------------------------------
@@ -77,7 +82,13 @@ const DEFAULT_OPENCLAW_PEERS: RepoConfig[] = [
 // ---------------------------------------------------------------------------
 
 export function toRepoConfig(e: RawRepoEntry): RepoConfig {
-  return { id: e.id, repo: e.repo, name: e.name, ...(e.paginated ? { paginated: true } : {}) };
+  return {
+    id: e.id,
+    repo: e.repo,
+    name: e.name,
+    ...(e.paginated ? { paginated: true } : {}),
+    ...(e.discussions ? { discussions: true } : {}),
+  };
 }
 
 export function loadConfig(configPath = "config.yml"): RadarConfig {
@@ -90,6 +101,7 @@ export function loadConfig(configPath = "config.yml"): RadarConfig {
       skillsRepo: DEFAULT_SKILLS_REPO,
       openclaw: DEFAULT_OPENCLAW,
       openclawPeers: DEFAULT_OPENCLAW_PEERS,
+      infraRepos: DEFAULT_INFRA_REPOS,
     };
   }
 
@@ -112,10 +124,15 @@ export function loadConfig(configPath = "config.yml"): RadarConfig {
       ? raw.openclaw_peers.map(toRepoConfig)
       : DEFAULT_OPENCLAW_PEERS;
 
+  const infraRepos =
+    Array.isArray(raw?.infra_repos) && raw.infra_repos.length > 0
+      ? raw.infra_repos.map(toRepoConfig)
+      : DEFAULT_INFRA_REPOS;
+
   console.log(
     `[config] Loaded from ${configPath}: ` +
-      `${cliRepos.length} CLI repos, ${openclawPeers.length} OpenClaw peers`,
+      `${cliRepos.length} CLI repos, ${openclawPeers.length} OpenClaw peers, ${infraRepos.length} infra repos`,
   );
 
-  return { cliRepos, skillsRepo, openclaw, openclawPeers };
+  return { cliRepos, skillsRepo, openclaw, openclawPeers, infraRepos };
 }

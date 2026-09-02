@@ -2,19 +2,19 @@
 
 English | [中文](./README.zh.md)
 
-A GitHub Actions workflow that runs every morning at 08:00 CST. It aggregates AI ecosystem signals from 10 data sources, then publishes bilingual (Chinese + English) daily digests as GitHub Issues and committed Markdown files. Weekly and monthly rollup reports are also generated automatically.
+A GitHub Actions workflow that runs every morning at 07:00 CST. It aggregates AI ecosystem signals from 10 data sources, then publishes bilingual (Chinese + English) daily digests as GitHub Issues and committed Markdown files.
 
 ### Data Sources
 
 | Source | Type | Data |
 |--------|------|------|
-| [GitHub Repos](https://github.com) | API | Issues, PRs, releases from 17+ tracked AI tool repos |
+| [GitHub Repos](https://github.com) | API | Issues, PRs, releases from 18 tracked AI tool repos |
 | [Claude Code Skills](https://github.com/anthropics/skills) | API | Trending skills sorted by community engagement |
 | [GitHub Trending](https://github.com/trending) | HTML + API | Daily trending repos + AI topic search (7-day window) |
 | [Hacker News](https://news.ycombinator.com) | [Algolia API](https://hn.algolia.com/api) | Top 30 AI stories from last 24h, 6 parallel queries |
 | [Product Hunt](https://www.producthunt.com) | GraphQL API | Yesterday's top AI products by votes |
 | [ArXiv](https://arxiv.org) | [ArXiv API](https://export.arxiv.org/api/query) | Latest papers from cs.AI, cs.CL, cs.LG (last 48h) |
-| [Hugging Face](https://huggingface.co) | [Hub API](https://huggingface.co/api/models) | 30 trending models sorted by weekly likes |
+| [Hugging Face](https://huggingface.co) | [Hub API](https://huggingface.co/api/models) | 30 trending models sorted by weekly likes — **weekly**, Mondays only |
 | [Dev.to](https://dev.to) | [Forem API](https://dev.to/api) | Top AI/LLM articles from 5 tags |
 | [Lobste.rs](https://lobste.rs) | JSON API | AI/ML tagged stories from last 7 days |
 | [Anthropic](https://anthropic.com) + [OpenAI](https://openai.com) | Sitemap | New articles detected via `lastmod` diff |
@@ -122,11 +122,12 @@ wrangler deploy
 | OpenAI Codex | [openai/codex](https://github.com/openai/codex) |
 | Gemini CLI | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) |
 | GitHub Copilot CLI | [github/copilot-cli](https://github.com/github/copilot-cli) |
-| Kimi Code CLI | [MoonshotAI/kimi-cli](https://github.com/MoonshotAI/kimi-cli) |
 | OpenCode | [anomalyco/opencode](https://github.com/anomalyco/opencode) |
-| Pi | [badlogic/pi-mono](https://github.com/badlogic/pi-mono) |
+| Pi | [earendil-works/pi](https://github.com/earendil-works/pi) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
-| DeepSeek TUI | [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) |
+
+Repos marked `discussions: true` in `config.yml` (Codex, Pi) also have their GitHub Discussions
+pulled in.
 
 ### Claude Code Skills (GitHub)
 
@@ -142,19 +143,26 @@ OpenClaw is tracked as the primary reference project, alongside several peer pro
 
 | Project | Repository | Stars |
 |---------|-----------|-------|
-| OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 348.1k |
-| NanoBot | [HKUDS/nanobot](https://github.com/HKUDS/nanobot) | 37.9k |
-| Hermes Agent | [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 32.3k |
-| PicoClaw | [sipeed/picoclaw](https://github.com/sipeed/picoclaw) | 27.5k |
-| NanoClaw | [qwibitai/nanoclaw](https://github.com/qwibitai/nanoclaw) | 26.5k |
-| ZeroClaw | [zeroclaw-labs/zeroclaw](https://github.com/zeroclaw-labs/zeroclaw) | 30.1k |
-| CoPaw | [agentscope-ai/CoPaw](https://github.com/agentscope-ai/CoPaw) | 14.4k |
-| IronClaw | [nearai/ironclaw](https://github.com/nearai/ironclaw) | 11.4k |
-| NullClaw | [nullclaw/nullclaw](https://github.com/nullclaw/nullclaw) | 7.0k |
-| LobsterAI | [netease-youdao/LobsterAI](https://github.com/netease-youdao/LobsterAI) | 4.8k |
-| TinyClaw | [TinyAGI/tinyagi](https://github.com/TinyAGI/tinyagi) | 3.5k |
-| Moltis | [moltis-org/moltis](https://github.com/moltis-org/moltis) | 2.5k |
-| ZeptoClaw | [qhkm/zeptoclaw](https://github.com/qhkm/zeptoclaw) | 567 |
+| OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 387.8k |
+| Hermes Agent | [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 237.0k |
+| QwenPaw | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 34.5k |
+| ZeroClaw | [zeroclaw-labs/zeroclaw](https://github.com/zeroclaw-labs/zeroclaw) | 32.7k |
+| IronClaw | [nearai/ironclaw](https://github.com/nearai/ironclaw) | 12.6k |
+
+### AI infrastructure (GitHub)
+
+The inference and serving layer the agent/CLI tools run on top of — tracked in a dedicated report with its own cross-project comparison.
+
+| Project | Repository | Layer | Stars |
+|---------|-----------|-------|-------|
+| Ollama | [ollama/ollama](https://github.com/ollama/ollama) | Local runtime | 177.2k |
+| llama.cpp | [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | Inference engine | 121.9k |
+| vLLM | [vllm-project/vllm](https://github.com/vllm-project/vllm) | Serving engine | 87.5k |
+| Unsloth | [unslothai/unsloth](https://github.com/unslothai/unsloth) | Fine-tuning | 69.0k |
+| LiteLLM | [BerriAI/litellm](https://github.com/BerriAI/litellm) | LLM gateway | 55.0k |
+| SGLang | [sgl-project/sglang](https://github.com/sgl-project/sglang) | Serving engine | 30.9k |
+
+Summaries focus on new model/hardware support, performance work, breaking changes, and what each change means for developers building on top of these projects.
 
 ### GitHub AI Trending
 
@@ -185,11 +193,13 @@ New articles are detected by comparing sitemap `lastmod` timestamps against a pe
 - Fetches issues, pull requests, and releases updated in the last 24 hours across all tracked repos
 - Tracks trending Claude Code Skills — sorted by community engagement, not recency
 - Generates a per-tool summary for each CLI repository and a cross-tool comparative analysis
-- Generates a deep OpenClaw project report plus a cross-ecosystem comparison against 11 peer projects
+- Generates a deep OpenClaw project report plus a cross-ecosystem comparison against 4 peer projects
+- Tracks 6 AI infrastructure projects (inference engines, gateways, fine-tuning) with a dedicated report and cross-project comparison
 - Scrapes official Anthropic and OpenAI web content via sitemaps; detects new articles incrementally
 - Monitors GitHub Trending daily + searches 6 AI topic tags; classifies repos by dimension and extracts trend signals
 - Fetches top-30 AI stories from Hacker News (last 24h, ranked by points); generates community sentiment report
 - Publishes GitHub Issues for each report type; commits Markdown files to `digests/YYYY-MM-DD/`
+- Generates every report body once in English and translates it to Chinese, instead of running the whole pipeline twice per language
 - Runs on a daily schedule via GitHub Actions; supports manual triggering
 - All tracked repositories are configurable via `config.yml` — no code changes needed
 
@@ -213,6 +223,13 @@ openclaw_peers:
   - id: my-agent
     repo: owner/my-agent
     name: My Agent
+
+# Add a new AI infrastructure project
+infra_repos:
+  - id: my-engine
+    repo: owner/my-engine
+    name: My Engine
+    paginated: true   # for repos with >100 daily issue/PR updates
 ```
 
 ### 3. Add Secrets
@@ -221,12 +238,14 @@ Go to **Settings → Secrets and variables → Actions** and add:
 
 | Secret | Required | Description |
 |--------|----------|-------------|
-| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, or `openrouter` |
+| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, `openrouter`, `deepseek`, or `qwen` |
 | `ANTHROPIC_API_KEY` | if Anthropic | API key — works with both Anthropic and Kimi Code |
 | `ANTHROPIC_BASE_URL` | optional | API endpoint override. Set to `https://api.kimi.com/coding/` for Kimi Code; leave unset for Anthropic |
 | `OPENAI_API_KEY` | if OpenAI | OpenAI API key |
 | `OPENAI_BASE_URL` | optional | OpenAI endpoint override |
 | `OPENROUTER_API_KEY` | if OpenRouter | OpenRouter API key |
+| `DEEPSEEK_API_KEY` | if DeepSeek | DeepSeek API key |
+| `DASHSCOPE_API_KEY` | if Qwen | Alibaba Model Studio API key |
 | `TELEGRAM_BOT_TOKEN` | optional | Telegram bot token from [@BotFather](https://t.me/BotFather). If set, a message is sent after each digest run |
 | `TELEGRAM_CHAT_ID` | optional | Telegram chat/channel/group ID to send notifications to |
 | `FEISHU_WEBHOOK_URLS` | optional | Comma-separated Feishu custom bot webhook URLs. If set, a card message is sent to each group after each digest run |
@@ -259,8 +278,12 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 | OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
+| DeepSeek | `deepseek` | `DEEPSEEK_API_KEY` | `deepseek-v4-flash` |
+| Qwen | `qwen` | `DASHSCOPE_API_KEY` | `qwen-flash` |
 
-Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, `OPENROUTER_MODEL`, `DEEPSEEK_MODEL`, or `QWEN_MODEL` respectively. The Qwen endpoint can be overridden with `DASHSCOPE_BASE_URL`.
+
+The scheduled daily run uses `qwen` / `qwen-flash`.
 
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 
@@ -285,6 +308,14 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # export LLM_PROVIDER=openrouter
 # export OPENROUTER_API_KEY=sk-or-xxxxxxxx
 
+# Option E: DeepSeek
+# export LLM_PROVIDER=deepseek
+# export DEEPSEEK_API_KEY=sk-xxxxxxxx
+
+# Qwen (Alibaba Model Studio)
+# export LLM_PROVIDER=qwen
+# export DASHSCOPE_API_KEY=sk-xxxxxxxx
+
 export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
 
 pnpm start
@@ -297,13 +328,14 @@ Files are written to `digests/YYYY-MM-DD/`:
 | File | Content | GitHub Issue label |
 |------|---------|-------------------|
 | `ai-cli.md` | CLI digest — cross-tool comparison + per-tool details | `digest` |
-| `ai-agents.md` | OpenClaw deep report + cross-ecosystem comparison + 11 peer details | `openclaw` |
+| `ai-agents.md` | OpenClaw deep report + cross-ecosystem comparison + 4 peer details | `openclaw` |
+| `ai-infra.md` | AI infrastructure digest — cross-project comparison + per-project details | `infra` |
 | `ai-web.md` | Official web content report (only written when new content exists) | `web` |
 | `ai-trending.md` | GitHub AI trending report — repos classified by dimension + trend signals (only written when data is available) | `trending` |
 | `ai-hn.md` | Hacker News AI community digest — top stories + sentiment analysis (only written when fetch succeeds) | `hn` |
 | `ai-ph.md` | Product Hunt AI products digest (only written when `PRODUCTHUNT_TOKEN` is set and data is available) | `ph` |
 | `ai-arxiv.md` | ArXiv AI research digest — key papers from cs.AI/cs.CL/cs.LG | `arxiv` |
-| `ai-hf.md` | Hugging Face trending models digest — sorted by weekly likes | `hf` |
+| `ai-hf.md` | Hugging Face trending models digest — sorted by weekly likes (**weekly**: written on Mondays only) | `hf` |
 | `ai-community.md` | Tech community AI digest — Dev.to articles + Lobste.rs stories combined | `community` |
 
 A shared state file `digests/web-state.json` tracks which web URLs have been seen; it is committed alongside the daily digests.
@@ -325,15 +357,14 @@ Each report is generated in both Chinese (`ai-cli.md`) and English (`ai-cli-en.m
   <details> OpenAI Codex   — Today's summary / Hot issues / PR progress / Trends
   <details> Gemini CLI     — ...
   <details> GitHub Copilot CLI — ...
-  <details> Kimi Code CLI  — ...
   <details> OpenCode       — ...
+  <details> Pi             — ...
   <details> Qwen Code      — ...
-  <details> DeepSeek TUI   — ...
 ```
 
 `ai-agents.md` / `ai-agents-en.md` structure:
 ```
-Issues: N | PRs: N | Projects covered: 10
+Issues: N | PRs: N | Projects covered: 5
 
 ## OpenClaw Deep Dive
   Today's summary / Releases / Project progress / Community highlights /
@@ -344,17 +375,29 @@ Issues: N | PRs: N | Projects covered: 10
   Shared technical directions / Differentiation / Community maturity / Trend signals
 
 ## Peer Project Reports
-  <details> Zeroclaw   — Today's summary / Releases / Progress / ... (8 sections)
-  <details> EasyClaw   — ...
-  <details> LobsterAI  — ...
-  <details> ZeptoClaw  — ...
-  <details> NanoBot      — ...
+  <details> ZeroClaw     — Today's summary / Releases / Progress / ... (8 sections)
   <details> Hermes Agent — ...
-  <details> PicoClaw     — ...
-  <details> NanoClaw   — ...
-  <details> IronClaw   — ...
-  <details> TinyClaw   — ...
-  <details> CoPaw      — ...
+  <details> IronClaw     — ...
+  <details> QwenPaw      — ...
+```
+
+`ai-infra.md` / `ai-infra-en.md` structure:
+```
+Projects covered: 6
+
+## Cross-Project Comparison
+  Ecosystem overview / Activity table / Model support race /
+  Performance frontier / Layer positioning / Trend signals
+
+## Per-Project Reports
+  <details> vLLM       — Today's highlights / Releases & breaking changes /
+                         New model & hardware support / Performance & optimization /
+                         Stability & regressions / What it means for app developers
+  <details> SGLang     — ...
+  <details> llama.cpp  — ...
+  <details> Ollama     — ...
+  <details> LiteLLM    — ...
+  <details> Unsloth    — ...
 ```
 
 `ai-web.md` / `ai-web-en.md` structure:
@@ -398,40 +441,24 @@ Community sentiment signals
 Worth reading
 ```
 
-`ai-weekly.md` / `ai-weekly-en.md` structure (generated every Monday):
-```
-Coverage: YYYY-MM-DD ~ YYYY-MM-DD  (last 7 daily digests)
+Historical digests are stored in [`digests/`](./digests/). Published issues are tagged by type: [`digest`](../../issues?q=is%3Aissue+label%3Adigest) · [`openclaw`](../../issues?q=is%3Aissue+label%3Aopenclaw) · [`web`](../../issues?q=is%3Aissue+label%3Aweb) · [`trending`](../../issues?q=is%3Aissue+label%3Atrending) · [`hn`](../../issues?q=is%3Aissue+label%3Ahn) · [`ph`](../../issues?q=is%3Aissue+label%3Aph) · [`arxiv`](../../issues?q=is%3Aissue+label%3Aarxiv) · [`hf`](../../issues?q=is%3Aissue+label%3Ahf) · [`community`](../../issues?q=is%3Aissue+label%3Acommunity).
 
-Weekly highlights
-Key trends & developments
-Notable releases
-Community momentum
-Outlook
-```
+Only the most recent day's issues are left open — `pnpm close-stale` closes everything older on each run, so the issue list stays at roughly one day's worth instead of thousands. Nothing is deleted: the label links above include closed issues, and the full archive also lives under `digests/` and in the Web UI. Issues without a digest label, and pull requests, are never touched.
 
-`ai-monthly.md` / `ai-monthly-en.md` structure (generated on the 1st of each month):
-```
-Sources: N weekly reports  (or sampled daily reports if fewer than 2 weeklies available)
-
-Month in review
-Major themes
-Ecosystem shifts
-Top projects & releases
-Looking ahead
-```
-
-Historical digests are stored in [`digests/`](./digests/). Published issues are tagged by type: [`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending) · [`hn`](../../issues?label=hn) · [`ph`](../../issues?label=ph) · [`arxiv`](../../issues?label=arxiv) · [`hf`](../../issues?label=hf) · [`community`](../../issues?label=community) · [`weekly`](../../issues?label=weekly) · [`monthly`](../../issues?label=monthly).
+Weekly and monthly rollup reports were discontinued in July 2026; past ones remain browsable under `digests/` and in the Web UI.
 
 ## Schedule
 
 | Workflow | Cron | UTC | CST |
 |----------|------|-----|-----|
-| Daily digest | `0 0 * * *` | 00:00 daily | 08:00 daily |
-| Weekly rollup | `0 1 * * 1` | 01:00 Monday | 09:00 Monday |
-| Monthly rollup | `0 2 1 * *` | 02:00 on the 1st | 10:00 on the 1st |
+| Daily digest | `37 22 * * *` | 22:37 daily | 06:37 next day |
 
-To change the schedule, edit the cron expressions in the corresponding workflow files under `.github/workflows/`.
+To change the schedule, edit the cron expression in `.github/workflows/daily-digest.yml`.
+
+GitHub's scheduled runs are queued, not guaranteed — typical delay for this workflow is 10-15 minutes, so a 06:37 CST start lands the digest around 07:00 CST. The minute is off the hour on purpose: the `:00` slot is the most contended, and while this workflow sat at `0 23 * * *` the delays degraded from minutes to hours (the 2026-08-26 run was dispatched 5h07m late, and the 2026-08-27 run was never created at all).
+
+When a scheduled run is late enough that you dispatch a catch-up run manually, the two would otherwise both build the same day's digest and open a duplicate set of issues. Two guards prevent that: a `concurrency: daily-digest` group serializes overlapping runs, and a `guard` job skips any **scheduled** run whose `digests/YYYY-MM-DD` folder (CST date) is already committed. Manual `workflow_dispatch` runs always proceed, so you can still force a regeneration.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=duanyytop/agents-radar&type=Date)](https://star-history.com/#duanyytop/agents-radar&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=duanyytop/agents-radar&type=Date)](https://star-history.dera.page/#duanyytop/agents-radar&Date)

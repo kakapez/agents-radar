@@ -2,7 +2,7 @@
 
 ## Project overview
 
-agents-radar is a daily digest generator for the AI open-source ecosystem. A GitHub Actions cron job runs at 00:00 UTC (08:00 CST) and produces bilingual (Chinese + English) reports, published as GitHub Issues and committed Markdown files.
+agents-radar is a daily digest generator for the AI open-source ecosystem. A GitHub Actions cron job runs at 22:37 UTC (06:37 CST next day) and produces bilingual (Chinese + English) reports, published as GitHub Issues and committed Markdown files.
 
 ## Commands
 
@@ -23,11 +23,10 @@ export GITHUB_TOKEN=ghp_xxxxx
 export DIGEST_REPO=owner/repo   # omit to skip GitHub issue creation
 
 # LLM provider (default: anthropic)
-export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter
+export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek | qwen
 
 # Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
-export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/  # omit for Anthropic
 
 # OpenAI
 # export OPENAI_API_KEY=sk-xxxxx
@@ -36,16 +35,32 @@ export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/  # omit for Anthropic
 
 # OpenRouter
 # export OPENROUTER_API_KEY=sk-or-xxxxx
+
+# DeepSeek
+# export DEEPSEEK_API_KEY=sk-xxxxx
+
+# Qwen (Alibaba Model Studio) — provider used by the GitHub Actions cron
+# export DASHSCOPE_API_KEY=sk-xxxxx
 ```
 
 ## Architecture
 
-The pipeline runs in four sequential phases, each implemented as a named async function in `src/index.ts`:
+The pipeline runs in five sequential phases, each implemented as a named async function in `src/index.ts`:
 
-1. **`fetchAllData`** — all network I/O in parallel: GitHub API (issues/PRs/releases) for 17 repos, Claude Code Skills, Anthropic/OpenAI sitemaps, GitHub Trending HTML + Search API, Hacker News Algolia API.
-2. **`generateSummaries`** — per-repo LLM calls, all in parallel, rate-limited to 5 concurrent requests by a queue in `src/report.ts`.
-3. **Comparisons** — two LLM calls: cross-tool CLI comparison and OpenClaw cross-ecosystem comparison.
-4. **Save phase** — `buildCliReportContent` / `buildOpenclawReportContent` (in `src/report-builders.ts`) build Markdown strings; `saveWebReport` / `saveTrendingReport` / `saveHnReport` (in `src/report-savers.ts`) call LLM + write file + create GitHub Issue.
+1. **`fetchAllData`** — all network I/O in parallel: GitHub API (issues/PRs/releases) for 18 repos, Claude Code Skills, Anthropic/OpenAI sitemaps, GitHub Trending HTML + Search API, Hacker News Algolia API.
+2. **`generateSummaries`** — per-repo LLM calls **in English only**, all in parallel, rate-limited to 5 concurrent requests by a queue in `src/report.ts`.
+3. **`translateSummaries`** — translates the English bodies to Chinese via `translateToZh`.
+4. **Comparisons** — three English LLM calls (cross-tool CLI, OpenClaw cross-ecosystem, infra), each then translated.
+5. **Save phase** — `buildCliReportContent` / `buildOpenclawReportContent` / `buildInfraReportContent` (in `src/report-builders.ts`) build Markdown strings; the `saveXxxReport` functions (in `src/report-savers.ts`) generate their body in English, translate it, then write both language files and create both GitHub Issues.
+
+### English-first generation
+
+Report bodies are generated **once in English** and translated to Chinese. Generating both languages from the raw GitHub/API data ran the whole pipeline twice for identical information; a translation prompt carries the finished report instead of the item dump, so it costs a fraction of the input tokens. Consequences for new code:
+
+- Prompt builders still take a `lang` argument, but the pipeline only ever passes `"en"`. The `lang` branches remain because the fixed scaffolding (titles, headers, footers) is still rendered per language from `src/i18n.ts`.
+- A `saveXxxReport` function emits **both** languages and takes no `lang` parameter. Do not call it once per language.
+- Fixed status strings (`MSG.noActivity`, `MSG.summaryFailed`, …) are mapped en→zh through `FIXED_EN_TO_ZH` in `src/index.ts` instead of being sent to the LLM.
+- `translateToZh` falls back to the English text on failure — a partly-English Chinese report still carries the day's information.
 
 ## Source files
 
@@ -53,20 +68,22 @@ The pipeline runs in four sequential phases, each implemented as a named async f
 |------|---------------|
 | `src/index.ts` | Orchestration: repo config, phase functions, `main()` |
 | `src/i18n.ts` | Centralized bilingual strings: `Lang` type, report titles, issue labels, footer text, `REPORT_LABELS`, `NOTIFY_LABELS` |
-| `src/github.ts` | GitHub API helpers: `fetchRecentItems`, `fetchRecentReleases`, `fetchSkillsData`, `createGitHubIssue`; shared `RepoFetch` type |
-| `src/prompts.ts` | LLM prompt builders for repo reports: `buildCliPrompt`, `buildPeerPrompt`, `buildComparisonPrompt`, `buildPeersComparisonPrompt`, `buildSkillsPrompt` |
-| `src/prompts-data.ts` | LLM prompt builders for data-source reports: `buildTrendingPrompt`, `buildWebReportPrompt`, `buildHnPrompt`, `buildWeeklyPrompt`, `buildMonthlyPrompt` |
-| `src/report.ts` | `callLlm` (with concurrency limiter), `saveFile`, `autoGenFooter` (uses i18n), LLM token budget constants |
-| `src/report-builders.ts` | `buildCliReportContent`, `buildOpenclawReportContent` — assemble final Markdown strings for CLI and OpenClaw reports |
-| `src/report-savers.ts` | `saveWebReport`, `saveTrendingReport`, `saveHnReport` — LLM call + file save + optional GitHub issue |
-| `src/date.ts` | Date and timing utilities: `toCstDateStr`, `toUtcStr`, `sleep` |
-| `src/rollup.ts` | Weekly and monthly rollup report generator |
+| `src/github.ts` | GitHub API helpers: `fetchRecentItems`, `fetchRecentReleases`, `fetchRecentDiscussions` (GraphQL), `fetchSkillsData`, `createGitHubIssue`; shared `RepoFetch` type |
+| `src/config.ts` | Loads `config.yml` into `RadarConfig` (`cliRepos`, `skillsRepo`, `openclaw`, `openclawPeers`, `infraRepos`); built-in defaults when a section is missing |
+| `src/prompts.ts` | LLM prompt builders for repo reports: `buildCliPrompt`, `buildPeerPrompt`, `buildInfraPrompt`, `buildComparisonPrompt`, `buildInfraComparisonPrompt`, `buildPeersComparisonPrompt`, `buildSkillsPrompt`; plus `buildTranslationPrompt` / `buildJsonTranslationPrompt` |
+| `src/prompts-data.ts` | LLM prompt builders for data-source reports: `buildTrendingPrompt`, `buildWebReportPrompt`, `buildHnPrompt` |
+| `src/report.ts` | `callLlm` (with concurrency limiter), `translateToZh`, `saveFile`, `autoGenFooter` (uses i18n), LLM token budget constants |
+| `src/report-builders.ts` | `buildCliReportContent`, `buildOpenclawReportContent`, `buildInfraReportContent` — assemble final Markdown strings for CLI, OpenClaw and infra reports |
+| `src/report-savers.ts` | `saveWebReport`, `saveTrendingReport`, `saveHnReport`, … — English LLM call + translation + both language files + optional GitHub issues; exports `LANGS` and `BilingualBody` |
+| `src/date.ts` | Date and timing utilities: `toCstDateStr`, `toUtcStr`, `weekdayOf`, `sleep` |
 | `src/providers/types.ts` | `LlmProvider` interface, `ProviderName` type, `VALID_PROVIDER_NAMES` |
 | `src/providers/openai-compatible.ts` | `OpenAICompatibleProvider` — shared base class for OpenAI-compatible providers |
 | `src/providers/anthropic.ts` | `AnthropicProvider` — Anthropic SDK wrapper |
 | `src/providers/openai.ts` | `OpenAIProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/github-copilot.ts` | `GitHubCopilotProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/openrouter.ts` | `OpenRouterProvider` — extends `OpenAICompatibleProvider` |
+| `src/providers/deepseek.ts` | `DeepSeekProvider` — extends `OpenAICompatibleProvider` |
+| `src/providers/qwen.ts` | `QwenProvider` — extends `OpenAICompatibleProvider`; Alibaba Model Studio |
 | `src/providers/index.ts` | `createProvider` factory + barrel re-exports |
 | `src/web.ts` | Sitemap-based web content fetching; state persisted to `digests/web-state.json` |
 | `src/trending.ts` | GitHub Trending HTML scraper + Search API topic queries |
@@ -81,31 +98,50 @@ Files written to `digests/YYYY-MM-DD/`:
 |------|-------|-------|
 | `ai-cli.md` | `digest` | Always generated |
 | `ai-agents.md` | `openclaw` | Always generated |
+| `ai-infra.md` | `infra` | Always generated |
 | `ai-web.md` | `web` | Skipped if no new sitemap content |
 | `ai-trending.md` | `trending` | Skipped if both data sources fail |
 | `ai-hn.md` | `hn` | Skipped if Algolia fetch fails |
+| `ai-hf.md` | `hf` | **Weekly** — only on `HF_REPORT_WEEKDAY` (Monday, CST) |
 
 ## Tracked sources
 
-- **CLI_REPOS** (9): claude-code, codex, gemini-cli, copilot-cli, kimi-cli, opencode, pi, qwen-code, deepseek-tui
-- **OPENCLAW** + **OPENCLAW_PEERS** (13): openclaw/openclaw + 12 peer projects (sorted by stars)
+- **CLI_REPOS** (7): claude-code, codex, gemini-cli, copilot-cli, opencode, pi, qwen-code
+- **Discussions** (`discussions: true` in `config.yml`): codex, pi.
+- **OPENCLAW** + **OPENCLAW_PEERS** (5): openclaw/openclaw + 4 peer projects (sorted by stars)
+- **INFRA_REPOS** (6): vllm, sglang, llama-cpp, ollama, litellm, unsloth — inference engines, gateway and fine-tuning layer
 - **CLAUDE_SKILLS_REPO**: anthropics/skills — no date filter, sorted by popularity
 - **Web**: anthropic.com + openai.com via sitemap, state in `digests/web-state.json`
 - **Trending**: github.com/trending (HTML) + GitHub Search API (6 AI topics, 7-day window)
 - **HN**: Algolia HN Search API — 6 parallel queries, top-30 AI stories by points, last 24h
+- **HF**: Hugging Face Hub trending models — **weekly**, gated on `HF_REPORT_WEEKDAY` in `src/index.ts`. The Hub list is ranked by cumulative downloads and 90.5% of a day's models carried over from the previous day, so daily generation was re-summarizing the same table. The fetch is gated too, not just the report.
 
 ## Key conventions
 
 - All bilingual strings (titles, labels, footers, messages) are centralized in `src/i18n.ts`. Use the `Lang` type (`"zh" | "en"`) and `Record<Lang, string>` maps. Do not add inline bilingual ternaries elsewhere.
-- LLM prompt builders are split across two files: `src/prompts.ts` (repo-level prompts) and `src/prompts-data.ts` (data-source and rollup prompts). Each report type has its own builder function.
-- `callLlm(prompt, maxTokens?)` defaults to 4096 tokens. Web report uses 8192, trending uses 6144. HN report uses the default 4096.
+- Report **bodies** are not bilingual strings — they are generated in English and translated (see "English-first generation"). Never add a second generation call to produce Chinese.
+- `translateToZh(text, maxTokens)` must be passed the same token budget the English body was generated with, or a long report gets truncated mid-translation.
+- LLM prompt builders are split across two files: `src/prompts.ts` (repo-level prompts) and `src/prompts-data.ts` (data-source prompts). Each report type has its own builder function.
+- Weekly and monthly rollups were removed in July 2026. `ai-weekly`/`ai-monthly` remain in `REPORT_LABELS` (`src/i18n.ts`) and `REPORT_FILES` (`src/generate-manifest.ts`) only so archived reports stay reachable — do not add generation code back.
+- `callLlm(prompt, maxTokens?)` defaults to 4096 tokens. Web report uses 8192, trending uses 6144. The table-formatted listing reports (HN, PH, ArXiv, HF, Community) use `LLM_TOKENS_LISTING` = 6144 to fit multi-row tables plus 2-sentence summaries.
+- Data-source listing reports (Trending, HN, PH, ArXiv, HF, Community) render their item lists as **Markdown tables** (not bullet lists). Numeric columns are copied verbatim from the fetched data; the summary column is 2 sentences. Tables already have CSS in `index.html` and render natively in GitHub Issues too.
 - On 429 rate-limit errors `callLlm` retries up to 3 times with exponential backoff (5 s / 10 s / 20 s); the concurrency slot is released during the wait.
 - The concurrency limiter (`LLM_CONCURRENCY = 5`) prevents 429s when many parallel LLM calls fire. Do not bypass it by calling SDK clients directly.
-- LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`.
+- LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`, `deepseek`, `qwen`.
+- The daily GitHub Actions run uses `qwen` (`qwen-flash`). It replaced `deepseek-v4-flash` in August 2026, after DeepSeek's 8/16 repricing pushed a run to ~¥3; qwen-flash is ~¥0.5. `qwen-flash` is tier-priced by single-request input length — every prompt here stays inside the cheapest 0–128K tier.
+- The daily workflow only ever produces one digest per CST day. Two mechanisms enforce it: a workflow-level `concurrency: daily-digest` group (`cancel-in-progress: false`) serializes overlapping runs, and a `guard` job skips **scheduled** runs whose `digests/YYYY-MM-DD` folder is already committed (checked via `gh api .../contents/...`, so no second checkout). `workflow_dispatch` always proceeds — that is the escape hatch for regenerating a day. This exists because GitHub delayed the 2026-08-26 scheduled run by 5h07m; the manual catch-up run and the late scheduled run both completed and opened 18 duplicate issues for 2026-08-27.
 - Provider implementations live in `src/providers/`. Each file implements the `LlmProvider` interface. The factory in `src/providers/index.ts` validates the provider name and logs only the provider name — never API keys or endpoint URLs.
+- `closeSupersededIssues` in `src/github.ts` (run by `pnpm close-stale`, the workflow's last step) keeps only the most recent digest day's issues open and closes the rest. The retained day is the newest **open digest issue**, not today's date, so a failed run leaves yesterday's reports up instead of closing everything. Days are compared as CST dates via `toCstDateStr`, matching the `digests/YYYY-MM-DD` folders — a delayed cron and its manual catch-up run land on the same day and are both retained. Eligibility requires a label in `ISSUE_LABELS` (plus the legacy `weekly`/`monthly`), and pull requests are excluded: the `/issues` REST endpoint returns PRs too, and the previous `closeStaleIssues` would have closed any open PR older than its cutoff.
 - GitHub issue label colors are defined in `LABEL_COLORS` in `src/github.ts`. Add new labels there.
-- `sampleNote(total, sampled)` in `src/prompts.ts` formats the "(共 N 条，展示前 M 条)" note. Reuse it — do not inline the same string format.
-- Web state (`digests/web-state.json`) is committed to git on every run. It is the source of truth for which URLs have been seen.
+- GitHub Discussions have no REST API, so `fetchRecentDiscussions` uses GraphQL. Enable per-repo with `discussions: true` — most tracked repos have the board enabled but dormant, and an unconditional fetch would just burn quota. Only `buildCliPrompt` renders a Discussions section, and it is omitted entirely when there is no data.
+- `sampleNote(total, sampled, lang, by)` in `src/prompts.ts` formats the "(共 N 条，展示前 M 条)" note. Reuse it — do not inline the same string format. Pass `by: "engagement"` when the sample was ranked by comments + upvotes (discussions) instead of comments alone.
+- Web state (`digests/web-state.json`) is committed to git on every run. It is the source of truth for which URLs have been seen. `saveWebReport` writes it once at the end, regardless of whether a report was generated.
+- Tracked repos are pruned when they go quiet. Removed August 2026 after an activity audit:
+  - `deepseek-harness` — Issues/PRs disabled upstream and the Discussions board dormant: 13/13 days of zero data.
+  - `zeptoclaw`, `nullclaw` — no upstream push for 30+ days; 90% and 50% of days had no activity at all.
+  - `nanobot`, `nanoclaw`, `lobsterai`, `codewhale` — 17–37 items per 24h, well under the 30-issue + 20-PR prompt sample, so the model was padding a full 8-section report out of a handful of items.
+  - `picoclaw`, `moltis` — removed by maintainer decision alongside the above.
+  - Same audit fixed two renames: `qwibitai/nanoclaw` → `nanocoai/nanoclaw`, `agentscope-ai/CoPaw` → `agentscope-ai/QwenPaw`.
 
 ## Web UI & RSS Feed
 
@@ -116,7 +152,7 @@ Files written to `digests/YYYY-MM-DD/`:
 
 ## Adding a new report type
 
-1. Create a data fetcher (or add to an existing one).
+1. Create a data fetcher (or add to an existing one). For a repo-backed report, add the section to `RawConfig`/`RadarConfig` and `loadConfig` in `src/config.ts` — a `config.yml` section with no schema entry is silently ignored.
 2. Add a `buildXxxPrompt` function in `src/prompts-data.ts` (for data-source prompts) or `src/prompts.ts` (for repo-level prompts).
 3. Add bilingual strings (titles, labels, issue title function) to `src/i18n.ts`.
 4. Add a `saveXxxReport` function in `src/report-savers.ts`.

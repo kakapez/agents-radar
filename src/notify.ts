@@ -11,6 +11,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { NOTIFY_LABELS } from "./i18n.ts";
 import type { ReportHighlights } from "./prompts-data.ts";
 
@@ -52,21 +53,11 @@ export function buildMessage(
   highlights?: Highlights | null,
 ): string {
   const PAGES_URL = (pagesUrl ?? process.env["PAGES_URL"] ?? PAGES_URL_DEFAULT).replace(/\/$/, "");
-  const baseReports = reports.filter((r) => !r.endsWith("-en"));
-  const isWeekly = baseReports.includes("ai-weekly");
-  const isMonthly = baseReports.includes("ai-monthly");
-
-  const icon = isMonthly ? "📆" : isWeekly ? "📅" : "📡";
-  const suffix = isMonthly ? " 月报" : isWeekly ? " 周报" : "";
-  const lines: string[] = [`${icon} <b>agents-radar${suffix} · ${date}</b>`];
-
-  // Daily reports first, then rollups
-  const ordered = [
-    ...baseReports.filter((r) => !r.includes("weekly") && !r.includes("monthly")),
-    ...baseReports.filter((r) => r.includes("weekly") || r.includes("monthly")),
-  ];
+  const ordered = reports.filter((r) => !r.endsWith("-en"));
+  const lines: string[] = [`📡 <b>agents-radar · ${date}</b>`];
 
   const zhHighlights = highlights?.zh ?? {};
+  const enHighlights = highlights?.en ?? {};
 
   for (const r of ordered) {
     const zhLabel = NOTIFY_LABELS[r]?.zh ?? r;
@@ -82,8 +73,9 @@ export function buildMessage(
       lines.push(`• <a href="${zhUrl}">${zhLabel}</a>`);
     }
 
-    // Add highlights as indented sub-items
-    const items = zhHighlights[r];
+    // Add highlights as indented sub-items. Fall back to en when a report's zh
+    // highlights are missing so a single-language failure never blanks the message.
+    const items = zhHighlights[r] ?? enHighlights[r];
     if (items?.length) {
       for (const h of items) {
         lines.push(`  ◦ ${escapeHtml(h)}`);
@@ -136,7 +128,11 @@ async function main(): Promise<void> {
   console.log("[notify] Done!");
 }
 
-main().catch((e: unknown) => {
-  console.error("[notify]", e instanceof Error ? e.message : e);
-  process.exit(1);
-});
+// Only auto-send when run directly (`tsx src/notify.ts`). Guard prevents an
+// accidental send when another module imports `buildMessage` from here.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((e: unknown) => {
+    console.error("[notify]", e instanceof Error ? e.message : e);
+    process.exit(1);
+  });
+}

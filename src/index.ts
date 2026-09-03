@@ -65,7 +65,7 @@ import { fetchHfData, type HfData } from "./hf.ts";
 import { fetchDevtoData, type DevtoData } from "./devto.ts";
 import { fetchLobstersData, type LobstersData } from "./lobsters.ts";
 import { loadConfig } from "./config.ts";
-import { createWeeklyWindow, toCstDateStr, toUtcStr } from "./date.ts";
+import { createWeeklyWindow, toCstWeekStartDateStr, toUtcStr } from "./date.ts";
 import {
   type Lang,
   MSG,
@@ -380,7 +380,7 @@ async function main(): Promise<void> {
   requireEnv("GITHUB_TOKEN");
 
   const { now, since } = createWeeklyWindow(new Date());
-  const dateStr = toCstDateStr(now);
+  const dateStr = toCstWeekStartDateStr(now);
   const utcStr = toUtcStr(now);
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
 

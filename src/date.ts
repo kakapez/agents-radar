@@ -27,6 +27,14 @@ export function toCstDateStr(date: Date): string {
   return new Date(date.getTime() + CST_OFFSET_MS).toISOString().slice(0, 10);
 }
 
+/** Return the Monday CST date that identifies the current weekly digest. */
+export function toCstWeekStartDateStr(date: Date): string {
+  const cstDate = new Date(`${toCstDateStr(date)}T00:00:00Z`);
+  const daysSinceMonday = (cstDate.getUTCDay() + 6) % 7;
+  cstDate.setUTCDate(cstDate.getUTCDate() - daysSinceMonday);
+  return cstDate.toISOString().slice(0, 10);
+}
+
 /** Format a Date as a compact UTC string like "2026-03-11 00:00". */
 export function toUtcStr(date: Date): string {
   return date.toISOString().slice(0, 16).replace("T", " ");

@@ -1,5 +1,12 @@
 import { describe, it, expect } from "vitest";
-import { createWeeklyWindow, toCstDateStr, toUtcStr, weekdayOf, WEEKLY_WINDOW_MS } from "../date.ts";
+import {
+  createWeeklyWindow,
+  toCstDateStr,
+  toCstWeekStartDateStr,
+  toUtcStr,
+  weekdayOf,
+  WEEKLY_WINDOW_MS,
+} from "../date.ts";
 
 describe("toCstDateStr", () => {
   it("shifts a late-UTC timestamp to the next CST day", () => {
@@ -9,6 +16,13 @@ describe("toCstDateStr", () => {
 
   it("keeps a mid-UTC-day timestamp on the same CST day", () => {
     expect(toCstDateStr(new Date("2026-08-27T04:00:00Z"))).toBe("2026-08-27");
+  });
+});
+
+describe("toCstWeekStartDateStr", () => {
+  it("uses Monday as the stable weekly report key", () => {
+    expect(toCstWeekStartDateStr(new Date("2026-08-30T23:00:00Z"))).toBe("2026-08-31");
+    expect(toCstWeekStartDateStr(new Date("2026-09-01T23:00:00Z"))).toBe("2026-08-31");
   });
 });
 

@@ -37,14 +37,15 @@ jobs:
             echo "should_run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # CST date, matching the digests/YYYY-MM-DD/ folder produced by the
-          # native weekly digest's toCstDateStr report date.
+          # Use the Monday CST date as the stable weekly report directory key.
           DATE=$(TZ=Asia/Shanghai date +%Y-%m-%d)
-          if gh api "repos/${{ github.repository }}/contents/digests/$DATE" --silent 2>/dev/null; then
-            echo "digests/$DATE is already committed — this week's digest exists. Skipping."
+          DAY=$(TZ=Asia/Shanghai date -d "$DATE" +%u)
+          WEEK_START=$(TZ=Asia/Shanghai date -d "$DATE -$((DAY - 1)) days" +%Y-%m-%d)
+          if gh api "repos/${{ github.repository }}/contents/digests/$WEEK_START" --silent 2>/dev/null; then
+            echo "digests/$WEEK_START is already committed — this week's digest exists. Skipping."
             echo "should_run=false" >> "$GITHUB_OUTPUT"
           else
-            echo "No digests/$DATE yet — proceeding with this week's digest."
+            echo "No digests/$WEEK_START yet — proceeding with this week's digest."
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           fi
 

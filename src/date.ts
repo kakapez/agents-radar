@@ -13,6 +13,11 @@ export interface WeeklyWindow {
   hfEnabled: true;
 }
 
+/** Describe the rolling source coverage separately from the stable Monday key. */
+export function formatWeeklyCoverage(since: Date, until: Date): string {
+  return `${since.toISOString()} through ${until.toISOString()} (captured at run time; Monday CST is the directory key)`;
+}
+
 /** Build the shared seven-day source cutoff used by every digest run. */
 export function createWeeklyWindow(now: Date): WeeklyWindow {
   return {

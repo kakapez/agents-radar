@@ -1,6 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { toRfc822, escapeXml } from "../generate-manifest.ts";
 
+// Feed generation reads each archived Markdown file as-is; these helpers are
+// intentionally tested without regenerating historical report bodies.
+
 // ---------------------------------------------------------------------------
 // toRfc822
 // ---------------------------------------------------------------------------

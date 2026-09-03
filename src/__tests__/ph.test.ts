@@ -14,6 +14,7 @@ describe("fetchPhData", () => {
   it("queries the requested window and keeps AI topics", async () => {
     process.env["PRODUCTHUNT_TOKEN"] = "test-token";
     const since = new Date("2026-08-26T00:00:00.000Z");
+    const until = new Date("2026-09-02T00:00:00.000Z");
     const body = {
       data: {
         posts: {
@@ -54,13 +55,10 @@ describe("fetchPhData", () => {
       return jsonResponse(body);
     });
 
-    const before = Date.now();
-    const result = await fetchPhData(since);
-    const after = Date.now();
+    const result = await fetchPhData(since, until);
 
     expect(result.products.map((product) => product.id)).toEqual(["new"]);
     expect(request.variables?.postedAfter).toBe(since.toISOString());
-    expect(new Date(request.variables?.postedBefore ?? "").getTime()).toBeGreaterThanOrEqual(before);
-    expect(new Date(request.variables?.postedBefore ?? "").getTime()).toBeLessThanOrEqual(after);
+    expect(request.variables?.postedBefore).toBe(until.toISOString());
   });
 });

@@ -547,6 +547,8 @@ describe("buildHnPrompt", () => {
     expect(result).toContain("共 1 条");
     expect(result).toContain("社区动态周报");
     expect(result).toContain("过去7天");
+    expect(result).toContain("当前 top-story 榜单");
+    expect(result).toContain("不是完整的七天历史");
   });
 
   it("generates English variant", () => {
@@ -570,5 +572,7 @@ describe("buildHnPrompt", () => {
     expect(result).toContain("Comments: 2");
     expect(result).toContain("Hacker News AI Community Weekly Digest");
     expect(result).toContain("last 7 days");
+    expect(result).toContain("best-effort current top-story snapshot");
+    expect(result).toContain("not a complete seven-day history");
   });
 });

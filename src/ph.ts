@@ -104,7 +104,7 @@ interface PhResponse {
 // Fetch
 // ---------------------------------------------------------------------------
 
-export async function fetchPhData(since: Date): Promise<PhData> {
+export async function fetchPhData(since: Date, until: Date): Promise<PhData> {
   const token = process.env["PRODUCTHUNT_TOKEN"] ?? "";
   if (!token) {
     console.log("  [ph] PRODUCTHUNT_TOKEN not set — skipping.");
@@ -112,8 +112,6 @@ export async function fetchPhData(since: Date): Promise<PhData> {
   }
 
   // Query the complete requested window; ranking remains vote-based.
-  const until = new Date();
-
   try {
     const resp = await fetch(API_URL, {
       method: "POST",

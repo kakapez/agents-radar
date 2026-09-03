@@ -79,14 +79,12 @@ export async function fetchDevtoData(since: Date): Promise<DevtoData> {
             }
 
             const raw = (await resp.json()) as DevtoApiArticle[];
-            let reachedCutoff = false;
+            const validPublishedTimes = raw
+              .map((a) => new Date(a.published_at).getTime())
+              .filter((time) => Number.isFinite(time));
             for (const a of raw) {
               const publishedAt = new Date(a.published_at).getTime();
-              if (!Number.isFinite(publishedAt)) continue;
-              if (publishedAt < since.getTime()) {
-                reachedCutoff = true;
-                continue;
-              }
+              if (!Number.isFinite(publishedAt) || publishedAt < since.getTime()) continue;
               if (!seen.has(a.id)) {
                 seen.set(a.id, {
                   id: a.id,
@@ -103,7 +101,9 @@ export async function fetchDevtoData(since: Date): Promise<DevtoData> {
               }
             }
 
-            if (raw.length < DEVTO_PER_PAGE || reachedCutoff) break;
+            const pageIsEntirelyBeforeCutoff =
+              validPublishedTimes.length > 0 && validPublishedTimes.every((time) => time < since.getTime());
+            if (raw.length < DEVTO_PER_PAGE || pageIsEntirelyBeforeCutoff) break;
           }
         } catch (err) {
           console.error(`  [devto] "${tag}": ${err}`);

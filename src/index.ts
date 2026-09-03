@@ -65,7 +65,7 @@ import { fetchHfData, type HfData } from "./hf.ts";
 import { fetchDevtoData, type DevtoData } from "./devto.ts";
 import { fetchLobstersData, type LobstersData } from "./lobsters.ts";
 import { loadConfig } from "./config.ts";
-import { createWeeklyWindow, toCstWeekStartDateStr, toUtcStr } from "./date.ts";
+import { createWeeklyWindow, formatWeeklyCoverage, toCstWeekStartDateStr, toUtcStr } from "./date.ts";
 import {
   type Lang,
   MSG,
@@ -103,6 +103,7 @@ function requireEnv(name: string): string {
 
 async function fetchAllData(
   since: Date,
+  until: Date,
   webState: WebState,
 ): Promise<{
   fetched: RepoFetch[];
@@ -188,7 +189,7 @@ async function fetchAllData(
       }),
     ),
     fetchHnData(since).catch((): HnData => ({ stories: [], fetchSuccess: false })),
-    fetchPhData(since).catch((): PhData => ({ products: [], fetchSuccess: false })),
+    fetchPhData(since, until).catch((): PhData => ({ products: [], fetchSuccess: false })),
     fetchArxivData(since).catch((): ArxivData => ({ papers: [], fetchSuccess: false })),
     fetchHfData().catch((): HfData => ({ models: [], fetchSuccess: false })),
 
@@ -385,7 +386,10 @@ async function main(): Promise<void> {
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
 
   const providerName = process.env["LLM_PROVIDER"] ?? "anthropic";
-  console.log(`[${now.toISOString()}] Starting digest | provider: ${providerName} | window: 7d`);
+  console.log(
+    `[${now.toISOString()}] Starting weekly digest | provider: ${providerName} | ` +
+      `period key: ${dateStr} (Monday CST) | coverage: ${formatWeeklyCoverage(since, now)}`,
+  );
 
   // 1. Fetch all data in parallel
   const webState = loadWebState();
@@ -400,7 +404,7 @@ async function main(): Promise<void> {
     hfData,
     devtoData,
     lobstersData,
-  } = await fetchAllData(since, webState);
+  } = await fetchAllData(since, now, webState);
 
   const peerIds = new Set(OPENCLAW_PEERS.map((p) => p.id));
   const infraIds = new Set(INFRA_REPOS.map((r) => r.id));

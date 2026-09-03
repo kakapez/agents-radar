@@ -72,6 +72,8 @@ async function getReportContent(date: string, report: string): Promise<ReportCon
   const filePath = path.join(DIGESTS_DIR, date, `${report}.md`);
 
   try {
+    // Read the archived file verbatim: historical daily entries are not rewritten
+    // or relabeled as newly generated weekly content when the feed is rebuilt.
     const markdown = fs.readFileSync(filePath, "utf-8");
     const html = await marked.parse(markdown, { async: false });
 

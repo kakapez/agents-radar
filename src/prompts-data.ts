@@ -359,7 +359,7 @@ export function buildHnPrompt(data: HnData, dateStr: string, lang: Lang = "zh"):
     .join("\n\n");
 
   if (lang === "en") {
-    return `You are an AI industry news analyst. The following are AI-related posts from the current Hacker News topstories feed as of ${dateStr} (ordered by HN rank, ${data.stories.length} total):
+    return `You are an AI industry news analyst. The following are a best-effort current top-story snapshot from Hacker News as of ${dateStr}, filtered to posts from the last 7 days (not a complete seven-day history; ordered by HN rank, ${data.stories.length} total):
 
 ---
 
@@ -398,7 +398,7 @@ Style: English, concise and professional, preserve all original links.
 `;
   }
 
-  return `你是 AI 行业资讯分析师。以下是 ${dateStr} 从 Hacker News topstories 抓取的 AI 相关热门帖子（按 HN 排名顺序，共 ${data.stories.length} 条）：
+  return `你是 AI 行业资讯分析师。以下是截至 ${dateStr} 从 Hacker News topstories 抓取的 AI 相关热门帖子快照（尽力而为，仅代表当前 top-story 榜单；已筛选过去7天，不是完整的七天历史，按 HN 排名顺序，共 ${data.stories.length} 条）：
 
 ---
 

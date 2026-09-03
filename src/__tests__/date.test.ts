@@ -6,6 +6,7 @@ import {
   toUtcStr,
   weekdayOf,
   WEEKLY_WINDOW_MS,
+  formatWeeklyCoverage,
 } from "../date.ts";
 
 describe("toCstDateStr", () => {
@@ -42,6 +43,14 @@ describe("weekly window", () => {
     expect(window.hfEnabled).toBe(true);
     expect(new Date("2026-08-31T23:00:00Z") >= window.since).toBe(true);
     expect(new Date("2026-08-31T22:59:59.999Z") >= window.since).toBe(false);
+  });
+
+  it("describes captured coverage separately from the Monday key", () => {
+    expect(
+      formatWeeklyCoverage(new Date("2026-08-31T23:00:00.000Z"), new Date("2026-09-07T23:00:00.000Z")),
+    ).toBe(
+      "2026-08-31T23:00:00.000Z through 2026-09-07T23:00:00.000Z (captured at run time; Monday CST is the directory key)",
+    );
   });
 
   it("returns one cutoff object for all source fetchers", () => {

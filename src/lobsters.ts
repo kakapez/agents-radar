@@ -90,7 +90,7 @@ export async function fetchLobstersData(since: Date): Promise<LobstersData> {
 
     // Filter using the shared cutoff supplied by the orchestration layer.
     const stories = [...seen.values()]
-      .filter((s) => new Date(s.publishedAt).getTime() > since.getTime())
+      .filter((s) => new Date(s.publishedAt).getTime() >= since.getTime())
       .sort((a, b) => b.score - a.score)
       .slice(0, LOBSTERS_TOP);
 

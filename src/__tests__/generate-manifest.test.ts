@@ -1,8 +1,26 @@
 import { describe, it, expect } from "vitest";
-import { toRfc822, escapeXml } from "../generate-manifest.ts";
+import { reportTitleFromMarkdown, toRfc822, escapeXml } from "../generate-manifest.ts";
 
 // Feed generation reads each archived Markdown file as-is; these helpers are
 // intentionally tested without regenerating historical report bodies.
+
+describe("reportTitleFromMarkdown", () => {
+  it("preserves an archived daily title when labels now say weekly", () => {
+    expect(
+      reportTitleFromMarkdown("# Hacker News AI 社区动态日报 2026-09-02\n\nbody", "2026-09-02", "ai-hn"),
+    ).toBe("Hacker News AI 社区动态日报 2026-09-02");
+  });
+
+  it("uses the current weekly title from a newly generated report", () => {
+    expect(
+      reportTitleFromMarkdown(
+        "# Hacker News AI Community Weekly Digest 2026-09-07\n",
+        "2026-09-07",
+        "ai-hn-en",
+      ),
+    ).toBe("Hacker News AI Community Weekly Digest 2026-09-07");
+  });
+});
 
 // ---------------------------------------------------------------------------
 // toRfc822

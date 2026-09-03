@@ -49,8 +49,19 @@ interface Manifest {
 }
 
 interface ReportContent {
+  title: string;
   summary: string;
   fullHtml: string;
+}
+
+/**
+ * Preserve the report's own period wording in RSS titles. This matters when
+ * rebuilding the feed after the fixed labels have moved from daily to weekly:
+ * archived Markdown remains the source of truth for historical semantics.
+ */
+export function reportTitleFromMarkdown(markdown: string, date: string, report: string): string {
+  const heading = markdown.match(/^#\s+(.+?)\s*$/m)?.[1]?.trim();
+  return heading || `${REPORT_LABELS[report] ?? report} ${date}`;
 }
 
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -76,6 +87,7 @@ async function getReportContent(date: string, report: string): Promise<ReportCon
     // or relabeled as newly generated weekly content when the feed is rebuilt.
     const markdown = fs.readFileSync(filePath, "utf-8");
     const html = await marked.parse(markdown, { async: false });
+    const title = reportTitleFromMarkdown(markdown, date, report);
 
     // Extract summary text from original HTML (before CDATA escape)
     const textOnly = html
@@ -88,6 +100,7 @@ async function getReportContent(date: string, report: string): Promise<ReportCon
     const safeHtml = html.replace(/]]>/g, "]]]]><![CDATA[");
 
     return {
+      title,
       summary: escapeXml(summary), // Plain text, XML-escaped, no CDATA
       fullHtml: `<![CDATA[${safeHtml}]]>`, // HTML in CDATA, no escaping needed
     };
@@ -96,6 +109,7 @@ async function getReportContent(date: string, report: string): Promise<ReportCon
     const label = REPORT_LABELS[report] ?? report;
     const title = `${label} ${date}`;
     return {
+      title,
       summary: escapeXml(title),
       fullHtml: `<![CDATA[${escapeXml(title)}]]>`,
     };
@@ -136,8 +150,6 @@ async function main(): Promise<void> {
 
   const itemXmlChunks: string[] = [];
   for (const { date, report } of feedItems) {
-    const label = REPORT_LABELS[report] ?? report;
-    const title = `${label} ${date}`;
     const link = `${SITE_URL}/#${date}/${report}`;
     const parts = date.split("-").map(Number);
     const pubDate = toRfc822(new Date(Date.UTC(parts[0]!, parts[1]! - 1, parts[2]!)));
@@ -145,7 +157,7 @@ async function main(): Promise<void> {
     itemXmlChunks.push(
       [
         "    <item>",
-        `      <title>${escapeXml(title)}</title>`,
+        `      <title>${escapeXml(content.title)}</title>`,
         `      <link>${escapeXml(link)}</link>`,
         `      <guid isPermaLink="true">${escapeXml(link)}</guid>`,
         `      <pubDate>${pubDate}</pubDate>`,

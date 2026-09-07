@@ -1,0 +1,61 @@
+# ArXiv AI Research Weekly Digest 2026-09-07
+
+> Source: [ArXiv](https://arxiv.org/) (cs.AI, cs.CL, cs.LG) | 50 papers | Generated: 2026-09-07 01:53 UTC
+
+---
+
+# ArXiv AI Research Weekly Digest (2026-09-01 to 2026-09-07)
+
+## 1. Last 7 Days' Highlights
+This week’s 50 cs.AI/CL/LG submissions center on advancing LLM reasoning transparency and efficiency, with breakthroughs in uncertainty quantification via graph complexity and adaptive MoE expert skipping. Agentic AI research expanded into multi-agent interchangeability testing, security-context contracts for composable controls, and substrate-aware planning that treats execution constraints as first-class inputs. New benchmarks and frameworks address long-horizon VLA robotics tasks, formal quantum mechanics proof synthesis, and legal meaning preservation evaluation. Applied AI saw notable progress in medical imaging, building energy systems, and computational design science, alongside a growing focus on responsible AI deployment including uncensored model ecosystem mapping and human-in-the-loop assessment frameworks.
+
+## 2. Key Papers
+
+### 🧠 Large Language Models (architecture, training, alignment, evaluation)
+| Paper | Authors | Summary |
+| :--- | :--- | :--- |
+| [GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity](http://arxiv.org/abs/2609.05284v1) | Shuang Liang, Xin-Yu Hu, Xiang-Jun Ou et al. | This work introduces a graph-complexity-based framework to quantify reasoning uncertainty in LLMs, which arises from divergent branching at each reasoning step even with identical inputs. It matters because it provides a principled metric to measure and optimize LLM reasoning reliability, addressing a critical gap in trustworthiness of advanced reasoning systems. |
+| [Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference](http://arxiv.org/abs/2609.05275v1) | Mostafa Elhoushi, Alex Pretko, Nolan Dey et al. | The paper revives layer dropout for large-scale LLMs, demonstrating optimized layer sparsity delivers faster training, higher accuracy, and robustness to zero-shot layer pruning. It reverses the trend of abandoning dropout in scaled LLM training, offering a practical path to more efficient model development and deployment. |
+| [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](http://arxiv.org/abs/2609.05228v1) | Zukang Xu, Zhixiong Zhao, Xing Hu et al. | ACE proposes a calibration-free adaptive expert skipping method for MoE LLMs that eliminates redundant computation from fixed top-k routing, without relying on router confidence scores. It significantly improves inference efficiency of MoE architectures while maintaining performance, a key advancement for scaling large language models cost-effectively. |
+| [What Matters in On-Policy Distillation? A Perspective on Data Efficiency and Data Selection](http://arxiv.org/abs/2609.05198v1) | Zhinan Hou, Jiaqi Zhang, Xunliang Cai et al. | This empirical study investigates data-centric mechanisms in on-policy distillation (OPD) for LLM reasoning enhancement, identifying critical factors for data efficiency and optimal data selection strategies. It fills a major gap in understanding OPD’s underlying dynamics, providing actionable guidance for more effective post-training of reasoning models. |
+| [Do LLMs Exhibit Coherent Knowledge Structures in Mathematical Reasoning? A Perspective from Knowledge Space Theory](http://arxiv.org/abs/2609.05245v1) | Peng Cui, Heejin Do, Mrinmaya Sachan et al. | Using Knowledge Space Theory, the paper examines whether LLMs have coherent, prerequisite-based knowledge structures in mathematical reasoning, as humans do. It provides new insights into the organizational logic of LLM knowledge, with implications for improving reasoning consistency and targeted model fine-tuning. |
+
+### 🤖 Agents & Reasoning (planning, tool use, multi-agent, chain-of-thought)
+| Paper | Authors | Summary |
+| :--- | :--- | :--- |
+| [RoboSPA: Can VLA Models Go Beyond Simple Scenes and Long-Horizon Tasks?](http://arxiv.org/abs/2609.05324v1) | Zhenxuan Fan, Bo Zhang, Yutong Lin et al. | RoboSPA introduces a benchmark and framework to evaluate Vision-Language-Action models in complex, long-horizon robotic manipulation tasks with increasing spatial and procedural complexity. It addresses a critical limitation of existing VLA evaluations, pushing research toward more realistic, generalizable robotic manipulation capabilities. |
+| [Testing Interchangeability in LLM Agent Teams](http://arxiv.org/abs/2609.05279v1) | Jianxin Gao, Tianyi Yu, Linna Deng et al. | This work empirically tests the core assumption that agents filling the same role in multi-agent systems are interchangeable, using eight independently formed teams from a single base model on identical tasks. It reveals potential inconsistencies in agent interchangeability, with important implications for production multi-agent system reliability and maintenance. |
+| [CONTINUITY: Security-Context Contracts for Composable LLM Agent Controls](http://arxiv.org/abs/2609.05269v1) | Chris Zheng, Geng Yang | CONTINUITY proposes security-context contracts to ensure end-to-end security in composable LLM agent systems, where individual correct security mechanisms may fail when integrated due to dropped or modified context. It provides a formal framework for building verifiably secure multi-component agent systems, addressing a growing risk in agent deployment. |
+| [Trace2Tower: Transition-Aware EigenTrace Induction of Multi-Level Skills for LLM Agents](http://arxiv.org/abs/2609.05261v1) | Jiazheng Sun, Boyu Yang, Binhao Yuan et al. | Trace2Tower introduces a transition-aware skill induction framework that extracts hierarchical, multi-level skills from agent execution traces by leveraging temporal dependencies and outcome-conditioned topology. It overcomes the limitations of shallow trajectory retrieval and flat skill summarization, enabling LLM agents to master complex interactive tasks more effectively. |
+| [Substrate-Aware AI Agents: Execution Context as a First-Class Input](http://arxiv.org/abs/2609.05232v1) | Manu Agrawal | The paper identifies "substrate blindness" in AI agents—failure to account for memory, runtime, compute, and operational constraints during planning—and proposes treating execution context as a first-class input. It significantly improves agent plan feasibility in real-world constrained environments, bridging the gap between agent planning and practical deployment limitations. |
+
+### 🔧 Methods & Frameworks (new techniques, benchmarks, efficiency improvements)
+| Paper | Authors | Summary |
+| :--- | :--- | :--- |
+| [LexFlip: A Dissociation Diagnostic for Legal Meaning Preservation Metrics](http://arxiv.org/abs/2609.05296v1) | Gaurab Baral | LexFlip introduces a diagnostic test to evaluate whether legal text simplification metrics truly measure meaning preservation, by dissociating lexical overlap from legal force. It solves a critical flaw in current evaluation methods that can be gamed by monotonic token overlap functions, enabling more reliable legal NLP system assessment. |
+| [GLASS: Graph-Language Alignment with Spherical Scoring for Transferable Graph-Level Anomaly Detection](http://arxiv.org/abs/2609.05253v1) | Xudong Wang, Chris Ding, Tongxin Li et al. | GLASS presents a cross-domain graph-level anomaly detection framework that aligns structure-aware graph encoders with instruction-aware text encoders on a unit hypersphere. It achieves robust transferability across diverse graph domains without task-specific fine-tuning, advancing the practical applicability of graph anomaly detection in real-world scenarios. |
+| [How Does mHC Use Its Residual Streams? Selective Routing and Near-Identity Mixing](http://arxiv.org/abs/2609.05309v1) | Pengxiang Zhao, Xing Li, Xianzhi Yu et al. | This work reveals that trained manifold-constrained Hyper-Connection (mHC) models use selective routing of information across residual streams and near-identity mixing, rather than full utilization of all parallel pathways. It provides fundamental insights into how multi-stream residual networks operate, guiding future architecture design for improved efficiency and performance. |
+
+### 📊 Applications (domain-specific, multimodal, code generation)
+| Paper | Authors | Summary |
+| :--- | :--- | :--- |
+| [Large Language Models for HVAC Operations in Building Energy Systems: A Critical Review of Methods, Applications, and Deployment Readiness](http://arxiv.org/abs/2609.05314v1) | Alexander Neubauer, Tianzhen Hong, Han Li et al. | This systematic review analyzes 66 peer-reviewed studies on LLM applications for HVAC building energy systems, evaluating methods, use cases, and deployment readiness. It provides a comprehensive roadmap for researchers and practitioners, addressing the gap between rich building sensor data and actionable operational insights enabled by LLMs. |
+| [AxQM: A Textbook-Scale Benchmark for Formal Proof Synthesis in a Library of Finite-Dimensional Quantum Mechanics](http://arxiv.org/abs/2609.05157v1) | Weichen Winston Yin, Jacob M. Taylor, Dirk R. Englund et al. | AxQM introduces a textbook-scale benchmark for formal proof synthesis in finite-dimensional quantum mechanics, bringing rigorous machine-verified standards to physics research. It enables evaluation and development of AI systems for automated formalization of physics, with potential to accelerate quantum research reproducibility and discovery. |
+
+## 3. Research Trend Signal
+A prominent emerging trend this week is the shift toward context-aware AI systems that integrate structural constraints—whether execution environment, security requirements, or domain-specific physical laws—into core model design and decision-making. This is visible across substrate-aware agents that treat computational constraints as first-class inputs, security-context contracts for composable agent systems, and physics-aware quantum machine learning frameworks.
+
+Simultaneously, there is a growing focus on uncertainty and reliability across the AI stack: from graph-based reasoning uncertainty quantification in LLMs to conformal prediction for offensive cybersecurity and change-point detection in multi-agent RL. This reflects a maturation of the field beyond raw performance gains toward building verifiable, deployable systems that can operate reliably in dynamic, real-world environments.
+
+## 4. Worth Deep Reading
+1. **[GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity](http://arxiv.org/abs/2609.05284v1)**  
+   Reasoning uncertainty is a fundamental barrier to trusted LLM deployment in high-stakes domains. This paper introduces a principled, graph-theoretic framework to measure and optimize this uncertainty, moving beyond ad-hoc confidence estimation methods. Its approach could enable systematic improvements to LLM reasoning reliability and provide a new evaluation paradigm for reasoning systems.
+
+2. **[CONTINUITY: Security-Context Contracts for Composable LLM Agent Controls](http://arxiv.org/abs/2609.05269v1)**  
+   As LLM agent systems increasingly integrate multiple security components, the risk of end-to-end security failure due to context loss across components grows rapidly. This work addresses a critical, understudied gap in agent security by proposing formal contracts that preserve security context across composable controls. It is essential reading for anyone building or deploying production multi-agent systems.
+
+3. **[RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?](http://arxiv.org/abs/2609.05324v1)**  
+   VLA models represent the frontier of robotic manipulation, but current benchmarks are limited to simple, short-horizon tasks that fail to reflect real-world complexity. RoboSPA pushes the field toward evaluating and advancing VLA capabilities in long-horizon, spatially complex scenarios, providing a new benchmark that will likely shape the next generation of robotics foundation model research.
+
+---
+*This weekly digest is auto-generated by [agents-radar](https://github.com/kakapez/agents-radar).*

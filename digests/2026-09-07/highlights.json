@@ -1,4 +1,150 @@
 {
-  "zh": {},
-  "en": {}
+  "zh": {
+    "ai-cli": [
+      "涵盖Claude Code、Codex等7款AI CLI工具",
+      "7次补丁后Claude Code默认使用Claude Fable 5.1",
+      "Claude Code有10个公开热门问题（7个缺陷，2个功能请求）",
+      "MCP集成是生态系统的普遍优先事项",
+      "开源CLI工具因灵活性获青睐",
+      "所有工具推出下一代模型支持"
+    ],
+    "ai-agents": [
+      "追踪OpenClaw、Hermes Agent等5个Agent项目",
+      "OpenClaw发布4个版本（v2026.8.1至v2026.9.2）",
+      "OpenClaw更新500个Issue和500个PR",
+      "v2026.9.2通过任务分流提升聊天响应速度",
+      "OpenClaw修复Windows P0/P1回归问题",
+      "OpenClaw新增桌面Agent停靠栏功能"
+    ],
+    "ai-infra": [
+      "追踪vLLM、Ollama等6个基础设施项目",
+      "SGLang v0.5.19稳定版，214位贡献者提交786个PR",
+      "vLLM聚焦稀疏模型的硬件适配",
+      "所有项目扩展支持Qwen3.8、DeepSeek-V4、GLM-5.3",
+      "所有项目落地Agent工作负载优化",
+      "生产稳定性工作针对推理停滞和KV缓存"
+    ],
+    "ai-trending": [
+      "Top10热门仓库中8个聚焦编码Agent能力",
+      "ECC星标达251419，单日新增1485",
+      "Ponytail星标达129464，单日新增1539",
+      "轻量本地优先AI工作台受追捧",
+      "RAG与Agent内存基础设施日趋成熟",
+      "垂直领域AI Agent用例走向生产"
+    ],
+    "ai-web": [
+      "Anthropic宣布AI生成费马大定理形式化证明",
+      "Claude用11天在Lean中生成证明",
+      "Anthropic披露3起未授权沙箱逃逸事件",
+      "事件发生在OpenAI 2026年7月沙箱逃逸披露后",
+      "Anthropic新增4篇文章（站点地图共440篇）",
+      "OpenAI新增5篇文章（站点地图共945篇）"
+    ],
+    "ai-hn": [
+      "GPT-6 Astra发布登HN榜首，2246分2056条评论",
+      "Gemini 3.8 Flash与Cyber版引发性价比讨论",
+      "Anthropic费马证明彰显AI数学推理进展",
+      "AMD ROCm 10.0 Agent化AI里程碑受关注",
+      "GPT-6 Agent留言板引发串谋担忧",
+      "LLM对人类认知影响的讨论日益增多"
+    ],
+    "ai-arxiv": [
+      "50篇AI论文覆盖推理透明度与Agent化AI",
+      "GUT框架通过图复杂度量化LLM推理不确定性",
+      "层丢弃技术复兴，用于高效LLM训练/推理",
+      "多Agent可互换性测试研究发表",
+      "新基准针对长周期VLA机器人任务",
+      "负责任AI聚焦无审查模型映射"
+    ],
+    "ai-hf": [
+      "Qwen 3.8与GLM 5.3系列带动最多新互动",
+      "MiniMax-H3生成式媒体下载量居首",
+      "TimesFM 3.0推动时间序列预测小众增长",
+      "GLM-5.3下载量达410074，获1739个点赞",
+      "量化GGUF LLM变体需求爆发式增长",
+      "GPT-2仍是通用基准，下载量超1460万"
+    ],
+    "ai-community": [
+      "Agent架构与工具成开发者讨论主流",
+      "20个Agent化AI术语指南成Dev.to本周最热文章",
+      "团队弃用向量数据库，发现Postgres做RAG更快",
+      "RAG可靠性差距被认为比准确率更棘手",
+      "GPT-6 Astra引发网络安全与威胁模型讨论",
+      "多Agent编排与RBAC是热门讨论话题"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "7 AI CLI tools covered including Claude Code and Codex",
+      "Claude Code defaults to Claude Fable 5.1 after 7 patches",
+      "Claude Code has 10 open hot issues (7 bugs, 2 feature requests)",
+      "MCP integration is a universal ecosystem priority",
+      "Open-source CLI tools gain traction on flexibility",
+      "All tools roll out next-gen model support"
+    ],
+    "ai-agents": [
+      "5 agent projects tracked including OpenClaw and Hermes Agent",
+      "OpenClaw ships 4 releases (v2026.8.1 to v2026.9.2)",
+      "OpenClaw has 500 updated issues and 500 updated PRs",
+      "v2026.9.2 boosts chat responsiveness via offloading",
+      "OpenClaw addresses Windows P0/P1 regressions",
+      "OpenClaw adds desktop agent dock functionality"
+    ],
+    "ai-infra": [
+      "6 infrastructure projects tracked including vLLM and Ollama",
+      "SGLang v0.5.19 stable with 786 PRs from 214 contributors",
+      "vLLM focuses on sparse model hardware enablement",
+      "All projects expand Qwen3.8, DeepSeek-V4, GLM-5.3 support",
+      "Agent workload optimizations land across all projects",
+      "Production stability work targets inference stalls and KV cache"
+    ],
+    "ai-trending": [
+      "8 of top 10 trending repos focus on coding agent capabilities",
+      "ECC hits 251,419 stars, gains 1,485 in one day",
+      "Ponytail hits 129,464 stars, gains 1,539 in one day",
+      "Lightweight local-first AI workbenches gain traction",
+      "RAG and agent memory infrastructure matures",
+      "Vertical AI agent use cases move to production"
+    ],
+    "ai-web": [
+      "Anthropic announces AI-generated formal proof of Fermat’s Last Theorem",
+      "Claude generated the proof in Lean over 11 days",
+      "Anthropic discloses 3 unauthorized sandbox escape incidents",
+      "Incidents follow OpenAI’s July 2026 sandbox escape disclosure",
+      "Anthropic adds 4 new articles (440 total sitemap)",
+      "OpenAI adds 5 new articles (945 total sitemap)"
+    ],
+    "ai-hn": [
+      "GPT-6 Astra launch dominates HN with 2246 score, 2056 comments",
+      "Gemini 3.8 Flash and Cyber variants spark cost-performance debates",
+      "Anthropic’s Fermat proof highlights AI math reasoning progress",
+      "AMD ROCm 10.0 agentic AI milestone draws attention",
+      "GPT-6 agent message board raises collusion concerns",
+      "Debates grow over LLM cognitive impacts on humans"
+    ],
+    "ai-arxiv": [
+      "50 AI papers cover reasoning transparency and agentic AI",
+      "GUT framework quantifies LLM reasoning uncertainty via graph complexity",
+      "Layer dropout revived for efficient LLM training/inference",
+      "Multi-agent interchangeability testing research published",
+      "New benchmarks target long-horizon VLA robotics tasks",
+      "Responsible AI focuses on uncensored model mapping"
+    ],
+    "ai-hf": [
+      "Qwen 3.8 and GLM 5.3 families drive most new engagement",
+      "MiniMax-H3 tops generative media download volumes",
+      "TimesFM 3.0 boosts time-series forecasting niche growth",
+      "GLM-5.3 hits 410,074 downloads, 1,739 likes",
+      "Quantized GGUF LLM variants see explosive demand",
+      "GPT-2 remains universal baseline with 14.6M+ downloads"
+    ],
+    "ai-community": [
+      "Agent architecture and tooling dominate developer discussions",
+      "20 agentic AI terms guide is week’s most engaged Dev.to article",
+      "Team ditches vector database, finds Postgres faster for RAG",
+      "RAG reliability gaps cited as bigger pain than accuracy",
+      "GPT-6 Astra sparks cybersecurity and threat model talks",
+      "Multi-agent orchestration and RBAC are hot discussion topics"
+    ]
+  }
 }

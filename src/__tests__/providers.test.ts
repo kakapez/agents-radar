@@ -232,14 +232,33 @@ describe("OpenAIProvider", () => {
     });
   });
 
+  it("falls back to reasoning_content when content is empty", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [{ message: { content: "", reasoning_content: "Thought output" } }],
+    });
+
+    const p = new OpenAIProvider({ apiKey: "k", model: "doubao-seed-2-1-turbo" });
+    const result = await p.call("test prompt", 2048);
+    expect(result).toBe("Thought output");
+    expect(mockCreate).toHaveBeenCalledWith({
+      model: "doubao-seed-2-1-turbo",
+      max_completion_tokens: 2048,
+      messages: [{ role: "user", content: "test prompt" }],
+      thinking: { type: "disabled" },
+    });
+  });
+
   it("throws on empty response", async () => {
     const mockCreate = await getOpenAIMockCreate();
     mockCreate.mockResolvedValueOnce({
-      choices: [{ message: { content: null } }],
+      choices: [{ message: { content: null }, finish_reason: "length" }],
     });
 
     const p = new OpenAIProvider({ apiKey: "k" });
-    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from openai");
+    await expect(p.call("prompt", 100)).rejects.toThrow(
+      "Unexpected empty response from openai (finish_reason: length)",
+    );
   });
 
   it("throws when choices is empty", async () => {

@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI生态系统迈入成熟阶段",
+      "本周摘要涵盖8款工具",
+      "Windows稳定性是普遍痛点",
+      "子代理编排成为核心功能",
+      "厂商原生与社区工具分化",
+      "Claude Code发布5个补丁版本"
+    ],
+    "ai-agents": [
+      "本周追踪5个代理项目",
+      "OpenClaw有500个更新的issue/PR",
+      "OpenClaw发布3个新版本",
+      "v2026.9.4是最新稳定版OpenClaw",
+      "稳定性回退给稳定通道施压",
+      "子代理编排bug已修复"
+    ],
+    "ai-infra": [
+      "涵盖6个基础设施项目",
+      "vLLM发布v0.29.0稳定版",
+      "稀疏注意力支持是首要任务",
+      "KV缓存创新降低成本",
+      "跨平台一致性差距正在缩小",
+      "SGLang有CI积压和4个高危bug"
+    ],
+    "ai-trending": [
+      "代理式工具实现爆发式增长",
+      "本地推理方案人气飙升",
+      "语音生成是突破性垂直领域",
+      "colibri单日斩获868星",
+      "开源语音克隆星数创纪录",
+      "代理技能注册表快速成熟"
+    ],
+    "ai-web": [
+      "Anthropic确认第四起网络安全事件",
+      "新型武器开发红队研究出炉",
+      "OpenAI新增15个页面",
+      "克劳德价值差异研究发布",
+      "开放研究数据访问范围扩大",
+      "两用风险研究范围拓宽"
+    ],
+    "ai-hn": [
+      "AI数学对齐偏差辩论引1200评论",
+      "Bengio代理对齐偏差研究爆火",
+      "AI安全与治理成讨论焦点",
+      "编码生产力提升遭质疑",
+      "苹果神经引擎与英伟达硬件引争论",
+      "AI代理垃圾信息与滥用担忧升温"
+    ],
+    "ai-arxiv": [
+      "反事实遗憾最小化提速80倍",
+      "MoE模型对重复数据过拟合更严重",
+      "领域特定幻觉检测方法亮相",
+      "边缘端视觉语言模型用于物种识别",
+      "训练后量化研究见解发布",
+      "多代理集体决策框架提出"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B以14973赞领跑趋势榜",
+      "通义千问包揽趋势榜前30中6席",
+      "LTX-2.5与MiniMax-H3视频模型猛涨",
+      "DeepSeek V4.1-Flash获2206赞",
+      "MiniCPM5-2B紧凑型大语言模型走热",
+      "Qwen-Drive-1.0-4B自动驾驶模型发布"
+    ],
+    "ai-community": [
+      "AI与开发者编程技能辩论激烈",
+      "氛围式编码讨论引发社区分裂",
+      "OpenAI代理实施真实世界攻击",
+      "GPT-6 Astra登陆AWS Bedrock",
+      "Claude Fable 5.1 / Mythos 5.1发布",
+      "RAG与LangGraph教程占教程类主流"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem enters maturation phase",
+      "8 tools covered in this week's digest",
+      "Windows stability is a universal pain point",
+      "Subagent orchestration becomes core feature",
+      "Vendor-native vs community tools diverge",
+      "Claude Code ships 5 patch releases"
+    ],
+    "ai-agents": [
+      "5 agent projects tracked this week",
+      "OpenClaw sees 500 updated issues/PRs",
+      "OpenClaw ships 3 new releases",
+      "v2026.9.4 is latest stable OpenClaw",
+      "Stability regressions pressure stable channel",
+      "Subagent orchestration bugs addressed"
+    ],
+    "ai-infra": [
+      "6 infrastructure projects covered",
+      "vLLM releases v0.29.0 stable",
+      "Sparse attention support is top priority",
+      "KV cache innovations cut costs",
+      "Cross-platform parity gaps being closed",
+      "SGLang has CI backlog and 4 high-severity bugs"
+    ],
+    "ai-trending": [
+      "Agentic tooling sees explosive growth",
+      "Local inference solutions surge in popularity",
+      "Voice generation is breakout vertical",
+      "colibri gains 868 stars in one day",
+      "Open-source voice cloning hits record stars",
+      "Agent skill registries mature rapidly"
+    ],
+    "ai-web": [
+      "Anthropic confirms 4th cybersecurity incident",
+      "New red team research on weapons development",
+      "OpenAI releases 15 new pages",
+      "Claude value variation study published",
+      "Open research data access expanded",
+      "Dual-use risk research broadens"
+    ],
+    "ai-hn": [
+      "AI math misalignment debate sparks 1200 comments",
+      "Bengio's agent misalignment research goes viral",
+      "AI safety and governance dominate discussions",
+      "Coding productivity gains questioned",
+      "Apple Neural Engine and Nvidia hardware debated",
+      "AI agent spam and misuse concerns rise"
+    ],
+    "ai-arxiv": [
+      "80x speedup for counterfactual regret minimization",
+      "MoE models overfit more to repeated data",
+      "Domain-specific hallucination detection unveiled",
+      "Edge vision-language models for species ID",
+      "Post-training quantization insights published",
+      "Multi-agent collective decision framework proposed"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B leads trending with 14973 likes",
+      "Qwen takes 6 of top 30 trending spots",
+      "LTX-2.5 and MiniMax-H3 video models surge",
+      "DeepSeek V4.1-Flash gains 2206 likes",
+      "MiniCPM5-2B compact LLM trends",
+      "Qwen-Drive-1.0-4B autonomous driving model launches"
+    ],
+    "ai-community": [
+      "AI vs developer coding skill debate rages",
+      "Vibe coding discourse splits community",
+      "OpenAI agents conduct real-world attacks",
+      "GPT-6 Astra launches on AWS Bedrock",
+      "Claude Fable 5.1 / Mythos 5.1 released",
+      "RAG and LangGraph tutorials dominate how-to content"
+    ]
+  }
+}

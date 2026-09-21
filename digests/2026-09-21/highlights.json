@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "本周摘要涵盖7款主流AI CLI工具",
+      "Claude Code发布8个稳定版(v2.1.271–v2.1.278)",
+      "Claude Code更新聚焦成本优化与可靠性",
+      "OpenAI Codex有10个活跃追踪问题",
+      "MCP成为关键互操作层",
+      "安全防护成CLI代理必备基础"
+    ],
+    "ai-agents": [
+      "OpenClaw生态摘要追踪5个代理项目",
+      "OpenClaw7天内500个问题和PR获更新",
+      "OpenClaw v2026.9.5稳定版含4179个PR",
+      "v2026.9.5有503名开发者参与贡献",
+      "Linux配套构建同步v2026.9.5稳定通道",
+      "近期OpenClaw大版本发布致bug量高"
+    ],
+    "ai-infra": [
+      "本周涵盖6个核心AI基础设施项目",
+      "vLLM有7个追踪的高/严重稳定性问题",
+      "SGLang发v0.5.20稳定版含713个PR237名贡献者",
+      "推理引擎针对DeepSeek V4、Qwen3.8-Flash-Next优化",
+      "本地运行时拓展消费级硬件边缘MoE部署",
+      "生态内无重大破坏性API变更"
+    ],
+    "ai-trending": [
+      "代理技能框架单日合计涨星超4000",
+      "计算机使用代理工具与集群管理激增",
+      "LLM内存/上下文优化成高增长品类",
+      "higgsfield GPU编排平台发布获465星",
+      "Ollama总星数达181330成核心本地LLM工具",
+      "生态围绕标准化代理技能接口整合"
+    ],
+    "ai-web": [
+      "Anthropic宣布与埃森哲超10亿美元嵌入式评估合作",
+      "Anthropic推出Claude生命科学验证计划",
+      "Anthropic披露第4起未上报的Claude Opus 4.6安全事件",
+      "AI优化的生物分子建模蛋白设计速度提升4倍",
+      "OpenAI发布50余篇安全与恶意使用阻断披露",
+      "共67篇官方文章：Anthropic4篇，OpenAI63篇"
+    ],
+    "ai-hn": [
+      "ChatGPT网页广告追踪引发强烈隐私反弹",
+      "Qwen Image 2.1获479分 开源权重性能受赞",
+      "LLM缓存间直接语义通信论文引发讨论",
+      "社区支持开源模型保护倡议",
+      "AI写作工具成用户争议焦点",
+      "自主AI武器与劳工权引发伦理讨论"
+    ],
+    "ai-arxiv": [
+      "追踪cs.AI等领域50篇AI相关论文",
+      "研究称安全训练“洗白”而非消除性别偏见",
+      "按需注意力实现LLM动态上下文回忆",
+      "新研究优化代理框架与在线策略蒸馏",
+      "概率时序推理框架填补基准空白",
+      "机器人世界模型进展聚焦物理代理能力"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B多模态模型点赞15862居榜首",
+      "MiniMax-H3与LTX-2.5视频模型下载均超150万",
+      "三值2位Bonsai模型引领超低位量化趋势",
+      "MiniCPM5-2B边缘场景下载量达420622",
+      "Xing4.0-29B-A4B因开源对话表现优异走红",
+      "Qwen-2.5-1B-RLCD优化适配Apple Silicon MLX并行解码"
+    ],
+    "ai-community": [
+      "AI代理安全与可靠性成开发者讨论热点",
+      "Dev.to概述AI代理四阶段DevSecOps流程",
+      "代理式编码扰乱开发者心流的争论升温",
+      "OpenAI单仓因库与SSO连环漏洞遭攻破受关注",
+      "GPT-6 Astra网络安全能力引发社区热议",
+      "GRPO对齐与非自回归模型引发研究讨论"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "7 major AI CLI tools covered in this week's digest",
+      "Claude Code shipped 8 stable releases (v2.1.271–v2.1.278)",
+      "Claude Code updates focus on cost optimization & reliability",
+      "OpenAI Codex has 10 active tracked issues",
+      "MCP emerges as critical interoperability layer",
+      "Security guardrails become table stakes for CLI agents"
+    ],
+    "ai-agents": [
+      "5 agent projects tracked in OpenClaw ecosystem digest",
+      "OpenClaw saw 500 issues and 500 PRs updated in 7 days",
+      "OpenClaw v2026.9.5 stable released with 4,179 integrated PRs",
+      "v2026.9.5 has contributions from 503 developers",
+      "Linux companion build matches v2026.9.5 stable channel",
+      "High bug volume tied to recent major OpenClaw release rollouts"
+    ],
+    "ai-infra": [
+      "6 key AI infrastructure projects covered this week",
+      "vLLM has 7 tracked high/critical stability issues",
+      "SGLang ships v0.5.20 stable with 713 PRs, 237 contributors",
+      "Inference engines optimize for DeepSeek V4, Qwen3.8-Flash-Next",
+      "Local runtimes expand edge MoE deployment on consumer hardware",
+      "No major breaking API changes across the ecosystem"
+    ],
+    "ai-trending": [
+      "Agent skill frameworks gain 4k+ combined stars in one day",
+      "Computer-use agent tooling and fleet management surge",
+      "LLM memory/context optimization becomes high-growth category",
+      "higgsfield GPU orchestration platform launches with 465 stars",
+      "Ollama hits 181,330 total stars as core local LLM tool",
+      "Ecosystem consolidates around standardized agent skill interfaces"
+    ],
+    "ai-web": [
+      "Anthropic announces $1B+ embedded evaluation partnership with Accenture",
+      "Anthropic launches Life Sciences Verification Program for Claude",
+      "Anthropic reveals 4th unreported Claude Opus 4.6 security incident",
+      "AI-optimized biomolecular modeling delivers 4x protein design speedup",
+      "OpenAI publishes 50+ safety and malicious use disruption disclosures",
+      "67 new official articles total: 4 from Anthropic, 63 from OpenAI"
+    ],
+    "ai-hn": [
+      "ChatGPT web activity ad tracking sparks major privacy backlash",
+      "Qwen Image 2.1 earns 479 points, praised for open-weight performance",
+      "Direct LLM cache-to-cache semantic communication paper draws debate",
+      "Community rallies around open model preservation initiatives",
+      "AI writing tools emerge as polarizing flashpoint for users",
+      "Autonomous AI weapons and labor rights spark ethical discussions"
+    ],
+    "ai-arxiv": [
+      "50 AI-focused papers tracked across cs.AI, cs.CL, cs.LG",
+      "Study finds safety training 'launders' rather than removes gender bias",
+      "On-Demand Attention enables dynamic context recall in LLMs",
+      "New work optimizes agent harnesses and on-policy distillation",
+      "Probabilistic temporal reasoning frameworks address benchmark gaps",
+      "Robotics world model advances target physical agent capabilities"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B multimodal model tops likes chart at 15,862",
+      "MiniMax-H3 and LTX-2.5 video models hit 1.5M+ downloads each",
+      "Ternary 2-bit Bonsai models lead ultra-low-bit quantization trend",
+      "MiniCPM5-2B racks up 420,622 downloads for edge use cases",
+      "Xing4.0-29B-A4B trends for strong open conversational performance",
+      "Qwen-2.5-1B-RLCD optimized for Apple Silicon MLX parallel decoding"
+    ],
+    "ai-community": [
+      "AI agent security and reliability dominate developer discussions",
+      "Four-stage DevSecOps pipeline for AI agents outlined on Dev.to",
+      "Debate grows over agentic coding disrupting developer flow state",
+      "OpenAI monorepo breach via chained library/SSO flaws draws attention",
+      "GPT-6 Astra cybersecurity capabilities spark community engagement",
+      "GRPO alignment and non-autoregressive models spark research debate"
+    ]
+  }
+}

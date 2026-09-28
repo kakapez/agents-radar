@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI生态进入高速成熟阶段。",
+      "本周几乎所有主流工具新增前沿模型支持。",
+      "安全加固与智能体健壮性是首要重点。",
+      "MCP（模型上下文协议）集成需求增长。",
+      "企业用户推动精细化策略与BYOK支持。",
+      "Windows兼容bug困扰开源闭源工具。"
+    ],
+    "ai-agents": [
+      "OpenClaw 7天内更新500个issue和500个PR。",
+      "OpenClaw发布v2026.9.6稳定版macOS重构版。",
+      "OpenClaw发布v2026.7.35 LTS网关回溯版。",
+      "2026.9.x系列面临稳定性回退与内存泄漏。",
+      "维护者在bug修复与核心重构间分配精力。",
+      "生态系统追踪5个关键智能体项目。"
+    ],
+    "ai-infra": [
+      "高端引擎针对新一代NVIDIA GPU优化。",
+      "边缘运行时聚焦Apple Silicon与可移植性。",
+      "LiteLLM推进基于Rust的重写以提升速度。",
+      "Unsloth拓展本地多模态服务领域。",
+      "DeepSeek-V4.1和Qwen3.x是通用优化目标。",
+      "vLLM发布重大版本v0.30.0含762次提交。"
+    ],
+    "ai-trending": [
+      "3款新智能体工具登热门榜获千颗新星。",
+      "开源语音工具集支持646种语言。",
+      "RAG从向量搜索演进至知识图谱。",
+      "ECC领跑大模型主题榜总星超26.8万。",
+      "Ollama作为本地运行时星数破18.1万。",
+      "企业级智能体生产力工具快速扩张。"
+    ],
+    "ai-web": [
+      "Anthropic在黎曼ζ函数界研究获突破。",
+      "Claude将ζ零点下界从41.6%提升至67.2%。",
+      "Anthropic发布5项经同行验证的科学突破。",
+      "OpenAI预告GPT-6发布周期与产品扩张。",
+      "OpenAI新增13页覆盖企业与教育内容。",
+      "两家公司展现截然不同的公开AI战略。"
+    ],
+    "ai-hn": [
+      "GPT-6 Sol与Luna发布成本周AI头号新闻。",
+      "Claude Opus 5.5获1802分与1129条评论。",
+      "社区热议无监管AI智能体行为风险。",
+      "作家协会诉OpenAI案引发版权辩论。",
+      " rogue智能体担忧分化安全与对齐讨论。",
+      "开发者权衡大模型对编程文化的影响。"
+    ],
+    "ai-arxiv": [
+      "50篇论文聚焦类脑大模型架构。",
+      "皮层路由降低简单任务的推理计算量。",
+      "输出头量化降低小模型推理成本。",
+      "提出带安全边界的MCP医疗网关方案。",
+      "大模型裁判去偏研究提升评估公平性。",
+      "多模态推理获几何 grounding方法支撑。"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B领跑获1.6万赞与670万下载。",
+      "Qwen-Image-2.1及6个变体跻身前30。",
+      "LTX-2.5视频模型成爆款获5千余赞。",
+      "GGUF低比特量化模型下载量居高。",
+      "Xing4.0-29B-A4B在消费级4位部署表现亮眼。",
+      "MiMo-V2.6-Pro-RL经RL优化下载破7.5万。"
+    ],
+    "ai-community": [
+      "提示注入被称为新的SQL注入风险。",
+      "推理模式可能让模型出错率高5倍。",
+      "Kaggle基准测试思维链忠实度。",
+      "漏洞报告频出下智能体安全成讨论焦点。",
+      "开发者担忧智能体成本控制与API迁移。",
+      "小模型训练效率获小众领域关注。"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem enters high-velocity maturation phase.",
+      "Nearly all major tools add frontier model support this week.",
+      "Security hardening and agent robustness are top priorities.",
+      "MCP (Model Context Protocol) integration demand grows.",
+      "Enterprise users push for granular policy and BYOK support.",
+      "Windows compatibility bugs plague both open and closed tools."
+    ],
+    "ai-agents": [
+      "OpenClaw sees 500 issues and 500 PRs updated in 7 days.",
+      "OpenClaw ships v2026.9.6 stable macOS rebuild.",
+      "OpenClaw releases v2026.7.35 LTS gateway backport.",
+      "2026.9.x line faces stability regressions and memory leaks.",
+      "Maintainers split between bug fixes and core refactoring.",
+      "5 key agent projects tracked in the ecosystem."
+    ],
+    "ai-infra": [
+      "High-end engines optimize for next-gen NVIDIA GPUs.",
+      "Edge runtimes focus on Apple Silicon and portability.",
+      "LiteLLM advances Rust-based rewrite for speed.",
+      "Unsloth expands into local multimodal serving.",
+      "DeepSeek-V4.1 and Qwen3.x are universal optimization targets.",
+      "vLLM releases major v0.30.0 with 762 commits."
+    ],
+    "ai-trending": [
+      "3 new agent tools hit top trending with 1k+ new stars.",
+      "Open-source voice suite supports 646 languages.",
+      "RAG evolves beyond vector search to knowledge graphs.",
+      "ECC leads LLM topic list with 268k+ total stars.",
+      "Ollama reaches 181k+ stars as a local runtime.",
+      "Enterprise agent productivity tools expand rapidly."
+    ],
+    "ai-web": [
+      "Anthropic achieves Riemann zeta function bound breakthrough.",
+      "Claude raises zeta zero lower bound from 41.6% to 67.2%.",
+      "Anthropic publishes 5 peer-validated science breakthroughs.",
+      "OpenAI teases GPT-6 launch cycle and product expansion.",
+      "OpenAI adds 13 new pages covering enterprise and education.",
+      "Two firms show divergent public AI strategies."
+    ],
+    "ai-hn": [
+      "GPT-6 Sol and Luna launch is top AI story of the week.",
+      "Claude Opus 5.5 draws 1802 points and 1129 comments.",
+      "Community debates unregulated AI agent behavior risks.",
+      "Authors Guild v. OpenAI case filings spark copyright debate.",
+      "Rogue agent fears split safety and alignment discussions.",
+      "Developers weigh LLMs' impact on programming culture."
+    ],
+    "ai-arxiv": [
+      "50 papers focus on brain-inspired LLM architectures.",
+      "Cortical routing cuts inference compute for easy tasks.",
+      "Output-head quantization reduces small LLM inference costs.",
+      "Safety-bounded MCP medical gateway proposed.",
+      "LLM judge debiasing research advances evaluation fairness.",
+      "Multimodal reasoning gains geometric grounding methods."
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B leads with 16k+ likes and 6.7M downloads.",
+      "Qwen-Image-2.1 and 6 variants rank in top 30.",
+      "LTX-2.5 video model is breakout hit with 5k+ likes.",
+      "GGUF low-bit quantization models see high downloads.",
+      "Xing4.0-29B-A4B shines in consumer-grade 4-bit deployment.",
+      "MiMo-V2.6-Pro-RL hits 75k+ downloads with RL optimization."
+    ],
+    "ai-community": [
+      "Prompt injection called the new SQL injection risk.",
+      "Reasoning mode can make models 5x more error-prone.",
+      "Kaggle benchmark tests chain-of-thought faithfulness.",
+      "Agent security dominates discussions amid exploit reports.",
+      "Developers worry about agent cost control and API migrations.",
+      "Small-model training efficiency gains niche attention."
+    ]
+  }
+}

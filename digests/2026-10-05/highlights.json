@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "本周周刊涵盖7款主流AI CLI工具",
+      "Claude Code7天内发布6个稳定版本",
+      "MCP成CLI互操作的基本标配",
+      "企业买家力推审计追踪与安全功能",
+      "智能体工作流推动子代理编排投资",
+      "Windows/跨平台兼容仍是普遍痛点"
+    ],
+    "ai-agents": [
+      "OpenClaw7天内更新500个Issue与PR",
+      "OpenClaw发布5个新版本含v2026.9.8稳定版",
+      "涵盖5个智能体项目：OpenClaw、Hermes等",
+      "OpenClaw聚焦状态与会话性能优化",
+      "社区热议成本治理与内存改进",
+      "多智能体权限范围引发积极讨论"
+    ],
+    "ai-infra": [
+      "本周追踪6个核心AI基础设施项目",
+      "SGLang发布v0.5.21，含779个PR227位贡献者",
+      "vLLM与SGLang在Blackwell GPU支持上竞争",
+      "llama.cpp发布10个本地/边缘运行时版本",
+      "LiteLLM推出标准化供应链签名功能",
+      "Unsloth推进扩散与TTS微调能力"
+    ],
+    "ai-trending": [
+      "AI编程智能体工具星标数爆发式增长",
+      "antirez/ds4因DeepSeek 4推理上线获211星",
+      "Ollama仍为顶级本地LLM工具，总星标18.2万",
+      "智能体内存方案激增以降低token成本",
+      "DeepSeek模型阵容催生社区新推理引擎",
+      "无向量RAG方案进入主流应用阶段"
+    ],
+    "ai-web": [
+      "Anthropic推出1亿美元Claude前沿学院",
+      "学院计划2027年前培养1万名AI部署工程师",
+      "Anthropic深化与巴克莱、印孚瑟斯合作",
+      "Anthropic推出生命科学验证计划",
+      "OpenAI预热GPT-6系列与Dots产品发布",
+      "Anthropic指出GLM-5.3存在不安全网络能力"
+    ],
+    "ai-hn": [
+      "Gemini 4 Argon发布成AI HN热帖，得分1697",
+      "1185条评论热议Gemini 4实际实用性",
+      "OpenAI安全团队辞职引发治理争论",
+      "热文：智能体需更好文档而非更多内存",
+      "FLUX 3图像模型获435分、97条评论",
+      "AI Stratego对战胜出引发研究界兴趣"
+    ],
+    "ai-arxiv": [
+      "本周cs.AI/CL/LG领域新增50篇AI论文",
+      "新框架可预测并修复LLM合并崩溃问题",
+      "自优化KV²缓存提升长上下文复用率",
+      "为LLM智能体形式化不确定性推理",
+      "新基准涵盖GPU内核与交易代码测试",
+      "领域AI进展覆盖医学影像与药物发现"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B领跑趋势，周点赞1.69万",
+      "LTX-2.5视频模型获6300赞、160万下载量",
+      "GGUF量化模型占下载量主导地位",
+      "2位三态量化变体下载量达数百万次",
+      "Cloudflare clef多模态系列进入趋势榜",
+      "DeepSeek-V4.1-Flash获社区快速关注"
+    ],
+    "ai-community": [
+      "OpenAI开发者日推出常在线Dots智能体",
+      "Agents API新增基于浏览器的计算机使用功能",
+      "73%的AI模型未能识别真实黑客攻击目标",
+      "端侧/自托管AI项目人气大幅飙升",
+      "OpenAI安全负责人辞职引发治理讨论",
+      "开发者探索智能体成本优化策略"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "7 major AI CLI tools covered in weekly digest",
+      "Claude Code ships 6 stable releases in 7 days",
+      "MCP becomes table stakes for CLI interoperability",
+      "Enterprise buyers push for audit trails and security",
+      "Agentic workflows drive subagent orchestration investment",
+      "Windows/cross-platform compatibility remains universal pain point"
+    ],
+    "ai-agents": [
+      "OpenClaw posts 500 updated issues and PRs in 7 days",
+      "OpenClaw ships 5 new releases including stable v2026.9.8",
+      "5 agent projects covered: OpenClaw, Hermes, IronClaw etc.",
+      "OpenClaw focuses on state/session performance optimization",
+      "Community debates cost governance and memory improvements",
+      "Multi-agent permission scoping draws active discussion"
+    ],
+    "ai-infra": [
+      "6 core AI infra projects tracked this week",
+      "SGLang releases v0.5.21 with 779 PRs, 227 contributors",
+      "vLLM and SGLang compete on Blackwell GPU support",
+      "llama.cpp ships 10 releases for local/edge runtime",
+      "LiteLLM rolls out standardized supply-chain signing",
+      "Unsloth advances diffusion and TTS fine-tuning capabilities"
+    ],
+    "ai-trending": [
+      "AI coding agent tooling sees explosive star growth",
+      "antirez/ds4 gains 211 stars on DeepSeek 4 inference launch",
+      "Ollama remains top local LLM tool with 182k total stars",
+      "Agent memory solutions surge to cut token costs",
+      "DeepSeek model lineup spurs new community inference engines",
+      "Vectorless RAG approaches enter mainstream adoption"
+    ],
+    "ai-web": [
+      "Anthropic launches $100M Claude Frontier Academy",
+      "Academy to train 10,000 AI deployment engineers by 2027",
+      "Anthropic deepens partnerships with Barclays and Infosys",
+      "Anthropic launches Life Sciences Verification Program",
+      "OpenAI teases GPT-6 family and Dots product launch",
+      "Anthropic flags GLM-5.3 unsecure cyber capabilities"
+    ],
+    "ai-hn": [
+      "Gemini 4 Argon launch is top AI HN post with 1697 score",
+      "1185 comments debate Gemini 4 real-world utility",
+      "OpenAI safety team resignation sparks governance debate",
+      "Viral essay: agents need better docs, not more memory",
+      "FLUX 3 image model draws 435 score, 97 comments",
+      "AI Stratego gameplay wins draw research community interest"
+    ],
+    "ai-arxiv": [
+      "50 new AI submissions across cs.AI/CL/LG this week",
+      "New framework predicts and repairs LLM merge collapse",
+      "Self-refining KV² cache improves long-context reuse",
+      "Formalized indeterminacy reasoning for LLM agents",
+      "New benchmarks cover GPU kernel and trading code testing",
+      "Domain AI progress spans medical imaging and drug discovery"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B leads trends with 16.9k weekly likes",
+      "LTX-2.5 video model hits 6.3k likes, 1.6M downloads",
+      "GGUF quantized models dominate download volumes",
+      "2-bit ternary quantization variants pull millions of downloads",
+      "Cloudflare clef multimodal series enters trending charts",
+      "DeepSeek-V4.1-Flash gains rapid community traction"
+    ],
+    "ai-community": [
+      "OpenAI DevDay unveils always-on Dots agent",
+      "Agents API adds browser-based computer use capability",
+      "73% of AI models fail to flag real hacking targets",
+      "On-device/self-hosted AI projects surge in popularity",
+      "OpenAI safety lead resignation sparks governance debate",
+      "Developers explore agent cost optimization tactics"
+    ]
+  }
+}

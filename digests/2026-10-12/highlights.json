@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "AI CLI生态进入成熟阶段",
+      "7大工具维护以安全补丁为主",
+      "开源工具缩小与头部厂商差距",
+      "功能路线图聚焦多智能体协作",
+      "尚无工具实现完全跨平台对等",
+      "MCP管理成路线图核心重点"
+    ],
+    "ai-agents": [
+      "OpenClaw本周发布5个新版本",
+      "v2026.10.1稳定版源自3055次提交",
+      "402名贡献者参与最新版本",
+      "500个issue更新：344开放156关闭",
+      "核心稳定性与运行时性能是首要重点",
+      "更新器可靠性提升是共性主题"
+    ],
+    "ai-infra": [
+      "基础设施进展覆盖四大核心层",
+      "vLLM发布v0.31.0，含717次提交",
+      "Blackwell GPU稳定性问题仍存在",
+      "LiteLLM解决Trivy入侵问题",
+      "Unsloth修复诊断中API密钥泄漏",
+      "边缘运行时优先优化MoE内存效率"
+    ],
+    "ai-trending": [
+      "智能体框架单日获25599星",
+      "RAG转向推理与图谱检索",
+      "70B模型可在单张4GB GPU运行",
+      "AI编码智能体扩展减少token消耗",
+      "本地与边缘AI部署日益受关注",
+      "airllm单日新增548星"
+    ],
+    "ai-web": [
+      "Anthropic推出1.5亿美元Claude Corps奖学金",
+      "Anthropic推出Cyber Mission计划",
+      "Claude Science生成首份完整UV天图",
+      "Anthropic发现新型类CRISPR酶",
+      "OpenAI预告GPT-6可能发布",
+      "两家公司均优先AI安全更新"
+    ],
+    "ai-hn": [
+      "Mistral Large 4发布引2040分HN讨论",
+      "OpenAI数学进展更新获1530条评论",
+      "字节级LLM改造论文受关注",
+      "自托管智能体沙箱成焦点",
+      "微软发布官方执行容器标准",
+      "AI安全讨论仍十分活跃"
+    ],
+    "ai-arxiv": [
+      "智能体可靠性研究获关键突破",
+      "提出MoE专家选择偏差校正方法",
+      "表格基础模型被证实实际较浅",
+      "小模型推理蒸馏取得进展",
+      "新基准测试抵御评估饱和",
+      "基于评分规则的LLM评判遭批判"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B多模态模型登趋势榜榜首",
+      "LTX-2.5图生视频模型获7325赞",
+      "SAM3蒙版生成模型下载破200万",
+      "GGUF变体占前30名半数以上",
+      "Cloudflare推出两款Clef多模态模型",
+      "Laya文本分类器获5493赞"
+    ],
+    "ai-community": [
+      "Hacktoberfest AI挑战融合科技与户外主题",
+      "Jev AI更新日志工具在Dev.to上线",
+      "文章称Unix规范优于自定义提示DSL",
+      "纽约AI工程师大会谈金融科技智能体应用",
+      "Claude Haiku 5.5与Mistral Large 4引讨论",
+      "Kaggle基准探究LLM编码弱点"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI ecosystem enters maturity phase",
+      "Security patches dominate 7 major tools’ maintenance",
+      "Open-source tools close gaps with incumbents",
+      "Feature roadmaps converge on multi-agent collaboration",
+      "No tool achieves full cross-platform parity",
+      "MCP management becomes key roadmap focus"
+    ],
+    "ai-agents": [
+      "OpenClaw ships 5 new releases this week",
+      "Stable v2026.10.1 builds from 3,055 commits",
+      "402 contributors contribute to latest release",
+      "500 issues updated: 344 open, 156 closed",
+      "Core stability and runtime performance are top priorities",
+      "Updater reliability improvements are cross-cutting theme"
+    ],
+    "ai-infra": [
+      "Infra progress spans four core layers",
+      "vLLM releases v0.31.0 with 717 commits",
+      "Blackwell GPU stability regressions persist",
+      "LiteLLM resolves Trivy compromise issue",
+      "Unsloth fixes API key leaks in diagnostics",
+      "Edge runtimes prioritize MoE memory efficiency"
+    ],
+    "ai-trending": [
+      "Agent framework gains 25,599 stars in one day",
+      "RAG shifts to reasoning and graph-based retrieval",
+      "70B model runs on single 4GB GPU",
+      "AI coding agent extensions cut token usage",
+      "Local and edge AI deployment gains traction",
+      "airllm hits 548 new stars in a day"
+    ],
+    "ai-web": [
+      "Anthropic launches $150M Claude Corps fellowship",
+      "Anthropic unveils Cyber Mission initiative",
+      "Claude Science generates first complete UV sky map",
+      "Anthropic discovers new CRISPR-like enzyme",
+      "OpenAI teases potential GPT-6 launch",
+      "Both firms prioritize AI safety updates"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 launch sparks 2040-point HN debate",
+      "OpenAI math progress update draws 1530 comments",
+      "Byte-level LLM retrofit paper gains traction",
+      "Self-hosted agent sandboxes are focal point",
+      "Microsoft releases official execution container standard",
+      "AI safety debates remain highly active"
+    ],
+    "ai-arxiv": [
+      "Agent reliability sees key research breakthroughs",
+      "MoE expert selection bias correction method proposed",
+      "Tabular foundation models found to be effectively shallow",
+      "Reasoning distillation advances for small models",
+      "New benchmarks resist evaluation saturation",
+      "Rubric-based LLM judges face critical analysis"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B multimodal model leads trending charts",
+      "LTX-2.5 image-to-video model gains 7,325 likes",
+      "SAM3 mask generation model tops 2M downloads",
+      "GGUF variants account for over half top 30 entries",
+      "Cloudflare launches two Clef multimodal models",
+      "Laya text classifier hits 5,493 likes"
+    ],
+    "ai-community": [
+      "Hacktoberfest AI challenge blends tech with outdoor themes",
+      "Jev AI CHANGELOG tool launches on Dev.to",
+      "Post argues Unix canon beats custom prompt DSLs",
+      "AI Engineer NY confab discusses fintech agent adoption",
+      "Claude Haiku 5.5 and Mistral Large 4 drive discussion",
+      "Kaggle benchmarks explore LLM coding weaknesses"
+    ]
+  }
+}

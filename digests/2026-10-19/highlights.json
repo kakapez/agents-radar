@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "本周摘要涵盖7款主流AI CLI编码工具",
+      "生态聚焦代理可靠性与上下文记忆升级",
+      "开放互操作标准（MCP、ACP）需求增长",
+      "开源CLI工具凭借可扩展插件人气上升",
+      "头部厂商竞相补齐企业安全与管理短板",
+      "跨工具工作聚焦Windows稳定性与SSH支持"
+    ],
+    "ai-agents": [
+      "OpenClaw 7天内更新500个issue与500个PR",
+      "发布9个OpenClaw稳定版/测试版新版本",
+      "OpenClaw v2026.10.5提升全平台更新可靠性",
+      "OpenClaw团队优先优化网关可靠性与降内存",
+      "社区热议MCP安全加固与上下文控制",
+      "多代理编排稳定性优化已推出"
+    ],
+    "ai-infra": [
+      "本周追踪6个核心AI基础设施项目",
+      "生态大力投入MoE推理服务优化",
+      "vLLM v0.32.0开发中，363贡献者提交814提交",
+      "重点支持AMD ROCm与NVIDIA Blackwell硬件",
+      "投机解码与KV缓存效率仍是核心优先级",
+      "500B+参数MoE模型获近乎首日推理支持"
+    ],
+    "ai-trending": [
+      "编码代理生态主导GitHub AI趋势榜",
+      "Anthropic官方Claude插件仓库日增1175星",
+      "开源编码代理OpenCode日增1414星",
+      "本地优先语音克隆套件日增2000+星",
+      "Cursor官方插件仓库单日获350星",
+      "RAG与代理记忆基础设施项目快速成熟"
+    ],
+    "ai-web": [
+      "Anthropic发布史无前例的AI透明度更新潮",
+      "Anthropic推出公益基金，占公司股份5%",
+      "研究发现蒸馏攻击有效性降低90-99%",
+      "Anthropic扩大第三方安全评估访问权限",
+      "OpenAI陷入罕见平静，仅发布3篇新文章",
+      "Anthropic披露内部人员结构调整计划"
+    ],
+    "ai-hn": [
+      "DeepSeek-v4.1-Flash-1017登HN AI头条，获936分",
+      "通过联想记忆原理解释Transformer架构",
+      "社区热议AI对现实劳动力市场的影响",
+      "AI代理自主性与安全护栏话题升温",
+      "从业者讨论AI代码审查工作流",
+      "本地LLM性能基准测试吸引开发者动手参与"
+    ],
+    "ai-arxiv": [
+      "本周cs.AI/CL/LG领域提交50篇AI论文",
+      "Gemini 4代理团队自主击败 Minecraft末影龙",
+      "发布个性化机器人操作新基准",
+      "研究发现LLM在印度语言中安全行为不一致",
+      "优化MoE路由提升表达能力与训练稳定性",
+      "框架实现仿真引擎与机器人策略协同进化"
+    ],
+    "ai-hf": [
+      "Qwen模型家族称霸Hugging Face趋势榜",
+      "Lightricks LTX-2.5视频模型周下载破200万",
+      "百度Unlimited-OCR周下载量破160万",
+      "Meta SAM3视觉模型下载量超160万",
+      "Underdog-Saluki-27B支持2比特量化，适用于边缘",
+      "LiquidAI的24B MoE模型因高效推理走红"
+    ],
+    "ai-community": [
+      "Hacktoberfest AI副业项目主导Dev.to讨论",
+      "10个实用提示词技巧指南在Dev.to走红",
+      "Qwen3-8B微调教程分享准确率从50%提至76%",
+      "文章概述7种生产级RAG架构",
+      "Lobste.rs讨论轻量隐私优先的浏览器端RAG",
+      "AI监管与安全执法引发开发者关注"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "7 leading AI CLI coding tools covered in this week's digest",
+      "Ecosystem focuses on agent reliability and context memory upgrades",
+      "Growing demand for open interoperability standards (MCP, ACP)",
+      "Open-source CLI tools gain traction via extensible plugins",
+      "Incumbents race to close enterprise security and admin gaps",
+      "Cross-tool work targets Windows stability and SSH support"
+    ],
+    "ai-agents": [
+      "OpenClaw sees 500 issues and 500 PRs updated in 7 days",
+      "9 new OpenClaw releases across stable/beta channels shipped",
+      "OpenClaw v2026.10.5 boosts update reliability across platforms",
+      "OpenClaw team prioritizes Gateway reliability and memory reduction",
+      "Community debates MCP security hardening and context control",
+      "Multi-agent orchestration stability improvements rolled out"
+    ],
+    "ai-infra": [
+      "6 core AI infrastructure projects tracked this week",
+      "Ecosystem invests heavily in MoE serving optimizations",
+      "vLLM v0.32.0 in progress with 814 commits from 363 contributors",
+      "Focus on AMD ROCm and NVIDIA Blackwell hardware support",
+      "Speculative decoding and KV cache efficiency remain key priorities",
+      "500B+ parameter MoE models get near-day-0 serving support"
+    ],
+    "ai-trending": [
+      "Coding agent ecosystems dominate GitHub AI trending lists",
+      "Anthropic's official Claude plugins repo hits 1175 daily stars",
+      "Open-source coding agent OpenCode earns 1414 daily stars",
+      "Local-first voice cloning suite gains 2000+ daily stars",
+      "Cursor's official plugin repo gets 350 stars in one day",
+      "RAG and agent memory infrastructure projects mature rapidly"
+    ],
+    "ai-web": [
+      "Anthropic releases unprecedented wave of AI transparency updates",
+      "Anthropic launches public benefit fund with 5% of company shares",
+      "Study finds 90-99% reduction in distillation attack effectiveness",
+      "Anthropic expands third-party safety evaluation access",
+      "OpenAI has rare lull with only 3 new articles published",
+      "Anthropic discloses internal labor restructuring plans"
+    ],
+    "ai-hn": [
+      "DeepSeek-v4.1-Flash-1017 is HN's top AI story with 936 points",
+      "Transformer architecture explained via associative memory principles",
+      "Community debates AI's real-world labor market impact",
+      "Rising conversations about AI agent autonomy and safety guardrails",
+      "Practitioners discuss AI code review workflows",
+      "Local LLM performance benchmarking draws hands-on developer participation"
+    ],
+    "ai-arxiv": [
+      "50 AI papers submitted this week across cs.AI/CL/LG categories",
+      "Gemini 4 agent teams autonomously beat Minecraft Ender Dragon",
+      "New benchmark released for personalized robotic manipulation",
+      "Study finds inconsistent LLM safety behavior across Indic languages",
+      "Optimized MoE routing boosts expressiveness and training stability",
+      "Framework co-evolves simulation engines with robot policies"
+    ],
+    "ai-hf": [
+      "Qwen model family dominates Hugging Face trending charts",
+      "Lightricks LTX-2.5 video model hits 2M+ weekly downloads",
+      "Baidu Unlimited-OCR breaks 1.6 million weekly downloads",
+      "Meta SAM3 vision model surpasses 1.6 million downloads",
+      "Underdog-Saluki-27B supports 2-bit quantization for edge use",
+      "LiquidAI's 24B MoE model trends for efficient inference"
+    ],
+    "ai-community": [
+      "Hacktoberfest AI side projects dominate Dev.to discussions",
+      "10 practical prompting techniques guide goes viral on Dev.to",
+      "Qwen3-8B fine-tuning walkthrough shares 50% to 76% accuracy gains",
+      "Article outlines 7 production-grade RAG architectures",
+      "Lobste.rs discusses lightweight privacy-focused browser RAG",
+      "AI regulation and safety enforcement gain developer attention"
+    ]
+  }
+}

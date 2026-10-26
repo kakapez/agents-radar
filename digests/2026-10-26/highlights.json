@@ -1,0 +1,130 @@
+{
+  "zh": {
+    "ai-cli": [
+      "MCP构建器技能PR修复v2.0.0兼容性，重命名关键客户端。",
+      "Skill-creator PR解决Windows子进程触发评估失败。",
+      "docx技能新增明确的LibreOffice超时错误报告。",
+      "本周社区讨论关注度最高的Claude Code技能。"
+    ],
+    "ai-agents": [
+      "OpenClaw发布稳定版v2026.10.7，支持回放安全会话恢复。",
+      "OpenClaw扩展稳定版v2026.9.34获关键安全网关更新。",
+      "项目每周记录500个更新问题与500个PR。",
+      "OpenClaw待办中剩余397个开放问题和220个PR。",
+      "开发重点为Windows与PostgreSQL可靠性修复。",
+      "OpenClaw在稳定与测试频道推出五个新版本。"
+    ],
+    "ai-infra": [
+      "LiteLLM本周遭遇严重供应链安全入侵。",
+      "SGLang发布v0.5.22，合并950个PR。",
+      "llama.cpp连续发布11个b11879–b11889稳定补丁。",
+      "团队优化Blackwell GPU与分离式预填充工作流。",
+      "vLLM有3个高严重性核心稳定性bug待修复。",
+      "Ollama处理一次严重云中断与3个运行时bug。"
+    ],
+    "ai-trending": [
+      "Cloudflare安全审计技能单日新增2878星。",
+      "本地开源VoiceStudio成为ElevenLabs替代方案。",
+      "模块化代理技能热度超过通用聊天机器人。",
+      "Open WebUI本周总星数维持156753。",
+      "RAG与内存基础设施项目热度居高不下。",
+      "编码代理技能主导本周开源发展趋势。"
+    ],
+    "ai-hn": [
+      "10年历史CNN在皮肤癌诊断上优于前沿LLM。",
+      "HN讨论AI在非科技领域的零可衡量财务回报。",
+      "Cerebras详述定制硬件上的万亿参数模型部署。",
+      "社区担忧AI对劳动力与创意产业的冲击。",
+      "专用窄域模型在医疗任务上胜过通用LLM。",
+      "工程师称赞Cerebras透明的GPU集群分解方案。"
+    ],
+    "ai-arxiv": [
+      "测试时思维剪枝降低推理模型的推理成本。",
+      "研究人员提出LLM部署的欧盟AI法案对齐框架。",
+      "新方法强化RL代理的信用分配与推理因果性。",
+      "Softmax交叉熵实现的数值bug修复已发布。",
+      "工具使用代理的安全审计框架获研究关注。",
+      "离线评估代理降低昂贵的闭环部署成本。"
+    ],
+    "ai-hf": [
+      "Qwen 27B图文转文本模型登顶HF本周热榜。",
+      "Lightricks LTX-2.5视频模型周下载量达210万。",
+      "RecursiveSI/flint轻量聊天LLM本周获858赞。",
+      "量化GGUF变体推动本地模型部署热度。",
+      "Nanbeige4.3-33B新Llama基础模型获早期关注。",
+      "XHToken/Spark-X2.6-4B针对边缘消费硬件优化。"
+    ],
+    "ai-community": [
+      "Dev.to涌现大量Hacktoberfest开源AI挑战投稿。",
+      "开发者反对AI工具工作流强制代理。",
+      "LangChain伦敦演讲：评估优先于代理框架选择。",
+      "Lobste.rs讨论AI监管与数据开发政策。",
+      "内容涵盖代理上下文管理与AI成本治理。",
+      "实用懒人AI日常任务自动化工具走红。"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "MCP builder skill PR fixes v2.0.0 compatibility, renames key client.",
+      "Skill-creator PR resolves Windows subprocess trigger evaluation failures.",
+      "docx skill adds explicit LibreOffice timeout error reporting.",
+      "Top Claude Code skills ranked by community discussion attention this week."
+    ],
+    "ai-agents": [
+      "OpenClaw ships stable v2026.10.7 with replay-safe session recovery.",
+      "OpenClaw extended-stable v2026.9.34 gets critical security gateway updates.",
+      "Project logs 500 updated issues and 500 pull requests weekly.",
+      "397 open issues and 220 open PRs remain in OpenClaw's backlog.",
+      "Development focuses on Windows and PostgreSQL reliability fixes.",
+      "Five new OpenClaw releases launched across stable and beta channels."
+    ],
+    "ai-infra": [
+      "LiteLLM faces major critical supply chain security compromise this week.",
+      "SGLang ships v0.5.22 major release with 950 merged PRs.",
+      "llama.cpp rolls out 11 consecutive stable b11879–b11889 patch releases.",
+      "Teams optimize for Blackwell GPUs and disaggregated prefill workflows.",
+      "vLLM has 3 open high-severity core stability bugs pending fixes.",
+      "Ollama handles one critical cloud outage plus 3 runtime bugs."
+    ],
+    "ai-trending": [
+      "Cloudflare security-audit skill gains 2,878 stars in a single day.",
+      "Local open-source VoiceStudio emerges as ElevenLabs alternative.",
+      "Modular agent skills outpace full-framework general chatbots in traction.",
+      "Open WebUI retains massive 156,753 total star count this week.",
+      "RAG and memory infrastructure projects remain highly active trending.",
+      "Coding agent skills dominate weekly open-source momentum."
+    ],
+    "ai-hn": [
+      "10-year-old CNN outperforms frontier LLMs on skin cancer diagnosis.",
+      "HN debates zero measurable non-tech AI financial ROI outcomes.",
+      "Cerebras details trillion-parameter model deployment on custom hardware.",
+      "Community raises concerns over AI labor and creative industry disruption.",
+      "Narrow specialized models beat general LLMs on narrow medical tasks.",
+      "Engineers praise Cerebras' transparent alternative GPU cluster breakdown."
+    ],
+    "ai-arxiv": [
+      "Test-time thought pruning cuts reasoning model inference costs.",
+      "Researchers propose EU AI Act alignment frameworks for LLM deployments.",
+      "New methods improve RL agent credit assignment and reasoning causality.",
+      "Softmax cross-entropy implementation numerical bug fixes released.",
+      "Safety auditing frameworks for tool-using agents gain research traction.",
+      "Offline evaluation proxies reduce expensive closed-loop rollout costs."
+    ],
+    "ai-hf": [
+      "Qwen 27B image-text-to-text model tops HF trending this week.",
+      "Lightricks LTX-2.5 video model hits 2.1 million weekly downloads.",
+      "RecursiveSI/flint lightweight chat LLM earns 858 likes this week.",
+      "Quantized GGUF variants drive local model deployment interest.",
+      "Nanbeige4.3-33B new Llama base model earns early community buzz.",
+      "XHToken/Spark-X2.6-4B optimized for edge consumer hardware."
+    ],
+    "ai-community": [
+      "Dev.to surges with Hacktoberfest open-source AI challenge submissions.",
+      "Developers push back against forced proxying for AI tool workflows.",
+      "LangChain London talk frames evals over agent framework choice.",
+      "Lobste.rs debates AI regulatory and data development policies.",
+      "Content covers agent context management and AI cost governance.",
+      "Practical 'lazy' AI daily-task automation tools gain traction."
+    ]
+  }
+}

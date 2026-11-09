@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code Skills PR #2019 修复 xlsx 外链误报",
+      "Claude Skills PR #2108 明确文档版本同步规则",
+      "Claude Skills 修复 xlsx 工作表定义名检测",
+      "Claude Skills 解决 xlsx 外链风险检测错误",
+      "Claude Skills 说明仓库与本地技能文件同步",
+      "Open AI CLI 工具含 Claude Code、Codex、Gemini CLI"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.2 稳定版发布，强化隐私日志保护",
+      "OpenClaw v2026.11.1 修复 macOS 配置密钥覆盖问题",
+      "OpenClaw v2026.11.5-beta.1 推出 Knowledge Scribes",
+      "OpenClaw 本周合并 148 个 PR、解决 120 个问题",
+      "OpenClaw 优先适配 macOS 与 SQLite 性能优化",
+      "OpenClaw 提升 Telegram、Discord、Webhook 可靠性"
+    ],
+    "ai-infra": [
+      "vLLM v0.33.0rc3 发布，含 927 个合并 PR",
+      "SGLang v0.5.23 发布，本周期含 1007 个合并 PR",
+      "llama.cpp 在 b12199 到 b12211 间发布 10 个 nightly 版",
+      "AI 基建生态聚焦 MoE 支持与异构硬件适配",
+      "llama.cpp、Ollama 优先支持边缘/NPU 代理",
+      "LiteLLM 侧重账单准确性，Unsloth 整合扩散模型"
+    ],
+    "ai-trending": [
+      "vercel-labs/agent-browser 当日新增 815 星",
+      "dsx-ai-factory/nvke 当日新增 345 星",
+      "本周 AI 开源聚焦生产级代理工具",
+      "跨会话代理记忆方案需求激增",
+      "独立代理可访问性项目日增数千星",
+      "GitHub 热榜聚焦头部 AI 实验室代理工具"
+    ],
+    "ai-web": [
+      "Anthropic 招募生命科学研究客座研究员",
+      "Anthropic 本周发布 14 篇生命科学相关文章",
+      "OpenAI 本周期发布 18 条仅元数据条目",
+      "Anthropic 为合作研究项目提供免费模型访问",
+      "两家公司均强调 AI 用于科研与网络安全",
+      "Anthropic 生命科学项目允许联合发表成果"
+    ],
+    "ai-hn": [
+      "MaxxBench 质疑 DeepSWE 分数有效性，获 388 分",
+      "Anthropic 代理记忆解析获 176 分、99 条评论",
+      "Claude Code 安全泄露在 HN 引发 360+ 条评论",
+      "高盛叫停银行家与交易员使用 Claude Code",
+      "OpenAI 110 亿美元融资引发 AI 泡沫讨论",
+      "Gemini Omni 1.2 Flash 发布获 366 分"
+    ],
+    "ai-arxiv": [
+      "构建 Scientist World 模拟自主 AI 研究员代理",
+      "机制可解释性综述系统化 AI 安全审计",
+      "50 篇新论文覆盖可解释性、代理基建、效率",
+      "新框架解码 LLM 残差流提升透明度",
+      "效率创新聚焦低比特推理与扩散解码",
+      "领域工作拓展至临床护理与生物医学知识图谱"
+    ],
+    "ai-hf": [
+      "Qwen/Qwen3.8-27B 下载量 760 万居热榜首位",
+      "speridlabs/idol 获 1397 赞为热门 3D 生成模型",
+      "Qwen 生态占 Hugging Face 热榜 30 款中 8 款",
+      "Kimi-K3.1-Pro 因均衡推理性能受关注",
+      "LiquidAI LFM3-1.7B 优化轻量端侧部署",
+      "社区聚焦无审查微调与 GGUF 量化模型"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code Skills PR #2019 fixes xlsx external link false negatives",
+      "Claude Skills PR #2108 clarifies document version sync behavior",
+      "Top Claude Skills update fixes xlsx worksheet defined name detection",
+      "Claude Skills PR resolves xlsx external link risk detection bugs",
+      "Claude Skills docs clarify repo vs local skill file sync relationships",
+      "Open AI CLI tools covered include Claude Code, Codex, Gemini CLI"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.2 stable released, boosts privacy log safeguards",
+      "OpenClaw v2026.11.1 fixes macOS config secret overwriting bugs",
+      "OpenClaw v2026.11.5-beta.1 launches Knowledge Scribes feature",
+      "OpenClaw merged 148 PRs and resolved 120 issues this week",
+      "OpenClaw prioritizes macOS compatibility and SQLite performance work",
+      "OpenClaw improves Telegram, Discord, webhook message reliability"
+    ],
+    "ai-infra": [
+      "vLLM v0.33.0rc3 released, backed by 927 merged PRs",
+      "SGLang v0.5.23 launched, with 1007 merged PRs this cycle",
+      "llama.cpp shipped 10 nightly releases between b12199 and b12211",
+      "AI infra ecosystem centers on MoE support and heterogeneous hardware",
+      "llama.cpp and Ollama prioritize edge/NPU support for agentic work",
+      "LiteLLM focuses on billing accuracy, Unsloth on diffusion integration"
+    ],
+    "ai-trending": [
+      "vercel-labs/agent-browser gained +815 stars today for agent automation",
+      "dsx-ai-factory/nvke earned +345 stars today for GPU K8s management",
+      "AI open source focuses on production-ready agent tooling this week",
+      "Developer demand surges for cross-session agent memory solutions",
+      "Independent agent accessibility projects earn thousands of stars daily",
+      "GitHub trending highlights agent-adjacent tools from top AI labs"
+    ],
+    "ai-web": [
+      "Anthropic launched guest investigator call for life sciences research",
+      "Anthropic released 14 new articles this week, focused on life science",
+      "OpenAI published 18 new metadata-only entries this cycle",
+      "Anthropic offers free model access for collaborative research projects",
+      "Both firms highlight AI for scientific research and cybersecurity",
+      "Anthropic's life science initiative allows joint publication of outputs"
+    ],
+    "ai-hn": [
+      "MaxxBench challenges DeepSWE score validity, earned 388 HN points",
+      "Anthropic agent memory breakdown got 176 HN points, 99 comments",
+      "Claude Code security leaks spark 360+ comment threads on HN",
+      "Goldman Sachs pulled Claude Code from bankers and traders",
+      "OpenAI $11B funding round fuels AI bubble market debates",
+      "Gemini Omni 1.2 Flash launch earned 366 HN points"
+    ],
+    "ai-arxiv": [
+      "Scientist World simulation built for autonomous AI researcher agents",
+      "Mechanistic interpretability review systematizes AI safety auditing",
+      "50 new AI papers cover interpretability, agent infrastructure, efficiency",
+      "Novel frameworks decode LLM residual streams for transparency",
+      "Efficiency innovations target low-bit inference and diffusion decoding",
+      "Domain work expands to clinical care and biomedical knowledge graphs"
+    ],
+    "ai-hf": [
+      "Qwen/Qwen3.8-27B hit 7.6M downloads as top trending model",
+      "speridlabs/idol earned 1397 likes as top 3D generation model",
+      "Qwen ecosystem powers 8 of 30 trending Hugging Face models",
+      "Kimi-K3.1-Pro gains traction for balanced reasoning performance",
+      "LiquidAI LFM3-1.7B optimized for lightweight on-device deployment",
+      "Community focuses on uncensored fine-tunes and GGUF quantizations"
+    ]
+  }
+}
